@@ -3,7 +3,8 @@
 		<div class="form-row mt-4">
 			<div class="form-group col-lg-8 col-md-12 col-sm-12">
 				<!-- <label for="inputEmail4">Email</label> -->
-				<input type="text" class="form-control font-italic" id="cari-barang" placeholder="Cari nama produk / nama tanaman...">
+				<input type="text" class="form-control font-italic" id="cari-barang"
+					placeholder="Cari nama produk / nama tanaman...">
 			</div>
 			<!-- <div class="form-group col-lg-3 col-md-12 col-sm-12">
 				<select id="inputState" class="form-control">
@@ -22,7 +23,8 @@
 			</div> -->
 			<div class="form-group col-lg-4 col-md-12 col-sm-12">
 				<!-- <label for="">Cek Biaya Kirim</label> -->
-				<a href="http://www.jet.co.id/tariff" class="btn btn-block btn-warning" target="_blank">Cek Biaya Kirim J&T Express</a>
+				<a href="http://www.jet.co.id/tariff" class="btn btn-block btn-warning" target="_blank">Cek Biaya Kirim
+					J&T Express</a>
 				<!-- <button type="button" class="btn btn-block btn-success">Cek Biaya Kirim</button> -->
 			</div>
 		</div>
@@ -33,7 +35,9 @@
 
 	<div class="card-deck my-4">
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -43,7 +47,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -53,7 +59,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -63,7 +71,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -73,7 +83,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -86,7 +98,9 @@
 
 	<div class="card-deck my-4">
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -96,7 +110,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -106,7 +122,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -116,7 +134,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -126,7 +146,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -139,7 +161,9 @@
 
 	<div class="card-deck my-4">
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -149,7 +173,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -159,7 +185,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -169,7 +197,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -179,7 +209,9 @@
 			</div>
 		</div>
 		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product" style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"
+				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
+					class="card-img-top" alt="...">
 				<div class="card-body">
 					<h6 class="card-title">Tanaman Kaktus</h6>
 				</div>
@@ -190,4 +222,27 @@
 		</div>
 	</div>
 
+</section>
+
+<section class="container my-5">
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center"">
+			<li class="page-item">
+				<a class="page-link" href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo; Previous Page</span>
+				</a>
+			</li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">4</a></li>
+			<li class="page-item"><a class="page-link" href="#">5</a></li>
+			<li class="page-item"><a class="page-link" href="#">6</a></li>
+			<li class="page-item">
+				<a class="page-link" href="#" aria-label="Next">
+					<span aria-hidden="true">Next Page &raquo;</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
 </section>
