@@ -1,5 +1,9 @@
-<section>
-	<div class="container mt-5">
+<section class="container mt-4 mb-4">
+    <h3 class="text-center" style="color: teal;">Halaman Admin Artikel</h3>
+</section>
+
+<section class="container">
+	<div class="table-responsive">
 		<table class="table table-hover">
 			<thead class="thead-light">
 				<tr>
@@ -18,7 +22,11 @@
 					<td>IMG001</td>
 					<td>Cara Perawatan Kaktus</td>
 					<td>DD-MM-YYYY</td>
-					<td>Action</td>
+                    <td>Action</td>
+					<!-- <td>
+                        <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn btn-warning"><i class="fas fa-trash-alt"></i></a>
+                    </td> -->
 				</tr>
 				<tr>
 					<th scope="row">2</th>
