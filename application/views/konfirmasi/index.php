@@ -1,24 +1,21 @@
-<div class="container alert alert-danger mt-5" role="alert">
-	Masih dalam tahap pengembangan! Ini belum jadi.
-</div>
-
-<form class="container mt-3">
-	<div class="form-group">
-		<label for="exampleInputPassword1">Kode Booking</label>
-		<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Kode Booking">
+<section class="container mt-5">
+	<div>
+		<h3 class="text-center mt-5" style="color: teal;">Cek Status Pesanan Anda disini.</h3>
 	</div>
-	<!-- <div class="form-group">
-		<label for="exampleFormControlFile1">Example file input</label>
-		<input type="file" class="form-control-file" id="exampleFormControlFile1">
-	</div> -->
-	<div class="input-group mb-3">
-		<!-- <div class="input-group-prepend">
-			<span class="input-group-text" id="inputGroupFileAddon01">Upload Bukti Transfer</span>
-		</div> -->
-		<div class="custom-file">
-			<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-			<label class="custom-file-label" for="inputGroupFile01">Klik untuk mencari file gambar / bukti transaksi</label>
+	<div class="row mt-2">
+		<div class="col-lg-4 col-md-12 col-sm-12"></div>
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<hr>
+			<form action="">
+				<div class="form-group">
+					<label for="exampleInputEmail1" style="color: teal;">Kode Pesanan</label>
+					<input type="text" class="form-control font-italic" id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="input kode pesanan disini">
+					<small id="emailHelp" class="form-text text-muted">Cek kesesuaian data kode booking untuk menghindari data tidak terbaca oleh sistem.</small>
+				</div>
+				<button type="submit" class="btn btn-block btn-warning align-right" style="color: teal;">Cek Status Pesanan</button>
+			</form>
 		</div>
+		<div class="col-lg-4 col-md-12 col-sm-12"></div>
 	</div>
-	<button type="submit" class="btn btn- btn-primary">Cek Status Pemesanan</button>
-</form>
+</section>

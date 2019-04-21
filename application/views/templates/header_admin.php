@@ -40,11 +40,15 @@
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li> -->
 					<li class="nav-item">
-						<a class="nav-link" href="<?= base_url(); ?>marketplace/index">Lihat Halaman Marketplace</a>
+						<a class="nav-link" href="<?= base_url(); ?>marketplace/index">Halaman Marketplace</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?= base_url(); ?>">Lihat Tampilan Utama Web</a>
+						<a class="nav-link" href="<?= base_url(); ?>">Tampilan Utama Web</a>
+					</li>
+					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
+					<li class="nav-item">
+						<a class="nav-link" href="<?= base_url(); ?>adminpage/loginpage">Logout</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<!-- <li class="nav-item dropdown">
