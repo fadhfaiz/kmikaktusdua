@@ -1,5 +1,5 @@
 <section class="container mt-4 mb-4">
-    <h3 class="text-center" style="color: teal;">Halaman Admin Artikel</h3>
+ <h3 class="text-center" style="color: teal;">Halaman Admin Artikel</h3>
 </section>
 
 <section class="container">
