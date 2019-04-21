@@ -12,7 +12,7 @@
 						data: {
 							labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
 							datasets: [{
-								label: '# of Votes',
+								label: 'Statistik Pengunjung',
 								data: [12, 19, 3, 23, 2, 3],
 								backgroundColor: [
 								'rgba(255, 99, 132, 0.2)',
