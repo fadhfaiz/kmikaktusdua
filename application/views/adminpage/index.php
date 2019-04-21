@@ -1,30 +1,50 @@
 <section>
 
 	<div class="container my-5">
-		<div class="card text-center">
-			<div class="card-header">
-				<ul class="nav nav-pills card-header-pills">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Active</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-					</li>
-				</ul>
-			</div>
-			<div class="card-body">
-				<h5 class="card-title">Tampilan Statistik Pengunjung</h5>
-				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-			</div>
-			<div class="alert alert-danger" role="alert">
-				Masih dalam tahap belajar wkwkwk
-			</div>
-		</div>
-	</div>
-
+		
+			<!-- Statistik -->
+			<script type="text/javascript" src="<?php echo base_url()?>assets/chartjs/Chart.js"></script>
+			<canvas id="myChart"></canvas>
+				<script>
+					var ctx = document.getElementById("myChart").getContext('2d');
+					var myChart = new Chart(ctx, {
+						type: 'line',
+						data: {
+							labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+							datasets: [{
+								label: 'Statistik Pengunjung',
+								data: [12, 19, 3, 23, 2, 3],
+								backgroundColor: [
+								'rgba(255, 99, 132, 0.2)',
+								'rgba(54, 162, 235, 0.2)',
+								'rgba(255, 206, 86, 0.2)',
+								'rgba(75, 192, 192, 0.2)',
+								'rgba(153, 102, 255, 0.2)',
+								'rgba(255, 159, 64, 0.2)'
+								],
+								borderColor: [
+								'rgba(255,99,132,1)',
+								'rgba(54, 162, 235, 1)',
+								'rgba(255, 206, 86, 1)',
+								'rgba(75, 192, 192, 1)',
+								'rgba(153, 102, 255, 1)',
+								'rgba(255, 159, 64, 1)'
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							scales: {
+								yAxes: [{
+									ticks: {
+										beginAtZero:true
+									}
+								}]
+							}
+						}
+					});
+				</script>
+			<!-- Statistik -->
 	<!-- <div class="row">
         <div class="col-4"></div>    
         <div class="col-4"></div>    
