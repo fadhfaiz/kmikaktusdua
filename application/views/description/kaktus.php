@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12 mt-4 mb-4">
-			<img src="<?php echo base_url()?>assets/img/sansiviera.jpg" class="img-fluid" alt="Responsive image">
+			<img src="<?php echo base_url()?>assets/img/edit1.jpg" class="img-fluid" alt="Responsive image">
         </div>
         
         <div class="col-lg-6 col-md-12 col-sm-12 mt-4 mb-4">
