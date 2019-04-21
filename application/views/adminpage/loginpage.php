@@ -9,14 +9,14 @@
 			<form action="">
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">ID Admin</label>
-					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Enter your ID">
+					<input type="text" class="form-control font-italic" id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="enter your ID">
 					<small id="emailHelp" class="form-text text-muted">We'll never share your admin ID with anyone
 						else.</small>
 				</div>
 				<div class="form-group">
 					<label for="exampleInputPassword1" style="color: teal;">Password</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					<input type="password" class="form-control font-italic" id="exampleInputPassword1" placeholder="enter your password">
 				</div>
 				<button type="submit" class="btn btn-warning align-right" style="color: teal;">Login</button>
 			</form>

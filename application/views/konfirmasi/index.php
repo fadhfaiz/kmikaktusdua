@@ -8,7 +8,7 @@
 			<hr>
 			<form action="">
 				<div class="form-group">
-					<label for="exampleInputEmail1" style="color: teal;">Kode Pesanan.</label>
+					<label for="exampleInputEmail1" style="color: teal;">Kode Pesanan</label>
 					<input type="text" class="form-control font-italic" id="exampleInputEmail1" aria-describedby="emailHelp"
 						placeholder="input kode pesanan disini">
 					<small id="emailHelp" class="form-text text-muted">Cek kesesuaian data kode booking untuk menghindari data tidak terbaca oleh sistem.</small>
