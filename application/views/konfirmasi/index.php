@@ -8,12 +8,16 @@
 			<hr>
 			<form action="">
 				<div class="form-group">
+					<label for="exampleInputEmail1" style="color: teal;">Nama Pembeli</label>
+					<input type="text" class="form-control font-italic" id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="input nama pembeli disini">
+				</div>
+				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">Kode Pesanan</label>
 					<input type="text" class="form-control font-italic" id="exampleInputEmail1" aria-describedby="emailHelp"
 						placeholder="input kode pesanan disini">
-					<small id="emailHelp" class="form-text text-muted">Cek kesesuaian data kode booking untuk menghindari data tidak terbaca oleh sistem.</small>
 				</div>
-				<button type="submit" class="btn btn-block btn-warning align-right" style="color: teal;">Cek Status Pesanan</button>
+				<button type="submit" class="btn btn-block btn-warning align-right" style="color: teal;">Lihat Status</button>
 			</form>
 		</div>
 		<div class="col-lg-4 col-md-12 col-sm-12"></div>
