@@ -105,7 +105,7 @@
 	<div class="row">
 
 		<div class="col">
-			<div class="card text-white bg-secondary mb-3">
+			<div class="card text-white bg-success mb-3">
 					<div class="card-body text-center">
 						<h5 class="card-title">Menunggu Ongkir</h5>
 					</div>
@@ -114,7 +114,7 @@
 		</div>
 
 		<div class="col">
-			<div class="card boder-secondary mb-3">
+			<div class="card border-secondary mb-3">
 				<div class="card-body text-center">
 					<h5 class="card-title">Menunggu Pembayaran</h5>
 				</div>
@@ -122,7 +122,7 @@
 		</div>
 
 		<div class="col">
-			<div class="card boder-secondary mb-3">
+			<div class="card border-secondary mb-3">
 				<div class="card-body text-center">
 					<h5 class="card-title">Pembayaran Terkonfirmasi</h5>
 				</div>
