@@ -17,7 +17,7 @@
 	<div class="container my-5">
 		<div class="card-deck">
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/product_admin"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/kaktus_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
 						<h5 class="card-title text-center">Kaktus</h5>
@@ -27,12 +27,9 @@
 							content. This content is a little bit longer.</p>
 					</div>
 				</a>
-				<!-- <div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div> -->
 			</div>
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/article_admin"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/aglonema_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
 						<h5 class="card-title text-center">Aglonema</h5>
@@ -43,12 +40,9 @@
 						</p>
 					</div>
 				</a>
-				<!-- <div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div> -->
 			</div>
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/verification_admin"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/aloevera_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
 						<h5 class="card-title text-center">Aloevera</h5>
@@ -58,9 +52,6 @@
 							content. This content is a little bit longer.</p>
 					</div>
 				</a>
-				<!-- <div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div> -->
 			</div>
 		</div>
 	</div>
@@ -70,25 +61,22 @@
 	<div class="container my-5">
 		<div class="card-deck">
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/product_admin"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/drasanena_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
-						<h5 class="card-title text-center">Kaktus</h5>
+						<h5 class="card-title text-center">Drasanena</h5>
 						<hr>
 						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
 							additional
 							content. This content is a little bit longer.</p>
 					</div>
 				</a>
-				<!-- <div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div> -->
 			</div>
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/article_admin"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/lactea_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
-						<h5 class="card-title text-center">Aglonema</h5>
+						<h5 class="card-title text-center">Lactea</h5>
 						<hr>
 						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
 							additional
@@ -96,66 +84,22 @@
 						</p>
 					</div>
 				</a>
-				<!-- <div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div> -->
 			</div>
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/verification_admin"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/paket_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
-						<h5 class="card-title text-center">Aloevera</h5>
+						<h5 class="card-title text-center">Paket</h5>
 						<hr>
 						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
 							additional
 							content. This content is a little bit longer.</p>
 					</div>
 				</a>
-				<!-- <div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div> -->
 			</div>
 		</div>
 	</div>
 </section>
-
-<!-- <section class="container">
-	<div class="row my-5 text-white">
-		<div class="col-sm-4">
-			<div class="card" id="card-satu">
-				<div class="card-body">
-					<h5 class="card-title">Tanaman Kaktus</h5>
-					<p class="card-text font-italic">With supporting text below as a natural lead-in to
-						additional content.</p>
-					<a href="#" class="btn btn-outline-secondary" disabled><i
-							class="fas fa-cart-arrow-down fa-lg mx-2"></i></a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-4">
-			<div class="card" id="card-satu">
-				<div class="card-body">
-					<h5 class="card-title">Tanaman Sansiveera</h5>
-					<p class="card-text font-italic">With supporting text below as a natural lead-in to
-						additional content.</p>
-					<a href="#" class="btn btn-outline-secondary" disabled><i
-							class="fas fa-cart-arrow-down fa-lg mx-2"></i></a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-4">
-			<div class="card" id="card-satu">
-				<div class="card-body">
-					<h5 class="card-title">Tanaman Aglonema</h5>
-					<p class="card-text text-italic">With supporting text below as a natural lead-in to
-						additional content.</p>
-					<a href="#" class="btn btn-outline-secondary" disabled><i
-							class="fas fa-cart-arrow-down fa-lg mx-2"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
 
 <section class="container">
 	<div>
@@ -227,7 +171,7 @@
 	<div class="container my-5">
 		<div class="card-deck">
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/product_admin"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/pot_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
 						<h5 class="card-title text-center">Pot Tanaman</h5>
@@ -242,7 +186,7 @@
 				</div> -->
 			</div>
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/article_admin"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/bibit_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
 						<h5 class="card-title text-center">Bibit Tanaman</h5>
@@ -258,7 +202,7 @@
 				</div> -->
 			</div>
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/verification_admin"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/batu_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
 						<h5 class="card-title text-center">Batu Tanaman</h5>
