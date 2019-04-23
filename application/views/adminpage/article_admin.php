@@ -1,5 +1,18 @@
 <section class="container mt-4 mb-4">
- <h3 class="text-center" style="color: teal;">Halaman Admin Artikel</h3>
+	<div class="row">
+		<div class="col-lg-4 col-md-12 col-sm-12">
+		
+		</div>
+
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<h3 class="text-center" style="color: teal;">Halaman Admin Artikel</h3>
+		</div>
+
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<a href="#" class="btn btn-warning">Upload Article</a>
+		</div>
+
+	</div>
 </section>
 
 <section class="container">
@@ -22,7 +35,7 @@
 					<td>IMG001</td>
 					<td>Cara Perawatan Kaktus</td>
 					<td>DD-MM-YYYY</td>
-                    <td>Action</td>
+					<td>Action</td>
 					<!-- <td>
                         <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                         <a href="#" class="btn btn-warning"><i class="fas fa-trash-alt"></i></a>
@@ -44,7 +57,7 @@
 					<td>DD-MM-YYYY</td>
 					<td>Action</td>
 				</tr>
-                <tr>
+				<tr>
 					<th scope="row">4</th>
 					<td><a href="">#AR0004</a></td>
 					<td>IMG004</td>
