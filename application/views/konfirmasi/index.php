@@ -8,9 +8,9 @@
 			<hr>
 			<form action="">
 				<div class="form-group">
-					<label for="exampleInputEmail1" style="color: teal;">Nama Pembeli</label>
+					<label for="exampleInputEmail1" style="color: teal;">Nomor Handphone</label>
 					<input type="text" class="form-control font-italic" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="input nama pembeli disini">
+						placeholder="input nomor hp disini">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">Kode Pesanan</label>
