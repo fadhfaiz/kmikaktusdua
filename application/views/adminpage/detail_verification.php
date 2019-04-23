@@ -10,7 +10,19 @@
 			</div>
 
 			<div class="card text-left">
-				<div class="card-body">
+				<div class="card-body text-muted">
+
+					<div class="row">
+						<div class="col-4">
+							<h5 class="card-title">Kode Pesanan</h5>
+						</div>
+						<div class="col-1">
+							<h5 class="card-title">:</h5>
+						</div>
+						<div class="col">
+							<h5 class="card-title">123456</h5>
+						</div>
+					</div>
 
 					<div class="row">
 						<div class="col-4">
@@ -66,6 +78,11 @@
 						</div>
 						<div class="col">
 							<h5 class="card-title"></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-4">
+							<img src="<?php echo base_url()?>assets/img/edit1.jpg" class="img-fluid">
 						</div>
 					</div>
 				</div>
@@ -90,16 +107,16 @@
 			<div class="row my-2">
 
 				<div class="col">
-					<h2>Kode Pesanan : 123456</h2>
+					<h2>Detail Pembelian</h2>
 				</div>
 
 			</div>
 
 			<div class="card text-left">
-				<div class="card-body">
+				<div class="card-body text-muted">
 					<div class="row">
 						<div class="col-4">
-							<h5 class="card-title">Nama Produk</h5>
+							<h5 class="card-title">Nama Pembeli</h5>
 						</div>
 						<div class="col-1">
 							<h5 class="card-title">:</h5>
@@ -110,7 +127,7 @@
 					</div>
 					<div class="row">
 						<div class="col-4">
-							<h5 class="card-title">Jumlah</h5>
+							<h5 class="card-title">Email</h5>
 						</div>
 						<div class="col-1">
 							<h5 class="card-title">:</h5>
@@ -121,7 +138,7 @@
 					</div>
 					<div class="row">
 						<div class="col-4">
-							<h5 class="card-title">Berat</h5>
+							<h5 class="card-title">No. Handphone</h5>
 						</div>
 						<div class="col-1">
 							<h5 class="card-title">:</h5>
@@ -132,7 +149,7 @@
 					</div>
 					<div class="row">
 						<div class="col-4">
-							<h5 class="card-title">Diameter x Tinggi</h5>
+							<h5 class="card-title">Alamat</h5>
 						</div>
 						<div class="col-1">
 							<h5 class="card-title">:</h5>
@@ -151,21 +168,6 @@
 						<div class="col">
 							<h5 class="card-title"></h5>
 						</div>
-					</div>
-
-				</div>
-				<div class="card-footer text-muted">
-					<div class="row">
-						<div class="col">
-							<form>
-								<div class="form-group">
-									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-										placeholder="Masukkan ongkos kirim">
-								</div>
-							</form>
-						</div>
-						<div class="col-0"><button type="button" class="btn btn-secondary">Submit</button></div>
-						<div class="col"><button type="button" class="btn btn-primary">Konfirmasi</button></div>
 					</div>
 				</div>
 			</div>
