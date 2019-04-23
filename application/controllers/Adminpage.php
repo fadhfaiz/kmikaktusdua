@@ -45,12 +45,22 @@
             $this->load->view('adminpage/verification_admin');
             $this->load->view('templates/footer');
         }
+
         public function detail_verification()
         {
             $data['judul'] = 'Halaman Detail Verifikasi';
 
             $this->load->view('templates/header_admin', $data);
             $this->load->view('adminpage/detail_verification');
+            $this->load->view('templates/footer');
+        }
+
+        public function article_page()
+        {
+            $data['judul'] = 'Halaman Isi Artikel';
+
+            $this->load->view('templates/header_admin', $data);
+            $this->load->view('adminpage/article_page');
             $this->load->view('templates/footer');
         }
     }

@@ -9,7 +9,7 @@
 		</div>
 
 		<div class="col-lg-4 col-md-12 col-sm-12">
-			<a href="#" class="btn btn-warning">Upload Article</a>
+			<a href="<?php echo base_url()?>adminpage/article_page" class="btn btn-warning">Upload Article</a>
 		</div>
 
 	</div>
