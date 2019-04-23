@@ -18,7 +18,10 @@
 				</div>
 			</a>
 			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
+				<small class="">
+                <a href="#" class="btn btn-outline-info"><i class="fas fa-edit fa-lg"></i></a>
+                <a href="#" class="btn btn-outline-danger"><i class="fas fa-trash-alt fa-lg"></i></a>
+                </small>
 			</div>
 		</div>
 		<div class="card">
