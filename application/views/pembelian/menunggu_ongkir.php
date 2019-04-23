@@ -41,7 +41,7 @@
 					<h5 class="card-title">:</h5>
 				</div>
 				<div class="col-7">
-					<h5 class="card-title"></h5>
+					<h5 class="card-title">Kaktus Duri Duri</h5>
 				</div>
 			</div>
 
@@ -53,7 +53,7 @@
 					<h5 class="card-title">:</h5>
 				</div>
 				<div class="col-7">
-					<h5 class="card-title"></h5>
+					<h5 class="card-title">3</h5>
 				</div>
 			</div>
 
@@ -65,7 +65,7 @@
 					<h5 class="card-title">:</h5>
 				</div>
 				<div class="col-7">
-					<h5 class="card-title"></h5>
+					<h5 class="card-title">Rp. 235,000</h5>
 				</div>
 			</div>
 
@@ -91,7 +91,7 @@
 					<h5 class="card-text">:</h5>
 				</div>
 				<div class="col-7">
-					<h5 class="card-text"></h5>
+					<h5 class="card-text">Rp. 235,000</h5>
 				</div>
 			</div>
 
@@ -137,49 +137,25 @@
 
 			<div class="row">
 				<div class="col-4">
-					<h5 class="card-title">Nama Produk</h5>
+					<h5 class="card-title">Alamat Email</h5>
 				</div>
 				<div class="col-1">
 					<h5 class="card-title">:</h5>
 				</div>
 				<div class="col-7">
-					<h5 class="card-title"></h5>
+					<h5 class="card-title">fadh.leather@gmail.com</h5>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-4">
-					<h5 class="card-title">Jumlah</h5>
+					<h5 class="card-title">Keterangan Tambahan</h5>
 				</div>
 				<div class="col-1">
 					<h5 class="card-title">:</h5>
 				</div>
 				<div class="col-7">
-					<h5 class="card-title"></h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Harga Produk</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title"></h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Ongkos Kirim</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title"></h5>
+					<h5 class="card-title">Tolong dipilihkan warna daunnya yang segarrr</h5>
 				</div>
 			</div>
 		</div>
@@ -196,26 +172,26 @@
 					<h5 class="card-text"></h5>
 				</div>
 			</div>
-
 		</div>
+
 	</div>
 </div>
 
-<div class="container my-2">
+<div class="container mb-5">
 	<div class="row">
 
 		<div class="col text-center">
-            <label>Step 1</label>
+			<label>Step 1</label>
 			<div class="card text-white bg-success">
-					<div class="card-body text-center">
-						<h5 class="card-title">Menunggu Ongkir</h5>
-					</div>
+				<div class="card-body text-center">
+					<h5 class="card-title">Menunggu Ongkir</h5>
+				</div>
 				</a>
 			</div>
 		</div>
 
 		<div class="col text-center">
-             <label>Step 2</label>
+			<label>Step 2</label>
 			<div class="card border-secondary">
 				<div class="card-body text-center">
 					<h5 class="card-title">Menunggu Pembayaran</h5>
@@ -224,7 +200,7 @@
 		</div>
 
 		<div class="col text-center">
-            <label>Step 3</label>
+			<label>Step 3</label>
 			<div class="card border-secondary">
 				<div class="card-body text-center">
 					<h5 class="card-title">Pembayaran Terkonfirmasi</h5>
@@ -232,17 +208,5 @@
 			</div>
 		</div>
 
-    </div>
-    <br><br>
-    <div class="row">
-        <div class="col">
-        <div class="card border-secondary">
-					<div class="card-body text-center">
-						<h5 class="card-title">Upload bukti bayar</h5>
-					</div>
-				</a>
-	    </div>
-        </div>
-  
-    </div>
+	</div>
 </div>

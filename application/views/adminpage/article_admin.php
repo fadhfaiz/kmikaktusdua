@@ -1,7 +1,7 @@
 <section class="container mt-4 mb-4">
 	<div class="row">
 		<div class="col-lg-4 col-md-12 col-sm-12">
-		
+
 		</div>
 
 		<div class="col-lg-4 col-md-12 col-sm-12">
@@ -35,7 +35,10 @@
 					<td>IMG001</td>
 					<td>Cara Perawatan Kaktus</td>
 					<td>DD-MM-YYYY</td>
-					<td>Action</td>
+					<td>
+						<span><a href="#" class="btn btn-outline-success"><i class="fas fa-edit"></i></a></span>
+						<span><a href="#" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a></span>
+					</td>
 					<!-- <td>
                         <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                         <a href="#" class="btn btn-warning"><i class="fas fa-trash-alt"></i></a>
@@ -47,7 +50,10 @@
 					<td>IMG002</td>
 					<td>Tanaman Trend 2019</td>
 					<td>DD-MM-YYYY</td>
-					<td>Action</td>
+					<td>
+						<span><a href="#" class="btn btn-outline-success"><i class="fas fa-edit"></i></a></span>
+						<span><a href="#" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a></span>
+					</td>
 				</tr>
 				<tr>
 					<th scope="row">3</th>
@@ -55,7 +61,10 @@
 					<td>IMG003</td>
 					<td>Pot Batu Untuk Meja</td>
 					<td>DD-MM-YYYY</td>
-					<td>Action</td>
+					<td>
+						<span><a href="#" class="btn btn-outline-success"><i class="fas fa-edit"></i></a></span>
+						<span><a href="#" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a></span>
+					</td>
 				</tr>
 				<tr>
 					<th scope="row">4</th>
@@ -63,7 +72,10 @@
 					<td>IMG004</td>
 					<td>Aksesoris Untuk Tanaman</td>
 					<td>DD-MM-YYYY</td>
-					<td>Action</td>
+					<td>
+						<span><a href="#" class="btn btn-outline-success"><i class="fas fa-edit"></i></a></span>
+						<span><a href="#" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a></span>
+					</td>
 				</tr>
 			</tbody>
 		</table>
