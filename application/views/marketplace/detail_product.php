@@ -11,7 +11,7 @@
 			<div class="text-center text-muted font-italic">
 				<h6>Kode Tanaman : KK00212</h6>
 			</div>
-			<div class="text-center" <a class="h3">Rp 360.000</a></div>
+			<div class="text-center" class="h3">Rp 360.000</a></div>
 			<a href="<?= base_url(); ?>marketplace/index" class="btn btn-block btn-outline-info my-3"><i
 					class="fas fa-arrow-circle-left mr-2">
 				</i> Kembali ke Marketplace</a>
