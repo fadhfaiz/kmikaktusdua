@@ -87,10 +87,7 @@
 
         <div class="row">
         <div class="col-6 my-2"><a href="<?= base_url(); ?>marketplace/index" class="btn btn-outline-info btn-block align-right"><i class="fas fa-arrow-circle-left fa-lg"></i> Back to Marketplace</a></div>
-        <div class="col-6 my-2"><a href="<?= base_url(); ?>pembelian/status_kirim" class="btn btn-success btn-block align-right">Checkout <i class="fas fa-arrow-circle-right fa-lg"></i></a></div>
+        <div class="col-6 my-2"><a href="<?= base_url(); ?>pembelian/status_kirim" class="btn btn-success btn-block align-right">Detail Pesanan <i class="fas fa-arrow-circle-right fa-lg"></i></a></div>
         </div>
-
-        
-
 	</form>
 </section>
