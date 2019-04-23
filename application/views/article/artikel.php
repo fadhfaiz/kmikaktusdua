@@ -1,4 +1,4 @@
-<br><br>
+<br>
   <div class="container">
         <div class="row">
            <h1>Lorem Ipsum Dolor Sit Amet</h1>
@@ -7,11 +7,13 @@
            <div class="col"><h4 style="text-align:right">DD/MM/YYYY</h4></div>
         </div>
         <div class="row">
-          <div class="col mt-4 mb-4">
+          <center>
+          <div class="col-lg-9">
               <div class="card bg-dark" >
                 <img src="<?php echo base_url()?>assets/img/kaktus01.jpg" class="img-fluid" alt="Responsive image">
               </div>
           </div>
+          </center>
         </div>
         <div class="row">
           <div class="col mt-4 mb-4">

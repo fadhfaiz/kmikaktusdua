@@ -22,9 +22,8 @@
 		<div class="card">
 			<img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
-                    <h6 class="card-title">Title 1</h6>
-                    <p class="card-text">5 Fakta menarik tentang kaktus</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
+                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
 				</div>
           </a>
 		</div>
@@ -32,9 +31,8 @@
 		<div class="card">
 			<img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
-                    <h6 class="card-title">Title 1</h6>
-                    <p class="card-text">5 Fakta menarik tentang kaktus</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
+                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
 				</div>
           </a>
           </div>
@@ -42,9 +40,8 @@
 		<div class="card">
 			<img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
-                    <h6 class="card-title">Title 1</h6>
-                    <p class="card-text">5 Fakta menarik tentang kaktus</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
+                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
 				</div>
           </a>
           </div>
@@ -52,9 +49,8 @@
 		<div class="card">
 			<img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
-                    <h6 class="card-title">Title 1</h6>
-                    <p class="card-text">5 Fakta menarik tentang kaktus</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
+                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
 				</div>
           </a>
           </div>
@@ -62,9 +58,8 @@
 		<div class="card">
 			<img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
-                    <h6 class="card-title">Title 1</h6>
-                    <p class="card-text">5 Fakta menarik tentang kaktus</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
+                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
 				</div>
           </a>
           </div>
