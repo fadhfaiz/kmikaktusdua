@@ -10,12 +10,28 @@
             $this->load->view('templates/footer');
         }
 
-        public function status_kirim()
+        public function menunggu_ongkir()
         {
             $data['judul'] = 'Halaman Status Pengiriman';
 
             $this->load->view('templates/header', $data);
-            $this->load->view('pembelian/status_kirim');
+            $this->load->view('pembelian/menunggu_ongkir');
+            $this->load->view('templates/footer');
+        }
+        public function menunggu_pembayaran()
+        {
+            $data['judul'] = 'Halaman Status Pengiriman';
+
+            $this->load->view('templates/header', $data);
+            $this->load->view('pembelian/menunggu_pembayaran');
+            $this->load->view('templates/footer');
+        }
+        public function terkonfirmasi()
+        {
+            $data['judul'] = 'Halaman Status Pengiriman';
+
+            $this->load->view('templates/header', $data);
+            $this->load->view('pembelian/terkonfirmasi');
             $this->load->view('templates/footer');
         }
     }
