@@ -91,7 +91,7 @@
 						<div class="col">
 							<form>
 								<div class="form-group">
-									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+									<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
 										placeholder="Masukkan ongkos kirim">
 								</div>
 							</form>

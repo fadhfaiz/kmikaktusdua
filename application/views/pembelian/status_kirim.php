@@ -204,7 +204,8 @@
 <div class="container my-2">
 	<div class="row">
 
-		<div class="col">
+		<div class="col text-center">
+            <label>Step 1</label>
 			<div class="card text-white bg-success">
 					<div class="card-body text-center">
 						<h5 class="card-title">Menunggu Ongkir</h5>
@@ -213,7 +214,8 @@
 			</div>
 		</div>
 
-		<div class="col">
+		<div class="col text-center">
+             <label>Step 2</label>
 			<div class="card border-secondary">
 				<div class="card-body text-center">
 					<h5 class="card-title">Menunggu Pembayaran</h5>
@@ -221,7 +223,8 @@
 			</div>
 		</div>
 
-		<div class="col">
+		<div class="col text-center">
+            <label>Step 3</label>
 			<div class="card border-secondary">
 				<div class="card-body text-center">
 					<h5 class="card-title">Pembayaran Terkonfirmasi</h5>
@@ -229,5 +232,17 @@
 			</div>
 		</div>
 
-	</div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col">
+        <div class="card border-secondary">
+					<div class="card-body text-center">
+						<h5 class="card-title">Upload bukti bayar</h5>
+					</div>
+				</a>
+	    </div>
+        </div>
+  
+    </div>
 </div>
