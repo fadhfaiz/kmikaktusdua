@@ -68,6 +68,14 @@
             $this->load->view('adminpage/article_page');
             $this->load->view('templates/footer');
         }
+        public function product_baru()
+        {
+            $data['judul'] = 'Halaman Menambah Produk Baru';
+
+            $this->load->view('templates/header_admin', $data);
+            $this->load->view('adminpage/product_baru');
+            $this->load->view('templates/footer');
+        }
     }
 
 ?>
