@@ -48,7 +48,7 @@
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?= base_url(); ?>adminpage/loginpage">Logout</a>
+						<a class="nav-link" href="<?php echo base_url('Login/logout'); ?>">Logout</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<!-- <li class="nav-item dropdown">

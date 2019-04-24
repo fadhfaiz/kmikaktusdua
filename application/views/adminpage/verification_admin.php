@@ -16,21 +16,21 @@
     </thead>
     <tbody>
        <tr>
-        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/detail_verification" >123456</a></th>
+        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/ongkir_verification" >123456</a></th>
         <td>kaktus Sehat</td>
         <td>Rocky Gersang</td>
         <td>DD-MM-YYYY</td>
         <td>Menunggu ongkir</td>
         </tr>
         <tr>
-        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/detail_verification" >123456</a></th>
+        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/konfirmasi_verification" >123456</a></th>
         <td>Kaktus Nyai</td>
         <td>Ratna Sarungterompet</td>
         <td>DD-MM-YYYY</td>
         <td>Terkonfirmasi</td>
         </tr>
         <tr>
-        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/detail_verification" >123456</a></th>
+        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/konfirmasi_verification" >123456</a></th>
         <td>Kaktus Setan</td>
         <td>Gres Natali</td>
         <td>DD-MM-YYYY</td>

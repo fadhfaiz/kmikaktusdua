@@ -1,24 +1,21 @@
 <?php 
     Class Adminpage extends CI_Controller
     {
-        public function index()
-        {
+        function __construct(){
+            parent::__construct();
+        
+            if($this->session->userdata('status') != "Login"){
+                redirect(base_url("Login"));
+            }
+        }
+        Public function index(){
             $data['judul'] = 'Halaman Admin';
 
             $this->load->view('templates/header_admin', $data);
             $this->load->view('adminpage/index');
             $this->load->view('templates/footer');
+        
         }
-
-        public function loginpage()
-        {
-            $data['judul'] = 'Halaman Login';
-
-            $this->load->view('templates/header_admin', $data);
-            $this->load->view('adminpage/loginpage');
-            $this->load->view('templates/footer');
-        }
-
         public function product_admin()
         {
             $data['judul'] = 'Produk Administrator';
@@ -46,12 +43,20 @@
             $this->load->view('templates/footer');
         }
 
-        public function detail_verification()
+        public function ongkir_verification()
         {
             $data['judul'] = 'Halaman Detail Verifikasi';
 
             $this->load->view('templates/header_admin', $data);
-            $this->load->view('adminpage/detail_verification');
+            $this->load->view('adminpage/ongkir_verification');
+            $this->load->view('templates/footer');
+        }
+        public function konfirmasi_verification()
+        {
+            $data['judul'] = 'Halaman Detail Verifikasi';
+
+            $this->load->view('templates/header_admin', $data);
+            $this->load->view('adminpage/konfirmasi_verification');
             $this->load->view('templates/footer');
         }
 
