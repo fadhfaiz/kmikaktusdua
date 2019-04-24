@@ -35,10 +35,10 @@
 			var myChart = new Chart(ctx, {
 				type: 'line',
 				data: {
-					labels: ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+					labels: ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu","Minggu"],
 					datasets: [{
 						label: 'Statistik Harian Pengunjung',
-						data: [12, 19, 3, 23, 2, 3, 11],
+						data: [12, 19, 3, 23, 2, 3, 11,5],
 						backgroundColor: [
 							'rgba(0, 128, 128, 0.2)',
 							'rgba(54, 162, 235, 0.2)',
