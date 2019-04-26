@@ -26,7 +26,7 @@
 
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark shadow p-3">
 		<div class="container">
-			<a class="navbar-brand" href="<?= base_url(); ?>adminpage/index">
+			<a class="navbar-brand" href="<?= base_url(); ?>adminpage/home">
 				<!-- <img src="" width="39" height="39" class="mr-2" alt=""> -->
 				Hello Admin !</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

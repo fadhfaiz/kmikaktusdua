@@ -82,7 +82,7 @@
 		<div class="container my-5">
 			<div class="card-deck">
 
-				<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/product_admin"
+				<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/Produk/product_admin"
 						style="color:white; text-decoration: none;">
 						<div class="card-body">
 							<h5 class="card-title text-center">Admin Produk</h5>
@@ -97,7 +97,7 @@
 				</div> -->
 				</div>
 
-				<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/article_admin"
+				<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/artikel/article_admin"
 						style="color:white; text-decoration: none;">
 						<div class="card-body">
 							<h5 class="card-title text-center">Admin Artikel</h5>
@@ -113,7 +113,7 @@
 				</div> -->
 				</div>
 
-				<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/verification_admin"
+				<div class="card bg-dark"><a href="<?php echo base_url(); ?>adminpage/verifikasi/verification_admin"
 						style="color:white; text-decoration: none;">
 						<div class="card-body">
 							<h5 class="card-title text-center">Admin Verifikasi</h5>
