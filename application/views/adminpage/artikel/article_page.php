@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <section class="container my-5">
 	<?php if ($this->session->flashdata('success')): ?>
 					<div class="alert alert-success" role="alert">
@@ -21,19 +22,24 @@
 								</div>
 		</div>
 	<div class="row">
-		<div class="col-sm-8">
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<span class="input-group-text">Upload</span>
+		<div class="col-sm-8">		
+				<div class="custom-file mb-3">
+					<input type="file" class="custom-file-input <?php echo form_error('gambar') ? 'is-invalid':'' ?>" id="customFile" name="gambar">
+					<label class="custom-file-label" for="customFile">Choose file</label>
+					<div class="invalid-feedback">
+									<?php echo form_error('gambar') ?>
+								</div>
 				</div>
-				<div class="custom-file">
-					<input type="file" class="custom-file-input" id="gambar" name="gambar">
-					<label class="custom-file-label" for="gambar"></label>
-				</div>
-			</div>
 		</div>
 		<div class="col-sm-2"><button class="btn btn-block btn-warning" type="reset">Cancel</button></div>
 		<div class="col-sm-2"><button class="btn btn-block btn-warning" type="submit">Submit</button></div>
 	</div>
 	</form>
 </section>
+<script>
+				// Add the following code if you want the name of the file appear on select
+				$(".custom-file-input").on("change", function() {
+				var fileName = $(this).val().split("\\").pop();
+				$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+				});
+</script>

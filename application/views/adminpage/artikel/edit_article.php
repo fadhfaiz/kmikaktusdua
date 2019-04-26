@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <section class="container my-5">
 	<form action="<?php base_url('Adminpage/Artikel/edit_article') ?>" method="post">
     <div class="form-group">
@@ -24,15 +25,12 @@
 								</div>
         </div>
         <div class="row">
-		<div class="col-8">
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<span class="input-group-text">Upload</span>
-				</div>
-				<div class="custom-file">
-					<input type="file" class="custom-file-input <?php echo form_error('gambar') ? 'is-invalid':'' ?>" id="gambar" name="gambar">
-                    <label class="custom-file-label" for="inputGroupFile01"><?php echo $artikel->gambar ?></label>
-                    <div class="invalid-feedback">
+		<div class="col-sm-8">		
+			<div class="form-group">
+				<div class="custom-file mb-3">
+					<input type="file" class="custom-file-input <?php echo form_error('gambar') ? 'is-invalid':'' ?>" id="customFile" name="gambar">
+					<label class="custom-file-label" for="customFile"><?php echo $artikel->gambar ?></label>
+					<div class="invalid-feedback">
 									<?php echo form_error('gambar') ?>
 								</div>
 				</div>
@@ -44,3 +42,10 @@
 	</form>
 
 </section>
+<script>
+				// Add the following code if you want the name of the file appear on select
+				$(".custom-file-input").on("change", function() {
+				var fileName = $(this).val().split("\\").pop();
+				$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+				});
+</script>
