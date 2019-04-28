@@ -1,17 +1,18 @@
 <section class="container">
+
 	<div class="row">
 		<div class="col-lg-6 col-md-12 col-sm-12 mt-4 mb-5">
-			<img src="<?php echo base_url()?>assets/img/kaktus03.jpg" class="img-fluid" alt="Responsive image">
+			<img src="<?php echo base_url().'assets/img/'.$barang->gambar?>" class="img-fluid" alt="Responsive image">
 		</div>
 
 		<div class="col-lg-6 col-md-12 col-sm-12 mt-4 mb-5">
 			<div class="text-center font-weight-bold">
-				<h1>Tanaman Kaktus</h1>
+				<h1><?php echo $barang->nama_tanaman;?></h1>
 			</div>
 			<div class="text-center text-muted font-italic">
-				<h6>Kode Tanaman : KK00212</h6>
+				<h6><?php echo $barang->kode_tanaman;?></h6>
 			</div>
-			<div class="text-center" class="h3">Rp 360.000</a></div>
+			<div class="text-center" class="h3">Rp. <?php echo $barang->harga;?></a></div>
 			<a href="<?= base_url(); ?>marketplace/index" class="btn btn-block btn-outline-info my-3"><i
 					class="fas fa-arrow-circle-left mr-2">
 				</i> Kembali ke Marketplace</a>
@@ -25,17 +26,17 @@
 						<tr>
 							<th scope="row">Stok Produk</th>
 							<td>:</td>
-							<td>8 pcs</td>
+							<td><?php echo $barang->stok;?> pcs</td>
 						</tr>
 						<tr>
 							<th scope="row">Diameter Pot</th>
 							<td>:</td>
-							<td>20 cm</td>
+							<td><?php echo $barang->diameter;?> cm</td>
 						</tr>
 						<tr>
 							<th scope="row">Tinggi Tanaman</th>
 							<td>:</td>
-							<td>45 cm</td>
+							<td><?php echo $barang->tinggi;?> cm</td>
 						</tr>
 					</tbody>
 				</table>

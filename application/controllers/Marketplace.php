@@ -1,8 +1,15 @@
 <?php 
     Class Marketplace extends CI_Controller
     {
+        public function __construct(){
+            parent::__construct();
+            $this->load->model('Marketplace_model');
+            
+        }
+
         public function index()
         {
+            $data['barang'] = $this->Marketplace_model->getDataBarang();
             $data['judul'] = 'Marketplace';
 
             $this->load->view('templates/header', $data);
@@ -10,8 +17,9 @@
             $this->load->view('templates/footer');
         }
 
-        public function detail_product()
+        public function detail_product($id)
         {
+            $data['barang'] = $this->Marketplace_model->getById($id);
             $data['judul'] = 'Disini Nama Produk';
 
             $this->load->view('templates/header', $data);
