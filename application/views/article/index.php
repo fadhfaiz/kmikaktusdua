@@ -19,51 +19,24 @@
 <section class="container">
 	<br><br>
 	<div class="card-deck my-3"><a href="<?php echo base_url(); ?>article/artikel" style="color:black; text-decoration: none;">
-		<div class="card">
-			<img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
-                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
-				</div>
-          </a>
-		</div>
-		<a href="<?php echo base_url(); ?>article/artikel" style="color:black; text-decoration: none;">
-		<div class="card">
-			<img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
-                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
-				</div>
-          </a>
-          </div>
-          <a href="<?php echo base_url(); ?>article/artikel" style="color:black; text-decoration: none;">
-		<div class="card">
-			<img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
-                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
-				</div>
-          </a>
-          </div>
-		<a href="<?php echo base_url(); ?>article/artikel" style="color:black; text-decoration: none;">
-		<div class="card">
-			<img src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
-                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
-				</div>
-          </a>
-          </div>
-		<a href="<?php echo base_url(); ?>article/artikel" style="color:black; text-decoration: none;">
-		<div class="card">
-			<img src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-                    <h6 class="card-title">5 Fakta menarik tentang kaktus</h6>
-                    <p class="card-text" style="font-size:12px">Last updated 3 mins ago</p>
-				</div>
-          </a>
-          </div>
-
+		
+               <?php
+                    foreach($artikelku as $a){
+                         echo '
+                         <a href="'. base_url().'article/artikel/'.$a->kode_artikel.'" style="color:black; text-decoration: none;">
+                         <div class="card">
+                              <img src="'. base_url().'assets/img/'.$a->gambar.'" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                   <h6 class="card-title">'.$a->judul.'</h6>
+                                   <p class="card-text" style="font-size:12px">'.$a->tanggal.'</p>
+                                   </div>
+                              </a>
+                         </div>
+                         ';
+                    }
+               ?>
+     </div>
+          
 </section>
 
 </div>
