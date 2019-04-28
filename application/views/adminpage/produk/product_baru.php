@@ -1,87 +1,107 @@
 <section class="container my-4">
-    <h1 style="font-weight:bold">Produk Baru !</h1>
+	<h2 style="color: teal;" class="text-center">Upload Produk Baru.</h2>
+    <hr>
 </section>
-<section class="container my-4">
-    <div class="row">
-        <div class="col-sm">
-        <form action="">
-            <div class="form-group">
-                <label for="judul_artikel" style="color: teal;" class="h4">Nama Produk</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Nama Produk">
-            </div>
-            <div class="form-group">
-                <label for="isi_artikel" style="color: teal;" class="h4">Tipe</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                        Tanaman
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                        Aksesoris
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                        Paket
-                        </label>
-                    </div>
-            </div>
-            <div class="form-group">
-            <label for="isi_artikel" style="color: teal;" class="h4">Grup</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected>Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-            </div>
-            <div class="form-group">
-                <label for="judul_artikel" style="color: teal;" class="h4">Harga</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Nama Produk">
-            </div>
-            <div class="form-group">
-                <label for="judul_artikel" style="color: teal;" class="h4">Size</label>
-                <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-0 h4" style="color: teal;">Diameter</div>
-                    <div class="col-1 h4" style="color: teal;">:</div>
-                    <div class="col-0">
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Nama Produk">
-                    </div>
+
+<section class="container">
+	<form action="">
+		<div class="row">
+
+			<div class="col-lg-6 col-md-12 col-sm-12">
+
+				<div class="form-group">
+					<label for="exampleInputEmail1" style="color: teal;">Nama Produk</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Nama produk">
+				</div>
+
+				<div class="form-group">
+					<label for="exampleInputEmail1" style="color: teal;">Tipe Tanaman</label>
+					<div class="form-check">
+						&nbsp;<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+							value="option2">
+						<label class="form-check-label" for="exampleRadios2">
+							Tanaman
+						</label>
+					</div>
+					<div class="form-check">
+						&nbsp;<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+							value="option2">
+						<label class="form-check-label" for="exampleRadios2">
+							Aksesoris
+						</label>
+					</div>
+					<div class="form-check">
+						&nbsp;<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+							value="option2">
+						<label class="form-check-label" for="exampleRadios2">
+							Paket
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="exampleFormControlSelect1" style="color: teal;">Grup Tanaman</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="exampleInputEmail1" style="color: teal;">Harga Produk</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Harga produk">
+				</div>
+
+			</div>
+
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<div class="row">
+					<div class="col-4">
+						<div class="form-group">
+							<label for="exampleInputEmail1" style="color: teal;">Diameter Produk</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+								placeholder="... cm">
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="form-group">
+							<label for="exampleInputEmail1" style="color: teal;">Tinggi Produk</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+								placeholder="... cm">
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="form-group">
+							<label for="exampleInputEmail1" style="color: teal;">Berat Produk</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+								placeholder="... gram">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="exampleInputEmail1" style="color: teal;">Keterangan Tambahan</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Tentang produk">
+				</div>
+
+				<div class="custom-file">
+					<input type="file" class="custom-file-input" id="customFile">
+					<label class="custom-file-label" for="customFile">Upload Foto Produk</label>
+				</div>
+
+                <div class="row mt-4">
+                    <div class="col-4"><a href="<?php echo base_url()?>adminpage/Produk/product_admin" class="btn btn-outline-secondary btn-block">Cancel</a></div>
+                    <div class="col-8"><a href="" class="btn btn-success btn-block">Tambah Produk</a></div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-0 h4" style="color: teal;">Tinggi</div>
-                    <div class="col-1 h4" style="color: teal;">:</div>
-                    <div class="col-0">
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Nama Produk">
-                    </div>
-                </div>
-            </div>          
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-0 h4" style="color: teal;">Berat</div>
-                    <div class="col-1 h4" style="color: teal;">:</div>
-                    <div class="col-0">
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Nama Produk">
-                    </div>
-                </div>
-            </div>
-            
-	    </form>
-        </div>
-        <div class="col"></div>
-    </div>
+
+			</div>
+
+		</div>
+	</form>
 </section>

@@ -1,9 +1,9 @@
 <section class="container mt-4">
 	<form action="">
 		<div class="row">
-			<div class="col-sm-8"><input class="form-control" type="text" placeholder="Cari tanaman"></div>
-			<div class="col-sm-2"><button class="btn btn-block btn-warning">Search</button></div>
-			<div class="col-sm-2"><a href="<?php echo base_url()?>adminpage/produk/product_baru" class="btn btn-warning">Upload Product</a></div>
+			<div class="col-6"><input class="form-control" type="text" placeholder="Cari tanaman"></div>
+			<div class="col-3"><button class="btn btn-block btn-outline-secondary">Search</button></div>
+			<div class="col-3"><a href="<?php echo base_url()?>adminpage/produk/product_baru" class="btn btn-block btn-warning">Upload Produk Baru</a></div>
 		</div>
 	</form>
 </section>
@@ -25,7 +25,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
@@ -63,7 +63,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
@@ -82,7 +82,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
@@ -101,7 +101,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
@@ -125,7 +125,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
@@ -144,7 +144,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
@@ -163,7 +163,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
@@ -182,7 +182,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
@@ -201,7 +201,7 @@
 					</div>
 					<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 					</div>
-					<div class="col-6"><input class="form-control" type="text" placeholder="2"></div>
+					<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled></div>
 				</div>
 			</div>
 		</div>
