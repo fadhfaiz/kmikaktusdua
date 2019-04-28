@@ -1,30 +1,39 @@
 <?php
 // untuk interaksi ke database
     class Marketplace_model extends CI_Model{
-        public function getDataBarang(){
-            return $this->db->query('SELECT 
-                        t.kode_tanaman, t.nama_tanaman, t.harga, t.gambar
-                        FROM 
-                        tanaman t 
-                        UNION 
-                        SELECT 
-                        a.kode_aksesoris, a.nama, a.harga, a.gambar 
-                        FROM 
-                        aksesoris a')->result();
+        public function getDataTanaman(){
+            $this->db->select("*");
+            $this->db->from("tanaman");
+            return $this->db->get()->result();
+        }
+        public function getDataAksesoris(){
+            $this->db->select("*");
+            $this->db->from("aksesoris");
+            return $this->db->get()->result();
+        }
+        public function getDataPaket(){
+            $this->db->select("*");
+            $this->db->from("paket");
+            return $this->db->get()->result();
         }
 
-        public function getById($id){
-            return $this->db->query("SELECT 
-                        t.kode_tanaman, t.nama_tanaman, t.harga, t.gambar, t.bobot, t.diameter, t.tinggi, t.stok
-                        FROM 
-                        tanaman t 
-                        WHERE t.kode_tanaman = '$id'
-                        UNION 
-                        SELECT 
-                        a.kode_aksesoris, a.nama, a.harga, a.gambar, 0 AS bobot, 0 AS diameter, 0 AS tinggi, a.stok 
-                        FROM 
-                        aksesoris a
-                        WHERE a.kode_aksesoris = '$id'")->row();
+        public function getByTanaman($id){
+            $this->db->select("*");
+            $this->db->from("tanaman");
+            $this->db->where('kode_tanaman', $id);
+            return $this->db->get()->row();
+        }
+        public function getByAksesoris($id){
+            $this->db->select("*");
+            $this->db->from("aksesoris");
+            $this->db->where('kode_aksesoris', $id);
+            return $this->db->get()->row();
+        }
+        public function getByPaket($id){
+            $this->db->select("*");
+            $this->db->from("paket");
+            $this->db->where('kode_paket', $id);
+            return $this->db->get()->row();
         }
     }
 
