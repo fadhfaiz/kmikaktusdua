@@ -7,7 +7,21 @@ class Article_Model extends CI_Model
   public $judul;
   public $gambar;
   public $isi;
-  
+ 
+// untuk interaksi ke database
+        public function getDataArtikel(){
+            $this->db->select("*");
+            $this->db->from("artikel");
+            return $this->db->get()->result();
+        }
+
+        public function getByIdArtikel($id){
+            $this->db->select("*");
+            $this->db->from("artikel");
+            $this->db->where('kode_artikel', $id);
+            return $this->db->get()->row();
+        }
+
   public function rules()
   {
     return[
