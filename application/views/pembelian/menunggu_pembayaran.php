@@ -235,13 +235,12 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col">
-        <div class="card border-secondary">
-					<div class="card-body text-center">
-						<h5 class="card-title">Upload bukti bayar</h5>
-					</div>
-				</a>
-	    </div>
+        <div class="col-sm">
+        <div class="custom-file mb-3">
+					<input type="file" class="custom-file-input" id="customFile" name="gambar">
+					<label class="custom-file-label" for="customFile">Choose file</label>
+	
+				</div>
         </div>
   
     </div>
