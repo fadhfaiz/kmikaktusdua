@@ -34,10 +34,11 @@
 <section class="container">
 	<div class="card-deck my-4">
 		<?php	
-			foreach($barang as $b){
+			foreach($tanaman as $b){
 				echo '
+
 					<div class="card">
-						<a href="' .base_url().'marketplace/detail_product/'.$b->kode_tanaman.'"
+						<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_tanaman.'"
 							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
@@ -48,6 +49,43 @@
 							<small class="text-muted">Rp. '.$b->harga.'</small>
 						</div>
 					</div>
+
+				';
+			}
+			foreach($aksesoris as $b){
+				echo '
+
+					<div class="card">
+						<a href="' .base_url().'marketplace/detail_aksesoris/'.$b->kode_aksesoris.'"
+							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
+								class="card-img-top" alt="...">
+							<div class="card-body">
+								<h6 class="card-title">'.$b->nama.'</h6>
+							</div>
+						</a>
+						<div class="card-footer">
+							<small class="text-muted">Rp. '.$b->harga.'</small>
+						</div>
+					</div>
+
+				';
+			}
+			foreach($paket as $b){
+				echo '
+
+					<div class="card">
+						<a href="' .base_url().'marketplace/detail_paket/'.$b->kode_paket.'"
+							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
+								class="card-img-top" alt="...">
+							<div class="card-body">
+								<h6 class="card-title">'.$b->nama_paket.'</h6>
+							</div>
+						</a>
+						<div class="card-footer">
+							<small class="text-muted">Rp. '.$b->harga.'</small>
+						</div>
+					</div>
+
 				';
 			}
 		?>
