@@ -1,10 +1,12 @@
 <?php
 class Login extends CI_Controller
 {
+    
     function __construct(){
         parent::__construct();
         $this->load->model('Login_Model');
     }
+
     public function index()
     {
         $data['judul'] = 'Halaman Admin';
@@ -37,6 +39,7 @@ class Login extends CI_Controller
                 echo "Username dan password salah !";
             }
    }
+   
    function logout(){
     $this->session->sess_destroy();
     redirect(base_url('Login'));
