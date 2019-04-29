@@ -42,14 +42,33 @@
 								<td><?php echo date("d/m/Y") ?></td>		
 								<td>
 								<span><a href="<?php echo base_url('Adminpage/Artikel/edit_article/'.$artikel->kode_artikel)?>" class="btn btn-outline-success"><i class="fas fa-edit"></i></a></span>
-								<span><a href="<?php echo base_url('Adminpage/Artikel/hapus_article/'.$artikel->kode_artikel)?>" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a></span>
+								<span><button class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-trash-alt"></i></button></span>
 								</td>
 								</tr>
-				
+								<!-- Modal -->
+							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">HAPUS</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									Yakin Ingin Menghapus Data??
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<a href="<?php echo base_url('Adminpage/Artikel/hapus_article/'.$artikel->kode_artikel)?>" class="btn btn-primary">Save changes</a>
+								</div>
+								</div>
+							</div>
+							</div>
+							<!-- Modal -->
 				<?php endforeach; ?>	
 				<?php endif; ?>	
 				</tr>
-			
 			</tbody>
 		</table>
 	</div>

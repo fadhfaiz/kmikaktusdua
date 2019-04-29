@@ -1,11 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <section class="container my-5">
-	<?php if ($this->session->flashdata('success')): ?>
-					<div class="alert alert-success" role="alert">
-						<?php echo $this->session->flashdata('success'); ?>
-					</div>
-	<?php endif; ?>
-	<form action="<?php base_url('Adminpage/Artikel/article_admin') ?>" method="post">
+	<form action="<?php echo base_url(); ?>Adminpage/Artikel/article_page" method="post">
 		<div class="form-group">
 			<label for="judul" style="color: teal;" class="h4">Judul Artikel</label>
 			<input type="text" class="form-control <?php echo form_error('judul') ? 'is-invalid':'' ?>"  id="judul" name="judul" aria-describedby="emailHelp"
@@ -35,6 +30,7 @@
 		<div class="col-sm-2"><button class="btn btn-block btn-warning" type="submit">Submit</button></div>
 	</div>
 	</form>
+	<a href="<?php echo base_url(); ?>Adminpage/Artikel/article_admin"><i class="fas fa-arrow-left"></i> Back</a>
 </section>
 <script>
 				// Add the following code if you want the name of the file appear on select
