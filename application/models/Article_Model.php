@@ -36,6 +36,7 @@ class Article_Model extends CI_Model
         'rules' => 'required',]
     ];
   }
+
   function tampil_data_article()
   {
     $this->db->select('kode_artikel,judul,gambar');
@@ -50,6 +51,7 @@ class Article_Model extends CI_Model
       return $data;
     }
   }
+
   public function getById($kode_artikel)
     {
         return $this->db->get_where($this->_table, ["kode_artikel" => $kode_artikel])->row();
@@ -66,6 +68,7 @@ class Article_Model extends CI_Model
     $this->db->insert($this->_table,$this);
 
   }
+
   function update_data_article()
   {
 		$post = $this->input->post();
@@ -75,9 +78,11 @@ class Article_Model extends CI_Model
     $this->isi = $post["isi"];
     $this->db->update($this->_table,$this, array('kode_artikel' => $post['kode_artikel']));
 
-	}	
+  }	
+  
   function hapus_data_article($kode_artikel)
   {
     return $this->db->delete($this->_table, array("kode_artikel" => $kode_artikel));
   }
+  
 }
