@@ -34,192 +34,25 @@
 <section class="container">
 
 	<div class="card-deck my-4">
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-	</div>
-
-	<div class="card-deck my-4">
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-	</div>
-
-	<div class="card-deck my-4">
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit2.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"
-				style="color:black; text-decoration: none;"><img src="<?php echo base_url()?>assets/img/edit1.jpg"
-					class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Tanaman Kaktus</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
+		<?php
+			foreach($aloevera as $a){
+				echo '
+					<div class="card">
+						<a href="'.base_url().'marketplace/detail_tanaman/'.$a->kode_tanaman.'"
+							style="color:black; text-decoration: none;"><img src="'.base_url().'assets/img/'.$a->gambar.'"
+								class="card-img-top" alt="...">
+							<div class="card-body">
+								<h6 class="card-title">'.$a->nama_tanaman.'</h6>
+							</div>
+						</a>
+						<div class="card-footer">
+							<small class="text-muted">Rp. '.$a->harga.'</small>
+						</div>
+					</div>
+				';
+			}
+		?>
+		
 	</div>
 
 </section>

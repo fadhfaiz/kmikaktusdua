@@ -85,61 +85,24 @@
 		<div class="col-4"><hr></div>
 	</div>
 	<div class="card-deck my-3">
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
+		
+			<?php
+				foreach($produk as $p){
+					echo '
+					<div class="card">
+							<a href="'.base_url().'home/detail_tanaman/'.$p->kode_tanaman.'"><img
+									src="'.base_url().'assets/img/'.$p->gambar.'" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h6 class="card-title">'.$p->nama_tanaman.'</h6>
+								</div>
+							</a>
+							<div class="card-footer">
+								<small class="text-muted">Rp. '.$p->harga.'</small>
+							</div>
+						</div>
+					';
+				}
+			?>
 	</div>
 	<div class="my-4">
 		<a href="<?php echo base_url(); ?>marketplace/index" class="btn btn-block btn-success">Lihat Produk lainnya</a>

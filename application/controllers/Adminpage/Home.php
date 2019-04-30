@@ -7,7 +7,8 @@ Class Home extends CI_Controller
             redirect(base_url("Login"));
         }
     }
-    Public function index(){
+    Public function index()
+    {
         $data['judul'] = 'Halaman Admin';
 
         $this->load->view('templates/header_admin', $data);
