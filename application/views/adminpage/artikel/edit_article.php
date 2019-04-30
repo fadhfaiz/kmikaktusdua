@@ -28,7 +28,7 @@
 		<div class="col-sm-8">		
 			<div class="form-group">
 				<div class="custom-file mb-3">
-					<input type="file" class="custom-file-input <?php echo form_error('gambar') ? 'is-invalid':'' ?>" id="customFile" name="gambar">
+					<input type="file" class="custom-file-input <?php echo form_error('gambar') ? 'is-invalid':'' ?>" id="customFile" name="gambar" value="<?php echo $artikel->gambar ?>">
 					<label class="custom-file-label" for="customFile"><?php echo $artikel->gambar ?></label>
 					<div class="invalid-feedback">
 									<?php echo form_error('gambar') ?>

@@ -80,6 +80,7 @@
         }
         public function paket_product()
         {
+            $data['paket'] = $this->Marketplace_model->getDataPaket();
             $data['judul'] = 'Produk Tanaman Lactea';
 
             $this->load->view('templates/header', $data);
