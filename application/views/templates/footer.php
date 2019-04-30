@@ -8,5 +8,8 @@
     <script src="<?php echo base_url()?>assets/popper.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
 
+    <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
+    <script>tinymce.init({selector:'textarea'});</script>
+
   </body>
 </html>
