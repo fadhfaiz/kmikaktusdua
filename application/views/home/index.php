@@ -17,6 +17,139 @@
 	<div class="container my-5">
 		<div class="card-deck">
 
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/pot_product"
+					style="color:white; text-decoration: none;">
+					<div class="card-body">
+						<h5 class="card-title text-center">Pot Tanaman</h5>
+						<hr>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+							additional
+							content. This content is a little bit longer.</p>
+					</div>
+				</a>
+				<!-- <div class="card-footer">
+					<small class="text-muted">Last updated 3 mins ago</small>
+				</div> -->
+			</div>
+
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/bibit_product"
+					style="color:white; text-decoration: none;">
+					<div class="card-body">
+						<h5 class="card-title text-center">Bibit Tanaman</h5>
+						<hr>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+							additional
+							content. This content is a little bit longer.
+						</p>
+					</div>
+				</a>
+				<!-- <div class="card-footer">
+					<small class="text-muted">Last updated 3 mins ago</small>
+				</div> -->
+			</div>
+
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/batu_product"
+					style="color:white; text-decoration: none;">
+					<div class="card-body">
+						<h5 class="card-title text-center">Batu Tanaman</h5>
+						<hr>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+							additional
+							content. This content is a little bit longer.</p>
+					</div>
+				</a>
+				<!-- <div class="card-footer">
+					<small class="text-muted">Last updated 3 mins ago</small>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+	<a href="https://www.instagram.com/fadh.leather/" class="float-ig" target="_blank">
+		<i class="fab fa-instagram my-float"></i>
+	</a>
+
+	<a href="https://api.whatsapp.com/send?phone=6281804086665&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+		class="float" target="_blank">
+		<i class="fab fa-whatsapp my-float"></i>
+	</a>
+
+</section>
+
+<section class="container">
+	<div class="row">
+		<div class="col-4"><hr></div>
+		<div class="col-4">
+			<h4 class="text-center">Produk Terbaru</h4>
+		</div>
+		<div class="col-4"><hr></div>
+	</div>
+	<div class="card-deck my-3">
+		<div class="card">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
+					src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h6 class="card-title">Sansiveera</h6>
+				</div>
+			</a>
+			<div class="card-footer">
+				<small class="text-muted">Rp. 360,000</small>
+			</div>
+		</div>
+		<div class="card">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
+					src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h6 class="card-title">Sansiveera</h6>
+				</div>
+			</a>
+			<div class="card-footer">
+				<small class="text-muted">Rp. 360,000</small>
+			</div>
+		</div>
+		<div class="card">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
+					src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h6 class="card-title">Sansiveera</h6>
+				</div>
+			</a>
+			<div class="card-footer">
+				<small class="text-muted">Rp. 360,000</small>
+			</div>
+		</div>
+		<div class="card">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
+					src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h6 class="card-title">Sansiveera</h6>
+				</div>
+			</a>
+			<div class="card-footer">
+				<small class="text-muted">Rp. 360,000</small>
+			</div>
+		</div>
+		<div class="card">
+			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
+					src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h6 class="card-title">Sansiveera</h6>
+				</div>
+			</a>
+			<div class="card-footer">
+				<small class="text-muted">Rp. 360,000</small>
+			</div>
+		</div>
+	</div>
+	<div class="my-4">
+		<a href="<?php echo base_url(); ?>marketplace/index" class="btn btn-block btn-success">Lihat Produk lainnya</a>
+	</div>
+</section>
+
+<section class="container">
+	<div class="container my-5">
+		<div class="card-deck">
+
 			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/kaktus_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
@@ -99,133 +232,4 @@
 			</div>
 		</div>
 	</div>
-</section>
-
-<section class="container">
-	<div>
-		<h4 class="text-center">Produk Terbaru dari KaktusKmi</h4>
-	</div>
-	<div class="card-deck my-3">
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit1.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-		<div class="card">
-			<a href="<?php echo base_url(); ?>marketplace/detail_product"><img
-					src="<?php echo base_url()?>assets/img/edit2.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h6 class="card-title">Sansiveera</h6>
-				</div>
-			</a>
-			<div class="card-footer">
-				<small class="text-muted">Rp. 360,000</small>
-			</div>
-		</div>
-	</div>
-	<div class="my-4">
-		<a href="<?php echo base_url(); ?>marketplace/index" class="btn btn-block btn-success">Lihat Produk lainnya</a>
-	</div>
-</section>
-
-<section class="container">
-	<div class="container my-5">
-		<div class="card-deck">
-
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/pot_product"
-					style="color:white; text-decoration: none;">
-					<div class="card-body">
-						<h5 class="card-title text-center">Pot Tanaman</h5>
-						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
-					</div>
-				</a>
-				<!-- <div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div> -->
-			</div>
-
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/bibit_product"
-					style="color:white; text-decoration: none;">
-					<div class="card-body">
-						<h5 class="card-title text-center">Bibit Tanaman</h5>
-						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.
-						</p>
-					</div>
-				</a>
-				<!-- <div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div> -->
-			</div>
-
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/batu_product"
-					style="color:white; text-decoration: none;">
-					<div class="card-body">
-						<h5 class="card-title text-center">Batu Tanaman</h5>
-						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
-					</div>
-				</a>
-				<!-- <div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div> -->
-			</div>
-		</div>
-	</div>
-
-	<a href="https://www.instagram.com/fadh.leather/" class="float-ig" target="_blank">
-		<i class="fab fa-instagram my-float"></i>
-	</a>
-
-	<a href="https://api.whatsapp.com/send?phone=6281804086665&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
-		class="float" target="_blank">
-		<i class="fab fa-whatsapp my-float"></i>
-	</a>
-
 </section>
