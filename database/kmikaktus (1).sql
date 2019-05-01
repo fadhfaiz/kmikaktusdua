@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2019 at 06:32 AM
+-- Generation Time: Apr 30, 2019 at 08:39 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -43,7 +43,14 @@ CREATE TABLE `aksesoris` (
 INSERT INTO `aksesoris` (`kode_aksesoris`, `nama`, `harga`, `stok`, `gambar`, `id_penjual`, `jenis_aksesoris`) VALUES
 ('AK001', 'Pot Kaca Cantik', 20000, 10, 'gambar1.jpg', 1, 'Pot'),
 ('AK002', 'Batu Warna-Warni', 40000, 15, 'gambar2.jpg', 1, 'Batu'),
-('AK003', 'Bibit Aloevera Cantik', 5000, 10, 'gambar3.jpg', 1, 'Bibit');
+('AK003', 'Bibit Aloevera Cantik', 5000, 10, 'gambar3.jpg', 1, 'Bibit'),
+('AK004', 'kaktus mini', 7500, 12, 'gambar20.jpg', 1, 'Bibit'),
+('AK005', 'kaktus bulat', 5000, 10, 'gambar21.jpg', 1, 'Bibit'),
+('AK006', 'batu warna', 5000, 5, 'gambar15.jpg', 1, 'Batu'),
+('AK007', 'batu koral', 10000, 10, 'gambar16.jpg', 1, 'Batu'),
+('Ak008', 'batu putih', 8000, 5, 'gambar13.jpg', 1, 'Batu'),
+('AK009', 'pot putih', 15000, 5, 'gambar17.jpg', 1, 'Pot'),
+('AK010', 'pot orange', 5500, 3, 'gambar19.jpg', 1, 'Pot');
 
 -- --------------------------------------------------------
 
@@ -64,7 +71,8 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`kode_artikel`, `judul`, `isi`, `gambar`, `tanggal`) VALUES
-('AR001', 'Apa itu Kaktus ?', 'Kaktus adalah nama yang diberikan untuk anggota tumbuhan berbunga famili Cactaceae.\r\n\r\nKaktus dapat tumbuh pada waktu yang lama tanpa air.[1] Kaktus biasa ditemukan di daerah-daerah yang kering (gurun).[1] Kata jamak untuk kaktus adalah kakti.[2] Kaktus memiliki akar yang panjang untuk mencari air dan memperlebar penyerapan air dalam tanah.[1] Air yang diserap kaktus disimpan dalam ruang di batangnya.[1] Kaktus juga memiliki daun yang berubah bentuk menjadi duri sehingga dapat mengurangi penguapan air lewat daun.{[3] Oleh sebab itu, kaktus dapat tumbuh pada waktu yang lama tanpa air', 'gambar10.jpg', '2019-04-03 00:00:00'),
+('5cc80', 'Aglaonema Adelia', 'Diambil dari nama kolektor tanaman hias di Manila, Adelia Angeles, tanaman aglaonema Adelia memiliki daun berujung runcing dengan warna merah menyala. Jenis tanaman Aglaonema ini berdaun besar, mengkilat dan tampil wah karena kombinasi warna merah-hijau yang intens.\r\n\r\nTanaman Aglaonema Adelia bisa tumbuh mencapai 30 cm, terutama jika menggunakan tanah yang gembur. Cara merawat tanaman Aglaonema ini adalah dengan menempatkan pada daerah yang semi-panas dan tidak terpapar sinar matahari secara langsung. Penyiraman harus dilakukan secara berkala dalam jumlah air sedang, dan disarankan dilakukan penyemprotan (misting) di bagian daun sesuai kebutuhan.', 'Aglaonema.jpg', '0000-00-00 00:00:00'),
+('AR001', 'Apa itu Kaktus ?', 'Kaktus adalah nama yang diberikan untuk anggota tumbuhan berbunga famili Cactaceae.\n\nKaktus dapat tumbuh pada waktu yang lama tanpa air.[1] Kaktus biasa ditemukan di daerah-daerah yang kering (gurun).[1] Kata jamak untuk kaktus adalah kakti.[2] Kaktus memiliki akar yang panjang untuk mencari air dan memperlebar penyerapan air dalam tanah.[1] Air yang diserap kaktus disimpan dalam ruang di batangnya.[1] Kaktus juga memiliki daun yang berubah bentuk menjadi duri sehingga dapat mengurangi penguapan air lewat daun.{[3] Oleh sebab itu, kaktus dapat tumbuh pada waktu yang lama tanpa air', 'gambar10.jpg', '2019-04-03 00:00:00'),
 ('AR002', 'Tips Memilih Tanaman Hias', 'Bingung memilih tanaman hias yang yang bisa kamu gunakan untuk lengkapi taman atau sekedar mempermanis sudut ruangan? Kaktus hias mungkin bisa jadi salah satu pilihanmu.\r\n\r\nTertarik hadirkan kaktus hias pada hunianmu? Ada banyak sekali variasi jenis kaktus hias yang bisa kamu pilih. Dan, untuk kamu yang masih pemula dalam memelihara kaktus hias, berikut adalah rekomendasi jenis kaktus hias dengan daya tahan ekstra dan perawatan praktis yang cocok untuk pemula!', 'gambar11.jpg', '2019-04-09 00:00:00'),
 ('AR003', 'Cara merawat Kaktus', 'Perhatikan Suhu Tempat Untuk Menanam Kaktus\r\nTanaman kaktus adalah tanaman yang sebaiknya ditempatkan di tempat dengan suhu sejuk namun tidak lembab. Dengan suhu yang pas, kaktus bisa tumbuh dan berkembang dengan baik. Hindari menempatkan kaktus di tempat dengan suhu terlalu dingin karena ini bisa membuat kaktus rentan membusuk. Juga, hindari menempatkan kaktus di tempat dengan suhu terlalu kering karena ini akan membuatnya layu dan mudah mati. \r\n\r\nSiram dengan Air Secukupnya Saja\r\nAgar kaktus tetap segar, siram kaktus dengan air secukupnya saja. Kaktus tidak perlu disiram setiap hari. Cukup siram satu kali untuk 3 hari atau bahkan satu kali untuk seminggu. Kaktus yang disiram terlalu sering justru akan lebih mudah membusuk. \r\n', 'gambar12.jpg', '2019-04-11 00:00:00');
 
@@ -242,7 +250,9 @@ CREATE TABLE `tanaman` (
 INSERT INTO `tanaman` (`kode_tanaman`, `id_penjual`, `nama_tanaman`, `harga`, `stok`, `diameter`, `tinggi`, `bobot`, `gambar`, `jenis_tanaman`) VALUES
 ('TN001', 1, 'Bambu Hoki - Pot Gelas - Small', 40000, 15, 10, 20, 300, 'gambar4.jpg', 'Kaktus'),
 ('TN002', 1, 'Aglonema - Pot Kaca', 30000, 15, 20, 50, 700, 'gambar5.jpg', 'Aglonema'),
-('TN003', 1, 'Lactea Putih - Pot Plastik Hitam', 25000, 10, 15, 25, 300, 'gambar6.jpg', 'Lactea');
+('TN003', 1, 'Lactea Putih - Pot Plastik Hitam', 25000, 10, 15, 25, 300, 'gambar6.jpg', 'Lactea'),
+('TN004', 1, 'Tunas Aloevera', 8500, 4, 30, 25, 50, 'gambar3.jpg', 'Aloevera'),
+('TN005', 1, 'Drasanena - pot keramik', 15000, 5, 40, 50, 60, 'gambar24.jpg', 'Drasanena');
 
 --
 -- Indexes for dumped tables

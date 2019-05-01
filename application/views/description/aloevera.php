@@ -1,11 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5 col-md-12 col-sm-12 mt-4 mb-4">
-			<img src="<?php echo base_url()?>assets/img/jenis/kaktus.jpg" class="img-fluid" alt="Responsive image">
+			<img src="<?php echo base_url()?>assets/img/jenis/aloevera.jpg" class="img-fluid" alt="Responsive image">
         </div>
         
         <div class="col-lg-7 col-md-12 col-sm-12 mt-4 mb-4">
-            <h1>Kaktus</h1>
+            <h1>Aloevera</h1>
             <div class="row">
                 <div class="col-lg-4 ">
                   <img src="<?php echo base_url()?>assets/img/des.png" alt="Responsive image">
@@ -13,10 +13,11 @@
                 <div class="col-lg-8 col-md-12 col-sm-12 mt-4 mb-4">
                 <h5 style="font-weight:bold">Deskripsi :</h5>
                 <p>
-                kaktus adalah tanaman dari anggota famili Cactaceae yang berasal dari benua amerika.  
-                Tumbuhan ini juga biasa disebut sebagai tumbuhan sekulen. 
-                umbuhan sekulen adalah tumbuhan yang menyimpan air di 
-                dalam tubuhnya.
+                Lidah buaya (Aloe vera) adalah sejenis tumbuhan yang 
+                sudah dikenal sejak ribuan tahun silam dan digunakan 
+                sebagai penyubur rambut, penyembuh luka, dan untuk 
+                perawatan kulit. Tumbuhan ini dapat ditemukan dengan 
+                mudah di kawasan kering di Afrika.
                 </p>
                 </div>
             </div>
@@ -26,13 +27,12 @@
                   <img src="<?php echo base_url()?>assets/img/care1.png" alt="Responsive image">
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 mt-4 mb-4">
-                <h5 style="font-weight:bold">How to Care ?</h5>
+                <h5 style="font-weight:bold">Cara Perawatan :</h5>
                 <ol>
-                    <li>Menyesuaikan media tanaman sesuai dengan habitat kaktus hias yaitu tanah kering, pasir</li>
-                    <li>Menyiram kaktus 3 hari sekali ketika cuaca kering , ketika cuaca lembab/musim penghujan lakukan penyiraman satu kali seminggu</li>
-                    <li>Hindari menempatkan di area yang mendapat sinar matahari langsung</li>
-                    <li>Berikan pupuk</li>
-                    <li>Ganti pot jika tanaman kaktus sudah semakin tinggi</li>
+                    <li>Gunakan tanah kering untuk menanam lidah buaya</li>
+                    <li>Menyiram lidah buaya sekali sehari atau jika tanah sudah kering</li>
+                    <li>Hindari menempatkan lidah buaya di area yang mendapat cahaya matahari langsung kaena bisa merusak daun.</li>
+                    <li>Ganti pot yang lebar dan dalam untuk mengakomodasi pertumbuhan daun dan tunas lidah buaya</li>
                 </ol> 
                 </div>
             </div>

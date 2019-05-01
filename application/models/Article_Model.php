@@ -3,11 +3,13 @@ class Article_Model extends CI_Model
 {
   private $_table = "artikel";
 
-  public $kode_artikel;
+  public $kode_artikel="AR";
   public $judul;
   public $gambar;
   public $isi;
+  public $tanggal;
  
+
 // untuk interaksi ke database
         public function getDataArtikel(){
             $this->db->select("*");
@@ -39,7 +41,7 @@ class Article_Model extends CI_Model
 
   function tampil_data_article()
   {
-    $this->db->select('kode_artikel,judul,gambar');
+    $this->db->select('kode_artikel,judul,gambar,tanggal');
     $q = $this->db->get('artikel');
 
     if($q->num_rows() > 0)
@@ -60,11 +62,15 @@ class Article_Model extends CI_Model
 
   function simpan_data_article()
   {
+    $this->load->helper('date');
+    $datestring = 'Year: %Y Month: %m Day: %d - %h:%i %a';
+    $time = time();
     $post = $this->input->post();
-    $this->kode_artikel = uniqid();
+    $this->kode_artikel = rand(0,100);
     $this->judul = $post["judul"];
     $this->gambar = $post["gambar"];
     $this->isi = $post["isi"];
+    $this->tanggal = mdate($datestring, $time);
     $this->db->insert($this->_table,$this);
 
   }

@@ -39,7 +39,7 @@
 								<td><?php echo $artikel->kode_artikel ?></td>
 								<td><?php echo $artikel->gambar ?></td>
 								<td><?php echo $artikel->judul ?></td>
-								<td><?php echo date("d/m/Y") ?></td>		
+								<td><?php echo $artikel->tanggal ?></td>		
 								<td>
 								<span><a href="<?php echo base_url('Adminpage/Artikel/edit_article/'.$artikel->kode_artikel)?>" class="btn btn-outline-success"><i class="fas fa-edit"></i></a></span>
 								<span><button class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-trash-alt"></i></button></span>
