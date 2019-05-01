@@ -37,7 +37,6 @@
 		<?php	
 			foreach($tanaman as $b){
 				echo '
-				
 					<div class="card">
 						<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_tanaman.'"
 							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"

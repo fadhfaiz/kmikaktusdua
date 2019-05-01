@@ -8,7 +8,6 @@ Class Artikel extends CI_Controller
         if($this->session->userdata('status') != "Login"){
             redirect(base_url("Login"));
         }
-        
         $this->load->model("Article_Model");
         $this->load->library("form_validation");
     }

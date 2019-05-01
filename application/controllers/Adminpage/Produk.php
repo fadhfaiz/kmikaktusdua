@@ -6,9 +6,14 @@ Class Produk extends CI_Controller
         if($this->session->userdata('status') != "Login"){
             redirect(base_url("Login"));
         }
+
+        $this->load->model('Marketplace_model');
     }
     public function product_admin()
     {
+        $data['tanaman'] = $this->Marketplace_model->getDataTanaman();
+        $data['aksesoris'] = $this->Marketplace_model->getDataAksesoris();
+        $data['paket'] = $this->Marketplace_model->getDataPaket();
         $data['judul'] = 'Produk Administrator';
 
         $this->load->view('templates/header_admin', $data);
