@@ -88,7 +88,7 @@
 				</div>
 				<div class="card-footer text-muted">
 					<div class="row">
-						<div class="col">
+						<div class="col-6">
 							<form>
 								<div class="form-group">
 									<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -96,8 +96,8 @@
 								</div>
 							</form>
 						</div>
-						<div class="col-0"><button type="button" class="btn btn-secondary">Submit</button></div>
-						<div class="col"><button type="button" class="btn btn-primary">Konfirmasi</button></div>
+						<div class="col-3"><button type="button" class="btn btn-block btn-secondary">Submit</button></div>
+						<div class="col-3"><button type="button" class="btn btn-block btn-primary">Konfirmasi</button></div>
 					</div>
 				</div>
 			</div>
