@@ -38,7 +38,7 @@
 			foreach($bibit as $b){
 				echo '
 					<div class="card">
-						<a href="' .base_url().'marketplace/detail_aksesoris/'.$p->kode_aksesoris.'"
+						<a href="' .base_url().'marketplace/detail_aksesoris/'.$b->kode_aksesoris.'"
 							style="color:black; text-decoration: none;"><img src="'.base_url().'assets/img/'.$b->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
