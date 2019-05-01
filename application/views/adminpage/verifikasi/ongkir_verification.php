@@ -96,7 +96,7 @@
 								</div>
 							</form>
 						</div>
-						<div class="col-3"><button type="button" class="btn btn-block btn-secondary">Submit</button></div>
+						<div class="col-3"><button type="button" class="btn btn-block btn-success">Submit</button></div>
 						<div class="col-3"><button type="button" class="btn btn-block btn-primary">Konfirmasi</button></div>
 					</div>
 				</div>

@@ -8,24 +8,24 @@
 			<div class="col-sm-9"><canvas id="myChart"></canvas></div>
 			<div class="col-sm mt-5 mb-5">
 				<div class="row-2">
-					<h4>This Years</h4>
+					<h4 style="color: teal;">This Years</h4>
 				</div>
 				<div class="row-2">
-					<h4>75234 Visitors</h4>
-				</div>
-				<br>
-				<div class="row-2">
-					<h4>This Month</h4>
-				</div>
-				<div class="row-2">
-					<h4>75234 Visitors</h4>
+					<h4>75234 visitors</h4>
 				</div>
 				<br>
 				<div class="row-2">
-					<h4>Today</h4>
+					<h4 style="color: teal;">This Month</h4>
 				</div>
 				<div class="row-2">
-					<h4>75234 Visitors</h4>
+					<h4>75234 visitors</h4>
+				</div>
+				<br>
+				<div class="row-2">
+					<h4 style="color: teal;">Today</h4>
+				</div>
+				<div class="row-2">
+					<h4>75234 visitors</h4>
 				</div>
 				
 			</div>
