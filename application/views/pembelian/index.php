@@ -1,5 +1,5 @@
 <section class="container my-4">
-	<form action="">
+	<form action="<?= base_url(); ?>Pembelian/Data_pembeli" method ="post">
 
 		<h5 class="text-center" style="color:white;" id="datadiri1">Informasi Pembeli</h5>
 		<hr>
@@ -7,8 +7,8 @@
 			<div class="row">
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
-						<label for="exampleInputEmail1">Nama</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<label for="exampleInputEmail1" >Nama</label>
+						<input type="text" class="form-control" id="exampleInputEmail1" name = 'nama' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -16,7 +16,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Alamat Email</label>
-						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<input type="email" class="form-control" id="exampleInputEmail1" name = 'email' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -27,7 +27,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Nomor Handphone</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="exampleInputEmail1" name = 'no_telp' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -35,7 +35,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Keterangan Tambahan</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="exampleInputEmail1" name = 'catatan' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -50,7 +50,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Provinsi</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"">
+						<input type="text" class="form-control" id="exampleInputEmail1" name = 'provinsi' aria-describedby="emailHelp"">
 						<small id=" emailHelp" class="form-text text-muted">We'll never share your email with anyone
 						else.</small>
 					</div>
@@ -58,7 +58,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Kabupaten / Kota</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="exampleInputEmail1" name = 'kabupaten' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -69,7 +69,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Kecamatan</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="exampleInputEmail1" name = 'kecamatan' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -77,7 +77,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Kode POS</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="exampleInputEmail1" name = 'kodepos' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -88,7 +88,7 @@
 				<div class="col-12">
 					<div class="form-group">
 						<label for="exampleFormControlTextarea1">Detail Alamat</label>
-						<textarea class="form-control font-italic" id="detail_alamat" rows="3"
+						<textarea class="form-control font-italic" id="detail_alamat" name = 'alamatlengkap' rows="3"
 							placeholder="contoh : Nama jalan, Nama Dusun atau Kampung, RT/RW dan Kelurahan/Desa"></textarea>
 					</div>
 				</div>
@@ -105,9 +105,7 @@
 			<div class="col-6 my-2"><a href="<?= base_url(); ?>marketplace/index"
 					class="btn btn-outline-info btn-block align-right"><i class="fas fa-arrow-circle-left fa-lg"></i>
 					Back to Marketplace</a></div>
-			<div class="col-6 my-2"><a href="<?= base_url(); ?>pembelian/menunggu_ongkir"
-					class="btn btn-success btn-block align-right">Detail Pesanan <i
-						class="fas fa-arrow-circle-right fa-lg"></i></a></div>
+			<div class="col-6 my-2"><button type="submit" class="btn btn-primary">Detail Pesanan</button></div>
 		</div>
 	</form>
 </section>

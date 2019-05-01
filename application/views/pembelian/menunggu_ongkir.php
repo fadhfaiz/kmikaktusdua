@@ -17,7 +17,7 @@
 					<h5 class="card-title">:</h5>
 				</div>
 				<div class="col-7">
-					<h5 class="card-title">CSK64H</h5>
+					<h5 class="card-title"><?php $ongkir->id_pembeli?></h5>
 				</div>
 			</div>
 
