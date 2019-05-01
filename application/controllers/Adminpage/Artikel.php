@@ -1,6 +1,7 @@
 <?php
 Class Artikel extends CI_Controller
 {
+    
     function __construct(){
         parent::__construct();
 
@@ -65,7 +66,6 @@ Class Artikel extends CI_Controller
         $artikel = $this->Article_Model;
         $validation = $this->form_validation;
         $validation->set_rules($artikel->rules());
-
         if($validation->run()){
             $artikel->simpan_data_article();
             $this->session->set_flashdata('sukses','berhasil disimpan');

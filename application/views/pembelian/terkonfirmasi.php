@@ -234,15 +234,4 @@
 
     </div>
     <br><br>
-    <div class="row">
-        <div class="col">
-        <div class="card border-secondary">
-					<div class="card-body text-center">
-						<h5 class="card-title">Upload bukti bayar</h5>
-					</div>
-				</a>
-	    </div>
-        </div>
-  
-    </div>
 </div>

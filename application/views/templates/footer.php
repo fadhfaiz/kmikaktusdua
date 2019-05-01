@@ -7,9 +7,16 @@
     <script src="<?php echo base_url()?>assets/jquery.slim.min.js"></script>
     <script src="<?php echo base_url()?>assets/popper.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url()?>assets/tinymce/tiny_mce.js"></script>
+    <script type="text/javascript">
+    tinyMCE.init({
+      mode: "textareas",
+      theme: "advanced",
+    });
+    </script>
 
-    <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
-    <script>tinymce.init({selector:'textarea'});</script>
+    <!-- <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
+    <script>tinymce.init({selector:'textarea'});</script> -->
 
   </body>
 </html>

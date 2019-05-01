@@ -1,7 +1,7 @@
 <div class="container my-5">
 			<div class="card-deck">
 
-				<div class="card bg-dark" id="card-satu"><a href="<?php echo base_url(); ?>description/kaktus"
+				<div class="card bg-dark"><a href="<?php echo base_url(); ?>description/kaktus"
 						style="color:white; text-decoration: none;">
 						<div class="card-body">
 							<h5 class="card-title text-center">Jenis Tanaman Kaktus</h5>
@@ -15,7 +15,7 @@
 				</div> -->
 				</div>
 
-				<div class="card bg-dark" id="card-satu"><a href="<?php echo base_url(); ?>description/aglaonema"
+				<div class="card bg-dark"><a href="<?php echo base_url(); ?>description/aglaonema"
 						style="color:white; text-decoration: none;">
 						<div class="card-body">
 							<h5 class="card-title text-center">Jenis Tanaman Aglaonema</h5>
@@ -29,7 +29,7 @@
 				</div> -->
 				</div>
 
-				<div class="card bg-dark" id="card-satu"><a href="<?php echo base_url(); ?>description/aloevera"
+				<div class="card bg-dark"><a href="<?php echo base_url(); ?>description/aloevera"
 						style="color:white; text-decoration: none;">
 						<div class="card-body">
 							<h5 class="card-title text-center">Jenis Tanaman Aloevera</h5>
@@ -48,14 +48,12 @@
 <div class="container my-5">
 			<div class="card-deck">
 
-				<div class="card bg-dark" id="card-satu"><a href="<?php echo base_url(); ?>description/lactea"
+				<div class="card bg-dark"><a href="<?php echo base_url(); ?>description/lactea"
 						style="color:white; text-decoration: none;">
 						<div class="card-body">
 							<h5 class="card-title text-center">Jenis Tanaman Lactea</h5>
 							<hr>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-								additional
-								content. This content is a little bit longer.</p>
+							<p class="card-text">lactea atau dikenal dengan bunga tulang naga, bunga naga dan bunga tempat lilin, </p>
 						</div>
 					</a>
 					<!-- <div class="card-footer">
@@ -63,7 +61,7 @@
 				</div> -->
 				</div>
 
-				<div class="card bg-dark" id="card-satu"><a href="<?php echo base_url(); ?>description/sansivera"
+				<div class="card bg-dark"><a href="<?php echo base_url(); ?>description/sansivera"
 						style="color:white; text-decoration: none;">
 						<div class="card-body">
 							<h5 class="card-title text-center">Jenis Tanaman Sansivera</h5>

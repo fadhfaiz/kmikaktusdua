@@ -33,10 +33,11 @@
 
 <section class="container">
 	<div class="card-deck my-4">
+	<div class="card-columns">
 		<?php	
 			foreach($tanaman as $b){
 				echo '
-
+				
 					<div class="card">
 						<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_tanaman.'"
 							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
@@ -49,12 +50,12 @@
 							<small class="text-muted">Rp. '.$b->harga.'</small>
 						</div>
 					</div>
-
+				
 				';
 			}
 			foreach($aksesoris as $b){
 				echo '
-
+			
 					<div class="card">
 						<a href="' .base_url().'marketplace/detail_aksesoris/'.$b->kode_aksesoris.'"
 							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
@@ -67,12 +68,12 @@
 							<small class="text-muted">Rp. '.$b->harga.'</small>
 						</div>
 					</div>
-
+				
 				';
 			}
 			foreach($paket as $b){
 				echo '
-
+	
 					<div class="card">
 						<a href="' .base_url().'marketplace/detail_paket/'.$b->kode_paket.'"
 							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
@@ -85,10 +86,12 @@
 							<small class="text-muted">Rp. '.$b->harga.'</small>
 						</div>
 					</div>
+			
 
 				';
 			}
 		?>
+	</div>
 	</div>
 
 </section>

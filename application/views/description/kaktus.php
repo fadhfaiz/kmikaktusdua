@@ -26,7 +26,7 @@
                   <img src="<?php echo base_url()?>assets/img/care1.png" alt="Responsive image">
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 mt-4 mb-4">
-                <h5 style="font-weight:bold">How to Care ?</h5>
+                <h5 style="font-weight:bold">Cara Perawatan :</h5>
                 <ol>
                     <li>Menyesuaikan media tanaman sesuai dengan habitat kaktus hias yaitu tanah kering, pasir</li>
                     <li>Menyiram kaktus 3 hari sekali ketika cuaca kering , ketika cuaca lembab/musim penghujan lakukan penyiraman satu kali seminggu</li>

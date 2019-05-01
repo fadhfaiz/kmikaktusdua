@@ -1,6 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <section class="container my-5">
 	<form action="<?php echo base_url(); ?>Adminpage/Artikel/article_page" method="post">
+	
 		<div class="form-group">
 			<label for="judul" style="color: teal;" class="h4">Judul Artikel</label>
 			<input type="text" class="form-control <?php echo form_error('judul') ? 'is-invalid':'' ?>"  id="judul" name="judul" aria-describedby="emailHelp"

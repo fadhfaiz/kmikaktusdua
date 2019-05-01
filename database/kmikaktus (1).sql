@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 30, 2019 at 08:39 PM
+-- Generation Time: May 01, 2019 at 10:16 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -190,17 +190,24 @@ CREATE TABLE `pembeli` (
   `kabupaten` varchar(15) DEFAULT NULL,
   `provinsi` varchar(50) DEFAULT NULL,
   `alamatlengkap` varchar(50) DEFAULT NULL,
-  `catatan` varchar(100) NOT NULL
+  `catatan` varchar(100) NOT NULL,
+  `kodepos` char(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pembeli`
 --
 
-INSERT INTO `pembeli` (`id_pembeli`, `nama_pembeli`, `no_telp`, `email`, `kecamatan`, `kabupaten`, `provinsi`, `alamatlengkap`, `catatan`) VALUES
-('PB001', 'Ais Suryo', '08122112212', 'aissuryo@gmail.com', 'umbulharjo', 'DI Yogyakarta', 'Yogyakarta', 'Gg. Nakula, Jl. Soga, 55162', 'Jangan kirim dompet kulit ya'),
-('PB002', 'Sandi Subianto', '020202020202', 'suararakyat@gmail.com', 'Sewon', 'Mbantul', 'D.I Yogyakarta', 'Jl. Sendirian', 'pokoknya cari aja yg belum ada aspal dan kabel indihome'),
-('PB003', 'Aldo', '082671628374', 'aldoofficial@gmail.com', 'Sambaliung', 'Berau', 'Kaltim', 'Jl. Nangka no 290', '');
+INSERT INTO `pembeli` (`id_pembeli`, `nama_pembeli`, `no_telp`, `email`, `kecamatan`, `kabupaten`, `provinsi`, `alamatlengkap`, `catatan`, `kodepos`) VALUES
+('PB001', 'Ais Suryo', '08122112212', 'aissuryo@gmail.com', 'umbulharjo', 'DI Yogyakarta', 'Yogyakarta', 'Gg. Nakula, Jl. Soga, 55162', 'Jangan kirim dompet kulit ya', '55162'),
+('PB002', 'Sandi Subianto', '020202020202', 'suararakyat@gmail.com', 'Sewon', 'Mbantul', 'D.I Yogyakarta', 'Jl. Sendirian', 'pokoknya cari aja yg belum ada aspal dan kabel indihome', '55165'),
+('PB003', 'Aldo', '082671628374', 'aldoofficial@gmail.com', 'Sambaliung', 'Berau', 'Kaltim', 'Jl. Nangka no 290', '', '17564'),
+('PB004', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '<p>jl. setengah jadi</p>', 'di dekat pohon mangga', '55164'),
+('PB005', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '<p>jl. setengah jadi</p>', 'di dekat pohon mangga', '55164'),
+('PB006', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '<p>jl. setengah jadi</p>', 'di dekat pohon mangga', '55164'),
+('PB007', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '<p>jl. setengah jadi</p>', 'di dekat pohon mangga', '55164'),
+('PB008', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '<p>jl. setengah jadi</p>', 'di dekat pohon mangga', '55164'),
+('PB009', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '<p>setengah</p>', 'di dekat pohon mangga', '55164');
 
 -- --------------------------------------------------------
 
