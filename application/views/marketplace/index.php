@@ -1,5 +1,5 @@
-<section class="container">	
-<form>
+<section class="container">
+	<form>
 		<div class="form-row mt-4">
 			<div class="form-group col-lg-8 col-md-12 col-sm-12">
 				<!-- <label for="inputEmail4">Email</label> -->
@@ -33,8 +33,8 @@
 
 <section class="container">
 	<div class="card-deck my-4">
-	<div class="card-columns">
-		<?php	
+		<div class="card-columns">
+			<?php	
 			foreach($tanaman as $b){
 				echo '
 					<div class="card">
@@ -47,8 +47,12 @@
 						</a>
 						<div class="card-footer">
 						<div class="row">
-						<small class="text-muted">Rp. '.$b->harga.'</small>
-						<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
+						<div class="col-8">
+							<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
+						</div>
+						<div class="col-4">
+							<input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'">
+						</div>
 						</div>
 						</div>
 					</div>
@@ -68,8 +72,10 @@
 						</a>
 						<div class="card-footer">
 						<div class="row">
-							<small class="text-muted">Rp. '.$b->harga.'</small>
-							<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
+						<div class="col-8">
+						<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
+						</div>
+							<div class="col-4"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
 						</div>
 						</div>
 					</div>
@@ -89,8 +95,10 @@
 						</a>
 						<div class="card-footer">
 						<div class="row">
-							<small class="text-muted">Rp. '.$b->harga.'</small>
-							<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
+						<div class="col-8">
+						<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
+						</div>
+							<div class="col-4"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
 						</div>
 						</div>
 					</div>
@@ -99,7 +107,7 @@
 				';
 			}
 		?>
-	</div>
+		</div>
 	</div>
 
 </section>
@@ -107,10 +115,10 @@
 <section class="container my-5">
 	<nav aria-label="Page navigation example">
 		<ul class="pagination justify-content-center"">
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="Previous">
-					<span aria-hidden="true">&laquo; Previous Page</span>
-				</a>
+			<li class=" page-item">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo; Previous Page</span>
+			</a>
 			</li>
 			<li class="page-item"><a class="page-link" href="#">1</a></li>
 			<li class="page-item"><a class="page-link" href="#">2</a></li>
