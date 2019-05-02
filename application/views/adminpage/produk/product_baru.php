@@ -78,7 +78,7 @@
 						<div class="form-group">
 							<label for="exampleInputEmail1" style="color: teal;">Stok Produk</label>
 							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="... gram">
+								placeholder="... pcs">
 						</div>
 					</div>
 				</div>

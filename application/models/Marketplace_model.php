@@ -110,6 +110,14 @@
             $this->db->where('kode_paket', $id);
             return $this->db->get()->row();
         }
+
+        public function getProdukKeyword($keyword){
+            $this->db->select("*");
+            $this->db->from("tanaman");
+            $this->db->like("nama_tanaman", $keyword);
+            $this->db->or_like("jenis_tanaman", $keyword);
+            return $this->db->get()->row();
+        }
     }
 
 ?>

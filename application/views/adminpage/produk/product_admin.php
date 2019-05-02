@@ -2,7 +2,7 @@
 	<form action="">
 		<div class="row">
 			<div class="col-6"><input class="form-control" type="text" placeholder="Cari tanaman"></div>
-			<div class="col-3"><button class="btn btn-block btn-outline-secondary">Search</button></div>
+			<div class="col-3"><button class="btn btn-block btn-dark">Search</button></div>
 			<div class="col-3"><a href="<?php echo base_url()?>adminpage/produk/product_baru" class="btn btn-block btn-warning">Upload Produk Baru</a></div>
 		</div>
 	</form>
@@ -23,9 +23,9 @@
 							</div>
 						<div class="card-footer">
 							<div class="row">
-								<div class="col-3"><a href="#" class="btn btn-success"><i class="fas fa-edit"></i></a>
+								<div class="col-3"><a href="#" class="btn btn-outline-success"><i class="fas fa-edit"></i></a>
 								</div>
-								<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+								<div class="col-3"><a href="#" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a>
 								</div>
 								<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$t->stok.'"></div>
 							</div>
@@ -45,9 +45,9 @@
 							</div>
 						<div class="card-footer">
 						<div class="row">
-								<div class="col-3"><a href="#" class="btn btn-success"><i class="fas fa-edit"></i></a>
+								<div class="col-3"><a href="#" class="btn btn-outline-success"><i class="fas fa-edit"></i></a>
 								</div>
-								<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+								<div class="col-3"><a href="#" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a>
 								</div>
 								<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$t->stok.'"></div>
 							</div>
@@ -66,9 +66,9 @@
 							</div>
 						<div class="card-footer">
 						<div class="row">
-								<div class="col-3"><a href="#" class="btn btn-success"><i class="fas fa-edit"></i></a>
+								<div class="col-3"><a href="#" class="btn btn-outline-success"><i class="fas fa-edit"></i></a>
 								</div>
-								<div class="col-3"><a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+								<div class="col-3"><a href="#" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a>
 								</div>
 								<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$t->stok.'"></div>
 							</div>

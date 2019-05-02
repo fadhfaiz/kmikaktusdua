@@ -1,7 +1,9 @@
 <?php 
     Class Marketplace extends CI_Controller
     {
-        public function __construct(){
+        public function __construct()
+        {
+
             parent::__construct();
             $this->load->model('Marketplace_model');
             
@@ -28,6 +30,7 @@
             $this->load->view('marketplace/detail/detail_tanaman');
             $this->load->view('templates/footer'); 
         }
+
         public function detail_aksesoris($id)
         {
             $data['aksesoris'] = $this->Marketplace_model->getByAksesoris($id);
@@ -37,6 +40,7 @@
             $this->load->view('marketplace/detail/detail_aksesoris');
             $this->load->view('templates/footer'); 
         }
+
         public function detail_paket($id)
         {
             $data['paket'] = $this->Marketplace_model->getByPaket($id);
@@ -46,6 +50,7 @@
             $this->load->view('marketplace/detail/detail_paket');
             $this->load->view('templates/footer'); 
         }
+
         public function kaktus_product()
         {
             $data['kaktus'] = $this->Marketplace_model->getByKaktus();
@@ -55,6 +60,7 @@
             $this->load->view('marketplace/tanaman/kaktus_product');
             $this->load->view('templates/footer'); 
         }
+
         public function aglonema_product()
         {
             $data['aglonema'] = $this->Marketplace_model->getByAglonema();
@@ -64,6 +70,7 @@
             $this->load->view('marketplace/tanaman/aglonema_product');
             $this->load->view('templates/footer'); 
         }
+
         public function aloevera_product()
         {
             $data['aloevera'] = $this->Marketplace_model->getByAloevera();
@@ -73,6 +80,7 @@
             $this->load->view('marketplace/tanaman/aloevera_product');
             $this->load->view('templates/footer'); 
         }
+
         public function drasanena_product()
         {
             $data['drasanena'] = $this->Marketplace_model->getByDrasanena();
@@ -82,6 +90,7 @@
             $this->load->view('marketplace/tanaman/drasanena_product');
             $this->load->view('templates/footer'); 
         }
+
         public function sansivera_product()
         {
             $data['drasanena'] = $this->Marketplace_model->getBySansivera();
@@ -91,6 +100,7 @@
             $this->load->view('marketplace/tanaman/sansivera_product');
             $this->load->view('templates/footer'); 
         }
+
         public function lactea_product()
         {
             $data['laktea'] = $this->Marketplace_model->getByLaktea();
@@ -100,6 +110,7 @@
             $this->load->view('marketplace/tanaman/lactea_product');
             $this->load->view('templates/footer'); 
         }
+
         public function paket_product()
         {
             $data['paket'] = $this->Marketplace_model->getDataPaket();
@@ -120,6 +131,7 @@
             $this->load->view('templates/footer');
 
         }
+
         public function batu_product()
         {
             $data['batu'] = $this->Marketplace_model->getDataBatu();
@@ -129,6 +141,7 @@
             $this->load->view('marketplace/aksesoris/batu_product');
             $this->load->view('templates/footer'); 
         }
+
         public function bibit_product()
         {
             $data['bibit'] = $this->Marketplace_model->getDataBibit();
@@ -137,6 +150,16 @@
             $this->load->view('templates/header', $data);
             $this->load->view('marketplace/aksesoris/bibit_product');
             $this->load->view('templates/footer'); 
+        }
+        
+        public function cariproduk()
+        {
+            $keyword = $this->input->post('keyword');
+            $data['tanaman'] = $this->Marketplace_model->getProdukKeyword($keyword);
+
+            $this->load->view('templates/header', $data);
+            $this->load->view('marketplace/index');
+            $this->load->view('templates/footer');
         }
     }
 ?>

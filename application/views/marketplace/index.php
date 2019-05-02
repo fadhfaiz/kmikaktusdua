@@ -1,11 +1,14 @@
 <section class="container">
+<?php echo form_open('Marketplace/cariproduk'); ?>
 	<form>
+		
 		<div class="form-row mt-4">
-			<div class="form-group col-lg-8 col-md-12 col-sm-12">
+			<div class="form-group col-lg-6 col-md-12 col-sm-12">
 				<!-- <label for="inputEmail4">Email</label> -->
-				<input type="text" class="form-control font-italic" id="cari-barang"
+				<input type="text" name="keyword" class="form-control font-italic" id="cari-barang"
 					placeholder="Cari nama produk / nama tanaman...">
 			</div>
+
 			<!-- <div class="form-group col-lg-3 col-md-12 col-sm-12">
 				<select id="inputState" class="form-control">
 					<option selected>Aksesoris Tanaman</option>
@@ -21,17 +24,20 @@
 					<option>Aglonemaa</option>
 				</select>
 			</div> -->
-			<div class="form-group col-lg-4 col-md-12 col-sm-12">
+
+			<div class="form-group col-lg-3 col-md-12 col-sm-12">
+				<input type="submit" name="search_submit" value="Search" class="btn btn-dark btn-block">
+			</div>
+			<div class="form-group col-lg-3 col-md-12 col-sm-12">
 				<!-- <label for="">Cek Biaya Kirim</label> -->
 				<a href="http://www.jet.co.id/tariff" class="btn btn-block btn-warning" target="_blank">Cek Biaya Kirim
-					J&T Express</a>
+					J&T</a>
 				<!-- <button type="button" class="btn btn-block btn-success">Cek Biaya Kirim</button> -->
 			</div>
 		</div>
+		
 	</form>
-</section>
 
-<section class="container">
 	<div class="card-deck my-4">
 		<div class="card-columns">
 			<?php	
@@ -109,7 +115,7 @@
 		?>
 		</div>
 	</div>
-
+	<?php echo form_close()?>
 </section>
 
 <section class="container my-5">
