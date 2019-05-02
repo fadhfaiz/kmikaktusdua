@@ -46,7 +46,10 @@
 							</div>
 						</a>
 						<div class="card-footer">
-							<small class="text-muted">Rp. '.$b->harga.'</small>
+						<div class="row">
+						<small class="text-muted">Rp. '.$b->harga.'</small>
+						<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
+						</div>
 						</div>
 					</div>
 				
@@ -64,7 +67,10 @@
 							</div>
 						</a>
 						<div class="card-footer">
+						<div class="row">
 							<small class="text-muted">Rp. '.$b->harga.'</small>
+							<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
+						</div>
 						</div>
 					</div>
 				
@@ -82,7 +88,10 @@
 							</div>
 						</a>
 						<div class="card-footer">
+						<div class="row">
 							<small class="text-muted">Rp. '.$b->harga.'</small>
+							<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
+						</div>
 						</div>
 					</div>
 			
