@@ -54,6 +54,12 @@
             $this->db->where('jenis_tanaman = "Aglonema"');
             return $this->db->get()->result();
         }
+        public function getBySansivera(){
+            $this->db->select("*");
+            $this->db->from("tanaman");
+            $this->db->where('jenis_tanaman = "Sansivera"');
+            return $this->db->get()->result();
+        }
 
         public function getByLaktea(){
             $this->db->select("*");

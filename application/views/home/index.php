@@ -62,6 +62,17 @@
 					<small class="text-muted">Last updated 3 mins ago</small>
 				</div> -->
 			</div>
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/paket_product"
+					style="color:white; text-decoration: none;">
+					<div class="card-body">
+						<h5 class="card-title text-center">Paket</h5>
+						<hr>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+							additional
+							content. This content is a little bit longer.</p>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 
@@ -182,10 +193,10 @@
 				</a>
 			</div>
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/paket_product"
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/sansivera_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
-						<h5 class="card-title text-center">Paket</h5>
+						<h5 class="card-title text-center">Sansivera</h5>
 						<hr>
 						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
 							additional

@@ -48,7 +48,7 @@
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link btn btn-info" href="<?= base_url(); ?>konfirmasi/index"> <i class="fas fa-envelope fa-lg"></i> Konfirmasi</a>
+						<a class="nav-link btn btn-info bg-light2" href="<?= base_url(); ?>konfirmasi/index"> <i class="fas fa-envelope fa-lg"></i> Konfirmasi</a>
 					</li>
 					<!-- <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"

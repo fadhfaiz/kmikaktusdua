@@ -82,6 +82,15 @@
             $this->load->view('marketplace/tanaman/drasanena_product');
             $this->load->view('templates/footer'); 
         }
+        public function sansivera_product()
+        {
+            $data['drasanena'] = $this->Marketplace_model->getBySansivera();
+            $data['judul'] = 'Produk Tanaman Sansivera';
+
+            $this->load->view('templates/header', $data);
+            $this->load->view('marketplace/tanaman/sansivera_product');
+            $this->load->view('templates/footer'); 
+        }
         public function lactea_product()
         {
             $data['laktea'] = $this->Marketplace_model->getByLaktea();

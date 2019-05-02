@@ -1,7 +1,13 @@
 <?php
 class Pembelian_Model extends CI_Model
 {
-
+    public $kode_pesanan;
+    public $kode_aksesoris;
+    public $id_pembeli;
+    public $total_harga;
+    public $jumlah_barang;
+    public $tanggal_beli;
+    public $ongkir;
     function Model_Pembeli($pembeli)
     {
         $this->db->select("id_pembeli");
@@ -28,6 +34,22 @@ class Pembelian_Model extends CI_Model
         return $idPembeli;
     }
 
+    function Beli_aksesoris(){
+        $post = $this->input->post();
+        $kode_pesanan +=1;
+        $this->kode_pesanan = "AK".$kode_pesanan;
+        $this->id_pembeli = $post["id_pembeli"];
+        $this->total_harga = $post["total_harga"];
+        $this->jumlah_barang = $post["jumlah_barang"];
+        $this->ongkir = $post["ongkir"];
+        $this->db->insert('beli_aksesoris',$this);
+    }
+    function Beli_tanaman(){
+
+    }
+    function Beli_paket(){
+
+    }
     function Model_ongkir($ongkir)
     {
             $this->db->select("*");

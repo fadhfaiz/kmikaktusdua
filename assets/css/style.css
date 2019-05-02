@@ -1,5 +1,5 @@
 #home {
-	/* background: url(http://localhost/kmikaktus/assets/img/kaktus01.jpg) no-repeat center center fixed; */
+	background-image: url('assets/img/Home.jpg') no-repeat center center fixed;
 	display: table;
 	height: 650px;
 	position: relative;
@@ -7,7 +7,7 @@
 	background-size: cover;
 	color: #fff;
 	/* background-color: teal; */
-	background-image: linear-gradient(to right, teal , #088d8d, #0bb1b1);
+	background-image: linear-gradient(to right, #af8759 , #af8759, #af8759);
 	min-height: 590px;
 	max-height: 630px;
 }
@@ -21,7 +21,9 @@
 #txt-satu {
 	font-size: 82px !important;
 }
-
+.bg{
+	background-color: #DEB887;
+}
 .MainPage {
 	background-color: #fff;
 	min-height: 250px;
