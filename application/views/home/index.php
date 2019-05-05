@@ -149,54 +149,21 @@
 				</a>
 			</div>
 
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/aloevera_product"
-					style="color:white; text-decoration: none;">
-					<div class="card-body">
-						<h5 class="card-title text-center">Aloevera</h5>
-						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="container">
-	<div class="container my-5">
-		<div class="card-deck">
-
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/drasanena_product"
-					style="color:white; text-decoration: none;">
-					<div class="card-body">
-						<h5 class="card-title text-center">Drasanena</h5>
-						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
-					</div>
-				</a>
-			</div>
-
-			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/lactea_product"
-					style="color:white; text-decoration: none;">
-					<div class="card-body">
-						<h5 class="card-title text-center">Lactea</h5>
-						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.
-						</p>
-					</div>
-				</a>
-			</div>
-
 			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/sansivera_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
 						<h5 class="card-title text-center">Sansivera</h5>
+						<hr>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+							additional
+							content. This content is a little bit longer.</p>
+					</div>
+				</a>
+			</div>
+			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/sukulen_product"
+					style="color:white; text-decoration: none;">
+					<div class="card-body">
+						<h5 class="card-title text-center">Sukulen</h5>
 						<hr>
 						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
 							additional

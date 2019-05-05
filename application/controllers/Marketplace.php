@@ -71,29 +71,9 @@
             $this->load->view('templates/footer'); 
         }
 
-        public function aloevera_product()
-        {
-            $data['aloevera'] = $this->Marketplace_model->getByAloevera();
-            $data['judul'] = 'Produk Tanaman Aloevera';
-
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/tanaman/aloevera_product');
-            $this->load->view('templates/footer'); 
-        }
-
-        public function drasanena_product()
-        {
-            $data['drasanena'] = $this->Marketplace_model->getByDrasanena();
-            $data['judul'] = 'Produk Tanaman Drasanena';
-
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/tanaman/drasanena_product');
-            $this->load->view('templates/footer'); 
-        }
-
         public function sansivera_product()
         {
-            $data['drasanena'] = $this->Marketplace_model->getBySansivera();
+            $data['sansivera'] = $this->Marketplace_model->getBySansivera();
             $data['judul'] = 'Produk Tanaman Sansivera';
 
             $this->load->view('templates/header', $data);
@@ -101,13 +81,13 @@
             $this->load->view('templates/footer'); 
         }
 
-        public function lactea_product()
+        public function sukulen_product()
         {
-            $data['laktea'] = $this->Marketplace_model->getByLaktea();
-            $data['judul'] = 'Produk Tanaman Lactea';
+            $data['sukulen'] = $this->Marketplace_model->getBySukulen();
+            $data['judul'] = 'Produk Tanaman Sukulen';
 
             $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/tanaman/lactea_product');
+            $this->load->view('marketplace/tanaman/sukulen_product');
             $this->load->view('templates/footer'); 
         }
 

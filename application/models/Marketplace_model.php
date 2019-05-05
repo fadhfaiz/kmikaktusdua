@@ -19,6 +19,12 @@
             $this->db->where('jenis_produk = "Pot"');
             return $this->db->get()->result();
         }
+        public function getDataPaket(){
+            $this->db->select("*");
+            $this->db->from("produk");
+            $this->db->where('jenis_produk = "Paket"');
+            return $this->db->get()->result();
+        }
 
         public function getDataBibit(){
             $this->db->select("*");
@@ -54,24 +60,10 @@
             return $this->db->get()->result();
         }
 
-        public function getByLaktea(){
+        public function getBySukulen(){
             $this->db->select("*");
             $this->db->from("produk");
-            $this->db->where('jenis_produk = "Lactea"');
-            return $this->db->get()->result();
-        }
-
-        public function getByDrasanena(){
-            $this->db->select("*");
-            $this->db->from("produk");
-            $this->db->where('jenis_produk = "Drasanena"');
-            return $this->db->get()->result();
-        }
-
-        public function getByAloevera(){
-            $this->db->select("*");
-            $this->db->from("produk");
-            $this->db->where('jenis_produk = "Aloevera"');
+            $this->db->where('jenis_produk = "Sukulen"');
             return $this->db->get()->result();
         }
 
@@ -89,14 +81,6 @@
             $this->db->where('kode_produk', $id);
             return $this->db->get()->row();
         }
-
-        // public function getByAksesoris($id){
-        //     $this->db->select("*");
-        //     $this->db->from("produk");
-        //     $this->db->where('kode_aksesoris', $id);
-        //     return $this->db->get()->row();
-        // }
-
         public function getProdukKeyword($keyword){
             $this->db->select("*");
             $this->db->from("produk");
