@@ -11,9 +11,9 @@
 
         public function index()
         {
-            $data['tanaman'] = $this->Marketplace_model->getDataTanaman();
-            $data['aksesoris'] = $this->Marketplace_model->getDataAksesoris();
-            $data['paket'] = $this->Marketplace_model->getDataPaket();
+            $data['produk'] = $this->Marketplace_model->getDataProduk();
+            // $data['aksesoris'] = $this->Marketplace_model->getDataAksesoris();
+    
             $data['judul'] = 'Marketplace';
 
             $this->load->view('templates/header', $data);
@@ -23,7 +23,7 @@
 
         public function detail_tanaman($id)
         {
-            $data['tanaman'] = $this->Marketplace_model->getByTanaman($id);
+            $data['produk'] = $this->Marketplace_model->getByProduk($id);
             $data['judul'] = 'Disini Nama Produk';
 
             $this->load->view('templates/header', $data);
@@ -31,15 +31,15 @@
             $this->load->view('templates/footer'); 
         }
 
-        public function detail_aksesoris($id)
-        {
-            $data['aksesoris'] = $this->Marketplace_model->getByAksesoris($id);
-            $data['judul'] = 'Disini Nama Produk';
+        // public function detail_aksesoris($id)
+        // {
+        //     $data['aksesoris'] = $this->Marketplace_model->getByAksesoris($id);
+        //     $data['judul'] = 'Disini Nama Produk';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/detail/detail_aksesoris');
-            $this->load->view('templates/footer'); 
-        }
+        //     $this->load->view('templates/header', $data);
+        //     $this->load->view('marketplace/detail/detail_aksesoris');
+        //     $this->load->view('templates/footer'); 
+        // }
 
         public function detail_paket($id)
         {
@@ -155,7 +155,7 @@
         public function cariproduk()
         {
             $keyword = $this->input->post('keyword');
-            $data['tanaman'] = $this->Marketplace_model->getProdukKeyword($keyword);
+            $data['produk'] = $this->Marketplace_model->getProdukKeyword($keyword);
 
             $this->load->view('templates/header', $data);
             $this->load->view('marketplace/index');
