@@ -13,7 +13,7 @@
         {
             $data['produk'] = $this->Marketplace_model->getDataProduk();
             // $data['aksesoris'] = $this->Marketplace_model->getDataAksesoris();
-            $data['paket'] = $this->Marketplace_model->getDataPaket();
+    
             $data['judul'] = 'Marketplace';
 
             $this->load->view('templates/header', $data);
