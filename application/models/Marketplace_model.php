@@ -13,13 +13,6 @@
         //     $this->db->from("produk");
         //     return $this->db->get()->result();
         // }
-
-        // public function getDataPaket(){
-        //     $this->db->select("*");
-        //     $this->db->from("paket");
-        //     return $this->db->get()->result();
-        // }
-
         public function getDataPot(){
             $this->db->select("*");
             $this->db->from("produk");
@@ -101,13 +94,6 @@
         //     $this->db->select("*");
         //     $this->db->from("produk");
         //     $this->db->where('kode_aksesoris', $id);
-        //     return $this->db->get()->row();
-        // }
-
-        // public function getByPaket($id){
-        //     $this->db->select("*");
-        //     $this->db->from("paket");
-        //     $this->db->where('kode_paket', $id);
         //     return $this->db->get()->row();
         // }
 

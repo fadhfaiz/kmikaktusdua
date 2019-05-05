@@ -8,36 +8,31 @@ Class Produk extends CI_Controller
         }
         $this->load->model("Produk_Model");
         $this->load->library("form_validation");
-        $this->load->model('Marketplace_model');
     }
-    public function edit_tanaman($kode_tanaman = null){
-        if(!isset($kode_tanaman)) redirect('Adminpage/Produk/produk_admin');
+    public function edit_produk($kode_produk = null){
+        if(!isset($kode_produk)) redirect('Adminpage/Produk/produk_admin');
 
-        $tanaman = $this->Produk_Model;
+        $produk = $this->Produk_Model;
         $validation = $this->form_validation;
-        $validation->set_rules($tanaman->rules());
+        $validation->set_rules($produk->rules());
 
         if($validation->run()){
-            $artikel->update_data_produktanaman();
-            $this->session->set_flashdata('sukses','berhasil disimpan');
-
+            $produk->update_data_produk();
         }
 
-        $data["tanaman"] = $tanaman->getBytanaman($kode_tanaman);
+        $data["produk"] = $produk->getIdDataProduk($kode_produk);
 
-        if(!$data["tanaman"]) show_404();
+        if(!$data["produk"]) show_404();
 
-        $judul['judul'] = 'Edit Produk Tanaman';
+        $judul['judul'] = 'Edit Produk';
 
         $this->load->view('templates/header_admin', $judul);
-        $this->load->view('adminpage/produk/edit_tanaman',$data);
+        $this->load->view('adminpage/produk/edit_produk',$data);
         $this->load->view('templates/footer');
     }
     public function product_admin()
     {
-        $data['tanaman'] = $this->Marketplace_model->getDataTanaman();
-        $data['aksesoris'] = $this->Marketplace_model->getDataAksesoris();
-        $data['paket'] = $this->Marketplace_model->getDataPaket();
+        $data['produk'] = $this->Produk_Model->getDataProduk();
         $data['judul'] = 'Produk Administrator';
 
         $this->load->view('templates/header_admin', $data);

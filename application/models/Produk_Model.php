@@ -1,24 +1,31 @@
 <?php
 class Produk_Model extends CI_Model
 {  
-  public $kode_tanaman;
-  public $nama_tanaman;
+  private $_table = "produk";
+  public $kode_produk;
+  public $nama_produk;
   public $gambar;
-  public $harga;
-  public $stok;
+  public $harga_produk;
+  public $stok_produk;
   public $diameter;
   public $tinggi;
   public $bobot;
-  public $jenis_tanaman;
+  public $jenis_produk;
  
   public function rules()
   {
     return[
-      [ 'field' => 'harga',
-        'label' => 'harga',
+      [ 'field' => 'nama_produk',
+        'label' => 'nama_produk',
         'rules' => 'required'],
-      [ 'field' => 'stok',
-        'label' => 'stok',
+      [ 'field' => 'harga_produk',
+        'label' => 'harga_produk',
+        'rules' => 'required'],
+      [ 'field' => 'jenis_produk',
+        'label' => 'jenis_produk',
+        'rules' => 'required'],
+      [ 'field' => 'stok_produk',
+        'label' => 'stok_produk',
         'rules' => 'required',],
       [ 'field' => 'gambar',
         'label' => 'gambar',
@@ -26,29 +33,50 @@ class Produk_Model extends CI_Model
     ];
   }
 
-  function update_data_produktanaman()
+  public function getDataProduk(){
+    $this->db->select("*");
+    $this->db->from("produk");
+    return $this->db->get()->result();
+}
+  public function getIdDataProduk($kode_produk){
+    return $this->db->get_where($this->_table, ["kode_produk" => $kode_produk])->row();
+}
+  function simpan_data_produk()
   {
-	$post = $this->input->post();
-    $this->kode_tanaman = $post["kode_tanaman"];
-    $this->nama_tanaman = $post["nama_tanaman"];
-    $this->harga = $post["harga"];
-    $this->gambar = $post["gambar"];
-    $this->stok = $post["stok"];
+
+    $post = $this->input->post();
+    $this->kode_produk = "P".rand(0,100);
+    $this->nama_produk = $post["nama_produk"];
+    $this->harga_produk = $post["harga_produk"];
+    $this->stok_produk = $post["stok_produk"];
     $this->diameter = $post["diameter"];
     $this->tinggi = $post["tinggi"];
     $this->bobot = $post["bobot"];
-    $this->jenis_tanaman = $post["jenis_tanaman"];
-    $this->db->update("tanaman",$this, array('kode_tanaman' => $post['kode_tanaman']));
+    $this->jenis_produk = $post["jenis_produk"];
+  
+    $this->db->insert($this->_table,$this);
+
+  }
+
+  function update_data_produk()
+  {
+		$post = $this->input->post();
+    $this->kode_produk = $post["kode_produk"];
+    $this->nama_produk = $post["nama_produk"];
+    $this->harga_produk = $post["harga_produk"];
+    $this->stok_produk = $post["stok_produk"];
+    $this->diameter = $post["diameter"];
+    $this->tinggi = $post["tinggi"];
+    $this->bobot = $post["bobot"];
+    $this->jenis_produk = $post["jenis_produk"];
+  
+    $this->db->update($this->_table,$this, array('kode_produk' => $post['kode_produk']));
 
   }	
-  public function getBytanaman($kode_tanaman)
-  {
-      return $this->db->get_where("tanaman", ["kode_tanaman" => $kode_tanaman])->row();
-  }
   
-  function hapus_data_article($kode_artikel)
+  function hapus_data_produk($kode_produk)
   {
-    return $this->db->delete("tanaman", array("kode_tanaman" => $kode_tanaman));
+    return $this->db->delete($this->_table, array("kode_produk" => $kode_produk));
   }
   
 }
