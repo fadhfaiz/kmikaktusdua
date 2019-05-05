@@ -53,20 +53,11 @@
 						</a>
 						<div class="card-footer">
 						<div class="row">
-<<<<<<< HEAD
-						<div class="col-6">
-							<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
-						</div>
-						<div class="col-6">
-							<!-- <input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"> -->
-							<input class="btn btn-block btn-success" type="button" href="#" value="Beli">
-=======
 						<div class="col-8">
 							<p class="h6" style="color: teal;">Rp. '.$b->harga_produk.'</p>
 						</div>
 						<div class="col-4">
 							<input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok_produk.'">
->>>>>>> 44494548228becf5852f3f65780e1504ea6acb5c
 						</div>
 						</div>
 						</div>
@@ -74,83 +65,6 @@
 				
 				';
 			}
-			// foreach($aksesoris as $b){
-			// 	echo '
-			
-<<<<<<< HEAD
-					<div class="card">
-						<a href="' .base_url().'marketplace/detail_aksesoris/'.$b->kode_aksesoris.'"
-							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
-								class="card-img-top" alt="...">
-							<div class="card-body">
-								<h6 class="card-title">'.$b->nama.'</h6>
-							</div>
-						</a>
-						<div class="card-footer">
-						<div class="row">
-						<div class="col-6">
-							<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
-						</div>
-						<div class="col-6">
-							<!-- <input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"> -->
-							<input class="btn btn-block btn-success" type="button" href="#" value="Beli">
-						</div>
-						</div>
-						</div>
-					</div>
-				
-				';
-			}
-			foreach($paket as $b){
-				echo '
-	
-					<div class="card">
-						<a href="' .base_url().'marketplace/detail_paket/'.$b->kode_paket.'"
-							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
-								class="card-img-top" alt="...">
-							<div class="card-body">
-								<h6 class="card-title">'.$b->nama_paket.'</h6>
-							</div>
-						</a>
-						<div class="card-footer">
-						<div class="row">
-						<div class="col-6">
-							<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
-						</div>
-						<div class="col-6">
-							<!-- <input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"> -->
-							<input class="btn btn-block btn-success" type="button" href="#" value="Beli">
-						</div>
-						</div>
-						</div>
-					</div>
-			
-
-				';
-			}
-=======
-			// 		<div class="card">
-			// 			<a href="' .base_url().'marketplace/detail_aksesoris/'.$b->kode_produk.'"
-			// 				style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
-			// 					class="card-img-top" alt="...">
-			// 				<div class="card-body">
-			// 					<h6 class="card-title">'.$b->nama.'</h6>
-			// 				</div>
-			// 			</a>
-			// 			<div class="card-footer">
-			// 			<div class="row">
-			// 			<div class="col-8">
-			// 			<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
-			// 			</div>
-			// 				<div class="col-4"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
-			// 			</div>
-			// 			</div>
-			// 		</div>
-				
-			// 	';
-			// }
-		
->>>>>>> 44494548228becf5852f3f65780e1504ea6acb5c
 		?>
 		</div>
 	</div>
