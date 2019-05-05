@@ -53,11 +53,12 @@
 						</a>
 						<div class="card-footer">
 						<div class="row">
-						<div class="col-8">
+						<div class="col-6">
 							<p class="h6" style="color: teal;">Rp. '.$b->harga_produk.'</p>
 						</div>
-						<div class="col-4">
-							<input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok_produk.'">
+						<div class="col-6">
+						<!--<input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok_produk.'">-->
+						<input type="button" class="btn btn-block btn-success" href="#" value="Beli">
 						</div>
 						</div>
 						</div>
