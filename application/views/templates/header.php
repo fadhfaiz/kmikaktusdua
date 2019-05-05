@@ -40,15 +40,15 @@
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li> -->
 					<li class="nav-item">
-						<a class="nav-link" href="<?= base_url(); ?>description/index"> Deskripsi & Cara Perawatan</a>
+						<a class="nav-link" style="color:white;" href="<?= base_url(); ?>description/index"> Deskripsi & Cara Perawatan</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?= base_url(); ?>article/index"> Baca Artikel</a>
+						<a class="nav-link" style="color:white;" href="<?= base_url(); ?>article/index"> Baca Artikel</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link btn btn-info bg-light2" href="<?= base_url(); ?>konfirmasi/index"> <i class="fas fa-envelope fa-lg"></i> Konfirmasi</a>
+						<a class="nav-link btn btn-info" style="color:white;" href="<?= base_url(); ?>konfirmasi/index"> <i class="fas fa-envelope fa-lg"></i> Konfirmasi</a>
 					</li>
 					<!-- <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"

@@ -7105,17 +7105,17 @@ button.bg-danger:hover {
 }
 
 .bg-dark {
-	background-color: #9b6d3f !important
+	background-color: teal !important
 }
 
 a.bg-dark:focus,
 a.bg-dark:hover,
 button.bg-dark:focus,
 button.bg-dark:hover {
-	background-color: #8a633e !important
+	background-color: #34DDDD !important
 }
 .bg-light2 {
-	background-color: #d6ae86 !important
+	background-color: #2ECC71 !important
 }
 
 a.bg-light2:focus,
