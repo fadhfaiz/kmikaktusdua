@@ -38,15 +38,15 @@
             foreach($pot as $p){
                 echo '
 					<div class="card">
-						<a href="' .base_url().'marketplace/detail_aksesoris/'.$p->kode_aksesoris.'"
+						<a href="' .base_url().'marketplace/detail_aksesoris/'.$p->kode_produk.'"
 							style="color:black; text-decoration: none;"><img src="' .base_url().'assets/img/'.$p->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
-								<h6 class="card-title">'.$p->nama.'</h6>
+								<h6 class="card-title">'.$p->nama_produk.'</h6>
 							</div>
 						</a>
 						<div class="card-footer">
-							<small class="text-muted">Rp. '.$p->harga.'</small>
+							<small class="text-muted">Rp. '.$p->harga_produk.'</small>
 						</div>
 					</div>
 				';

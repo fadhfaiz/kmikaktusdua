@@ -38,15 +38,15 @@
 			foreach($drasanena as $d){
 				echo '
 					<div class="card">
-						<a href="'.base_url().'marketplace/detail_tanaman/'.$d->kode_tanaman.'"
+						<a href="'.base_url().'marketplace/detail_tanaman/'.$d->kode_produk.'"
 							style="color:black; text-decoration: none;"><img src="'.base_url().'assets/img/'.$d->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
-								<h6 class="card-title">'.$d->nama_tanaman.'</h6>
+								<h6 class="card-title">'.$d->nama_produk.'</h6>
 							</div>
 						</a>
 						<div class="card-footer">
-							<small class="text-muted">Rp. '.$d->harga.'</small>
+							<small class="text-muted">Rp. '.$d->harga_produk.'</small>
 						</div>
 					</div>
 				';

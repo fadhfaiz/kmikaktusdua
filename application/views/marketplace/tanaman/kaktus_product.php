@@ -38,15 +38,15 @@
 			foreach($kaktus as $k){
 				echo '
 				<div class="card">
-					<a href="'.base_url().'marketplace/detail_tanaman/'.$k->kode_tanaman.'"
+					<a href="'.base_url().'marketplace/detail_tanaman/'.$k->kode_produk.'"
 						style="color:black; text-decoration: none;"><img src="'.base_url().'assets/img/'.$k->gambar.'"
 							class="card-img-top" alt="...">
 						<div class="card-body">
-							<h6 class="card-title">'.$k->nama_tanaman.'</h6>
+							<h6 class="card-title">'.$k->nama_produk.'</h6>
 						</div>
 					</a>
 					<div class="card-footer">
-						<small class="text-muted">Rp. '.$k->harga.'</small>
+						<small class="text-muted">Rp. '.$k->harga_produk.'</small>
 					</div>
 				</div>
 				';

@@ -20,7 +20,7 @@
 
         public function detail_tanaman($id)
         {
-            $data['tanaman'] = $this->Marketplace_model->getByTanaman($id);
+            $data['produk'] = $this->Marketplace_model->getByProduk($id);
             $data['judul'] = 'Disini Nama Produk';
 
             $this->load->view('templates/header', $data);

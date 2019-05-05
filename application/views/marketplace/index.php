@@ -41,23 +41,23 @@
 	<div class="card-deck my-4">
 		<div class="card-columns">
 			<?php	
-			foreach($tanaman as $b){
+			foreach($produk as $b){
 				echo '
 					<div class="card">
-						<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_tanaman.'"
+						<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
 							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
-								<h6 class="card-title">'.$b->nama_tanaman.'</h6>
+								<h6 class="card-title">'.$b->nama_produk.'</h6>
 							</div>
 						</a>
 						<div class="card-footer">
 						<div class="row">
 						<div class="col-8">
-							<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
+							<p class="h6" style="color: teal;">Rp. '.$b->harga_produk.'</p>
 						</div>
 						<div class="col-4">
-							<input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'">
+							<input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok_produk.'">
 						</div>
 						</div>
 						</div>
@@ -65,29 +65,29 @@
 				
 				';
 			}
-			foreach($aksesoris as $b){
-				echo '
+			// foreach($aksesoris as $b){
+			// 	echo '
 			
-					<div class="card">
-						<a href="' .base_url().'marketplace/detail_aksesoris/'.$b->kode_aksesoris.'"
-							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
-								class="card-img-top" alt="...">
-							<div class="card-body">
-								<h6 class="card-title">'.$b->nama.'</h6>
-							</div>
-						</a>
-						<div class="card-footer">
-						<div class="row">
-						<div class="col-8">
-						<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
-						</div>
-							<div class="col-4"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
-						</div>
-						</div>
-					</div>
+			// 		<div class="card">
+			// 			<a href="' .base_url().'marketplace/detail_aksesoris/'.$b->kode_produk.'"
+			// 				style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
+			// 					class="card-img-top" alt="...">
+			// 				<div class="card-body">
+			// 					<h6 class="card-title">'.$b->nama.'</h6>
+			// 				</div>
+			// 			</a>
+			// 			<div class="card-footer">
+			// 			<div class="row">
+			// 			<div class="col-8">
+			// 			<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
+			// 			</div>
+			// 				<div class="col-4"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
+			// 			</div>
+			// 			</div>
+			// 		</div>
 				
-				';
-			}
+			// 	';
+			// }
 			foreach($paket as $b){
 				echo '
 	

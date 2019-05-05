@@ -38,15 +38,15 @@
 			foreach($laktea as $l){
 				echo '
 					<div class="card">
-						<a href="'.base_url().'marketplace/detail_tanaman/'.$l->kode_tanaman.'"
+						<a href="'.base_url().'marketplace/detail_tanaman/'.$l->kode_produk.'"
 							style="color:black; text-decoration: none;"><img src="'.base_url().'assets/img/'.$l->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
-								<h6 class="card-title">'.$l->nama_tanaman.'</h6>
+								<h6 class="card-title">'.$l->nama_produk.'</h6>
 							</div>
 						</a>
 						<div class="card-footer">
-							<small class="text-muted">Rp. '.$l->harga.'</small>
+							<small class="text-muted">Rp. '.$l->harga_produk.'</small>
 						</div>
 					</div>
 				';

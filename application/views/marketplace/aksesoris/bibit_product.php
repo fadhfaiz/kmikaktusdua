@@ -38,15 +38,15 @@
 			foreach($bibit as $b){
 				echo '
 					<div class="card">
-						<a href="' .base_url().'marketplace/detail_aksesoris/'.$b->kode_aksesoris.'"
+						<a href="' .base_url().'marketplace/detail_aksesoris/'.$b->kode_produk.'"
 							style="color:black; text-decoration: none;"><img src="'.base_url().'assets/img/'.$b->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
-								<h6 class="card-title">'.$b->nama.'</h6>
+								<h6 class="card-title">'.$b->nama_produk.'</h6>
 							</div>
 						</a>
 						<div class="card-footer">
-							<small class="text-muted">Rp. '.$b->harga.'</small>
+							<small class="text-muted">Rp. '.$b->harga_produk.'</small>
 						</div>
 					</div>
 				';
