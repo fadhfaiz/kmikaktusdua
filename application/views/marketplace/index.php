@@ -53,11 +53,12 @@
 						</a>
 						<div class="card-footer">
 						<div class="row">
-						<div class="col-8">
+						<div class="col-6">
 							<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
 						</div>
-						<div class="col-4">
-							<input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'">
+						<div class="col-6">
+							<!-- <input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"> -->
+							<input class="btn btn-block btn-success" type="button" href="#" value="Beli">
 						</div>
 						</div>
 						</div>
@@ -78,10 +79,13 @@
 						</a>
 						<div class="card-footer">
 						<div class="row">
-						<div class="col-8">
-						<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
+						<div class="col-6">
+							<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
 						</div>
-							<div class="col-4"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
+						<div class="col-6">
+							<!-- <input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"> -->
+							<input class="btn btn-block btn-success" type="button" href="#" value="Beli">
+						</div>
 						</div>
 						</div>
 					</div>
@@ -101,10 +105,13 @@
 						</a>
 						<div class="card-footer">
 						<div class="row">
-						<div class="col-8">
-						<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
+						<div class="col-6">
+							<p class="h6" style="color: teal;">Rp. '.$b->harga.'</p>
 						</div>
-							<div class="col-4"><input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"></div>
+						<div class="col-6">
+							<!-- <input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok.'"> -->
+							<input class="btn btn-block btn-success" type="button" href="#" value="Beli">
+						</div>
 						</div>
 						</div>
 					</div>

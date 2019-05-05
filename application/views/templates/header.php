@@ -48,6 +48,10 @@
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
+						<a class="nav-link btn btn-success" style="color:white;" href="<?= base_url(); ?>keranjang/index"> <i class="fas fa-cart-plus fa-lg"></i> Cart</a>
+					</li>
+					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
+					<li class="nav-item">
 						<a class="nav-link btn btn-info" style="color:white;" href="<?= base_url(); ?>konfirmasi/index"> <i class="fas fa-envelope fa-lg"></i> Konfirmasi</a>
 					</li>
 					<!-- <li class="nav-item dropdown">
