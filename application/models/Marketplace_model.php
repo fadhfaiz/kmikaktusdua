@@ -7,12 +7,6 @@
             $this->db->from("produk");
             return $this->db->get()->result();
         }
-
-        // public function getDataAksesoris(){
-        //     $this->db->select("*");
-        //     $this->db->from("produk");
-        //     return $this->db->get()->result();
-        // }
         public function getDataPot(){
             $this->db->select("*");
             $this->db->from("produk");
