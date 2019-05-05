@@ -14,11 +14,11 @@
         //     return $this->db->get()->result();
         // }
 
-        public function getDataPaket(){
-            $this->db->select("*");
-            $this->db->from("paket");
-            return $this->db->get()->result();
-        }
+        // public function getDataPaket(){
+        //     $this->db->select("*");
+        //     $this->db->from("paket");
+        //     return $this->db->get()->result();
+        // }
 
         public function getDataPot(){
             $this->db->select("*");
@@ -86,7 +86,7 @@
             $this->db->select("*");
             $this->db->from("produk");
             $this->db->limit(5);
-            $this->db->order_by('kode_tanaman', 'ASC');
+            $this->db->order_by('kode_produk', 'DESC');
             return $this->db->get()->result();
         }
 
@@ -104,12 +104,12 @@
         //     return $this->db->get()->row();
         // }
 
-        public function getByPaket($id){
-            $this->db->select("*");
-            $this->db->from("paket");
-            $this->db->where('kode_paket', $id);
-            return $this->db->get()->row();
-        }
+        // public function getByPaket($id){
+        //     $this->db->select("*");
+        //     $this->db->from("paket");
+        //     $this->db->where('kode_paket', $id);
+        //     return $this->db->get()->row();
+        // }
 
         public function getProdukKeyword($keyword){
             $this->db->select("*");

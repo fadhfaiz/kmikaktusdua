@@ -9,13 +9,16 @@
 
         public function index()
         {
+            
             $data['artikelku'] = $this->Article_Model->getDataArtikel();
+            $data['artikelbaru'] = $this->Article_Model->getArtikelBaru();
             $judul['judul'] = 'Artikel Kaktuskmi';
 
             $this->load->view('templates/header' ,$judul);
             $this->load->view('article/index', $data);
             $this->load->view('templates/footer');
         }
+       
         public function artikel($id)
         {                           
             $data['artikelku'] = $this->Article_Model->getByIdArtikel($id);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

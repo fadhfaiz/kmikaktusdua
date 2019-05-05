@@ -10,7 +10,7 @@
 
         public function index()
         {
-            $data['produk'] = $this->Marketplace_model->getDataProduk();
+            $data['produk'] = $this->Marketplace_model->getDataProdukTerbaru();
             $data['judul'] = 'Selamat Datang di Kaktuskmi';
 
             $this->load->view('templates/header', $data);

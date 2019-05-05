@@ -17,6 +17,14 @@ class Article_Model extends CI_Model
             return $this->db->get()->result();
         }
 
+        public function getArtikelBaru(){
+          $this->db->select("*");
+          $this->db->from("artikel");
+          $this->db->limit(1);
+          $this->db->order_by('kode_artikel', 'ASC');
+          return $this->db->get()->result();
+      }
+
         public function getByIdArtikel($id){
             $this->db->select("*");
             $this->db->from("artikel");
