@@ -1,6 +1,6 @@
 <section class="container">
 	<table class="table table-bordered table-hover mt-5">
-		<thead class="text-center">
+		<thead class="text-center thead-light">
 			<tr>
 				<th scope="col">Foto Barang Barang</th>
 				<th scope="col">Nama Barang</th>
