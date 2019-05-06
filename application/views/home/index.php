@@ -102,7 +102,7 @@
 					echo '
 					<div class="card">
 							<a href="'.base_url().'home/detail_tanaman/'.$p->kode_produk.'"><img
-									src="'.base_url().'assets/img/'.$p->gambar.'" class="card-img-top" alt="...">
+									src="'.base_url().'gambar/'.$p->gambar.'" class="card-img-top" alt="...">
 								<div class="card-body">
 									<h6 class="card-title">'.$p->nama_produk.'</h6>
 								</div>

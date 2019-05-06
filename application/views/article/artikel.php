@@ -10,7 +10,7 @@
           <center>
           <div class="col-lg-9">
               <div class="card bg-dark" >
-                <img src="<?php echo base_url().'assets/img/'.$artikelku->gambar?>" class="img-fluid" alt="Responsive image">
+                <img src="<?php echo base_url().'gambar/'.$artikelku->gambar?>" class="img-fluid" alt="Responsive image">
               </div>
           </div>
           </center>

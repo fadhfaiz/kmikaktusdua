@@ -40,7 +40,7 @@
 				echo '
 					<div class="card">
 						<a href="'.base_url().'marketplace/detail_tanaman/'.$a->kode_produk.'"
-							style="color:black; text-decoration: none;"><img src="'.base_url().'assets/img/'.$a->gambar.'"
+							style="color:black; text-decoration: none;"><img src="'.base_url().'gambar/'.$a->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
 								<h6 class="card-title">'.$a->nama_produk.'</h6>

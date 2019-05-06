@@ -29,7 +29,7 @@
 				echo '
 					<div class="card">
 						<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
-							style="color:black; text-decoration: none;"><img src="'. base_url().'assets/img/'.$b->gambar.'"
+							style="color:black; text-decoration: none;"><img src="'. base_url().'gambar/'.$b->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
 								<h6 class="card-title">'.$b->nama_produk.'</h6>

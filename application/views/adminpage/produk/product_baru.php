@@ -20,15 +20,15 @@
 				</div>
 				<div class="form-group">
 					<label for="exampleFormControlSelect1" style="color: teal;">Jenis Produk</label>
-					<select class="form-control" id="exampleFormControlSelect1">
-						<option name="jenis_produk" value="Kaktus">Kaktus</option>
-						<option name="jenis_produk" value="Aglonema">Aglonema</option>
-						<option name="jenis_produk" value="Sukulen">Sukulen</option>
-						<option name="jenis_produk" value="Sansivera">Sansivera</option>
-						<option name="jenis_produk" value="Batu">Batu</option>
-						<option name="jenis_produk" value="Bibit">Bibit</option>
-						<option name="jenis_produk" value="Pot">Pot</option>
-						<option name="jenis_produk" value="Paket">Paket</option>
+					<select class="form-control" name="jenis_produk" id="exampleFormControlSelect1">
+						<option value="Kaktus">Kaktus</option>
+						<option value="Aglonema">Aglonema</option>
+						<option value="Sukulen">Sukulen</option>
+						<option value="Sansivera">Sansivera</option>
+						<option value="Batu">Batu</option>
+						<option value="Bibit">Bibit</option>
+						<option value="Pot">Pot</option>
+						<option value="Paket">Paket</option>
 					</select>
 				</div>
 
