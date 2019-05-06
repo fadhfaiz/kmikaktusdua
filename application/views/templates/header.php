@@ -48,11 +48,11 @@
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link btn btn-success" style="color:white;" href="<?= base_url(); ?>keranjang/index"> <i class="fas fa-cart-plus fa-lg"></i> Cart <span class="badge badge-light">2</span></a>
+						<a class="nav-link btn btn-dark" style="color:white;" href="<?= base_url(); ?>keranjang/index"> <i class="fas fa-cart-plus fa-lg"></i> Cart <span class="badge badge-light">2</span></a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link btn btn-info" style="color:white;" href="<?= base_url(); ?>konfirmasi/index"> <i class="fas fa-envelope fa-lg"></i> Konfirmasi</a>
+						<a class="nav-link btn btn-dark" style="color:white;" href="<?= base_url(); ?>konfirmasi/index"> <i class="fas fa-envelope fa-lg"></i> Konfirmasi</a>
 					</li>
 					<!-- <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
