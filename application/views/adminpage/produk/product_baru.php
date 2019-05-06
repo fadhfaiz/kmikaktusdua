@@ -18,7 +18,7 @@
 							<?php echo form_error('judul') ?>
 						</div>
 				</div>
-				<!-- <div class="form-group">
+				<div class="form-group">
 					<label for="exampleFormControlSelect1" style="color: teal;">Jenis Produk</label>
 					<select class="form-control" id="exampleFormControlSelect1">
 						<option name="jenis_produk" value="Kaktus">Kaktus</option>
@@ -30,7 +30,7 @@
 						<option name="jenis_produk" value="Pot">Pot</option>
 						<option name="jenis_produk" value="Paket">Paket</option>
 					</select>
-				</div> -->
+				</div>
 
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">Harga Produk</label>
