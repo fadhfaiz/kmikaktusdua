@@ -8,7 +8,9 @@ Class Artikel extends CI_Controller
         if($this->session->userdata('status') != "Login"){
             redirect(base_url("Login"));
         }
+        $this->load->helper(array('form', 'url'));
         $this->load->model("Article_Model");
+        $this->load->library('upload');
         $this->load->library("form_validation");
     }
     
@@ -74,6 +76,7 @@ Class Artikel extends CI_Controller
         $this->load->view('adminpage/artikel/article_page');
         $this->load->view('templates/footer');
     }
+    
 }
 
 ?>

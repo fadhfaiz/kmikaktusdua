@@ -21,7 +21,7 @@ class Article_Model extends CI_Model
           $this->db->select("*");
           $this->db->from("artikel");
           $this->db->limit(1);
-          $this->db->order_by('kode_artikel', 'ASC');
+          $this->db->order_by('kode_artikel', 'DSC');
           return $this->db->get()->result();
       }
 
@@ -72,13 +72,13 @@ private function _uploadImage()
           $config['upload_path']          = '/assets/img/';
           $config['allowed_types']        = 'gif|jpg|png';
           $config['file_name']            = $this->kode_artikel;
-         // $config['overwrite']			= true;
+          $config['overwrite']			= true;
           //$config['max_size']             = 1024; // 1MB
           // $config['max_width']            = 1024;
           // $config['max_height']           = 768;
       
           $this->load->library('upload', $config);
-      
+          
           if ($this->upload->do_upload('gambar')) {
               return $this->upload->data("file_name");
           }

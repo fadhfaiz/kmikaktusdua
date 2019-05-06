@@ -26,7 +26,7 @@ class Pembelian_Model extends CI_Model
             'kabupaten' => "$pembeli[kabupaten]",
             'provinsi' => "$pembeli[provinsi]",
             'kodepos' => "$pembeli[kodepos]",
-            'alamatlengkap' => "$pembeli[alamatlengkap]",
+            'alamat_lengkap' => "$pembeli[alamatlengkap]",
             'catatan' => "$pembeli[catatan]"
         );
         
