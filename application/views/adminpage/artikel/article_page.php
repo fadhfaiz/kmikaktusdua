@@ -23,10 +23,8 @@
 	<div class="row">
 		<div class="col-sm-8">		
 				<div class="custom-file mb-3">
-					<input type="file" class="custom-file-input" id="customFile" name="gambar">
-					<label class="custom-file-label" for="customFile">Choose file</label>
-					<div class="invalid-feedback">
-								</div>
+					<input type="file" class="custom-file-input" id="gambar" name="gambar">
+					<label class="custom-file-label" for="gambar" name="gambar">Choose file</label>
 				</div>
 		</div>
 		<div class="col-sm-2"><button class="btn btn-block btn-warning" type="reset">Cancel</button></div>

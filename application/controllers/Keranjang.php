@@ -3,7 +3,7 @@
     {
         public function index()
         {
-            $data['Judul'] = 'Halaman Keranjang';
+            $data['judul'] = 'Halaman Keranjang';
 
             $this->load->view('templates/header', $data);
             $this->load->view('keranjang/index');

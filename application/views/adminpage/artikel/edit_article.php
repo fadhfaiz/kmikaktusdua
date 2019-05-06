@@ -30,6 +30,7 @@
 				<div class="custom-file mb-3">
 					<input type="file" class="custom-file-input" id="customFile" name="gambar" value="<?php echo $artikel->gambar ?>">
 					<label class="custom-file-label" for="customFile"><?php echo $artikel->gambar ?></label>
+					<input type="hidden" name="old_image" value="<?php echo $artikel->gambar ?>">
 				</div>
 			</div>
 		</div>

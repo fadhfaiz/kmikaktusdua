@@ -6,6 +6,7 @@ Class Produk extends CI_Controller
         if($this->session->userdata('status') != "Login"){
             redirect(base_url("Login"));
         }
+        $this->load->library('upload');
         $this->load->model("Produk_Model");
         $this->load->library("form_validation");
     }
@@ -42,23 +43,25 @@ Class Produk extends CI_Controller
 
     public function product_admin()
     {
-        $data['produk'] = $this->Produk_Model->getDataProduk();
-        $data['judul'] = 'Produk Administrator';
+      
+        $judul['judul'] = 'Produk Administrator';
+        
+        $data["produk"] = $this->Produk_Model->getDataProduk();
 
-        $this->load->view('templates/header_admin', $data);
-        $this->load->view('adminpage/produk/product_admin');
+        $this->load->view('templates/header_admin',$judul);
+        $this->load->view('adminpage/produk/product_admin' ,$data);
         $this->load->view('templates/footer');
     }
     public function product_baru()
     {
         $data['judul'] = 'Halaman Menambah Produk Baru';
-
-        
+   
         $produk = $this->Produk_Model;
         $validation = $this->form_validation;
         $validation->set_rules($produk->rules());
         if($validation->run()){
             $produk->simpan_data_produk();
+            $this->session->set_flashdata('sukses','berhasil disimpan');
         }
 
         $this->load->view('templates/header_admin', $data);

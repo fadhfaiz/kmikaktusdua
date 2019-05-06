@@ -64,6 +64,23 @@ class Article_Model extends CI_Model
         return $this->db->get_where($this->_table, ["kode_artikel" => $kode_artikel])->row();
     }
 
+private function _uploadImage()
+      {
+          $config['upload_path']          = './assets/img/';
+          $config['allowed_types']        = 'gif|jpg|png';
+          $config['file_name']            = $this->kode_artikel;
+          $config['overwrite']			= true;
+          //$config['max_size']             = 1024; // 1MB
+          // $config['max_width']            = 1024;
+          // $config['max_height']           = 768;
+      
+          $this->load->library('upload', $config);
+          
+          if ($this->upload->do_upload('gambar')) {
+              return $this->upload->data("file_name");
+          }
+         return "default.jpg"; 
+}
   function simpan_data_article()
   {
     $this->load->helper('date');
@@ -80,11 +97,21 @@ class Article_Model extends CI_Model
 
   function update_data_article()
   {
+    $this->load->helper('date');
+    $datestring = '%Y-%m-%d';
+    $time = time();
 		$post = $this->input->post();
     $this->kode_artikel = $post["kode_artikel"];
     $this->judul = $post["judul"];
-    $this->gambar = $post["gambar"];
     $this->isi = $post["isi"];
+    $this->tanggal = mdate($datestring, $time);
+    
+    if (!empty($_FILES["gambar"]["name"])) {
+      $this->gambar = $this->_uploadImage();
+    } else {
+      $this->gambar = $post["old_image"];
+    }
+    
     $this->db->update($this->_table,$this, array('kode_artikel' => $post['kode_artikel']));
 
   }	

@@ -9,22 +9,6 @@
 					placeholder="Cari nama produk / nama tanaman...">
 			</div>
 
-			<!-- <div class="form-group col-lg-3 col-md-12 col-sm-12">
-				<select id="inputState" class="form-control">
-					<option selected>Aksesoris Tanaman</option>
-					<option>Pot</option>
-					<option>Batu Alam</option>
-				</select>
-			</div>
-			<div class="form-group col-lg-3 col-md-12 col-sm-12">
-				<select id="inputState" class="form-control">
-					<option selected>Kategori</option>
-					<option>Kaktus</option>
-					<option>Sansiveera</option>
-					<option>Aglonemaa</option>
-				</select>
-			</div> -->
-
 			<div class="form-group col-lg-3 col-md-12 col-sm-12">
 				<input type="submit" name="search_submit" value="Search" class="btn btn-dark btn-block">
 			</div>
