@@ -80,7 +80,7 @@
             $this->db->from("produk");
             $this->db->like("nama_produk", $keyword);
             $this->db->or_like("jenis_produk", $keyword);
-            return $this->db->get()->row();
+            return $this->db->get()->result();
         }
     }
 

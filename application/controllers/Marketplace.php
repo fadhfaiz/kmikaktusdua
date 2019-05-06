@@ -13,7 +13,7 @@
         {
             $data['produk'] = $this->Marketplace_model->getDataProduk();
             // $data['aksesoris'] = $this->Marketplace_model->getDataAksesoris();
-    
+            // var_dump($data['produk']);
             $data['judul'] = 'Marketplace';
 
             $this->load->view('templates/header', $data);
@@ -134,9 +134,11 @@
         
         public function cariproduk()
         {
-            $keyword = $this->input->post('keyword');
-            $data['produk'] = $this->Marketplace_model->getProdukKeyword($keyword);
 
+            $keyword = $this->input->post('keyword');
+            
+            $data['produk'] = $this->Marketplace_model->getProdukKeyword($keyword);
+            // var_dump($data['produk']);
             $this->load->view('templates/header', $data);
             $this->load->view('marketplace/index');
             $this->load->view('templates/footer');
