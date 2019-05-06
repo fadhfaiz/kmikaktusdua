@@ -27,9 +27,6 @@ class Produk_Model extends CI_Model
       [ 'field' => 'stok_produk',
         'label' => 'stok_produk',
         'rules' => 'required',],
-      [ 'field' => 'gambar',
-        'label' => 'gambar',
-        'rules' => 'required',]
     ];
   }
 
@@ -38,24 +35,41 @@ class Produk_Model extends CI_Model
     $this->db->from("produk");
     return $this->db->get()->result();
 }
+
   public function getIdDataProduk($kode_produk){
     return $this->db->get_where($this->_table, ["kode_produk" => $kode_produk])->row();
+}
+private function _uploadImage()
+      {
+          $config['upload_path']          = './assets/img/';
+          $config['allowed_types']        = 'gif|jpg|png';
+          $config['file_name']            = $this->kode_artikel;
+          $config['overwrite']			= true;
+          //$config['max_size']             = 1024; // 1MB
+          // $config['max_width']            = 1024;
+          // $config['max_height']           = 768;
+      
+          $this->load->library('upload', $config);
+          
+          if ($this->upload->do_upload('gambar')) {
+              return $this->upload->data("file_name");
+          }
+         return "default.jpg"; 
 }
   function simpan_data_produk()
   {
 
     $post = $this->input->post();
-    $this->kode_produk = "P".rand(0,100);
+    $this->kode_produk = rand(0,100);
     $this->nama_produk = $post["nama_produk"];
     $this->harga_produk = $post["harga_produk"];
     $this->stok_produk = $post["stok_produk"];
     $this->diameter = $post["diameter"];
     $this->tinggi = $post["tinggi"];
     $this->bobot = $post["bobot"];
-    $this->jenis_produk = $post["jenis_produk"];
-  
-    $this->db->insert($this->_table,$this);
+    $this->gambar = $this->_uploadImage();
 
+    $this->db->insert($this->_table,$this);
   }
 
   function update_data_produk()
