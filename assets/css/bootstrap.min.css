@@ -2819,11 +2819,11 @@ fieldset:disabled a.btn {
 }
 
 .btn-success:hover {
-	color: #fff;
+	color: teal;
 	/* background-color: #218838; */
 	/* border-color: #1e7e34; */
-	background-color: #4d4d4d;
-	border-color: #4d4d4d;
+	background-color: #FFC107;
+	border-color: #FFC107;
 }
 
 .btn-success.focus,

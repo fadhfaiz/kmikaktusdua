@@ -1,7 +1,7 @@
 <section class="container my-4">
 	<form action="<?= base_url(); ?>Pembelian/Data_pembeli" method ="post">
 
-		<h5 class="text-center" style="color:white;" id="datadiri1">Informasi Pembeli</h5>
+		<h5 class="text-center" style="color:white;" id="datadiri1">Informasi Pembeli &nbsp<i class="fas fa-user-circle"></i></h5>
 		<hr>
 		<div>
 			<div class="row">
@@ -43,7 +43,7 @@
 			</div>
 		</div>
 
-		<h5 class="text-center" style="color:white;" id="datadiri2">Alamat Pengiriman</h5>
+		<h5 class="text-center" style="color:white;" id="datadiri2">Alamat Pengiriman &nbsp<i class="fas fa-home"></i></h5>
 		<hr>
 		<div>
 			<div class="row">
@@ -93,7 +93,7 @@
 					</div>
 				</div>
 				<div class="col-12">
-					<div class="alert alert-info" role="alert">
+					<div class="alert alert-danger text-right" role="alert">
 						Pastikan sekali lagi data yang di-input sudah sesuai.
 					</div>
 				</div>
@@ -102,10 +102,10 @@
 		</div>
 
 		<div class="row">
-			<div class="col-6 my-2"><a href="<?= base_url(); ?>marketplace/index"
-					class="btn btn-outline-info btn-block align-right"><i class="fas fa-arrow-circle-left fa-lg"></i>
-					Back to Marketplace</a></div>
-			<div class="col-6 my-2"><button type="submit" class="btn btn-primary">Detail Pesanan</button></div>
+			<div class="col-6"><a href="<?= base_url(); ?>keranjang/index"
+					class="btn btn-outline-secondary btn-block align-right"><i class="fas fa-arrow-circle-left fa-lg"></i>
+					Back to Cart</a></div>
+			<div class="col-6"><button type="submit" class="btn btn-block btn-warning">Detail Pesanan</button></div>
 		</div>
 	</form>
 </section>

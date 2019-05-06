@@ -2,7 +2,7 @@
 	<table class="table table-bordered table-hover mt-5">
 		<thead class="text-center thead-light">
 			<tr>
-				<th scope="col">Foto Barang Barang</th>
+				<th scope="col">Kode Barang</th>
 				<th scope="col">Nama Barang</th>
 				<th scope="col">Harga Satuan</th>
 				<th scope="col">Jumlah Pembelian</th>
@@ -11,14 +11,14 @@
 		</thead>
 		<tbody>
 			<tr>
-				<th scope="row">Kaktus.jpg</th>
+				<th scope="row">KK003</th>
 				<td>Kaktus Durian Sumatera</td>
 				<td class="text-center">Rp 35.000</td>
 				<td class="text-center">3</td>
                 <td class="text-center">Rp 105.000</td>
 			</tr>
 			<tr>
-				<th scope="row">Aglonema.png</th>
+				<th scope="row">KK004</th>
 				<td>Aglonema Bantul</td>
 				<td class="text-center">Rp 55.000</td>
 				<td class="text-center">2</td>

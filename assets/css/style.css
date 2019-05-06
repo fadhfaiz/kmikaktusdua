@@ -88,9 +88,15 @@
 }
 
 #datadiri1 {
-	background-color: #008080;
+	background-color: #36B07F;
+	border-radius: 25px;
+	padding: 4px;
+	/* width: 40%; */
 }
 
 #datadiri2 {
-	background-color: #008080;
+	background-color: #36B07f;
+	border-radius: 25px;
+	padding: 4px;
+	/* width: 40%; */
 }
