@@ -36,10 +36,11 @@
 					<?php foreach($artikel as $artikel): ?>
 
 				<tr>
+				<?php $date = $artikel->tanggal; ?>
 					<td><?php echo $artikel->kode_artikel ?></td>
 					<td><?php echo $artikel->gambar ?></td>
 					<td><?php echo $artikel->judul ?></td>
-					<td><?php echo $artikel->tanggal ?></td>
+					<td><?php echo date("d-m-Y", $date); ?></td>
 					<td>
 						<span><a href="<?php echo base_url('Adminpage/Artikel/edit_article/'.$artikel->kode_artikel)?>"
 								class="btn btn-outline-success"><i class="fas fa-edit"></i></a></span>

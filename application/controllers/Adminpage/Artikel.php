@@ -10,7 +10,7 @@ Class Artikel extends CI_Controller
         }
         $this->load->helper(array('form', 'url'));
         $this->load->model("Article_Model");
-        $this->load->library('upload');
+        // $this->load->library('upload');
         $this->load->library("form_validation");
     }
     
@@ -64,17 +64,30 @@ Class Artikel extends CI_Controller
     {
         $data['judul'] = 'Halaman Isi Artikel';
 
-        $artikel = $this->Article_Model;
         $validation = $this->form_validation;
-        $validation->set_rules($artikel->rules());
+        $validation->set_rules($this->Article_Model->rules());
+        
+        $dataku = [
+            "judul" => $this->input->post('judul'),
+            "isi" => $this->input->post('isi'),
+        ];
+
+        $this->session->set_userdata($dataku);
+
+        // var_dump($validation->run());
+        
         if($validation->run()){
-            $artikel->simpan_data_article();
+            // echo 'proses berhasil';
+            $this->Article_Model->save_gambar($this->Article_Model->upload_gambar());
+            // $artikel->simpan_data_article();
+            // die;
             $this->session->set_flashdata('sukses','berhasil disimpan');
         }
+            $this->load->view('templates/header_admin', $data);
+            $this->load->view('adminpage/artikel/article_page');
+            $this->load->view('templates/footer');
+        
 
-        $this->load->view('templates/header_admin', $data);
-        $this->load->view('adminpage/artikel/article_page');
-        $this->load->view('templates/footer');
     }
     
 }

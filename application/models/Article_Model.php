@@ -40,9 +40,6 @@ class Article_Model extends CI_Model
         'rules' => 'required'],
       [ 'field' => 'isi',
         'label' => 'isi',
-        'rules' => 'required',],
-      [ 'field' => 'gambar',
-        'label' => 'gambar',
         'rules' => 'required',]
     ];
   }
@@ -67,24 +64,6 @@ class Article_Model extends CI_Model
         return $this->db->get_where($this->_table, ["kode_artikel" => $kode_artikel])->row();
     }
 
-private function _uploadImage()
-      {
-          $config['upload_path']          = '/assets/img/';
-          $config['allowed_types']        = 'gif|jpg|png';
-          $config['file_name']            = $this->kode_artikel;
-          $config['overwrite']			= true;
-          //$config['max_size']             = 1024; // 1MB
-          // $config['max_width']            = 1024;
-          // $config['max_height']           = 768;
-      
-          $this->load->library('upload', $config);
-          
-          if ($this->upload->do_upload('gambar')) {
-              return $this->upload->data("file_name");
-          }
-          
-          return "default.jpg"; 
-}
   function simpan_data_article()
   {
     $this->load->helper('date');
@@ -93,7 +72,6 @@ private function _uploadImage()
     $post = $this->input->post();
     $this->kode_artikel = rand(0,100);
     $this->judul = $post["judul"];
-    $this->gambar = $this->_uploadImage();
     $this->isi = $post["isi"];
     $this->tanggal = mdate($datestring, $time);
     $this->db->insert($this->_table,$this);
@@ -115,5 +93,35 @@ private function _uploadImage()
   {
     return $this->db->delete($this->_table, array("kode_artikel" => $kode_artikel));
   }
-  
+
+  public function upload_gambar() {
+      $config['upload_path'] = 'gambar/';
+      $config['allowed_types'] = 'jpg|png|jpeg';
+      $config['max_size']  = '2048';
+      $config['remove_space'] = TRUE;
+    
+      $this->load->library('upload', $config); // Load konfigurasi uploadnya
+      if($this->upload->do_upload('gambar')){ // Lakukan upload dan Cek jika proses upload berhasil
+        // Jika berhasil :
+        $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
+        return $return;
+      }else{
+        // Jika gagal :
+        $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+        return $return;
+      }
+  }
+
+  public function save_gambar($upload)
+  {
+    $data = array(
+      'judul'=>$this->session->userdata('judul'),
+      'isi' => $this->session->userdata('isi'),
+      'tanggal' => time(),
+      'gambar' => $upload['file']['orig_name'],
+    );
+    
+    $this->db->insert('artikel', $data);
+  }
+
 }

@@ -1,5 +1,8 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <section class="container my-5">
+ 	<div class="alert alert-success" role="alert">
+ 		<?= $this->session->flashdata('sukses'); ?>
+	 </div>
 	<form action="<?php echo base_url(); ?>Adminpage/Artikel/article_page" method="post" enctype="multipart/form-data">
 	
 		<div class="form-group">
@@ -20,10 +23,9 @@
 	<div class="row">
 		<div class="col-sm-8">		
 				<div class="custom-file mb-3">
-					<input type="file" class="custom-file-input <?php echo form_error('gambar') ? 'is-invalid':'' ?>" id="customFile" name="gambar">
+					<input type="file" class="custom-file-input" id="customFile" name="gambar">
 					<label class="custom-file-label" for="customFile">Choose file</label>
 					<div class="invalid-feedback">
-									<?php echo form_error('gambar') ?>
 								</div>
 				</div>
 		</div>
