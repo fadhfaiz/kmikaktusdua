@@ -86,8 +86,6 @@ Class Artikel extends CI_Controller
             $this->load->view('templates/header_admin', $data);
             $this->load->view('adminpage/artikel/article_page');
             $this->load->view('templates/footer');
-        
-
     }
     
 }

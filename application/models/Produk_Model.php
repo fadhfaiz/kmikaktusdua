@@ -98,10 +98,14 @@ class Produk_Model extends CI_Model
 public function save_gambar_produk($upload)
 {
   $data = array(
-    'judul'=>$this->session->userdata('judul'),
-    'isi' => $this->session->userdata('isi'),
-    'tanggal' => time(),
+    'nama_produk'=>$this->session->userdata('nama_produk'),
+    'harga_produk' => $this->session->userdata('harga_produk'),
+    'stok_produk'=>$this->session->userdata('stok_produk'),
+    'diameter'=>$this->session->userdata('diameter'),
+    'tinggi' => $this->session->userdata('tinggi'),
     'gambar' => $upload['file']['orig_name'],
+    'jenis_produk' => $this->session->userdata('jenis_produk'),
+    'catatan' => $this->session->userdata('catatan'),
   );
   
   $this->db->insert('produk', $data);

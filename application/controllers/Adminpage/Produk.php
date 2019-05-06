@@ -56,11 +56,23 @@ Class Produk extends CI_Controller
     {
         $data['judul'] = 'Halaman Menambah Produk Baru';
    
-        $produk = $this->Produk_Model;
         $validation = $this->form_validation;
-        $validation->set_rules($produk->rules());
+        $validation->set_rules($this->Produk_Model->rules());
+
+        $dataku = [
+            "nama_produk" => $this->input->post('nama_produk'),
+            "harga_produk" => $this->input->post('harga_produk'),
+            "diameter" => $this->input->post('diameter'),
+            "tinggi" => $this->input->post('tinggi'),
+            "jenis_produk" => $this->input->post('jenis_produk'),
+            "catatan" => $this->input->post('catatan'),
+        ];
+
+        $this->session->set_userdata($dataku);
+
         if($validation->run()){
-            $produk->simpan_data_produk();
+            $this->Produk_Model->save_gambar_produk($this->Produk_Model->upload_gambar_produk());
+
             $this->session->set_flashdata('sukses','berhasil disimpan');
         }
 

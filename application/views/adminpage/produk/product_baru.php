@@ -5,6 +5,9 @@
 </section>
 
 <section class="container">
+	<div class="alert alert-success" role="alert">
+ 		<?= $this->session->flashdata('sukses'); ?>
+	 </div>
 	<form action="<?php echo base_url(); ?>Adminpage/Produk/product_baru" method="post" enctype="multipart/form-data">
 		<div class="row">
 
