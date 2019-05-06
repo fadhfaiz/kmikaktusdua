@@ -1,5 +1,5 @@
 <section class="container">
-	<table class="table table-bordered mt-5">
+	<table class="table table-bordered table-hover mt-5">
 		<thead class="text-center">
 			<tr>
 				<th scope="col">Foto Barang Barang</th>
@@ -26,7 +26,7 @@
 			</tr>
 			<tr>
 				<td scope="row" colspan="4" class="text-center font-weight-bold">Jumlah Total Pembayaran</td>
-                <td class="text-center" style="color: red;">Rp 215.000</td>
+                <td class="text-center font-weight-bold" style="color: teal;">Rp 215.000</td>
 			</tr>
 		</tbody>
 	</table>
