@@ -18,13 +18,14 @@
 				<div class="form-group">
 					<label for="exampleFormControlSelect1" style="color: teal;">Jenis Produk</label>
 					<select class="form-control" id="exampleFormControlSelect1" name="jenis_produk">
-						<option>Kaktus</option>
-						<option>Aglonema</option>
-						<option>Sukulen</option>
-						<option>Sansivera</option>
-						<option>batu</option>
-						<option>bibit</option>
-						<option>pot</option>
+						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Kaktus</option>
+						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Aglonema</option>
+						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Sukulen</option>
+						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Sansivera</option>
+						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Batu</option>
+						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Bibit</option>
+						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Pot</option>
+						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Paket</option>
 					</select>
 				</div>
 

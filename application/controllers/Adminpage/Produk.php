@@ -30,6 +30,16 @@ Class Produk extends CI_Controller
         $this->load->view('adminpage/produk/edit_produk',$data);
         $this->load->view('templates/footer');
     }
+    public function hapus_produk($kode_produk = null)
+    {
+        if (!isset($kode_produk)) show_404();
+
+        if($this->Produk_Model->hapus_data_produk($kode_produk))
+        {
+            redirect(site_url('Adminpage/Produk/product_admin'));
+        }
+    }
+
     public function product_admin()
     {
         $data['produk'] = $this->Produk_Model->getDataProduk();
@@ -42,6 +52,14 @@ Class Produk extends CI_Controller
     public function product_baru()
     {
         $data['judul'] = 'Halaman Menambah Produk Baru';
+
+        
+        $produk = $this->Produk_Model;
+        $validation = $this->form_validation;
+        $validation->set_rules($produk->rules());
+        if($validation->run()){
+            $produk->simpan_data_produk();
+        }
 
         $this->load->view('templates/header_admin', $data);
         $this->load->view('adminpage/produk/product_baru');

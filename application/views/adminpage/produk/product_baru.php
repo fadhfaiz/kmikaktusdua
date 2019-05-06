@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <section class="container my-4">
 	<h2 style="color: teal;" class="text-center">Upload Produk Baru.</h2>
     <hr>
@@ -11,49 +12,33 @@
 
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">Nama Produk</label>
-					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Nama produk">
+					<input type="text" class="form-control <?php echo form_error('nama_produk') ? 'is-invalid':'' ?>" id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Nama produk" name="nama_produk">
+						<div class="invalid-feedback">
+							<?php echo form_error('judul') ?>
+						</div>
 				</div>
-
 				<div class="form-group">
-					<label for="exampleInputEmail1" style="color: teal;">Tipe Tanaman</label>
-					<div class="form-check">
-						&nbsp;<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-							value="option2">
-						<label class="form-check-label" for="exampleRadios2">
-							Tanaman
-						</label>
-					</div>
-					<div class="form-check">
-						&nbsp;<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-							value="option2">
-						<label class="form-check-label" for="exampleRadios2">
-							Aksesoris
-						</label>
-					</div>
-					<div class="form-check">
-						&nbsp;<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-							value="option2">
-						<label class="form-check-label" for="exampleRadios2">
-							Paket
-						</label>
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label for="exampleFormControlSelect1" style="color: teal;">Grup Tanaman</label>
+					<label for="exampleFormControlSelect1" style="color: teal;">Jenis Produk</label>
 					<select class="form-control" id="exampleFormControlSelect1">
-						<option>Kaktus</option>
-						<option>Aglonema</option>
-						<option>Sansivera</option>
-						<option>None</option>
+						<option name="jenis_produk" value="Kaktus">Kaktus</option>
+						<option name="jenis_produk" value="Aglonema">Aglonema</option>
+						<option name="jenis_produk" value="Sukulen">Sukulen</option>
+						<option name="jenis_produk" value="Sansivera">Sansivera</option>
+						<option name="jenis_produk" value="Batu">Batu</option>
+						<option name="jenis_produk" value="Bibit">Bibit</option>
+						<option name="jenis_produk" value="Pot">Pot</option>
+						<option name="jenis_produk" value="Paket">Paket</option>
 					</select>
 				</div>
 
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">Harga Produk</label>
-					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Harga produk">
+					<input type="text" class="form-control <?php echo form_error('harga_produk') ? 'is-invalid':'' ?>" id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Harga produk" name="harga_produk">
+						<div class="invalid-feedback">
+							<?php echo form_error('judul') ?>
+						</div>
 				</div>
 
 			</div>
@@ -64,21 +49,24 @@
 						<div class="form-group">
 							<label for="exampleInputEmail1" style="color: teal;">Diameter Produk</label>
 							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="... cm">
+								placeholder="... cm" name="diameter">
 						</div>
 					</div>
 					<div class="col-4">
 						<div class="form-group">
 							<label for="exampleInputEmail1" style="color: teal;">Tinggi Produk</label>
 							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="... cm">
+								placeholder="... cm" name="tinggi">
 						</div>
 					</div>
 					<div class="col-4">
 						<div class="form-group">
 							<label for="exampleInputEmail1" style="color: teal;">Stok Produk</label>
-							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="... pcs">
+							<input type="text" class="form-control <?php echo form_error('stok_produk') ? 'is-invalid':'' ?>" id="exampleInputEmail1" aria-describedby="emailHelp"
+								placeholder="... pcs" name="stok_produk">
+								<div class="invalid-feedback">
+									<?php echo form_error('judul') ?>
+								</div>
 						</div>
 					</div>
 				</div>
@@ -86,21 +74,32 @@
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">Keterangan Tambahan</label>
 					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Tentang produk">
+						placeholder="Tentang produk" name="catatan">
 				</div>
 
 				<div class="custom-file">
-					<input type="file" class="custom-file-input" id="customFile">
+					<input type="file" class="custom-file-input <?php echo form_error('gambar') ? 'is-invalid':'' ?>" id="customFile" name="gambar">
 					<label class="custom-file-label" for="customFile">Upload Foto Produk</label>
+					<div class="invalid-feedback">
+						<?php echo form_error('gambar') ?>
+					</div>
 				</div>
 
                 <div class="row mt-4">
                     <div class="col-4"><a href="<?php echo base_url()?>adminpage/Produk/product_admin" class="btn btn-outline-secondary btn-block">Cancel</a></div>
-                    <div class="col-8"><a href="" class="btn btn-success btn-block">Tambah Produk</a></div>
+                    <div class="col-8"><button class="btn btn-block btn-warning" type="submit">Submit</button></div>
                 </div>
 
 			</div>
 
 		</div>
 	</form>
+	<a href="<?php echo base_url(); ?>Adminpage/Produk/product_admin"><i class="fas fa-arrow-left"></i> Back</a>
 </section>
+<script>
+				// Add the following code if you want the name of the file appear on select
+				$(".custom-file-input").on("change", function() {
+				var fileName = $(this).val().split("\\").pop();
+				$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+				});
+</script>
