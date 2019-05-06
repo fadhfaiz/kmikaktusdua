@@ -39,23 +39,7 @@ class Produk_Model extends CI_Model
   public function getIdDataProduk($kode_produk){
     return $this->db->get_where($this->_table, ["kode_produk" => $kode_produk])->row();
 }
-private function _uploadImage()
-      {
-          $config['upload_path']          = './assets/img/';
-          $config['allowed_types']        = 'gif|jpg|png';
-          $config['file_name']            = $this->kode_artikel;
-          $config['overwrite']			= true;
-          //$config['max_size']             = 1024; // 1MB
-          // $config['max_width']            = 1024;
-          // $config['max_height']           = 768;
-      
-          $this->load->library('upload', $config);
-          
-          if ($this->upload->do_upload('gambar')) {
-              return $this->upload->data("file_name");
-          }
-         return "default.jpg"; 
-}
+
   function simpan_data_produk()
   {
 
@@ -93,4 +77,33 @@ private function _uploadImage()
     return $this->db->delete($this->_table, array("kode_produk" => $kode_produk));
   }
   
+  public function upload_gambar_produk() {
+    $config['upload_path'] = 'gambar/';
+    $config['allowed_types'] = 'jpg|png|jpeg';
+    $config['max_size']  = '2048';
+    $config['remove_space'] = TRUE;
+  
+    $this->load->library('upload', $config); // Load konfigurasi uploadnya
+    if($this->upload->do_upload('gambar')){ // Lakukan upload dan Cek jika proses upload berhasil
+      // Jika berhasil :
+      $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
+      return $return;
+    }else{
+      // Jika gagal :
+      $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+      return $return;
+    }
+}
+
+public function save_gambar_produk($upload)
+{
+  $data = array(
+    'judul'=>$this->session->userdata('judul'),
+    'isi' => $this->session->userdata('isi'),
+    'tanggal' => time(),
+    'gambar' => $upload['file']['orig_name'],
+  );
+  
+  $this->db->insert('produk', $data);
+}
 }
