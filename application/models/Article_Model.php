@@ -64,23 +64,6 @@ class Article_Model extends CI_Model
         return $this->db->get_where($this->_table, ["kode_artikel" => $kode_artikel])->row();
     }
 
-private function _uploadImage()
-      {
-          $config['upload_path']          = './assets/img/';
-          $config['allowed_types']        = 'gif|jpg|png';
-          $config['file_name']            = $this->kode_artikel;
-          $config['overwrite']			= true;
-          //$config['max_size']             = 1024; // 1MB
-          // $config['max_width']            = 1024;
-          // $config['max_height']           = 768;
-      
-          $this->load->library('upload', $config);
-          
-          if ($this->upload->do_upload('gambar')) {
-              return $this->upload->data("file_name");
-          }
-         return "default.jpg"; 
-}
   function simpan_data_article()
   {
     $this->load->helper('date');
