@@ -62,10 +62,9 @@
 				<div class="col-6">
 					<div class="input-group">
 						<select class="custom-select" id="inputGroupSelect01">
-							<option selected>Jumlah Pembelian</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
+							<option value="1">1 pcs</option>
+							<option value="2">2 pcs</option>
+							<option value="3">3 pcs</option>
 						</select>
 					</div>
 				</div>
