@@ -6,6 +6,8 @@ Class Produk extends CI_Controller
         if($this->session->userdata('status') != "Login"){
             redirect(base_url("Login"));
         }
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('upload');
         $this->load->model("Produk_Model");
         $this->load->library("form_validation");
     }
