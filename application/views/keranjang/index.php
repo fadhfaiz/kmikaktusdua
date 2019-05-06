@@ -4,7 +4,7 @@
 			<tr>
 				<th scope="col">Foto Barang Barang</th>
 				<th scope="col">Nama Barang</th>
-				<th scope="col">Harga @</th>
+				<th scope="col">Harga Satuan</th>
 				<th scope="col">Jumlah Pembelian</th>
                 <th scope="col">Harga Total</th>
 			</tr>
@@ -26,7 +26,7 @@
 			</tr>
 			<tr>
 				<td scope="row" colspan="4" class="text-center font-weight-bold">Jumlah Total Pembayaran</td>
-                <td class="text-center font-weight-bold" style="color: teal;">Rp 215.000</td>
+                <td class="text-center font-weight-bold bg-secondary" style="color: white;">Rp 215.000</td>
 			</tr>
 		</tbody>
 	</table>
