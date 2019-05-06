@@ -71,7 +71,7 @@
 				</div>
 
 				<div class="col-6">
-					<a href="<?= base_url(); ?>pembelian/index" class="btn btn-block btn-success"><i
+					<a href="<?= base_url(); ?>pembelian/index" class="btn btn-block btn-warning"><i
 							class="fas fa-cart-arrow-down mr-2">
 						</i> Beli Produk Ini</a>
 				</div>

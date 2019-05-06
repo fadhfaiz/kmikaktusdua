@@ -116,7 +116,7 @@
 			?>
 	</div>
 	<div class="my-4">
-		<a href="<?php echo base_url(); ?>marketplace/index" class="btn btn-block btn-success">Lihat Produk lainnya</a>
+		<a href="<?php echo base_url(); ?>marketplace/index" class="btn btn-block btn-warning">Lihat Produk lainnya</a>
 	</div>
 </section>
 
