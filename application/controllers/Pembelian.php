@@ -8,7 +8,7 @@
         $this->load->model("Menunggu_Model");
         $this->load->library("form_validation");
         }
-        
+
         public function Data_pembeli()
         {
             $id = $this->Pembelian_Model->Model_Pembeli($this->input->post());
@@ -52,6 +52,11 @@
             $this->load->view('templates/header', $data);
             $this->load->view('pembelian/terkonfirmasi');
             $this->load->view('templates/footer');
+        }
+
+        public function Simpandetailpesanan()
+        {
+            
         }
     }
 
