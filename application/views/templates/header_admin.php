@@ -18,7 +18,11 @@
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/Dosis/Dosis.css">
 	<link rel="icon" href="<?php echo base_url()?>assets/img/icon.png" />
-
+	<script type= 'text/javascript' src="<?php echo base_url(); ?>assets/js/jquery-1.9.1.min.js"></script>
+    <script type= 'text/javascript' src="<?php echo base_url(); ?>assets/js/exporting.js"></script>
+    <script type= 'text/javascript' src="<?php echo base_url(); ?>assets/js/highcharts.js"></script>
+    <script type= 'text/javascript' src="<?php echo base_url(); ?>assets/js/jquery.tsv-0.96.min.js"></script>
+    
 	<title><?php echo $judul; ?></title>
 </head>
 
