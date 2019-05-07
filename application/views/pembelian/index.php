@@ -8,7 +8,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1" >Nama</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" name = 'nama' aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="nama" name = 'nama' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -16,7 +16,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Alamat Email</label>
-						<input type="email" class="form-control" id="exampleInputEmail1" name = 'email' aria-describedby="emailHelp">
+						<input type="email" class="form-control" id="email" name = 'email' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -27,7 +27,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Nomor Handphone</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" name = 'no_telp' aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="no_telp" name = 'no_telp' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -35,7 +35,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Keterangan Tambahan</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" name = 'catatan' aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="catatan" name = 'catatan' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -50,7 +50,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Provinsi</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" name = 'provinsi' aria-describedby="emailHelp"">
+						<input type="text" class="form-control" id="provinsi" name = 'provinsi' aria-describedby="emailHelp"">
 						<small id=" emailHelp" class="form-text text-muted">We'll never share your email with anyone
 						else.</small>
 					</div>
@@ -58,7 +58,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Kabupaten / Kota</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" name = 'kabupaten' aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="kabupaten" name = 'kabupaten' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
@@ -69,7 +69,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Kecamatan</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" name = 'kecamatan' aria-describedby="emailHelp">
+						<input type="text" class="form-control" id="kecamatan" name = 'kecamatan' aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 							else.</small>
 					</div>
