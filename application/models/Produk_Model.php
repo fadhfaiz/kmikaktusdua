@@ -103,9 +103,10 @@ public function save_gambar_produk($upload)
     'stok_produk'=>$this->session->userdata('stok_produk'),
     'diameter'=>$this->session->userdata('diameter'),
     'tinggi' => $this->session->userdata('tinggi'),
-    'gambar' => $upload['file']['orig_name'],
     'jenis_produk' => $this->session->userdata('jenis_produk'),
     'catatan' => $this->session->userdata('catatan'),
+    'gambar' => $upload['file']['orig_name'],
+   
   );
   
   $this->db->insert('produk', $data);

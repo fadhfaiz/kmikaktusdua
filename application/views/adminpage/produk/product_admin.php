@@ -15,7 +15,7 @@
 			foreach($produk as $t){
 				echo '
 					<div class="card">
-						<img src="'.base_url().'assets/img/'.$t->gambar.'"
+						<img src="'.base_url().'gambar/'.$t->gambar.'"
 								class="card-img-top" alt="...">
 							<div class="card-body">
 								<h6 class="card-title">'.$t->nama_produk.'</h6>

@@ -35,6 +35,7 @@
 <section class="container">
 
 	<div class="card-deck my-4">
+	<div class="card-columns">
 		<?php
 			foreach($sukulen as $d){
 				echo '
@@ -53,7 +54,7 @@
 				';
 			}
 		?>
-		
+	</div>
 	</div>
 
 </section>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2019 at 10:04 AM
+-- Generation Time: May 06, 2019 at 11:39 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.1.12
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `artikel` (
-  `kode_artikel` char(5) NOT NULL,
+  `kode_artikel` int(11) NOT NULL,
   `judul` varchar(60) NOT NULL,
   `isi` text NOT NULL,
-  `tanggal` date NOT NULL,
+  `tanggal` int(11) NOT NULL,
   `gambar` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -41,7 +41,7 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`kode_artikel`, `judul`, `isi`, `tanggal`, `gambar`) VALUES
-('AR001', 'Kaktus dan Segala Manfaatnya', 'Kaktus (Cactaceae) adalah tanaman yang memiliki batang berduri dan dikenal hidup dicuaca panas dan\r\nkering, duri pada kaktus itu merupakan daun kaktus yang berubah bentuk menjadi duri sebagai\r\npenyesuaian diri untuk menghemat air. Biasanya kita mengenal kaktus itu hidup di gurun padahal tidak\r\nsemua jenis kaktus itu hidup di gurun ada juga beberapa jenis kaktus yang hidup di daerah tropis.\r\nTanaman kaktus saat ini juga digunakan sebagai tanaman hias, beraneka ragam jenis tanaman kaktus\r\nsekarang dijual dipasaran. Jenis tanaman kaktus yang populer adalah ariocarpus,haworhia attenuata,\r\nferocactus, Echinofossulocactus, echinocactud grussoni, Cereus Tetragonous.\r\n\r\nCara perawatan tanaman kaktus yang tergolong mudah menjadi salah satu sebab tanaman kaktus\r\npopuler dikalangan pecinta tamanan hias.\r\nKaktus tidak hanya bermanfaat untuk menghias rumah atau ruangan, sekarang kaktus juga sudah diolah\r\nmenjadi berbagai produk kecantikan, berikut manfaat kaktus :\r\n\r\n1. Menjadikan udara ruangan bebas dari polusi\r\nKaktus dapat membuat udara ruangan lebih bersih karena tumbuhan ini dapat menangkap\r\npolusi disekitarnya. Duri kaktus berfungsi untuk menangkap debu disekitar ruangan\r\n\r\n2. Meningkatkan kadar oksigen diruangan\r\nTanaman kaktus berbeda dari tanaman lain. Tanaman kaktus pada malam hari akan menyerap\r\nkarbondioksida dan melepaskan oksigen, sehingga kadar oksigen yang ada di ruangan akan\r\nmeningkat.\r\n\r\n3. Mengatasi radiasi dan gelombang elektromagnetik\r\nGelombang elektromagnetik yang dihasilkan dari computer, televisi, handphone, dan berbagai\r\nalat elektronik lainnya juga menghasilkan radiasi yang tidak baik bagi tubuh. Tanaman kaktus\r\ndapat menetralisir gelombang elektromagnetik dan menyerap radiasi yang dipaparkan oleh alat\r\nelektronik tersebut.\r\n\r\n4. Mencegah penuaan dini\r\nTanaman kaktus mengandung anti-oksidan yang melimpah, sehingga kaktus mampu mencegah\r\nmunculnya tanda-tanda penuaan dini. Kaktus juga kaya dengan vitamin E yang dapat membantu\r\nmempercepat regenerasi sel kulit. Produk kosmetik yang memiliki bahan dasar kaktus sekarang\r\nsudah ada di pasaran, biasanya berbentuk gel.\r\n\r\n5. Memperbaiki sel kulit yang rusak\r\nKandungan anti oksidan yang tinggi pada tanaman kaktus juga bisa membuat regenerasi kuliy\r\nmenjadi lebih cepat sehingga kulit akan tampak lebih sehar dan segar.\r\n\r\n6. Melawan radikal bebas\r\nRadikal bebas berasal dari radiasi sinar UV, polusi udara, dan asap rokok dapat menyebabkan\r\nkerusakan pada jaringa kulit. Molekul radikal bebas dapat dilawan dengan menggunakan\r\nantioksidan. Oleh karena itu tanaman kaktus yang kaya akan kandungan anti oksidan, flavonoid\r\ndan vitamin E dapat melawan radikal bebas\r\n\r\n7. Mengatasi gejala alergi\r\nBatang kaktus dapat digunakan untuk mengatasi gejala alergi seperti ruam dan rasa gatal.\r\nKarena kaktus memiliki kandungan flavonoid yang berfungsi untuk meredakan gejala alergi.', '2019-05-05', 'artikel kaktus.jpg');
+(1, 'Kaktus dan Segala Manfaatnya', 'Kaktus (Cactaceae) adalah tanaman yang memiliki batang berduri dan dikenal hidup dicuaca panas dan\r\nkering, duri pada kaktus itu merupakan daun kaktus yang berubah bentuk menjadi duri sebagai\r\npenyesuaian diri untuk menghemat air. Biasanya kita mengenal kaktus itu hidup di gurun padahal tidak\r\nsemua jenis kaktus itu hidup di gurun ada juga beberapa jenis kaktus yang hidup di daerah tropis.\r\nTanaman kaktus saat ini juga digunakan sebagai tanaman hias, beraneka ragam jenis tanaman kaktus\r\nsekarang dijual dipasaran. Jenis tanaman kaktus yang populer adalah ariocarpus,haworhia attenuata,\r\nferocactus, Echinofossulocactus, echinocactud grussoni, Cereus Tetragonous.\r\n\r\nCara perawatan tanaman kaktus yang tergolong mudah menjadi salah satu sebab tanaman kaktus\r\npopuler dikalangan pecinta tamanan hias.\r\nKaktus tidak hanya bermanfaat untuk menghias rumah atau ruangan, sekarang kaktus juga sudah diolah\r\nmenjadi berbagai produk kecantikan, berikut manfaat kaktus :\r\n\r\n1. Menjadikan udara ruangan bebas dari polusi\r\nKaktus dapat membuat udara ruangan lebih bersih karena tumbuhan ini dapat menangkap\r\npolusi disekitarnya. Duri kaktus berfungsi untuk menangkap debu disekitar ruangan\r\n\r\n2. Meningkatkan kadar oksigen diruangan\r\nTanaman kaktus berbeda dari tanaman lain. Tanaman kaktus pada malam hari akan menyerap\r\nkarbondioksida dan melepaskan oksigen, sehingga kadar oksigen yang ada di ruangan akan\r\nmeningkat.\r\n\r\n3. Mengatasi radiasi dan gelombang elektromagnetik\r\nGelombang elektromagnetik yang dihasilkan dari computer, televisi, handphone, dan berbagai\r\nalat elektronik lainnya juga menghasilkan radiasi yang tidak baik bagi tubuh. Tanaman kaktus\r\ndapat menetralisir gelombang elektromagnetik dan menyerap radiasi yang dipaparkan oleh alat\r\nelektronik tersebut.\r\n\r\n4. Mencegah penuaan dini\r\nTanaman kaktus mengandung anti-oksidan yang melimpah, sehingga kaktus mampu mencegah\r\nmunculnya tanda-tanda penuaan dini. Kaktus juga kaya dengan vitamin E yang dapat membantu\r\nmempercepat regenerasi sel kulit. Produk kosmetik yang memiliki bahan dasar kaktus sekarang\r\nsudah ada di pasaran, biasanya berbentuk gel.\r\n\r\n5. Memperbaiki sel kulit yang rusak\r\nKandungan anti oksidan yang tinggi pada tanaman kaktus juga bisa membuat regenerasi kuliy\r\nmenjadi lebih cepat sehingga kulit akan tampak lebih sehar dan segar.\r\n\r\n6. Melawan radikal bebas\r\nRadikal bebas berasal dari radiasi sinar UV, polusi udara, dan asap rokok dapat menyebabkan\r\nkerusakan pada jaringa kulit. Molekul radikal bebas dapat dilawan dengan menggunakan\r\nantioksidan. Oleh karena itu tanaman kaktus yang kaya akan kandungan anti oksidan, flavonoid\r\ndan vitamin E dapat melawan radikal bebas\r\n\r\n7. Mengatasi gejala alergi\r\nBatang kaktus dapat digunakan untuk mengatasi gejala alergi seperti ruam dan rasa gatal.\r\nKarena kaktus memiliki kandungan flavonoid yang berfungsi untuk meredakan gejala alergi.', 20190505, 'artikel kaktus.jpg');
 
 -- --------------------------------------------------------
 
@@ -117,28 +117,34 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`kode_produk`, `id_penjual`, `nama_produk`, `harga_produk`, `stok_produk`, `diameter`, `tinggi`, `gambar`, `jenis_produk`, `catatan`) VALUES
-('KK001', '1', 'Cephalocereus Senilis', 10000, 1, 1, 1, 'P3.jpg', 'Sukulen', ''),
-('KK002', '1', 'Cereus Tetragonous', 20000, 2, 2, 2, 'P4.jpg', 'Sukulen', ''),
-('KK003', '1', 'Cereus Peruvianus', 30000, 3, 3, 3, 'P5.jpg', 'Sukulen', ''),
-('KK004', '1', 'Echeveria Purposorum', 40000, 4, 4, 4, 'P6.jpg', 'Sukulen', ''),
-('KK005', '1', 'Astrophythum Capricorne', 50000, 5, 5, 5, 'P7.jpg', 'Sukulen', ''),
-('KK006', '1', 'Astrophythum Asterias', 60000, 6, 6, 6, 'P3.jpg', 'Sukulen', ''),
-('KK007', '1', 'Astrophythum Myriostigma', 70000, 7, 7, 7, 'P4.jpg', 'Sukulen', ''),
-('KK008', '1', 'Astrophythum Ornatum', 80000, 8, 8, 8, 'P5.jpg', 'Sukulen', ''),
-('KK009', '1', 'Echinopsis Ancistrophora', 90000, 9, 9, 9, 'P6.jpg', 'Sukulen', ''),
-('KK010', '1', 'Echinopsis Atacamensis', 10000, 10, 10, 10, 'P7.jpg', 'Sukulen', ''),
-('KK011', '1', 'Echinopsis Chiloensis', 11000, 11, 11, 11, 'P3.jpg', 'Sukulen', ''),
-('KK012', '1', 'Echinopsis Oxygona', 12000, 12, 12, 12, 'P4,jpg', 'Sukulen', ''),
-('KK013', '1', 'Echinopsis Spaciana', 130001, 13, 13, 13, 'P5.jpg', 'Sukulen', ''),
-('KK014', '1', 'Echinopsis Terscheckii', 14000, 14, 14, 14, 'P6.jpg ', 'Sukulen', ''),
-('KK015', '1', 'Trichocereus Spachianus ', 15000, 15, 15, 15, 'P5.jpg', 'Sukulen', ''),
-('KK016', '1', 'Acanthocalycium Thionanthum', 16000, 16, 16, 16, 'P7.jpg', 'Sukulen', ''),
-('KK017', '1', 'Echinocactus Grusonii', 17000, 17, 17, 17, 'P3.jpg', 'Sukulen', ''),
-('KK018', '1', 'Aloe Aristata Cactus', 18000, 18, 18, 18, 'P4.jpg', 'Sukulen', ''),
-('KK019', '1', 'Aloe Erinacea', 19000, 19, 19, 19, 'P5.jpg', 'Sukulen', ''),
-('KK020', '1', 'Aloe Jucunda', 20000, 20, 20, 20, 'P6.jpg', 'Sukulen', ''),
-('KK021', '1', 'Ariocarpus Confusus', 21000, 21, 21, 21, 'P7.jpg', 'Sukulen', ''),
-('KK022', '1', 'Ariocarpus Fissuratus', 22000, 22, 22, 22, 'P5.jpg', 'Sukulen', '');
+('KK001', '1', 'Cephalocereus Senilis', 10000, 1, 1, 1, 'P3.PNG', 'Sukulen', ''),
+('KK002', '1', 'Cereus Tetragonous', 20000, 2, 2, 2, 'P4.PNG', 'Sukulen', ''),
+('KK003', '1', 'Cereus Peruvianus', 30000, 3, 3, 3, 'P5.PNG', 'Sukulen', ''),
+('KK004', '1', 'Echeveria Purposorum', 40000, 4, 4, 4, 'P6.PNG', 'Sukulen', ''),
+('KK005', '1', 'Astrophythum Capricorne', 50000, 5, 5, 5, 'P7.PNG', 'Sukulen', ''),
+('KK006', '1', 'Astrophythum Asterias', 60000, 6, 6, 6, 'P3.PNG', 'Sukulen', ''),
+('KK007', '1', 'Astrophythum Myriostigma', 70000, 7, 7, 7, 'P4.PNG', 'Sukulen', ''),
+('KK008', '1', 'Astrophythum Ornatum', 80000, 8, 8, 8, 'P5.PNG', 'Sukulen', ''),
+('KK009', '1', 'Echinopsis Ancistrophora', 90000, 9, 9, 9, 'P6.PNG', 'Sukulen', ''),
+('KK010', '1', 'Echinopsis Atacamensis', 10000, 10, 10, 10, 'P7.PNG', 'Sukulen', ''),
+('KK011', '1', 'Echinopsis Chiloensis', 11000, 11, 11, 11, 'P3.PNG', 'Sukulen', ''),
+('KK012', '1', 'Echinopsis Oxygona', 12000, 12, 12, 12, 'P4.PNG', 'Sukulen', ''),
+('KK013', '1', 'Echinopsis Spaciana', 130001, 13, 13, 13, 'P5.PNG', 'Sukulen', ''),
+('KK014', '1', 'Echinopsis Terscheckii', 14000, 14, 14, 14, 'P6.PNG', 'Sukulen', ''),
+('KK015', '1', 'Trichocereus Spachianus ', 15000, 15, 15, 15, 'P5.PNG', 'Sukulen', ''),
+('KK016', '1', 'Acanthocalycium Thionanthum', 16000, 16, 16, 16, 'P7.PNG', 'Sukulen', ''),
+('KK017', '1', 'Echinocactus Grusonii', 17000, 17, 17, 17, 'P3.PNG', 'Sukulen', ''),
+('KK018', '1', 'Aloe Aristata Cactus', 18000, 18, 18, 18, 'P4.PNG', 'Sukulen', ''),
+('KK019', '1', 'Aloe Erinacea', 19000, 19, 19, 19, 'P5.PNG', 'Sukulen', ''),
+('KK020', '1', 'Aloe Jucunda', 20000, 20, 20, 20, 'P6.PNG', 'Sukulen', ''),
+('KK021', '1', 'Ariocarpus Confusus', 21000, 21, 21, 21, 'P7.PNG', 'Sukulen', ''),
+('KK022', '1', 'Ariocarpus Fissuratus', 22000, 22, 22, 22, 'P5.PNG', 'Sukulen', ''),
+('KK023', '1', 'Aglaonema Bidadari', 23000, 23, 23, 23, 'P4.png', 'Aglaonema', ''),
+('KK025', '1', 'Sansevieria Canaliculata', 25000, 25, 25, 25, 'P7.png', 'Sansevieria', ''),
+('KK026', '1', 'Sansevieria Pinguicula', 26000, 26, 26, 26, 'P5.png', 'Sansievieria', ''),
+('KK027', '1', 'Alocasia', 27000, 27, 27, 27, 'P7.png', 'Tanaman Hias Lainnya', ''),
+('KK028', '1', 'Anthurium', 28000, 28, 28, 28, 'P4.png', 'Tanaman Hias Lainnya', ''),
+('Ko24', '1', 'Aglaonema Bride of Sumatera', 24000, 24, 24, 24, 'P6.png', 'Aglaonema', '');
 
 -- --------------------------------------------------------
 
@@ -202,6 +208,16 @@ ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`kode_pesanan`),
   ADD KEY `id_pembeli` (`id_pembeli`,`kode_produk`),
   ADD KEY `kode_produk` (`kode_produk`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `kode_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

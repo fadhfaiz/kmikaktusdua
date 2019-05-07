@@ -21,7 +21,7 @@ class Article_Model extends CI_Model
           $this->db->select("*");
           $this->db->from("artikel");
           $this->db->limit(1);
-          $this->db->order_by('kode_artikel', 'DSC');
+          $this->db->order_by('tanggal', 'DESC');
           return $this->db->get()->result();
       }
 
@@ -133,5 +133,4 @@ class Article_Model extends CI_Model
     
     $this->db->insert('artikel', $data);
   }
-
 }
