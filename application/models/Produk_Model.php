@@ -21,12 +21,12 @@ class Produk_Model extends CI_Model
       [ 'field' => 'harga_produk',
         'label' => 'harga_produk',
         'rules' => 'required'],
+      [ 'field' => 'kode_produk',
+        'label' => 'kode_produk',
+        'rules' => 'required'],
       [ 'field' => 'jenis_produk',
         'label' => 'jenis_produk',
-        'rules' => 'required'],
-      [ 'field' => 'stok_produk',
-        'label' => 'stok_produk',
-        'rules' => 'required',],
+        'rules' => 'required']
     ];
   }
 
@@ -95,17 +95,18 @@ class Produk_Model extends CI_Model
     }
 }
 
-public function save_gambar_produk($upload)
+public function save_produk($upload)
 {
   $data = array(
+    'kode_produk'=>$this->session->userdata('kode_produk'),
     'nama_produk'=>$this->session->userdata('nama_produk'),
     'harga_produk' => $this->session->userdata('harga_produk'),
-    'stok_produk'=>$this->session->userdata('stok_produk'),
+    'stok_produk' => $this->session->userdata('stok_produk'),
     'diameter'=>$this->session->userdata('diameter'),
     'tinggi' => $this->session->userdata('tinggi'),
     'jenis_produk' => $this->session->userdata('jenis_produk'),
     'catatan' => $this->session->userdata('catatan'),
-    'gambar' => $upload['file']['orig_name'],
+    'gambar' => $upload['file']['name'],
    
   );
   

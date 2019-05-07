@@ -8,11 +8,19 @@
 	<div class="alert alert-success" role="alert">
  		<?= $this->session->flashdata('sukses'); ?>
 	 </div>
-	<form action="<?php echo base_url(); ?>Adminpage/Produk/product_baru" method="post" enctype="multipart/form-data">
+	<form action="<?php echo base_url(); ?>Adminpage/produk/product_baru" method="post" enctype="multipart/form-data">
 		<div class="row">
 
 			<div class="col-lg-6 col-md-12 col-sm-12">
 
+				<div class="form-group">
+					<label for="exampleInputEmail1" style="color: teal;">Kode Produk</label>
+					<input type="text" class="form-control <?php echo form_error('kode_produk') ? 'is-invalid':'' ?>" id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Nama produk" name="kode_produk" id="kode_produk">
+						<div class="invalid-feedback">
+							<?php echo form_error('kode_produk') ?>
+						</div>
+				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">Nama Produk</label>
 					<input type="text" class="form-control <?php echo form_error('nama_produk') ? 'is-invalid':'' ?>" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -65,13 +73,11 @@
 					<div class="col-4">
 						<div class="form-group">
 							<label for="exampleInputEmail1" style="color: teal;">Stok Produk</label>
-							<input type="text" class="form-control <?php echo form_error('stok_produk') ? 'is-invalid':'' ?>" id="exampleInputEmail1" aria-describedby="emailHelp"
+							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
 								placeholder="... pcs" name="stok_produk" id="stok_produk">
-								<div class="invalid-feedback">
-									<?php echo form_error('stok_produk') ?>
-								</div>
 						</div>
 					</div>
+
 				</div>
 
 				<div class="form-group">
