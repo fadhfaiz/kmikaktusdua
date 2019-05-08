@@ -14,18 +14,18 @@ Class Home extends CI_Controller
         $judul['judul'] = 'Halaman Admin';
         foreach($this->Model_grafik->statistik_pengunjung()->result_array() as $row)
         {
-         $data['grafik'][]=(float)$row['Januari'];
-         $data['grafik'][]=(float)$row['Februari'];
-         $data['grafik'][]=(float)$row['Maret'];
-         $data['grafik'][]=(float)$row['April'];
-         $data['grafik'][]=(float)$row['Mei'];
-         $data['grafik'][]=(float)$row['Juni'];
-         $data['grafik'][]=(float)$row['Juli'];
-         $data['grafik'][]=(float)$row['Agustus'];
-         $data['grafik'][]=(float)$row['September'];
-         $data['grafik'][]=(float)$row['Oktober'];
-         $data['grafik'][]=(float)$row['November'];
-         $data['grafik'][]=(float)$row['Desember'];
+         $data['grafik'][0]=(float)$row['Januari'];
+         $data['grafik'][1]=(float)$row['Februari'];
+         $data['grafik'][2]=(float)$row['Maret'];
+         $data['grafik'][3]=(float)$row['April'];
+         $data['grafik'][4]=(float)$row['Mei'];
+         $data['grafik'][5]=(float)$row['Juni'];
+         $data['grafik'][6]=(float)$row['Juli'];
+         $data['grafik'][7]=(float)$row['Agustus'];
+         $data['grafik'][8]=(float)$row['September'];
+         $data['grafik'][9]=(float)$row['Oktober'];
+         $data['grafik'][10]=(float)$row['November'];
+         $data['grafik'][11]=(float)$row['Desember'];
         }
         $this->load->view('templates/header_admin', $judul);
         $this->load->view('adminpage/index',$data);
