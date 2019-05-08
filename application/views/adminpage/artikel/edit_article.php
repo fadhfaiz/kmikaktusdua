@@ -2,8 +2,8 @@
 <section class="container my-5">
 	<form action="<?php base_url('Adminpage/Artikel/edit_article') ?>" method="post">
     <div class="form-group">
-			<label for="judul" style="color: teal;" class="h4">Kode Artikel</label>
-			<input type="text" class="form-control <?php echo form_error('kode_artikel') ? 'is-invalid':'' ?>"  id="kode_artikel" name="kode_artikel" aria-describedby="emailHelp"
+			<!-- <label for="judul" style="color: teal;" class="h4">Kode Artikel</label> -->
+			<input type="hidden" readonly class="form-control <?php echo form_error('kode_artikel') ? 'is-invalid':'' ?>"  id="kode_artikel" name="kode_artikel" aria-describedby="emailHelp"
 				 value="<?php echo $artikel->kode_artikel ?>">
 								<div class="invalid-feedback">
 									<?php echo form_error('kode_artikel') ?>

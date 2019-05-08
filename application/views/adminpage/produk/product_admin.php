@@ -16,8 +16,8 @@
 				echo '
 					<div class="card">
 						<img src="'.base_url().'gambar/'.$t->gambar.'"
-								class="card-img-top" alt="...">
-							<div class="card-body">
+								class="card-img-top" style="height:200px" alt="...">
+							<div class="card-body" style="height: 100px">
 								<h6 class="card-title">'.$t->nama_produk.'</h6>
 								<h6 class="text-muted">Kode : '.$t->kode_produk.'</h6>
 							</div>

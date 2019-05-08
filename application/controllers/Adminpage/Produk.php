@@ -6,7 +6,7 @@ Class Produk extends CI_Controller
         if($this->session->userdata('status') != "Login"){
             redirect(base_url("Login"));
         }
-        $this->load->library('upload');
+        // $this->load->library('upload');
         $this->load->model("Produk_Model");
         $this->load->library("form_validation");
     }
@@ -67,7 +67,7 @@ Class Produk extends CI_Controller
             "diameter" => $this->input->post('diameter'),
             "tinggi" => $this->input->post('tinggi'),
             "jenis_produk" => $this->input->post('jenis_produk'),
-            "catatan" => $this->input->post('catatan'),
+            "catatan" => $this->input->post('catatan')
         ];
 
         $this->session->set_userdata($dataku);
@@ -76,11 +76,13 @@ Class Produk extends CI_Controller
             $this->Produk_Model->save_produk($this->Produk_Model->upload_gambar_produk());
 
             $this->session->set_flashdata('sukses','berhasil disimpan');
+            redirect('Adminpage/produk/product_admin');
+        } else {
+            $this->load->view('templates/header_admin', $data);
+            $this->load->view('adminpage/produk/product_baru');
+            $this->load->view('templates/footer');
         }
 
-        $this->load->view('templates/header_admin', $data);
-        $this->load->view('adminpage/produk/product_baru');
-        $this->load->view('templates/footer');
     }
 }
 

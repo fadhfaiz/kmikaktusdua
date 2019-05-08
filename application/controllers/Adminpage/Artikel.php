@@ -36,7 +36,7 @@ Class Artikel extends CI_Controller
         if($validation->run()){
             $artikel->update_data_article();
             $this->session->set_flashdata('sukses','berhasil disimpan');
-
+            redirect(site_url('Adminpage/Artikel/article_admin'));
         }
 
         $data["artikel"] = $artikel->getById($kode_artikel);
@@ -82,6 +82,7 @@ Class Artikel extends CI_Controller
             // $artikel->simpan_data_article();
             // die;
             $this->session->set_flashdata('sukses','berhasil disimpan');
+            redirect(site_url('Adminpage/Artikel/article_admin'));
         }
             $this->load->view('templates/header_admin', $data);
             $this->load->view('adminpage/artikel/article_page');

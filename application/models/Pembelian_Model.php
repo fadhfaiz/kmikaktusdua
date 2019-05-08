@@ -14,9 +14,9 @@ class Pembelian_Model extends CI_Model
         $this->db->from('pembeli');
         $this->db->order_by('id_pembeli', "DESC");
         $id = $this->db->get()->row();
-        $id_pembeli = substr($id->id_pembeli, 4);
+        $id_pembeli = substr($id->id_pembeli, 3);
         $id_pembeli += 1;
-        $idPembeli = "PB" . $id_pembeli;
+        $idPembeli = "PB0" . $id_pembeli;
         $data = array(
             'id_pembeli' => $idPembeli,
             'nama_pembeli' => "$pembeli[nama]",

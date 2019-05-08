@@ -87,7 +87,7 @@ class Article_Model extends CI_Model
     $this->kode_artikel = $post["kode_artikel"];
     $this->judul = $post["judul"];
     $this->isi = $post["isi"];
-    $this->tanggal = mdate($datestring, $time);
+    $this->tanggal = $time;
     
     if (!empty($_FILES["gambar"]["name"])) {
       $this->gambar = $this->upload_gambar();
@@ -105,7 +105,7 @@ class Article_Model extends CI_Model
   }
 
   public function upload_gambar() {
-      $config['upload_path'] = 'gambarproduk/';
+      $config['upload_path'] = 'gambar/';
       $config['allowed_types'] = 'jpg|png|jpeg';
       $config['max_size']  = '2048';
       $config['remove_space'] = TRUE;

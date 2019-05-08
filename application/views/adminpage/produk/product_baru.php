@@ -13,14 +13,14 @@
 
 			<div class="col-lg-6 col-md-12 col-sm-12">
 
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">Kode Produk</label>
 					<input type="text" class="form-control <?php echo form_error('kode_produk') ? 'is-invalid':'' ?>" id="exampleInputEmail1" aria-describedby="emailHelp"
 						placeholder="Nama produk" name="kode_produk" id="kode_produk">
 						<div class="invalid-feedback">
 							<?php echo form_error('kode_produk') ?>
 						</div>
-				</div>
+				</div> -->
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">Nama Produk</label>
 					<input type="text" class="form-control <?php echo form_error('nama_produk') ? 'is-invalid':'' ?>" id="exampleInputEmail1" aria-describedby="emailHelp"
