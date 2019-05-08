@@ -16,7 +16,7 @@ class Pembelian_Model extends CI_Model
         $id = $this->db->get()->row();
         $id_pembeli = substr($id->id_pembeli, 3);
         $id_pembeli += 1;
-        $idPembeli = "PB0" . $id_pembeli;
+        $idPembeli = "PM00" . $id_pembeli;
         $data = array(
             'id_pembeli' => $idPembeli,
             'nama_pembeli' => "$pembeli[nama]",
