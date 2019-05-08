@@ -54,10 +54,31 @@
             $this->load->view('templates/footer');
         }
 
-        public function Simpandetailpesanan()
-        {
-            
-        }
+        // public function Simpandetailpesanan()
+        // {
+
+        //     $this->form_validation->set_rules('nama','nama','required');
+        //     $this->form_validation->set_rules('email','email','required|valid_email');
+        //     $this->form_validation->set_rules('no_telp','no_telp','required|exact_length[13]');
+        //     $this->form_validation->set_rules('catatan','catatan','required');
+        //     $this->form_validation->set_rules('provinsi','provinsi','required');
+        //     $this->form_validation->set_rules('kabupaten','kabupaten','required');
+        //     $this->form_validation->set_rules('kecamatan','kecamatan','required');
+        //     $this->form_validation->set_rules('kodepos','kodepos','required');
+        //     $this->form_validation->set_rules('alamatlengkap','alamatlengkap','required');
+
+        //     if ($this->form_validation->run() == FALSE) {
+        //         $this->load->view('templates/header', $data);
+        //         $this->load->view('pembelian/index');
+        //         // $this->load->view('templates/footer');
+        //     } else {
+        //         $this->Pembelian_Model->Model_Pembeli();
+        //         $this->session->set_flashdata('flash', 'ditambahkan');
+
+        //         redirect('pembelian/menunggu_ongkir');
+        //     }
+
+        // }
     }
 
 ?>

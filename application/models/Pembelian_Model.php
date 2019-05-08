@@ -8,6 +8,7 @@ class Pembelian_Model extends CI_Model
     public $jumlah_barang;
     public $tanggal_beli;
     public $ongkir;
+    
     function Model_Pembeli($pembeli)
     {
         $this->db->select("id_pembeli");
@@ -31,6 +32,7 @@ class Pembelian_Model extends CI_Model
         );
         
         $this->db->insert('pembeli', $data);
+
         return $idPembeli;
     }
 
