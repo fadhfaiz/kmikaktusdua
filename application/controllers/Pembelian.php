@@ -8,11 +8,13 @@
         $this->load->model("Menunggu_Model");
         $this->load->library("form_validation");
         }
+
         public function Data_pembeli()
         {
             $id = $this->Pembelian_Model->Model_Pembeli($this->input->post());
             redirect('pembelian/menunggu_ongkir/'.$id);
         }
+
         public function index()
         {
 
@@ -33,6 +35,7 @@
             $this->load->view('pembelian/menunggu_ongkir');
             $this->load->view('templates/footer');
         }
+
         public function menunggu_pembayaran()
         {
             $data['judul'] = 'Halaman Status Pengiriman';
@@ -41,6 +44,7 @@
             $this->load->view('pembelian/menunggu_pembayaran');
             $this->load->view('templates/footer');
         }
+
         public function terkonfirmasi()
         {
             $data['judul'] = 'Halaman Status Pengiriman';
@@ -48,6 +52,11 @@
             $this->load->view('templates/header', $data);
             $this->load->view('pembelian/terkonfirmasi');
             $this->load->view('templates/footer');
+        }
+
+        public function Simpandetailpesanan()
+        {
+            
         }
     }
 

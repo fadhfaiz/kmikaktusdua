@@ -575,17 +575,3 @@ class Track_Visitor {
 
 /* End of file track_visitor.php */
 /* Location: ./application/hooks/Track_Visitor.php */
-
-/*
-  | -------------------------------------------------------------------------
-  | Track Visitor
-  | -------------------------------------------------------------------------
-  | log visitor info
-  |
- */
-$hook['post_controller_constructor'][] = array(
-    'class' => 'Track_Visitor',
-    'function' => 'visitor_track',
-    'filename' => 'Track_Visitor.php',
-    'filepath' => 'hooks'
-);

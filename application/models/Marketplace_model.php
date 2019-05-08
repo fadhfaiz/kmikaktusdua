@@ -75,11 +75,13 @@
             $this->db->where('kode_produk', $id);
             return $this->db->get()->row();
         }
+
         public function getProdukKeyword($keyword){
             $this->db->select("*");
             $this->db->from("produk");
             $this->db->like("nama_produk", $keyword);
             $this->db->or_like("jenis_produk", $keyword);
+            $this->db->or_like("harga_produk", $keyword);
             return $this->db->get()->result();
         }
     }
