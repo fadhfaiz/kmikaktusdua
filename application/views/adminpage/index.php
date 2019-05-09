@@ -4,39 +4,74 @@
 
 		<!-- Statistik -->
 		<script type="text/javascript" src="<?php echo base_url()?>assets/chartjs/Chart.js"></script>
-		<div id="chart">
-</div>
-<script type="text/javascript">
-jQuery(function(){
- new Highcharts.Chart({
-  chart: {
-   renderTo: 'chart',
-   type: 'line',
-  },
-  title: {
-   text: 'Grafik Statistik pengunjung',
-   x: -20
-  },
-  subtitle: {
-   text: 'Count visitor',
-   x: -20
-  },
-  xAxis: {
-   categories: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun',
-                    'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
-  },
-  yAxis: {
-   title: {
-    text: 'Total pengunjung'
-   }
-  },
-  series: [{
-   name: 'Data dalam Bulan',
-   data: <?php echo json_encode($grafik); ?>
-  }]
- });
-}); 
-</script>
+		<div class="row">
+			<div class="col-9">		
+					<div id="chart">
+					</div>
+			</div>
+			<div class="col">
+			<?php 
+				foreach($pertahun as $tahun){
+				echo'
+					<h5> This Years</h5>
+					<h2>'.$tahun->jumlah_tahun.' visitors</h2>
+				';
+				}
+				foreach($perbulan as $bulan){
+					echo'
+					<h5> This Month</h5>
+					<h2>'.$bulan->jumlah_bulan.' visitors</h2>
+					';
+				}
+				foreach($perminggu as $minggu){
+					echo'
+					<h5> This Weeks </h5>
+					<h2>'.$minggu->jumlah_minggu.' visitors</h2>
+					';
+				}
+				foreach($perhari as $hari){
+				echo'
+					<h5> Today </h5>
+					<h2>'.$hari->hari.' visitors</h2>
+				';
+				}
+
+			?>
+	
+			
+			</div>
+		</div>
+
+				<script type="text/javascript">
+				jQuery(function(){
+				new Highcharts.Chart({
+					chart: {
+					renderTo: 'chart',
+					type: 'line',
+					},
+					title: {
+					text: 'Grafik Statistik pengunjung',
+					x: -20
+					},
+					subtitle: {
+					text: 'Count visitor',
+					x: -20
+					},
+					xAxis: {
+					categories: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu','Minggu']
+					},
+					yAxis: {
+					title: {
+						text: 'Total pengunjung'
+					}
+					},
+					series: [{
+					name: 'Data dalam Bulan',
+					data: <?php echo json_encode($grafik); ?>
+					}]
+				});
+				}); 
+				</script>
 		<!-- Statistik -->
 		<!-- <div class="row">
         <div class="col-4"></div>    
