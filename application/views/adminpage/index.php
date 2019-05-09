@@ -29,12 +29,12 @@
 					<h2>'.$minggu->jumlah_minggu.' visitors</h2>
 					';
 				}
-				foreach($perhari as $hari){
-				echo'
-					<h5> Today </h5>
-					<h2>'.$hari->hari.' visitors</h2>
-				';
-				}
+				foreach($perhari as $harian){
+					echo'
+						<h5> Today </h5>
+						<h2>'.$harian->hari.' visitors</h2>
+					';
+					}
 
 			?>
 	
@@ -58,7 +58,7 @@
 					x: -20
 					},
 					xAxis: {
-					categories: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu','Minggu']
+					categories: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni','Juli','Agustus','September','Oktober','November','Desember']
 					},
 					yAxis: {
 					title: {
