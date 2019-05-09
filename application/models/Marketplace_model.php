@@ -2,10 +2,9 @@
 // untuk interaksi ke database
     class Marketplace_model extends CI_Model{
 
-        public function getDataProduk(){
-            $this->db->select("*");
-            $this->db->from("produk");
-            return $this->db->get()->result();
+        public function getDataProduk($limit, $start){
+            $query = $this->db->get('produk', $limit, $start);
+            return $query;
         }
         public function getDataPot(){
             $this->db->select("*");

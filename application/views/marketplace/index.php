@@ -21,11 +21,9 @@
 		</div>
 		
 	</form>
-
-	<div class="card-deck my-4">
 		<div class="card-columns">
 			<?php	
-			foreach($produk as $b){
+			foreach($data->result() as $b){
 				echo '
 					<div class="card">
 						<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
@@ -54,31 +52,11 @@
 		
 		?>
 		</div>
-	</div>
 	<?php echo form_close()?>
 </section>
 
 <section class="container my-5">
-	<nav aria-label="Page navigation example">
-		<ul class="pagination justify-content-center"">
-			<li class=" page-item">
-			<a class="page-link" href="#" aria-label="Previous">
-				<span aria-hidden="true">&laquo; Previous Page</span>
-			</a>
-			</li>
-			<li class="page-item"><a class="page-link" href="#">1</a></li>
-			<li class="page-item"><a class="page-link" href="#">2</a></li>
-			<li class="page-item"><a class="page-link" href="#">3</a></li>
-			<li class="page-item"><a class="page-link" href="#">4</a></li>
-			<li class="page-item"><a class="page-link" href="#">5</a></li>
-			<li class="page-item"><a class="page-link" href="#">6</a></li>
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="Next">
-					<span aria-hidden="true">Next Page &raquo;</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
+	<?php echo $pagination; ?>
 	<a href="https://www.instagram.com/fadh.leather/" class="float-ig" target="_blank">
 		<i class="fab fa-instagram my-float"></i>
 	</a>
