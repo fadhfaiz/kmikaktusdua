@@ -66,7 +66,7 @@
 					}
 					},
 					series: [{
-					name: 'Data dalam Bulan',
+					name: 'Data dalam Harian',
 					data: <?php echo json_encode($grafik); ?>
 					}]
 				});
