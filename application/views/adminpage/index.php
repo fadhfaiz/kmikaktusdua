@@ -5,11 +5,11 @@
 		<!-- Statistik -->
 		<script type="text/javascript" src="<?php echo base_url()?>assets/chartjs/Chart.js"></script>
 		<div class="row">
-			<div class="col-9">		
+			<div class="col-sm-9">		
 					<div id="chart">
 					</div>
 			</div>
-			<div class="col">
+			<div class="col mt-5">
 			<?php 
 				foreach($pertahun as $tahun){
 				echo'
@@ -58,7 +58,7 @@
 					x: -20
 					},
 					xAxis: {
-					categories: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni','Juli','Agustus','September','Oktober','November','Desember']
+					categories: ['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Minggu']
 					},
 					yAxis: {
 					title: {

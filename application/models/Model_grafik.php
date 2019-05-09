@@ -2,7 +2,7 @@
 
 class Model_grafik extends CI_Model {
 
-    function statistik_pengunjung()
+    function statistik_pengunjung_perbulan()
     {
      
      $sql= $this->db->query("
@@ -20,6 +20,26 @@ class Model_grafik extends CI_Model {
      ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((Month(date)=10) AND (YEAR(date)=YEAR(NOW())))),0) AS `Oktober`,
      ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((Month(date)=11) AND (YEAR(date)=YEAR(NOW())))),0) AS `November`,
      ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((Month(date)=12) AND (YEAR(date)=YEAR(NOW())))),0) AS `Desember`
+     from tbcounter GROUP BY YEAR(date)
+     ");
+     
+     return $sql;
+     
+    } 
+    function statistik_pengunjung_perhari()
+    {
+     
+     $sql= $this->db->query("
+     
+     select
+     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 0) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Senin`,
+     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 1) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Selasa`,
+     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 2) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Rabu`,
+     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 3) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Kamis`,
+     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 4) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Jumat`,
+     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 5) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Sabtu`,
+     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 6) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Minggu`
+
      from tbcounter GROUP BY YEAR(date)
      ");
      
