@@ -26,12 +26,11 @@ class Counter_Model extends CI_Model
         $this->db->where('date', $counter['date']);
         $query = $this->db->get($this->_table, FALSE);
 		
-		$hits = $query->row()->hits;
 		
       	$cek = $query->num_rows();
         
 		if($cek > 0){
-			
+			$hits = $query->row()->hits;
 			$hits++;
 			
 			$data = array(
@@ -48,7 +47,7 @@ class Counter_Model extends CI_Model
 			$data = array(
             'ip' => $counter['ip'],
             'date' => $counter['date'],
-            'hits' => '0'
+			'hits' => '1'
 			);
 			
 			$this->db->insert($this->_table, $data);
