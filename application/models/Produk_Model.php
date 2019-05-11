@@ -66,10 +66,13 @@ class Produk_Model extends CI_Model
     $this->diameter = $post["diameter"];
     $this->tinggi = $post["tinggi"];
     $this->bobot = $post["bobot"];
+    $this->gambar = $post["gambar"];
     $this->jenis_produk = $post["jenis_produk"];
   
     $this->db->update($this->_table,$this, array('kode_produk' => $post['kode_produk']));
-
+    // $this->db->set('gambar',$post['gambar']);
+    // $this->db->where('kode_produk',$post['kode_produk']);
+    // $this->db->update('produk');
   }	
   
   function hapus_data_produk($kode_produk)
