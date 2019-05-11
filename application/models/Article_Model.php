@@ -86,6 +86,7 @@ class Article_Model extends CI_Model
     $this->kode_artikel = $post["kode_artikel"];
     $this->judul = $post["judul"];
     $this->isi = $post["isi"];
+    $this->gambar = $post["gambar"];
     $this->tanggal = $time;
     
     if (!empty($_FILES["gambar"]["name"])) {
