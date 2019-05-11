@@ -10,7 +10,7 @@ Class Artikel extends CI_Controller
         }
         $this->load->helper(array('form', 'url'));
         $this->load->model("Article_Model");
-        // $this->load->library('upload');
+        //$this->load->library('upload');
         $this->load->library("form_validation");
     }
     
@@ -36,7 +36,7 @@ Class Artikel extends CI_Controller
         if($validation->run()){
             $artikel->update_data_article();
             $this->session->set_flashdata('sukses','berhasil disimpan');
-            redirect(site_url('Adminpage/Artikel/article_admin'));
+           redirect(site_url('Adminpage/Artikel/article_admin'));
         }
 
         $data["artikel"] = $artikel->getById($kode_artikel);

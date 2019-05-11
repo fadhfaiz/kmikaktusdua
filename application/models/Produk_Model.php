@@ -30,12 +30,10 @@ class Produk_Model extends CI_Model
     ];
   }
 
-  public function getDataProduk(){
-    $this->db->select("*");
-    $this->db->from("produk");
-    return $this->db->get()->result();
+  public function getDataProduk($limit, $start){
+    $query = $this->db->get('produk', $limit, $start);
+    return $query;
 }
-
   public function getIdDataProduk($kode_produk){
     return $this->db->get_where($this->_table, ["kode_produk" => $kode_produk])->row();
 }

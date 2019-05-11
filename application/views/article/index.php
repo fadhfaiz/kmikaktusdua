@@ -1,9 +1,9 @@
 <br><br>
 <div class="container">
-<a href="<?php echo base_url(); ?>article/artikel" style="color:white; text-decoration: none;">
 <?php 
      foreach($artikelbaru as $b){
           echo '
+          <a href="'. base_url().'article/artikel/'.$b->kode_artikel.'" style="color:white; text-decoration: none;">
           <div class="card bg-dark text-white">
           <img class="card-img" src="'. base_url().'gambar/'.$b->gambar.'" alt="Card-image" style="height:300px">
           <div class="card-img-overlay">
@@ -24,10 +24,10 @@
 
 <section class="container">
 	<br><br>
-	<div class="card-columns my-3"><a href="<?php echo base_url(); ?>article/artikel" style="color:black; text-decoration: none;">
+	<div class="card-columns my-3"  style="color:black; text-decoration: none;">
 
           <?php
-                    foreach($artikelku as $a){
+                    foreach($data->result() as $a){
                          echo '
                          <a href="'. base_url().'article/artikel/'.$a->kode_artikel.'" style="color:black; text-decoration: none;">
                          <div class="card">
@@ -46,3 +46,7 @@
 </section>
 
 </div>
+<section class="container my-5">
+	<?php echo $pagination; ?>
+
+</section>
