@@ -12,7 +12,7 @@
 	<div class="card-deck my-4">
 	<div class="card-columns">
 		<?php
-			foreach($produk as $t){
+			foreach($data->result() as $t){
 				echo '
 					<div class="card">
 						<img src="'.base_url().'gambar/'.$t->gambar.'"
@@ -36,4 +36,8 @@
 		?>
 		</div>
 	</div>
+</section>
+<section class="container my-5">
+	<?php echo $pagination; ?>
+
 </section>

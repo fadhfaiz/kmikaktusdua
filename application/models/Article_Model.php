@@ -11,11 +11,10 @@ class Article_Model extends CI_Model
  
 
 // untuk interaksi ke database
-        public function getDataArtikel(){
-            $this->db->select("*");
-            $this->db->from("artikel");
-            return $this->db->get()->result();
-        }
+      public function getDataArtikel($limit, $start){
+        $query = $this->db->get('artikel', $limit, $start);
+        return $query;
+      }
 
         public function getArtikelBaru(){
           $this->db->select("*");
