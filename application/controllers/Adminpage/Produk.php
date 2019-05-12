@@ -59,13 +59,15 @@ Class Produk extends CI_Controller
 
     public function product_admin()
     {
-        $this->load->library('pagination');
-        $config['base_url'] = site_url('adminpage/produk/product_admin'); //site url
+        $judul['judul'] = 'Produk Administrator';
+      
+        $config['base_url'] = site_url('Adminpage/Produk/product_admin'); //site url
         $config['total_rows'] = $this->db->count_all('produk'); //total row
-        $config['per_page'] = 5;  //show record per halaman
-        $config["uri_segment"] = 3;  // uri parameter
+        $config['per_page'] = 15;  //show record per halaman
+        $config["uri_segment"] = 4;  // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
+     
         $config['first_link']       = 'First';
         $config['last_link']        = 'Last';
         $config['next_link']        = 'Next';
@@ -86,10 +88,11 @@ Class Produk extends CI_Controller
         $config['last_tagl_close']  = '</span></li>';
      
         $this->pagination->initialize($config);
-        $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-      
+        $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+     
+        
         $data['data'] = $this->Produk_Model->getDataProduk($config["per_page"], $data['page']); 
-        $judul['judul'] = 'Produk Administrator';
+    
         $data['pagination'] = $this->pagination->create_links();
 
         $this->load->view('templates/header_admin',$judul);
