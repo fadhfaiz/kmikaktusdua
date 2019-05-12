@@ -5,6 +5,7 @@
         {
 
             parent::__construct();
+            $this->load->library('cart');
             $this->load->model('Marketplace_model');
             $this->load->library('pagination');
             
@@ -61,17 +62,7 @@
             $this->load->view('marketplace/detail/detail_tanaman');
             $this->load->view('templates/footer'); 
         }
-
-        // public function detail_aksesoris($id)
-        // {
-        //     $data['aksesoris'] = $this->Marketplace_model->getByAksesoris($id);
-        //     $data['judul'] = 'Disini Nama Produk';
-
-        //     $this->load->view('templates/header', $data);
-        //     $this->load->view('marketplace/detail/detail_aksesoris');
-        //     $this->load->view('templates/footer'); 
-        // }
-
+      
         public function detail_paket($id)
         {
             $data['paket'] = $this->Marketplace_model->getByPaket($id);
@@ -173,6 +164,15 @@
             $this->load->view('templates/header', $data);
             $this->load->view('marketplace/index');
             $this->load->view('templates/footer');
+        }
+        
+        public function tambah()
+        {
+            $this->cart->insert();
+        }
+        public function ubah()
+        {
+            $this->cart->update();
         }
     }
 ?>

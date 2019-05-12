@@ -39,7 +39,6 @@ Class Home extends CI_Controller
          $data['grafik'][6]=(float)$row['Minggu'];
         }
        
-        $data["perminggu"] = $this->Model_grafik->perminggu();
         $data["perbulan"] = $this->Model_grafik->perbulan();
         $data["pertahun"] = $this->Model_grafik->pertahun();
         $data["perhari"] = $this->Model_grafik->perhari();

@@ -48,7 +48,7 @@
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link btn btn-success" style="color:white;" href="<?= base_url(); ?>keranjang/index"> <i class="fas fa-cart-plus fa-lg"></i> Cart <span class="badge badge-light">2</span></a>
+						<a class="nav-link btn btn-success" style="color:white;" href="<?= base_url(); ?>Keranjang/tampil_cart"> <i class="fas fa-cart-plus fa-lg"></i> Cart <span class="badge badge-light">2</span></a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
@@ -69,6 +69,7 @@
 					<!-- <li class="nav-item">
 					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 				</li> -->
+				
 				</ul>
 				<!-- <form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

@@ -56,16 +56,6 @@ class Model_grafik extends CI_Model {
         $this->db->group_by("DATE(date)");
         return $this->db->get()->result();
     }
-    function perminggu(){
-   
-        $this->db->select("YEARWEEK(date) as minggu");
-        $this->db->select('SUM(hits) as jumlah_minggu');
-        $this->db->from("tbcounter");
-        $this->db->where('YEARWEEK(date) = YEARWEEK(NOW())');
-        $this->db->group_by("YEARWEEK(date)");
-        return $this->db->get()->result();
-    
-    }
     function perbulan(){
         $this->db->select("MONTH(date) as bulan");
         $this->db->select('SUM(hits) as jumlah_bulan');
@@ -85,6 +75,3 @@ class Model_grafik extends CI_Model {
 
     }
 }
-
-/* End of file visitormodel.php */
-/* Location: ./application/models/visitormodel.php */

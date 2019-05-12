@@ -1,4 +1,5 @@
 <section class="container">
+
 	<table class="table table-bordered table-hover mt-5">
 		<thead class="text-center thead-light">
 			<tr>
@@ -9,25 +10,8 @@
                 <th scope="col">Harga Total</th>
 			</tr>
 		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">KK003</th>
-				<td>Kaktus Durian Sumatera</td>
-				<td class="text-center">Rp 35.000</td>
-				<td class="text-center">3</td>
-                <td class="text-center">Rp 105.000</td>
-			</tr>
-			<tr>
-				<th scope="row">KK004</th>
-				<td>Aglonema Bantul</td>
-				<td class="text-center">Rp 55.000</td>
-				<td class="text-center">2</td>
-                <td class="text-center">Rp 110.000</td>
-			</tr>
-			<tr>
-				<td scope="row" colspan="4" class="text-center font-weight-bold">Jumlah Total Pembayaran</td>
-                <td class="text-center font-weight-bold bg-secondary" style="color: white;">Rp 215.000</td>
-			</tr>
+	
+
 		</tbody>
 	</table>
 
@@ -36,4 +20,5 @@
         <div class="col-3"><a href="<?= base_url(); ?>marketplace/index"><input type="button" value="Kembali" class="btn btn-outline-info btn-block"></a></div>
         <div class="col-3"><a href="<?= base_url(); ?>pembelian/index"><input type="button" value="Checkout" class="btn btn-warning btn-block"></a></div>
     </div>
+
 </section>

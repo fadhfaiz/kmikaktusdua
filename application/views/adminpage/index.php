@@ -23,12 +23,6 @@
 					<h2>'.$bulan->jumlah_bulan.' visitors</h2>
 					';
 				}
-				foreach($perminggu as $minggu){
-					echo'
-					<h5> This Weeks </h5>
-					<h2>'.$minggu->jumlah_minggu.' visitors</h2>
-					';
-				}
 				foreach($perhari as $harian){
 					echo'
 						<h5> Today </h5>
@@ -50,7 +44,7 @@
 					type: 'line',
 					},
 					title: {
-					text: 'Grafik Statistik pengunjung',
+					text: 'Grafik Statistik pengunjung jomblo',
 					x: -20
 					},
 					subtitle: {
