@@ -7,6 +7,7 @@
         $this->load->model("Pembelian_Model");
         $this->load->model("Menunggu_Model");
         $this->load->library("form_validation");
+        $this->load->library("session");
         }
 
         public function Data_pembeli()
@@ -17,12 +18,37 @@
 
         public function index()
         {
-
             $data['judul'] = 'Data Diri';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('pembelian/index');
-            $this->load->view('templates/footer');
+            $this->form_validation->set_rules('nama','Nama','required');
+            $this->form_validation->set_rules('email','Email','required|valid_email');
+            $this->form_validation->set_rules('no_telp','No_telp','required|numeric|min_length[7]|max_length[13]');
+            $this->form_validation->set_rules('catatan','Catatan','required');
+            $this->form_validation->set_rules('provinsi','Provinsi','required');
+            $this->form_validation->set_rules('kabupaten','Kabupaten','required');
+            $this->form_validation->set_rules('kecamatan','Kecamatan','required');
+            $this->form_validation->set_rules('kodepos','Kode Pos','required');
+            $this->form_validation->set_rules('alamatlengkap','Alamat Lengkap','required');
+
+            $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+
+            if ($this->form_validation->run() != FALSE) {
+
+                $id = $this->Pembelian_Model->Model_Pembeli($this->input->post());
+                $this->session->set_flashdata('success');
+                redirect('pembelian/menunggu_ongkir/'. $id);
+
+            } else {
+
+                $this->load->view('templates/header', $data);
+                $this->load->view('pembelian/index');
+                $this->load->view('templates/footer');
+                
+            }
+
+            // $this->load->view('templates/header', $data);
+            // $this->load->view('pembelian/index');
+            // $this->load->view('templates/footer');
         }
 
         public function menunggu_ongkir($id)
@@ -54,30 +80,14 @@
             $this->load->view('templates/footer');
         }
 
-        // public function Simpandetailpesanan()
+        public function registerpembeli()
+        {
+            $this->load->view('pembeli/index');
+        }
+
+        // public function addpembeli()
         // {
-
-        //     $this->form_validation->set_rules('nama','nama','required');
-        //     $this->form_validation->set_rules('email','email','required|valid_email');
-        //     $this->form_validation->set_rules('no_telp','no_telp','required|exact_length[13]');
-        //     $this->form_validation->set_rules('catatan','catatan','required');
-        //     $this->form_validation->set_rules('provinsi','provinsi','required');
-        //     $this->form_validation->set_rules('kabupaten','kabupaten','required');
-        //     $this->form_validation->set_rules('kecamatan','kecamatan','required');
-        //     $this->form_validation->set_rules('kodepos','kodepos','required');
-        //     $this->form_validation->set_rules('alamatlengkap','alamatlengkap','required');
-
-        //     if ($this->form_validation->run() == FALSE) {
-        //         $this->load->view('templates/header', $data);
-        //         $this->load->view('pembelian/index');
-        //         // $this->load->view('templates/footer');
-        //     } else {
-        //         $this->Pembelian_Model->Model_Pembeli();
-        //         $this->session->set_flashdata('flash', 'ditambahkan');
-
-        //         redirect('pembelian/menunggu_ongkir');
-        //     }
-
+            
         // }
     }
 

@@ -1,7 +1,7 @@
 <section class="container">
-<?php echo form_open('Marketplace/cariproduk'); ?>
+	<?php echo form_open('Marketplace/cariproduk'); ?>
 	<form>
-		
+
 		<div class="form-row mt-4">
 			<div class="form-group col-lg-6 col-md-12 col-sm-12">
 				<!-- <label for="inputEmail4">Email</label> -->
@@ -19,11 +19,11 @@
 				<!-- <button type="button" class="btn btn-block btn-success">Cek Biaya Kirim</button> -->
 			</div>
 		</div>
-		
+
 	</form>
-		<div class="card-columns">
-		
-			<?php	
+	<div class="card-columns">
+
+		<?php	
 			foreach($data as $b){
 				echo '
 				<form method="post" action="'.base_url().'Keranjang/tambah" method="post" accept-charset="utf-8">
@@ -57,10 +57,13 @@
 			}
 		
 		?>
-		
-		</div>
+
+	</div>
+
 	<?php echo form_close()?>
+
 </section>
+
 <section class="container my-5">
 	<?php echo $pagination; ?>
 	<a href="https://www.instagram.com/fadh.leather/" class="float-ig" target="_blank">

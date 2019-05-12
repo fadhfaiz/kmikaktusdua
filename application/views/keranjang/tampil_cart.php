@@ -18,7 +18,7 @@
     <div class="row mt-3">
         <div class="col-6"></div>
         <div class="col-3"><a href="<?= base_url(); ?>marketplace/index"><input type="button" value="Kembali" class="btn btn-outline-info btn-block"></a></div>
-        <div class="col-3"><a href="<?= base_url(); ?>pembelian/index"><input type="button" value="Checkout" class="btn btn-warning btn-block"></a></div>
+        <div class="col-3"><a href="<?= base_url(); ?>Pembelian"><input type="button" value="Checkout" class="btn btn-warning btn-block"></a></div>
     </div>
 
 </section>
