@@ -10,7 +10,7 @@
 			</div>
 
 			<div class="form-group col-lg-3 col-md-12 col-sm-12">
-				<input type="submit" name="search_submit" value="Cari Produk" class="btn btn-dark btn-block">
+				<input type="submit" name="search_submit" value="Cari Produk" class="btn btn-secondary btn-block">
 			</div>
 			<div class="form-group col-lg-3 col-md-12 col-sm-12">
 				<!-- <label for="">Cek Biaya Kirim</label> -->
@@ -47,7 +47,7 @@
 						<input type="hidden" name="jumlah" value="1" />
 						<div class="col-6">
 							<!--<input class="form-control" type="text" id="disabledInput" disabled value="'.$b['stok_produk'].'">-->
-							<button type="submit" class="btn btn-sm btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Beli</button>
+							<button type="submit" class="btn btn-block btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Beli</button>
 						</div>
 						</div>
 						</div>

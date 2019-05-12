@@ -92,7 +92,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-6"><a href="<?= base_url(); ?>keranjang/index"
+			<div class="col-6"><a href="<?= base_url(); ?>Keranjang/tampil_cart"
 					class="btn btn-outline-secondary btn-block align-right"><i class="fas fa-arrow-circle-left fa-lg"></i>
 					Back to Cart</a>
 			</div>

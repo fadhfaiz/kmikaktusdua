@@ -84,11 +84,6 @@
         {
             $this->load->view('pembeli/index');
         }
-
-        // public function addpembeli()
-        // {
-            
-        // }
     }
 
 ?>
