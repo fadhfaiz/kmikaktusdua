@@ -2,15 +2,14 @@
 	<?php echo form_open('Marketplace/cariproduk'); ?>
 	<form>
 
-		<div class="form-row mt-4">
+		<div class="form-row mt-4 mb-4">
 			<div class="form-group col-lg-6 col-md-12 col-sm-12">
-				<!-- <label for="inputEmail4">Email</label> -->
 				<input type="text" name="keyword" class="form-control font-italic" id="cari-barang"
 					placeholder="cari nama produk / jenis tanaman / harga tanaman">
 			</div>
 
 			<div class="form-group col-lg-3 col-md-12 col-sm-12">
-				<input type="submit" name="search_submit" value="Cari Produk" class="btn btn-secondary btn-block">
+				<input type="submit" name="search_submit" value="Cari Produk" class="btn btn-dark btn-block">
 			</div>
 			<div class="form-group col-lg-3 col-md-12 col-sm-12">
 				<!-- <label for="">Cek Biaya Kirim</label> -->
