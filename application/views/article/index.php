@@ -5,7 +5,7 @@
           echo '
           <a href="'. base_url().'article/artikel/'.$b->kode_artikel.'" style="color:white; text-decoration: none;">
           <div class="card bg-dark text-white">
-          <img class="card-img" src="'. base_url().'gambar/'.$b->gambar.'" alt="Card-image" style="height:300px">
+          <img class="card-img" src="'. base_url().'gambar/'.$b->gambar.'" alt="Card-image" style="height:400px">
           <div class="card-img-overlay">
                <div class="container">
                     <div class="card-body">
@@ -31,7 +31,7 @@
                          echo '
                          <a href="'. base_url().'article/artikel/'.$a->kode_artikel.'" style="color:black; text-decoration: none;">
                          <div class="card">
-                              <img src="'. base_url().'gambar/'.$a->gambar.'" style="height:400px" class="card-img-top d-block w-100" alt="...">
+                              <img src="'. base_url().'gambar/'.$a->gambar.'" style="height:200px" class="card-img-top d-block w-100" alt="...">
                                    <div class="card-body">
                                    <h6 class="card-title">'.$a->judul.'</h6>
                                    <p class="card-text" style="font-size:12px">'.date("d-m-Y", $a->tanggal).'</p>

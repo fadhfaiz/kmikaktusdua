@@ -34,7 +34,6 @@
 	<a href="<?php echo base_url(); ?>Adminpage/Artikel/article_admin"><i class="fas fa-arrow-left"></i> Back</a>
 </section>
 <script>
-				// Add the following code if you want the name of the file appear on select
 				$(".custom-file-input").on("change", function() {
 				var fileName = $(this).val().split("\\").pop();
 				$(this).siblings(".custom-file-label").addClass("selected").html(fileName);

@@ -20,12 +20,6 @@ class Produk_Model extends CI_Model
         'rules' => 'required'],
       [ 'field' => 'harga_produk',
         'label' => 'harga_produk',
-        'rules' => 'required'],
-      // [ 'field' => 'kode_produk',
-      //   'label' => 'kode_produk',
-      //   'rules' => 'required'],
-      [ 'field' => 'jenis_produk',
-        'label' => 'jenis_produk',
         'rules' => 'required']
     ];
   }
@@ -54,23 +48,24 @@ class Produk_Model extends CI_Model
     $this->db->insert($this->_table,$this);
   }
 
-  function update_data_produk()
+  function update_data_produk($data)
   {
-		$post = $this->input->post();
-    $this->kode_produk = $post["kode_produk"];
-    $this->nama_produk = $post["nama_produk"];
-    $this->harga_produk = $post["harga_produk"];
-    $this->stok_produk = $post["stok_produk"];
-    $this->diameter = $post["diameter"];
-    $this->tinggi = $post["tinggi"];
-    $this->bobot = $post["bobot"];
-    $this->gambar = $post["gambar"];
-    $this->jenis_produk = $post["jenis_produk"];
-  
-    $this->db->update($this->_table,$this, array('kode_produk' => $post['kode_produk']));
-    // $this->db->set('gambar',$post['gambar']);
-    // $this->db->where('kode_produk',$post['kode_produk']);
-    // $this->db->update('produk');
+    
+    if (!empty($_FILES["gambar"]["name"])) {
+      $this->gambar = $this->upload_gambar_produk();
+      $this->db->set('gambar', $this->gambar['file']['orig_name']);
+    } else {
+    }
+    $this->db->set('nama_produk', $data['nama_produk']);
+    $this->db->set('harga_produk', $data['harga_produk']);
+    $this->db->set('stok_produk', $data['stok_produk']);
+    $this->db->set('diameter', $data['diameter']);
+    $this->db->set('tinggi', $data['tinggi']);
+    $this->db->set('jenis_produk', $data['jenis_produk']);
+    $this->db->set('catatan', $data['catatan']);
+    
+    $this->db->where('kode_produk',$data['kode_produk']);
+    $this->db->update('produk');
   }	
   
   function hapus_data_produk($kode_produk)
@@ -84,14 +79,11 @@ class Produk_Model extends CI_Model
     $config['max_size']  = '2048';
     $config['remove_space'] = TRUE;
   
-    $this->load->library('upload', $config); // Load konfigurasi uploadnya
-    if($this->upload->do_upload('gambar')){ // Lakukan upload dan Cek jika proses upload berhasil
-      // var_dump();
-      // Jika berhasil :
+    $this->load->library('upload', $config); 
+    if($this->upload->do_upload('gambar')){ 
       $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
       return $return;
     }else{
-      // Jika gagal :
       $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
       return $return;
     }

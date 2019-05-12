@@ -10,9 +10,9 @@ class Article_Model extends CI_Model
   public $tanggal;
  
 
-// untuk interaksi ke database
       public function getDataArtikel($limit, $start){
-        $query = $this->db->get('artikel', $limit, $start);
+        $q = "SELECT * FROM `artikel` WHERE kode_artikel > $start and kode_artikel < (select kode_artikel from artikel order by kode_artikel desc limit 1)";
+        $query = $this->db->query($q);
         return $query;
       }
 
@@ -91,11 +91,19 @@ class Article_Model extends CI_Model
     
     if (!empty($_FILES["gambar"]["name"])) {
       $this->gambar = $this->upload_gambar();
+      $this->db->set('gambar', $this->gambar['file']['orig_name']);
+      
     } else {
-      $this->gambar = $post["old_image"];
+      
+      $this->db->set('gambar', $post['old_image']);
+
     }
-    
-    $this->db->update($this->_table,$this, array('kode_artikel' => $post['kode_artikel']));
+
+    $this->db->set('judul',$this->judul);
+    $this->db->set('isi',$this->isi);
+
+    $this->db->where('kode_artikel',$post['kode_artikel']);
+    $this->db->update('artikel');
 
   }	
   
@@ -110,13 +118,11 @@ class Article_Model extends CI_Model
       $config['max_size']  = '2048';
       $config['remove_space'] = TRUE;
     
-      $this->load->library('upload', $config); // Load konfigurasi uploadnya
-      if($this->upload->do_upload('gambar')){ // Lakukan upload dan Cek jika proses upload berhasil
-        // Jika berhasil :
+      $this->load->library('upload', $config); 
+      if($this->upload->do_upload('gambar')){ 
         $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
         return $return;
       }else{
-        // Jika gagal :
         $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
         return $return;
       }

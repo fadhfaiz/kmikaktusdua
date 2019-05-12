@@ -44,11 +44,10 @@
 					<td>
 						<span><a href="<?php echo base_url('Adminpage/Artikel/edit_article/'.$artikel->kode_artikel)?>"
 								class="btn btn-outline-success"><i class="fas fa-edit"></i></a></span>
-						<span><button class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal"><i
-									class="fas fa-trash-alt"></i></button></span>
+						<span><a href="<?php echo base_url('Adminpage/Artikel/hapus_article/'.$artikel->kode_artikel)?>"
+								class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a></span>
 					</td>
 				</tr>
-				<!-- Modal -->
 				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 					aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
@@ -70,7 +69,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- Modal -->
 				<?php endforeach; ?>
 				<?php endif; ?>
 				</tr>

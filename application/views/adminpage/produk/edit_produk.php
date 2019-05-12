@@ -5,7 +5,7 @@
 </section>
 
 <section class="container">
-	<form action="<?php base_url('Adminpage/Produk/edit_produk') ?>">
+	<form action="<?php base_url('Adminpage/Produk/edit_produk') ?>" method="post" enctype="multipart/form-data">
 		<div class="row">
 
 			<div class="col-lg-6 col-md-12 col-sm-12">
@@ -18,14 +18,14 @@
 				<div class="form-group">
 					<label for="exampleFormControlSelect1" style="color: teal;">Jenis Produk</label>
 					<select class="form-control" id="exampleFormControlSelect1" name="jenis_produk">
-						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Kaktus</option>
-						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Aglonema</option>
-						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Sukulen</option>
-						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Sansivera</option>
-						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Batu</option>
-						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Bibit</option>
-						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Pot</option>
-						<option name="jenis_produk"  value="<?php echo $produk->jenis_produk ?>">Paket</option>
+						<option value="<?php echo $produk->jenis_produk ?>">Kaktus</option>
+						<option  value="<?php echo $produk->jenis_produk ?>">Aglonema</option>
+						<option  value="<?php echo $produk->jenis_produk ?>">Sukulen</option>
+						<option  value="<?php echo $produk->jenis_produk ?>">Sansivera</option>
+						<option  value="<?php echo $produk->jenis_produk ?>">Batu</option>
+						<option  value="<?php echo $produk->jenis_produk ?>">Bibit</option>
+						<option  value="<?php echo $produk->jenis_produk ?>">Pot</option>
+						<option  value="<?php echo $produk->jenis_produk ?>">Paket</option>
 					</select>
 				</div>
 
@@ -88,7 +88,7 @@
 
                 <div class="row mt-4">
                     <div class="col-4"><a href="<?php echo base_url()?>adminpage/Produk/product_admin" class="btn btn-outline-secondary btn-block">Cancel</a></div>
-                    <div class="col-8"><a href="" class="btn btn-success btn-block">Tambah Produk</a></div>
+                    <div class="col-8"><button type="submit" class="btn btn-success btn-block">Edit Produk</a></div>
                 </div>
 
 			</div>

@@ -19,16 +19,31 @@ Class Produk extends CI_Controller
         $validation->set_rules($produk->rules());
 
         if($validation->run()){
-            $produk->update_data_produk();
+            $data = [
+                "kode_produk" => $kode_produk,
+                "nama_produk" => $this->input->post('nama_produk'),
+                "harga_produk" => $this->input->post('harga_produk'),
+                "stok_produk" => $this->input->post('stok_produk'),
+                "diameter" => $this->input->post('diameter'),
+                "tinggi" => $this->input->post('tinggi'),
+                "bobot" => $this->input->post('bobot'),
+                "gambar" => $this->input->post('gambar') ,
+                "jenis_produk" => $this->input->post('jenis_produk')
+            ];
+
+            $produk->update_data_produk($data);
+         
+            redirect(site_url('Adminpage/Produk/product_admin'));
         }
 
         $data["produk"] = $produk->getIdDataProduk($kode_produk);
-
+     
         if(!$data["produk"]) show_404();
 
         $judul['judul'] = 'Edit Produk';
 
         $this->load->view('templates/header_admin', $judul);
+
         $this->load->view('adminpage/produk/edit_produk',$data);
         $this->load->view('templates/footer');
     }
@@ -72,8 +87,7 @@ Class Produk extends CI_Controller
      
         $this->pagination->initialize($config);
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-     
-        //panggil function get_mahasiswa_list yang ada pada mmodel mahasiswa_model. 
+      
         $data['data'] = $this->Produk_Model->getDataProduk($config["per_page"], $data['page']); 
         $judul['judul'] = 'Produk Administrator';
         $data['pagination'] = $this->pagination->create_links();
