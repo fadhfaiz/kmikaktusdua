@@ -129,6 +129,18 @@ Class Produk extends CI_Controller
         }
 
     }
+    public function cariproduk()
+    {
+
+        $judul['judul'] = 'Pencarian Produk';
+        $keyword = $this->input->post('keyword');
+        $data['pagination'] = $this->pagination->create_links();
+        $data['data'] = $this->Produk_Model->getProdukKeyword($keyword);
+        // var_dump($data['produk']);
+        $this->load->view('templates/header_admin',$judul);
+        $this->load->view('adminpage/produk/product_admin' ,$data);
+        $this->load->view('templates/footer');
+    }
 }
 
 ?>
