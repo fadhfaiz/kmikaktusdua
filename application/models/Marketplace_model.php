@@ -87,7 +87,7 @@
             $this->db->like("nama_produk", $keyword);
             $this->db->or_like("jenis_produk", $keyword);
             $this->db->or_like("harga_produk", $keyword);
-            return $this->db->get()->result();
+            return $this->db->get()->result_array();
         }
     }
 
