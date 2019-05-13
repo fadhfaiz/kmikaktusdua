@@ -45,7 +45,7 @@
             $this->db->where('jenis_produk = "Kaktus"');
             return $this->db->get()->result();
         }
-
+    
         public function getByAglonema(){
             $this->db->select("*");
             $this->db->from("produk");

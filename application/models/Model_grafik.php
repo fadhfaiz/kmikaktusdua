@@ -60,7 +60,7 @@ class Model_grafik extends CI_Model {
         $this->db->select("MONTH(date) as bulan");
         $this->db->select('SUM(hits) as jumlah_bulan');
         $this->db->from("tbcounter");
-        $this->db->where('MONTH(date) = MONTH(NOW())');
+        $this->db->where('MONTH(date) = MONTH(NOW()) AND YEAR(date) = YEAR(NOW())');
         $this->db->group_by("MONTH(date)");
         return $this->db->get()->result();
 
