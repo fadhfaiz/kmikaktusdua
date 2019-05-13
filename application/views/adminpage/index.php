@@ -44,7 +44,7 @@
 					type: 'line',
 					},
 					title: {
-					text: 'Grafik Statistik pengunjung jomblo',
+					text: 'Grafik Statistik pengunjung',
 					x: -20
 					},
 					subtitle: {
@@ -52,7 +52,7 @@
 					x: -20
 					},
 					xAxis: {
-					categories: ['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Minggu']
+					categories: ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember']
 					},
 					yAxis: {
 					title: {
@@ -60,7 +60,7 @@
 					}
 					},
 					series: [{
-					name: 'Data dalam Harian',
+					name: 'Data dalam Bulanan',
 					data: <?php echo json_encode($grafik); ?>
 					}]
 				});
