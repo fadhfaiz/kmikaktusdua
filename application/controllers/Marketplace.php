@@ -85,11 +85,12 @@
 
         public function aglonema_product()
         {
+  
             $data['aglonema'] = $this->Marketplace_model->getByAglonema();
-            $data['judul'] = 'Produk Tanaman Aglonema';
+            $judul['judul'] = 'Produk Tanaman Aglonema';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/tanaman/aglonema_product');
+            $this->load->view('templates/header', $judul);
+            $this->load->view('marketplace/tanaman/aglonema_product',$data);
             $this->load->view('templates/footer'); 
         }
 
@@ -166,6 +167,7 @@
             $this->load->view('marketplace/index', $data);
             $this->load->view('templates/footer');
         }
+       
         
     }
 ?>

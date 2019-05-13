@@ -27,22 +27,22 @@
 				echo '
 				<form method="post" action="'.base_url().'Keranjang/tambah" method="post" accept-charset="utf-8">
 					<div class="card">
-						<a href="' .base_url().'marketplace/detail_tanaman/'.$b['kode_produk'].'"
+						<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
 							style="color:black; text-decoration: none;">
-							<img src="'. base_url().'gambar/'.$b['gambar'].'"
+							<img src="'. base_url().'gambar/'.$b->gambar.'"
 								class="card-img-top" style="height: 200px;" alt="...">
 							<div class="card-body" style="height:100px;">
-								<h6 class="card-title">'.$b['nama_produk'].'</h6>
+								<h6 class="card-title">'.$b->nama_produk.'</h6>
 							</div>
 						</a>
 						<div class="card-footer">
 						<div class="row">
 						<div class="col-6">
-							<p class="h6" style="color: teal;">Rp. '.number_format($b['harga_produk'],0,",",".").'</p>
+							<p class="h6" style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
 						</div>
 						<div class="col-6">
-							<!--<input class="form-control" type="text" id="disabledInput" disabled value="'.$b['stok_produk'].'">-->
-							<button type="submit" class=" add_cart btn btn-block btn-success" data-kode_produk="'.$b['kode_produk'].'" data-nama_produk="'.$b['nama_produk'].'" data-harga_produk="'.$b['harga_produk'].'"><i class="glyphicon glyphicon-shopping-cart" ></i> Beli</button>
+							
+							<button type="submit" class=" add_cart btn btn-block btn-success" ><i class="glyphicon glyphicon-shopping-cart" ></i> Beli</button>
 						</div>
 						</div>
 						</div>
