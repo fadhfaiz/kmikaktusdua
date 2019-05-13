@@ -40,13 +40,9 @@
 						<div class="col-6">
 							<p class="h6" style="color: teal;">Rp. '.number_format($b['harga_produk'],0,",",".").'</p>
 						</div>
-						<input type="hidden" name="kode_produk" value="'.$b['kode_produk'].'" />
-						<input type="hidden" name="nama_produk" value="'.$b['nama_produk'].'" />
-						<input type="hidden" name="harga_produk" value="'.$b['harga_produk'].'" />
-						<input type="hidden" name="jumlah" value="1" />
 						<div class="col-6">
 							<!--<input class="form-control" type="text" id="disabledInput" disabled value="'.$b['stok_produk'].'">-->
-							<button type="submit" class="btn btn-block btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Beli</button>
+							<button type="submit" class=" add_cart btn btn-block btn-success" data-kode_produk="'.$b['kode_produk'].'" data-nama_produk="'.$b['nama_produk'].'" data-harga_produk="'.$b['harga_produk'].'"><i class="glyphicon glyphicon-shopping-cart" ></i> Beli</button>
 						</div>
 						</div>
 						</div>
@@ -60,7 +56,7 @@
 	</div>
 
 	<?php echo form_close()?>
-
+</div>
 </section>
 
 <section class="container my-5">

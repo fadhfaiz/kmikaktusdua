@@ -167,13 +167,5 @@
             $this->load->view('templates/footer');
         }
         
-        public function tambah()
-        {
-            $this->cart->insert();
-        }
-        public function ubah()
-        {
-            $this->cart->update();
-        }
     }
 ?>
