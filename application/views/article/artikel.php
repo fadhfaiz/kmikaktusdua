@@ -28,7 +28,7 @@
 	<div class="row">
 		<div class="col-lg-6 col-md-12 col-sm-12">
 			<div class="my-4">
-				<h2 class="text-center"><?php echo $artikelku->judul;?></h1>
+				<h2 class="text-center font-weight-bold"><?php echo $artikelku->judul;?></h1>
 			</div>
 			<div class="card bg-dark fixed">
 				<img src="<?php echo base_url().'gambar/'.$artikelku->gambar?>" class="img-fluid" alt="Responsive image">
