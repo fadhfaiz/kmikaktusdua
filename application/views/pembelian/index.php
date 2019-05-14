@@ -93,11 +93,11 @@
 
 		<div class="row">
 			<div class="col-6"><a href="<?= base_url(); ?>Keranjang/tampil_cart"
-					class="btn btn-outline-secondary btn-block align-right"><i class="fas fa-arrow-circle-left fa-lg"></i>
+					class="btn btn-dark btn-block align-right"><i class="fas fa-arrow-circle-left fa-lg"></i>
 					Back to Cart</a>
 			</div>
 
-			<div class="col-6"><button type="submit" class="btn btn-block btn-warning" name="tambahpembeli">Detail Pesanan</button></div>
+			<div class="col-6"><button type="submit" class="btn btn-block btn-warning" name="tambahpembeli">Detail Pesanan <i class="fas fa-arrow-circle-right fa-lg"></i></button></div>
 		
 		</div>
 	</form>
