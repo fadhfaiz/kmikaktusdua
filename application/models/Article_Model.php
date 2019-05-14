@@ -115,7 +115,7 @@ class Article_Model extends CI_Model
   public function upload_gambar() {
       $config['upload_path'] = 'gambar/';
       $config['allowed_types'] = 'jpg|png|jpeg';
-      $config['max_size']  = '2048';
+      // $config['max_size']  = '2048';
       $config['remove_space'] = TRUE;
     
       $this->load->library('upload', $config); 
