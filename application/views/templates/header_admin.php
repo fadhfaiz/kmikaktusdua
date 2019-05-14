@@ -44,17 +44,16 @@
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li> -->
 					<li class="nav-item">
-						<a class="nav-link" href="<?= base_url(); ?>marketplace/index">Halaman Marketplace</a>
+						<a class="nav-link" style="color:white;" href="<?= base_url(); ?>marketplace/index">Halaman Marketplace</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?= base_url(); ?>">Tampilan Utama Web</a>
+						<a class="nav-link" style="color:white;" href="<?= base_url(); ?>">Tampilan Utama Web</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('Login/logout'); ?>">Logout</a>
+						<a class="nav-link btn btn-block btn-danger" style="color:white;" href="<?php echo base_url('Login/logout'); ?>">Logout</a>
 					</li>
-					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<!-- <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
 					 aria-haspopup="true" aria-expanded="false">

@@ -9,7 +9,7 @@
 			</div>
 
 			<div class="form-group col-lg-3 col-md-12 col-sm-12">
-				<input type="submit" name="search_submit" value="Cari Produk" class="btn btn-dark btn-block">
+			<input type="submit" name="search_submit" value="Cari Produk" class="btn btn-dark btn-block">
 			</div>
 			<div class="form-group col-lg-3 col-md-12 col-sm-12">
 				<!-- <label for="">Cek Biaya Kirim</label> -->

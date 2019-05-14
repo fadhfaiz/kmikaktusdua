@@ -28,7 +28,7 @@
             $this->form_validation->set_rules('kabupaten','Kabupaten','required');
             $this->form_validation->set_rules('kecamatan','Kecamatan','required');
             $this->form_validation->set_rules('kodepos','Kode Pos','required');
-            $this->form_validation->set_rules('alamatlengkap','Alamat Lengkap','required');
+            $this->form_validation->set_rules('alamatlengkap','Detail Alamat','required');
 
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
@@ -45,10 +45,6 @@
                 $this->load->view('templates/footer');
                 
             }
-
-            // $this->load->view('templates/header', $data);
-            // $this->load->view('pembelian/index');
-            // $this->load->view('templates/footer');
         }
 
         public function menunggu_ongkir($id)
