@@ -112,7 +112,7 @@
 					<div class="card-footer">
 					<div class="row">
 					<div class="col-6">
-						<p class="h6" style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
+						<p style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
 					</div>
 					<div class="col-6">
 						

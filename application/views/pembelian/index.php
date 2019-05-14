@@ -11,7 +11,7 @@
 					<div class="form-group">
 						<label for="nama" >Nama</label>
 						<input type="text" class="form-control" id="nama" name = 'nama'>
-						<small id="" class="form-text text-danger"><?= form_error('nama'); ?></small>
+						<small id="" class="form-text alert-danger"><?= form_error('nama'); ?></small>
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12">

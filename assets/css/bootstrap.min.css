@@ -513,8 +513,8 @@ mark {
 	max-width: 100%;
 	height: auto;
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	padding: 1.5%;
-	border-radius: .85rem;
+	padding: 0.75%;
+	border-radius: .35rem;
 }
 
 .img-thumbnail {

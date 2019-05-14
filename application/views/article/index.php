@@ -1,5 +1,5 @@
-<br><br>
-<div class="container">
+
+<div class="container my-3">
 <?php 
      foreach($artikelbaru as $b){
           echo '

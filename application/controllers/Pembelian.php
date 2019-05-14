@@ -45,10 +45,6 @@
                 $this->load->view('templates/footer');
                 
             }
-
-            // $this->load->view('templates/header', $data);
-            // $this->load->view('pembelian/index');
-            // $this->load->view('templates/footer');
         }
 
         public function menunggu_ongkir($id)
