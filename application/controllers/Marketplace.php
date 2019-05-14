@@ -5,6 +5,7 @@
         {
 
             parent::__construct();
+            $this->load->library('cart');
             $this->load->model('Marketplace_model');
             $this->load->library('pagination');
             
@@ -41,7 +42,7 @@
             $this->pagination->initialize($config);
             $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
      
-            //panggil function get_mahasiswa_list yang ada pada mmodel mahasiswa_model. 
+          
             $data['data'] = $this->Marketplace_model->getDataProduk($config["per_page"], $data['page']);           
      
             $data['pagination'] = $this->pagination->create_links();
@@ -61,17 +62,7 @@
             $this->load->view('marketplace/detail/detail_tanaman');
             $this->load->view('templates/footer'); 
         }
-
-        // public function detail_aksesoris($id)
-        // {
-        //     $data['aksesoris'] = $this->Marketplace_model->getByAksesoris($id);
-        //     $data['judul'] = 'Disini Nama Produk';
-
-        //     $this->load->view('templates/header', $data);
-        //     $this->load->view('marketplace/detail/detail_aksesoris');
-        //     $this->load->view('templates/footer'); 
-        // }
-
+      
         public function detail_paket($id)
         {
             $data['paket'] = $this->Marketplace_model->getByPaket($id);
@@ -94,11 +85,12 @@
 
         public function aglonema_product()
         {
+  
             $data['aglonema'] = $this->Marketplace_model->getByAglonema();
-            $data['judul'] = 'Produk Tanaman Aglonema';
+            $judul['judul'] = 'Produk Tanaman Aglonema';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/tanaman/aglonema_product');
+            $this->load->view('templates/header', $judul);
+            $this->load->view('marketplace/tanaman/aglonema_product',$data);
             $this->load->view('templates/footer'); 
         }
 
@@ -166,13 +158,16 @@
         public function cariproduk()
         {
 
+            $judul['judul'] = 'Pencarian Produk';
             $keyword = $this->input->post('keyword');
-            
-            $data['produk'] = $this->Marketplace_model->getProdukKeyword($keyword);
+            $data['pagination'] = $this->pagination->create_links();
+            $data['data'] = $this->Marketplace_model->getProdukKeyword($keyword);
             // var_dump($data['produk']);
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/index');
+            $this->load->view('templates/header',$judul);
+            $this->load->view('marketplace/index', $data);
             $this->load->view('templates/footer');
         }
+       
+        
     }
 ?>

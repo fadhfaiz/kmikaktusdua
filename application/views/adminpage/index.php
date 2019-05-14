@@ -23,12 +23,6 @@
 					<h2>'.$bulan->jumlah_bulan.' visitors</h2>
 					';
 				}
-				foreach($perminggu as $minggu){
-					echo'
-					<h5> This Weeks </h5>
-					<h2>'.$minggu->jumlah_minggu.' visitors</h2>
-					';
-				}
 				foreach($perhari as $harian){
 					echo'
 						<h5> Today </h5>
@@ -58,7 +52,7 @@
 					x: -20
 					},
 					xAxis: {
-					categories: ['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Minggu']
+					categories: ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember']
 					},
 					yAxis: {
 					title: {
@@ -66,7 +60,7 @@
 					}
 					},
 					series: [{
-					name: 'Data dalam Harian',
+					name: 'Data dalam Bulanan',
 					data: <?php echo json_encode($grafik); ?>
 					}]
 				});

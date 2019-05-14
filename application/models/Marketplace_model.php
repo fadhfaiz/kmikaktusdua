@@ -4,8 +4,14 @@
 
         public function getDataProduk($limit, $start){
             $query = $this->db->get('produk', $limit, $start);
-            return $query;
+            return $query->result();
         }
+        public function get_produk_all()
+        {
+            $query = $this->db->get('produk');
+            return $query->result_array();
+        }
+     
         public function getDataPot(){
             $this->db->select("*");
             $this->db->from("produk");
@@ -39,7 +45,7 @@
             $this->db->where('jenis_produk = "Kaktus"');
             return $this->db->get()->result();
         }
-
+    
         public function getByAglonema(){
             $this->db->select("*");
             $this->db->from("produk");
@@ -83,6 +89,8 @@
             $this->db->or_like("harga_produk", $keyword);
             return $this->db->get()->result();
         }
+
+
     }
 
 ?>

@@ -1,10 +1,9 @@
 <section class="container">
-<?php echo form_open('Marketplace/cariproduk'); ?>
+	<?php echo form_open('Marketplace/cariproduk'); ?>
 	<form>
-		
-		<div class="form-row mt-4">
+
+		<div class="form-row mt-4 mb-4">
 			<div class="form-group col-lg-6 col-md-12 col-sm-12">
-				<!-- <label for="inputEmail4">Email</label> -->
 				<input type="text" name="keyword" class="form-control font-italic" id="cari-barang"
 					placeholder="cari nama produk / jenis tanaman / harga tanaman">
 			</div>
@@ -19,12 +18,14 @@
 				<!-- <button type="button" class="btn btn-block btn-success">Cek Biaya Kirim</button> -->
 			</div>
 		</div>
-		
+
 	</form>
-		<div class="card-columns">
-			<?php	
-			foreach($data->result() as $b){
+	<div class="card-columns">
+
+		<?php	
+			foreach($data as $b){
 				echo '
+				<form method="post" action="'.base_url().'Keranjang/tambah" method="post" accept-charset="utf-8">
 					<div class="card">
 						<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
 							style="color:black; text-decoration: none;">
@@ -37,22 +38,25 @@
 						<div class="card-footer">
 						<div class="row">
 						<div class="col-6">
-							<p class="h6" style="color: teal;">Rp. '.$b->harga_produk.'</p>
+							<p class="h6" style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
 						</div>
 						<div class="col-6">
-							<!--<input class="form-control" type="text" id="disabledInput" disabled value="'.$b->stok_produk.'">-->
-							<input class="form-control btn btn-block btn-success" type="button" value="Beli">
+							
+							<button type="submit" class=" add_cart btn btn-block btn-success" ><i class="glyphicon glyphicon-shopping-cart" ></i> Beli</button>
 						</div>
 						</div>
 						</div>
 					</div>
-				
+					</form>
 				';
 			}
 		
 		?>
-		</div>
+
+	</div>
+
 	<?php echo form_close()?>
+</div>
 </section>
 
 <section class="container my-5">

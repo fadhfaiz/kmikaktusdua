@@ -98,19 +98,29 @@
 	<div class="card-deck my-3">
 		
 			<?php
-				foreach($produk as $p){
+				foreach($produk as $b){
 					echo '
 					<div class="card">
-							<a href="'.base_url().'home/detail_tanaman/'.$p->kode_produk.'"><img
-									src="'.base_url().'gambar/'.$p->gambar.'" class="card-img-top" alt="...">
-								<div class="card-body">
-									<h6 class="card-title">'.$p->nama_produk.'</h6>
-								</div>
-							</a>
-							<div class="card-footer">
-								<small class="text-muted">Rp. '.$p->harga_produk.'</small>
-							</div>
+					<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
+						style="color:black; text-decoration: none;">
+						<img src="'. base_url().'gambar/'.$b->gambar.'"
+							class="card-img-top" style="height: 200px;" alt="...">
+						<div class="card-body" style="height:100px;">
+							<h6 class="card-title">'.$b->nama_produk.'</h6>
 						</div>
+					</a>
+					<div class="card-footer">
+					<div class="row">
+					<div class="col-6">
+						<p class="h6" style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
+					</div>
+					<div class="col-6">
+						
+						<button type="submit" class=" add_cart btn btn-block btn-success" ><i class="glyphicon glyphicon-shopping-cart" ></i> Beli</button>
+					</div>
+					</div>
+					</div>
+				</div>
 					';
 				}
 			?>

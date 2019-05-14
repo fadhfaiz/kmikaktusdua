@@ -6,19 +6,20 @@
 		<div class="col-lg-4 col-md-12 col-sm-12"></div>
 		<div class="col-lg-4 col-md-12 col-sm-12">
 			<hr>
-			<form action="<?php echo base_url('Login/aksi_login'); ?>" method="post">
+			<?php if(isset($error)) { echo $error; }; ?>
+			<form action="<?php echo base_url() ?>Login" method="post">
 			
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">ID Admin</label>
 					<input type="text" class="form-control font-italic" id="username" name="username" aria-describedby="emailHelp"
 						placeholder="enter your ID">
-					<small id="emailHelp" class="form-text text-muted">We'll never share your admin ID with anyone
-						else.</small>
+						<?php echo form_error('username'); ?>
 				</div>
 
 				<div class="form-group">
 					<label for="exampleInputPassword1" style="color: teal;">Password</label>
 					<input type="password" class="form-control font-italic" id="password" name="password" placeholder="enter your password">
+					<?php echo form_error('password'); ?>
 				</div>
 				<button type="submit" class="btn btn-warning align-right" style="color: teal;">Login</button>
 			</form>

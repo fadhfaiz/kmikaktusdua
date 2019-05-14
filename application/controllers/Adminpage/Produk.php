@@ -3,9 +3,7 @@ Class Produk extends CI_Controller
 {
     function __construct(){
         parent::__construct();
-        if($this->session->userdata('status') != "Login"){
-            redirect(base_url("Login"));
-        }
+      
         // $this->load->library('upload');
         $this->load->model("Produk_Model");
         $this->load->library("form_validation");
@@ -130,6 +128,18 @@ Class Produk extends CI_Controller
             $this->load->view('templates/footer');
         }
 
+    }
+    public function cariproduk()
+    {
+
+        $judul['judul'] = 'Pencarian Produk';
+        $keyword = $this->input->post('keyword');
+        $data['pagination'] = $this->pagination->create_links();
+        $data['data'] = $this->Produk_Model->getProdukKeyword($keyword);
+       
+        $this->load->view('templates/header_admin',$judul);
+        $this->load->view('adminpage/produk/product_admin' ,$data);
+        $this->load->view('templates/footer');
     }
 }
 

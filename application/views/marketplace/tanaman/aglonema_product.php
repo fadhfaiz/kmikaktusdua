@@ -1,5 +1,6 @@
 
 <section class="container">
+
 	<form>
 		<div class="form-row mt-4">
 			<div class="form-group col-lg-8 col-md-12 col-sm-12">
@@ -34,22 +35,31 @@
 
 <section class="container">
 
-	<div class="card-deck my-4">
+	<div class="card-columns my-4">
 		<?php
-			foreach($aglonema as $a){
+			foreach($aglonema as $b){
 				echo '
-					<div class="card">
-						<a href="'.base_url().'marketplace/detail_tanaman/'.$a->kode_produk.'"
-							style="color:black; text-decoration: none;"><img src="'.base_url().'gambar/'.$a->gambar.'"
-								class="card-img-top" alt="...">
-							<div class="card-body">
-								<h6 class="card-title">'.$a->nama_produk.'</h6>
-							</div>
-						</a>
-						<div class="card-footer">
-							<small class="text-muted">Rp. '.$a->harga_produk.'</small>
-						</div>
+				<div class="card">
+				<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
+					style="color:black; text-decoration: none;">
+					<img src="'. base_url().'gambar/'.$b->gambar.'"
+						class="card-img-top" style="height: 200px;" alt="...">
+					<div class="card-body" style="height:100px;">
+						<h6 class="card-title">'.$b->nama_produk.'</h6>
 					</div>
+				</a>
+				<div class="card-footer">
+				<div class="row">
+				<div class="col-6">
+					<p class="h6" style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
+				</div>
+				<div class="col-6">
+					
+					<button type="submit" class=" add_cart btn btn-block btn-success" ><i class="glyphicon glyphicon-shopping-cart" ></i> Beli</button>
+				</div>
+				</div>
+				</div>
+				</div>
 				';
 			}
 		?>
@@ -59,26 +69,7 @@
 </section>
 
 <section class="container my-5">
-	<nav aria-label="Page navigation example">
-		<ul class="pagination justify-content-center"">
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="Previous">
-					<span aria-hidden="true">&laquo; Previous Page</span>
-				</a>
-			</li>
-			<li class="page-item"><a class="page-link" href="#">1</a></li>
-			<li class="page-item"><a class="page-link" href="#">2</a></li>
-			<li class="page-item"><a class="page-link" href="#">3</a></li>
-			<li class="page-item"><a class="page-link" href="#">4</a></li>
-			<li class="page-item"><a class="page-link" href="#">5</a></li>
-			<li class="page-item"><a class="page-link" href="#">6</a></li>
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="Next">
-					<span aria-hidden="true">Next Page &raquo;</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
+	
 	<a href="https://www.instagram.com/fadh.leather/" class="float-ig" target="_blank">
 		<i class="fab fa-instagram my-float"></i>
 	</a>

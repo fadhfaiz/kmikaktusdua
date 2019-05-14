@@ -1,8 +1,15 @@
 <section class="container mt-4">
+<?php echo form_open('Adminpage/Produk/cariproduk'); ?>
 	<form action="">
 		<div class="row">
-			<div class="col-6"><input class="form-control" type="text" placeholder="Cari tanaman"></div>
-			<div class="col-3"><button class="btn btn-block btn-dark">Search</button></div>
+		<div class="form-group col-lg-6 col-md-12 col-sm-12">
+				<input type="text" name="keyword" class="form-control font-italic" id="cari-barang"
+					placeholder="cari nama produk ">
+			</div>
+
+			<div class="form-group col-lg-3 col-md-12 col-sm-12">
+				<input type="submit" name="search_submit" value="Cari Produk" class="btn btn-dark btn-block">
+			</div>
 			<div class="col-3"><a href="<?php echo base_url()?>adminpage/produk/product_baru" class="btn btn-block btn-warning">Upload Produk Baru</a></div>
 		</div>
 	</form>

@@ -32,6 +32,12 @@ class Produk_Model extends CI_Model
     return $this->db->get_where($this->_table, ["kode_produk" => $kode_produk])->row();
 }
 
+  public function getProdukKeyword($keyword){
+    $this->db->select("*");
+    $this->db->from("produk");
+    $this->db->like("nama_produk", $keyword);
+    return $this->db->get();
+  }
   function simpan_data_produk()
   {
 
