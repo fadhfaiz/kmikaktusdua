@@ -33,15 +33,7 @@
 
         redirect('Keranjang/tampil_cart');
     }
-    public function check_out()
-    {    
-        $this->pagination->initialize($config);
-        $data['kategori'] = $this->Keranjang_Model->get_kategori_all();
-        $this->load->view('themes/header',$data);
-        $this->load->view('shopping/check_out',$data);
-        $this->load->view('themes/footer');
-    }
-  
+
        
     }
 ?>
