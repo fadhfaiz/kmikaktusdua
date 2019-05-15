@@ -39,5 +39,5 @@
       <td><a href="<?= base_url('Pembelian')?>" class="btn btn-warning">Checkout</a></td>
       </tr>
       </tfoot>
-
+</table>
 </section>
