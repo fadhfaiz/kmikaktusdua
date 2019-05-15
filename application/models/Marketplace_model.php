@@ -45,7 +45,7 @@
         public function getByAglonema(){
             $this->db->select("*");
             $this->db->from("produk");
-            $this->db->where('jenis_produk = "Aglaonema"');
+            $this->db->where('jenis_produk = "Aglonema"');
             return $this->db->get()->result();
         }
         public function getBySansivera(){
