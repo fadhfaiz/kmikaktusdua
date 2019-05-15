@@ -82,11 +82,13 @@ class Produk_Model extends CI_Model
   public function upload_gambar_produk() {
     $config['upload_path'] = 'gambar/';
     $config['allowed_types'] = 'jpg|png|jpeg';
-    // $config['max_size']  = '2048';
+    $config['max_size']      = 2048; // maksimal ukuran
     $config['remove_space'] = TRUE;
   
-    $this->load->library('upload', $config); 
+    $this->load->library('upload'); 
+    $this->upload->initialize($config);
     if($this->upload->do_upload('gambar')){ 
+    
       $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
       return $return;
     }else{

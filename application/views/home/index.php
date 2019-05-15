@@ -95,11 +95,12 @@
 		</div>
 		<div class="col-4"><hr></div>
 	</div>
-	<div class="card-deck my-3">
+	<div class="card-columns my-3">
 		
 			<?php
 				foreach($produk as $b){
 					echo '
+					<form method="post" action="'.base_url().'Home/addToCart/'.$b->kode_produk.'" method="post" accept-charset="utf-8">
 					<div class="card">
 					<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
 						style="color:black; text-decoration: none;">
@@ -112,6 +113,7 @@
 					<div class="card-footer">
 					<div class="row">
 					<div class="col-6">
+					<input type="hidden" name="kode_barang" value="'.$b->kode_produk.'" />
 						<p style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
 					</div>
 					<div class="col-6">
@@ -121,6 +123,7 @@
 					</div>
 					</div>
 				</div>
+				</form>
 					';
 				}
 			?>

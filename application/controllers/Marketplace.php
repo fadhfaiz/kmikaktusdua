@@ -1,18 +1,24 @@
 <?php 
     Class Marketplace extends CI_Controller
     {
+        private $data;
         public function __construct()
         {
 
             parent::__construct();
             $this->load->library('cart');
             $this->load->model('Marketplace_model');
+            $this->load->model('Keranjang_Model');
+            $this->load->model('cart_model');
             $this->load->library('pagination');
+            $this->data['data'] = $this->cart_model->getcart();
             
         }
 
         public function index()
         {
+        
+            
             $config['base_url'] = site_url('marketplace/index'); //site url
             $config['total_rows'] = $this->db->count_all('produk'); //total row
             $config['per_page'] = 15;  //show record per halaman
@@ -46,61 +52,98 @@
             $data['data'] = $this->Marketplace_model->getDataProduk($config["per_page"], $data['page']);           
      
             $data['pagination'] = $this->pagination->create_links();
-            $judul['judul'] = 'Marketplace';
+            $data['judul'] = 'Marketplace';
 
-            $this->load->view('templates/header', $judul);
+            $this->load->view('templates/header', $this->data);
             $this->load->view('marketplace/index',$data);
             $this->load->view('templates/footer');
         }
 
         public function detail_tanaman($id)
         {
+            //$data['cart'] = $this->cart_model->getcart();
             $data['produk'] = $this->Marketplace_model->getByProduk($id);
             $data['judul'] = 'Disini Nama Produk';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/detail/detail_tanaman');
+            $this->load->view('templates/header', $this->data);
+            $this->load->view('marketplace/detail/detail_tanaman',$data);
             $this->load->view('templates/footer'); 
         }
-      
+        function ambil_ip_pengunjung() {
+            if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+            } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            } else {
+                $ip = $_SERVER['REMOTE_ADDR'];
+            }
+            return $ip;
+        }
+      public function addToCart(){
+        $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'Marketplace';
+          redirect($tujuan);
+      }
         public function detail_paket($id)
         {
+           // $data['cart'] = $this->cart_model->getcart();
             $data['paket'] = $this->Marketplace_model->getByPaket($id);
             $data['judul'] = 'Disini Nama Produk';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/detail/detail_paket');
+            $this->load->view('templates/header', $this->data);
+            $this->load->view('marketplace/detail/detail_paket',$data);
             $this->load->view('templates/footer'); 
         }
 
         public function kaktus_product()
+        
         {
+            $data['cart'] = $this->cart_model->getcart();
             $data['kaktus'] = $this->Marketplace_model->getByKaktus();
             $data['judul'] = 'Produk Tanaman Kaktus';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/tanaman/kaktus_product');
+            $this->load->view('templates/header',$this->data);
+            $this->load->view('marketplace/tanaman/kaktus_product',$data);
             $this->load->view('templates/footer'); 
         }
 
         public function aglonema_product()
         {
-  
+            $data['cart'] = $this->cart_model->getcart();
             $data['aglonema'] = $this->Marketplace_model->getByAglonema();
-            $judul['judul'] = 'Produk Tanaman Aglonema';
+            $data['judul'] = 'Produk Tanaman Aglonema';
 
-            $this->load->view('templates/header', $judul);
+            $this->load->view('templates/header',$this->data);
             $this->load->view('marketplace/tanaman/aglonema_product',$data);
             $this->load->view('templates/footer'); 
         }
 
         public function sansivera_product()
         {
+            $data['cart'] = $this->cart_model->getcart();
             $data['sansivera'] = $this->Marketplace_model->getBySansivera();
             $data['judul'] = 'Produk Tanaman Sansivera';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/tanaman/sansivera_product');
+            $this->load->view('templates/header', $this->data);
+            $this->load->view('marketplace/tanaman/sansivera_product',$data);
             $this->load->view('templates/footer'); 
         }
 
@@ -109,8 +152,8 @@
             $data['sukulen'] = $this->Marketplace_model->getBySukulen();
             $data['judul'] = 'Produk Tanaman Sukulen';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/tanaman/sukulen_product');
+            $this->load->view('templates/header',$this->data);
+            $this->load->view('marketplace/tanaman/sukulen_product',$data);
             $this->load->view('templates/footer'); 
         }
 
@@ -119,8 +162,8 @@
             $data['paket'] = $this->Marketplace_model->getDataPaket();
             $data['judul'] = 'Produk Tanaman Lactea';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/paket/paket_product');
+            $this->load->view('templates/header', $this->data);
+            $this->load->view('marketplace/paket/paket_product',$data);
             $this->load->view('templates/footer'); 
         }
       
@@ -129,8 +172,8 @@
             $data['pot'] = $this->Marketplace_model->getDataPot();
             $data['judul'] = 'Produk Pot Tanaman';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/aksesoris/pot_product');
+            $this->load->view('templates/header', $this->data);
+            $this->load->view('marketplace/aksesoris/pot_product',$data);
             $this->load->view('templates/footer');
 
         }
@@ -140,8 +183,8 @@
             $data['batu'] = $this->Marketplace_model->getDataBatu();
             $data['judul'] = 'Produk Batu Tanaman';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/aksesoris/batu_product');
+            $this->load->view('templates/header', $this->data);
+            $this->load->view('marketplace/aksesoris/batu_product',$data);
             $this->load->view('templates/footer'); 
         }
 
@@ -150,21 +193,21 @@
             $data['bibit'] = $this->Marketplace_model->getDataBibit();
             $data['judul'] = 'Produk Bibit Tanaman';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('marketplace/aksesoris/bibit_product');
+            $this->load->view('templates/header',$this->data);
+            $this->load->view('marketplace/aksesoris/bibit_product',$data);
             $this->load->view('templates/footer'); 
         }
         
         public function cariproduk()
         {
 
-            $judul['judul'] = 'Pencarian Produk';
+            $data['judul'] = 'Pencarian Produk';
             $keyword = $this->input->post('keyword');
             $data['pagination'] = $this->pagination->create_links();
             $data['data'] = $this->Marketplace_model->getProdukKeyword($keyword);
             // var_dump($data['produk']);
-            $this->load->view('templates/header',$judul);
-            $this->load->view('marketplace/index', $data);
+            $this->load->view('templates/header',$this->$data);
+            $this->load->view('marketplace/index', $this->$data);
             $this->load->view('templates/footer');
         }
        

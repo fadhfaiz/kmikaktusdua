@@ -1,10 +1,13 @@
 <?php 
     Class Article extends CI_Controller
     {
+        private $data;
         public function __construct(){
             parent::__construct();
             $this->load->model('Article_Model');
+            $this->load->model('cart_model');
             $this->load->library('pagination');
+            $this->data['data'] = $this->cart_model->getcart();
             
         }
 
@@ -13,7 +16,7 @@
             
             //$data['artikelku'] = $this->Article_Model->getDataArtikel();
             $data['artikelbaru'] = $this->Article_Model->getArtikelBaru();
-            $judul['judul'] = 'Artikel Kaktuskmi';
+            $data['judul'] = 'Artikel Kaktuskmi';
             $config['base_url'] = site_url('article/index'); //site url
             $config['total_rows'] = $this->db->count_all('artikel'); //total row
             $config['per_page'] = 3;  //show record per halaman
@@ -47,7 +50,7 @@
             $data['data'] = $this->Article_Model->getDataArtikel($config["per_page"], $data['page']);           
      
             $data['pagination'] = $this->pagination->create_links();
-            $this->load->view('templates/header' ,$judul);
+            $this->load->view('templates/header' ,$this->data);
             $this->load->view('article/index', $data);
             $this->load->view('templates/footer');
         }
@@ -57,7 +60,7 @@
             $data['artikelku'] = $this->Article_Model->getByIdArtikel($id);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
             $judul['judul'] = 'Artikel Kaktuskmi';
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-            $this->load->view('templates/header', $judul);
+            $this->load->view('templates/header', $this->data);
             $this->load->view('article/artikel', $data);
             $this->load->view('templates/footer');
         }

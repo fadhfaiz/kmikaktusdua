@@ -34,7 +34,7 @@
 
 <section class="container">
 
-	<div class="card-deck my-4">
+	<div class="card-columns my-4">
 		<?php
 			foreach($sansivera as $b){
 				echo '

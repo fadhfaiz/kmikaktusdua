@@ -1,13 +1,16 @@
 <?php 
     Class Pembelian extends CI_Controller
     {
+        private $data;
         function __construct(){
             parent::__construct();
 
         $this->load->model("Pembelian_Model");
         $this->load->model("Menunggu_Model");
+        $this->load->model("cart_model");
         $this->load->library("form_validation");
         $this->load->library("session");
+        $this->data['data'] = $this->cart_model->getcart();
         }
 
         public function Data_pembeli()
@@ -40,8 +43,8 @@
 
             } else {
 
-                $this->load->view('templates/header', $data);
-                $this->load->view('pembelian/index');
+                $this->load->view('templates/header', $this->data);
+                $this->load->view('pembelian/index',$data);
                 $this->load->view('templates/footer');
                 
             }
@@ -53,8 +56,8 @@
             $data['ongkir'] =$this->Pembelian_Model->Model_ongkir($id);
             $data['judul'] = 'Halaman Status Pengiriman';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('pembelian/menunggu_ongkir');
+            $this->load->view('templates/header', $this->data);
+            $this->load->view('pembelian/menunggu_ongkir',$data);
             $this->load->view('templates/footer');
         }
 
@@ -62,8 +65,8 @@
         {
             $data['judul'] = 'Halaman Status Pengiriman';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('pembelian/menunggu_pembayaran');
+            $this->load->view('templates/header', $this->data);
+            $this->load->view('pembelian/menunggu_pembayaran',$data);
             $this->load->view('templates/footer');
         }
 
@@ -71,8 +74,8 @@
         {
             $data['judul'] = 'Halaman Status Pengiriman';
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('pembelian/terkonfirmasi');
+            $this->load->view('templates/header', $this->data);
+            $this->load->view('pembelian/terkonfirmasi',$data);
             $this->load->view('templates/footer');
         }
 

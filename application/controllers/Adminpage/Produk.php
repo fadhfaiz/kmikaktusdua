@@ -20,6 +20,7 @@ Class Produk extends CI_Controller
             $data = [
                 "kode_produk" => $kode_produk,
                 "nama_produk" => $this->input->post('nama_produk'),
+                "catatan" => $this->input->post('catatan'),
                 "harga_produk" => $this->input->post('harga_produk'),
                 "stok_produk" => $this->input->post('stok_produk'),
                 "diameter" => $this->input->post('diameter'),
@@ -28,10 +29,9 @@ Class Produk extends CI_Controller
                 "gambar" => $this->input->post('gambar') ,
                 "jenis_produk" => $this->input->post('jenis_produk')
             ];
-
             $produk->update_data_produk($data);
-         
-            redirect(site_url('Adminpage/Produk/product_admin'));
+        
+            //redirect(site_url('Adminpage/Produk/product_admin'));
         }
 
         $data["produk"] = $produk->getIdDataProduk($kode_produk);
@@ -119,9 +119,8 @@ Class Produk extends CI_Controller
 
         if($validation->run()){
             $this->Produk_Model->save_produk($this->Produk_Model->upload_gambar_produk());
-
             $this->session->set_flashdata('sukses','berhasil disimpan');
-            redirect('Adminpage/produk/product_admin');
+            //redirect('Adminpage/produk/product_admin');
         } else {
             $this->load->view('templates/header_admin', $data);
             $this->load->view('adminpage/produk/product_baru');
