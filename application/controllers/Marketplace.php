@@ -80,7 +80,7 @@
             }
             return $ip;
         }
-      public function addToCart(){
+        public function addToCart(){
         $ip = $this->ambil_ip_pengunjung();
           $kode = $this->input->post('kode_barang');
           //$kode = $this->input->post('jumlah');
@@ -102,8 +102,8 @@
           }
           $tujuan = 'Marketplace';
           redirect($tujuan);
-      }
-      public function addToCartdetail(){
+         }
+        public function addToCartdetail(){
         $ip = $this->ambil_ip_pengunjung();
           $kode = $this->input->post('kode_barang');
           //$kode = $this->input->post('jumlah');
@@ -125,11 +125,204 @@
           }
           $tujuan = 'marketplace/detail_tanaman/'.$kode;
           redirect($tujuan);
-      }
+         }
+        public function addToCartbatu(){
+            $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'marketplace/batu_product/';
+          redirect($tujuan);
+         }
+    
+        public function addToCartbibit(){
+            $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'marketplace/bibit_product/';
+          redirect($tujuan);
+         }
+    
+        public function addToCartpot(){
+            $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'marketplace/pot_product/';
+          redirect($tujuan);
+         }
+    
+        public function addToCartpaket(){
+            $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'marketplace/paket_product/';
+          redirect($tujuan);
+         }
+    
+    
+        public function addToCartaglonema(){
+            $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'marketplace/aglonema_product/';
+          redirect($tujuan);
+         }
+    
+        public function addToCartkaktus(){
+            $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'marketplace/kaktus_product/';
+          redirect($tujuan);
+         }
+    
+        public function addToCartsansivera(){
+            $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'marketplace/sansivera_product/';
+          redirect($tujuan);
+         }
+    
+        public function addToCartsukulen(){
+            $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'marketplace/sukulen_product/';
+          redirect($tujuan);
+         }
+    
         public function detail_paket($id)
         {
            // $data['cart'] = $this->cart_model->getcart();
-            $data['paket'] = $this->Marketplace_model->getByPaket($id);
+            $data['data'] = $this->Marketplace_model->getByPaket($id);
             $data['judul'] = 'Disini Nama Produk';
 
             $this->load->view('templates/header', $this->data);
@@ -140,8 +333,8 @@
         public function kaktus_product()
         
         {
-            $data['cart'] = $this->cart_model->getcart();
-            $data['kaktus'] = $this->Marketplace_model->getByKaktus();
+           // $data['cart'] = $this->cart_model->getcart();
+            $data['data'] = $this->Marketplace_model->getByKaktus();
             $data['judul'] = 'Produk Tanaman Kaktus';
 
             $this->load->view('templates/header',$this->data);
@@ -151,8 +344,8 @@
 
         public function aglonema_product()
         {
-            $data['cart'] = $this->cart_model->getcart();
-            $data['aglonema'] = $this->Marketplace_model->getByAglonema();
+          //  $data['cart'] = $this->cart_model->getcart();
+            $data['data'] = $this->Marketplace_model->getByAglonema();
             $data['judul'] = 'Produk Tanaman Aglonema';
 
             $this->load->view('templates/header',$this->data);
@@ -162,8 +355,8 @@
 
         public function sansivera_product()
         {
-            $data['cart'] = $this->cart_model->getcart();
-            $data['sansivera'] = $this->Marketplace_model->getBySansivera();
+           // $data['cart'] = $this->cart_model->getcart();
+            $data['data'] = $this->Marketplace_model->getBySansivera();
             $data['judul'] = 'Produk Tanaman Sansivera';
 
             $this->load->view('templates/header', $this->data);
@@ -173,7 +366,7 @@
 
         public function sukulen_product()
         {
-            $data['sukulen'] = $this->Marketplace_model->getBySukulen();
+            $data['data'] = $this->Marketplace_model->getBySukulen();
             $data['judul'] = 'Produk Tanaman Sukulen';
 
             $this->load->view('templates/header',$this->data);
@@ -183,7 +376,7 @@
 
         public function paket_product()
         {
-            $data['paket'] = $this->Marketplace_model->getDataPaket();
+            $data['data'] = $this->Marketplace_model->getDataPaket();
             $data['judul'] = 'Produk Tanaman Lactea';
 
             $this->load->view('templates/header', $this->data);
@@ -193,7 +386,7 @@
       
         public function pot_product()
         {
-            $data['pot'] = $this->Marketplace_model->getDataPot();
+            $data['data'] = $this->Marketplace_model->getDataPot();
             $data['judul'] = 'Produk Pot Tanaman';
 
             $this->load->view('templates/header', $this->data);
@@ -204,7 +397,7 @@
 
         public function batu_product()
         {
-            $data['batu'] = $this->Marketplace_model->getDataBatu();
+            $data['data'] = $this->Marketplace_model->getDataBatu();
             $data['judul'] = 'Produk Batu Tanaman';
 
             $this->load->view('templates/header', $this->data);
@@ -214,7 +407,7 @@
 
         public function bibit_product()
         {
-            $data['bibit'] = $this->Marketplace_model->getDataBibit();
+            $data['data'] = $this->Marketplace_model->getDataBibit();
             $data['judul'] = 'Produk Bibit Tanaman';
 
             $this->load->view('templates/header',$this->data);

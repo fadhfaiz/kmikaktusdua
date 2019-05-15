@@ -36,8 +36,9 @@
 
 	<div class="card-columns my-4">
 		<?php
-			foreach($kaktus as $b){
+			foreach($data as $b){
 				echo '
+				<form method="post" action="'.base_url().'Marketplace/addToCartkaktus/'.$b->kode_produk.'" method="post" accept-charset="utf-8">
 				<div class="card">
 					<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
 						style="color:black; text-decoration: none;">
@@ -50,6 +51,7 @@
 					<div class="card-footer">
 					<div class="row">
 					<div class="col-6">
+					<input type="hidden" name="kode_barang" value="'.$b->kode_produk.'" />
 						<p class="h6" style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
 					</div>
 					<div class="col-6">
@@ -59,6 +61,7 @@
 					</div>
 					</div>
 				</div>
+				</form>
 				';
 			}
 		?>

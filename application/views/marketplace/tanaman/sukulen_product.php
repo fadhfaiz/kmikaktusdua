@@ -35,9 +35,10 @@
 <section class="container">
 	<div class="card-columns">
 		<?php
-			foreach($sukulen as $b){
+			foreach($data as $b){
 				echo '
 				<div class="card">
+				<form method="post" action="'.base_url().'Marketplace/addToCartsukulen/'.$b->kode_produk.'" method="post" accept-charset="utf-8">
 				<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
 					style="color:black; text-decoration: none;">
 					<img src="'. base_url().'gambar/'.$b->gambar.'"
@@ -49,6 +50,7 @@
 				<div class="card-footer">
 				<div class="row">
 				<div class="col-6">
+				<input type="hidden" name="kode_barang" value="'.$b->kode_produk.'" />
 					<p class="h6" style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
 				</div>
 				<div class="col-6">
@@ -58,6 +60,7 @@
 				</div>
 				</div>
 			</div>
+			</form>
 				';
 			}
 		?>

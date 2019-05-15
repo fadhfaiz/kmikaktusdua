@@ -39,7 +39,7 @@
 		<?php
 			foreach($batu as $b){
 				echo '
-				
+				<form method="post" action="'.base_url().'Marketplace/addToCartbatu/'.$b->kode_produk.'" method="post" accept-charset="utf-8">
 				<div class="card">
 					<a href="' .base_url().'marketplace/detail_tanaman/'.$b->kode_produk.'"
 						style="color:black; text-decoration: none;">
@@ -61,7 +61,7 @@
 					</div>
 					</div>
 				</div>
-				
+				</form>
 				';
 			}
 		?>

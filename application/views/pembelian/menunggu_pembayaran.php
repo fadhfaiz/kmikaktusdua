@@ -238,7 +238,7 @@
         <div class="col-sm">
         <div class="custom-file mb-3">
 					<input type="file" class="custom-file-input" id="customFile" name="gambar">
-					<label class="custom-file-label" for="customFile">Choose file</label>
+					<label class="custom-file-label" for="customFile">Upload bukti pembayaran</label>
 	
 				</div>
         </div>
