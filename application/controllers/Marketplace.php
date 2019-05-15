@@ -12,6 +12,7 @@
             $this->load->model('cart_model');
             $this->load->library('pagination');
             $this->data['data'] = $this->cart_model->getcart();
+            $this->data['judul'] = 'KaktusKmi';
             
         }
 
@@ -62,7 +63,7 @@
         public function detail_tanaman($id)
         {
             //$data['cart'] = $this->cart_model->getcart();
-            $data['produk'] = $this->Marketplace_model->getByProduk($id);
+            $data['data'] = $this->Marketplace_model->getByProduk($id);
             $data['judul'] = 'Disini Nama Produk';
 
             $this->load->view('templates/header', $this->data);
@@ -100,6 +101,29 @@
              
           }
           $tujuan = 'Marketplace';
+          redirect($tujuan);
+      }
+      public function addToCartdetail(){
+        $ip = $this->ambil_ip_pengunjung();
+          $kode = $this->input->post('kode_barang');
+          //$kode = $this->input->post('jumlah');
+
+          $err = FALSE;
+
+         // $ip = $this->session->userdata('id');
+          
+          if($ip){
+              if($this->Keranjang_Model->addToCart($kode)) {
+                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+              }
+              
+              if(!$err){
+                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+
+              }
+             
+          }
+          $tujuan = 'marketplace/detail_tanaman/'.$kode;
           redirect($tujuan);
       }
         public function detail_paket($id)

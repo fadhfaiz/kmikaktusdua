@@ -8,6 +8,7 @@
             $this->load->model('cart_model');
             $this->load->library('pagination');
             $this->data['data'] = $this->cart_model->getcart();
+            $this->data['judul'] = 'KaktusKmi';
             
         }
 

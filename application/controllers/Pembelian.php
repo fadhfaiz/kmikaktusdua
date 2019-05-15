@@ -11,6 +11,7 @@
         $this->load->library("form_validation");
         $this->load->library("session");
         $this->data['data'] = $this->cart_model->getcart();
+        $this->data['judul'] = 'KaktusKmi';
         }
 
         public function Data_pembeli()
