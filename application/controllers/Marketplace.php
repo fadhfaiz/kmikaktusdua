@@ -423,8 +423,8 @@
             $data['pagination'] = $this->pagination->create_links();
             $data['data'] = $this->Marketplace_model->getProdukKeyword($keyword);
             // var_dump($data['produk']);
-            $this->load->view('templates/header',$this->$data);
-            $this->load->view('marketplace/index', $this->$data);
+            $this->load->view('templates/header',$this->data);
+            $this->load->view('marketplace/index',$data);
             $this->load->view('templates/footer');
         }
        
