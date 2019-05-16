@@ -31,7 +31,7 @@ Class Produk extends CI_Controller
             ];
             $produk->update_data_produk($data);
         
-            //redirect(site_url('Adminpage/Produk/product_admin'));
+            redirect(site_url('Adminpage/Produk/product_admin'));
         }
 
         $data["produk"] = $produk->getIdDataProduk($kode_produk);

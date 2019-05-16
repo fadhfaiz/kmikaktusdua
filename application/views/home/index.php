@@ -76,7 +76,7 @@
 		</div>
 	</div>
 
-	<a href="https://www.instagram.com/fadh.leather/" class="float-ig" target="_blank">
+	<a href="https://www.instagram.com/kaktuskmi/" class="float-ig" target="_blank">
 		<i class="fab fa-instagram my-float"></i>
 	</a>
 
@@ -140,7 +140,7 @@
 			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/kaktus_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
-						<h5 class="card-title text-center">Kaktus</h5>
+						<h5 class="card-title text-center">Tanaman Lainnya</h5>
 						<hr>
 						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
 							additional
