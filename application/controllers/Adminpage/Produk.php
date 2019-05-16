@@ -31,7 +31,7 @@ Class Produk extends CI_Controller
             ];
             $produk->update_data_produk($data);
         
-            //redirect(site_url('Adminpage/Produk/product_admin'));
+            redirect(site_url('Adminpage/Produk/product_admin'));
         }
 
         $data["produk"] = $produk->getIdDataProduk($kode_produk);
@@ -120,7 +120,7 @@ Class Produk extends CI_Controller
         if($validation->run()){
             $this->Produk_Model->save_produk($this->Produk_Model->upload_gambar_produk());
             $this->session->set_flashdata('sukses','berhasil disimpan');
-            //redirect('Adminpage/produk/product_admin');
+            redirect('Adminpage/produk/product_admin');
         } else {
             $this->load->view('templates/header_admin', $data);
             $this->load->view('adminpage/produk/product_baru');

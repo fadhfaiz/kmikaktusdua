@@ -101,9 +101,11 @@ public function save_produk($upload)
 {
   $this->db->select("kode_produk");
   $this->db->from('produk');
-  $this->db->order_by('kode_produk', "DESC");
+  $this->db->order_by('tanggal', "DESC");
   $id = $this->db->get()->row();
-  $kode_produk = (int)substr($id->kode_produk, 3);
+  $kode_produk = (int)substr($id->kode_produk, 2);
+  // var_dump($kode_produk);
+  // die;
   $kode_produk += 1;
   $kodeProduk = "KK0" . $kode_produk;
   

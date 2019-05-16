@@ -34,7 +34,7 @@
 								</div>
 								<div class="col-3"><a href="'.base_url().'Adminpage/Produk/hapus_produk/'.$t->kode_produk.'" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a>
 								</div>
-								<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="'.$t->stok_produk.'"></div>
+								<div class="col-6"><input class="form-control" type="text" id="disabledInput" disabled value="Stok '.$t->stok_produk.'"></div>
 							</div>
 						</div>
 					</div>

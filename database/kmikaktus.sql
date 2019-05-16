@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2019 at 12:50 AM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.1.12
+-- Generation Time: May 16, 2019 at 12:51 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -45,6 +43,26 @@ INSERT INTO `artikel` (`kode_artikel`, `judul`, `isi`, `tanggal`, `gambar`) VALU
 (17, 'Kaktus dan Segala Manfaatnya', '<p>Kaktus (Cactaceae) adalah tanaman yang memiliki batang berduri dan dikenal hidup dicuaca panas dan kering, duri pada kaktus itu merupakan daun kaktus yang berubah bentuk menjadi duri sebagai penyesuaian diri untuk menghemat air. Biasanya kita mengenal kaktus itu hidup di gurun padahal tidak semua jenis kaktus itu hidup di gurun ada juga beberapa jenis kaktus yang hidup di daerah tropis. Tanaman kaktus saat ini juga digunakan sebagai tanaman hias, beraneka ragam jenis tanaman kaktus sekarang dijual dipasaran. Jenis tanaman kaktus yang populer adalah ariocarpus,haworhia attenuata, ferocactus, Echinofossulocactus, echinocactud grussoni, Cereus Tetragonous. Cara perawatan tanaman kaktus yang tergolong mudah menjadi salah satu sebab tanaman kaktus populer dikalangan pecinta tamanan hias. Kaktus tidak hanya bermanfaat untuk menghias rumah atau ruangan, sekarang kaktus juga sudah diolah menjadi berbagai produk kecantikan, berikut manfaat kaktus :</p>\r\n<p>1. Menjadikan udara ruangan bebas dari polusi</p>\r\n<p>Kaktus dapat membuat udara ruangan lebih bersih karena tumbuhan ini dapat menangkap polusi disekitarnya. Duri kaktus berfungsi untuk menangkap debu disekitar ruangan</p>\r\n<p>2. Meningkatkan kadar oksigen diruangan</p>\r\n<p>Tanaman kaktus berbeda dari tanaman lain. Tanaman kaktus pada malam hari akan menyerap karbondioksida dan melepaskan oksigen, sehingga kadar oksigen yang ada di ruangan akan meningkat.</p>\r\n<p>3. Mengatasi radiasi dan gelombang elektromagnetik</p>\r\n<p>Gelombang elektromagnetik yang dihasilkan dari computer, televisi, handphone, dan berbagai alat elektronik lainnya juga menghasilkan radiasi yang tidak baik bagi tubuh. Tanaman kaktus dapat menetralisir gelombang elektromagnetik dan menyerap radiasi yang dipaparkan oleh alat elektronik tersebut.</p>\r\n<p>4. Mencegah penuaan dini</p>\r\n<p>Tanaman kaktus mengandung anti-oksidan yang melimpah, sehingga kaktus mampu mencegah munculnya tanda-tanda penuaan dini. Kaktus juga kaya dengan vitamin E yang dapat membantu mempercepat regenerasi sel kulit. Produk kosmetik yang memiliki bahan dasar kaktus sekarang sudah ada di pasaran, biasanya berbentuk gel.</p>\r\n<p>5. Memperbaiki sel kulit yang rusak</p>\r\n<p>Kandungan anti oksidan yang tinggi pada tanaman kaktus juga bisa membuat regenerasi kulit menjadi lebih cepat sehingga kulit akan tampak lebih sehar dan segar.</p>\r\n<p>6. Melawan radikal bebas</p>\r\n<p>Radikal bebas berasal dari radiasi sinar UV, polusi udara, dan asap rokok dapat menyebabkan kerusakan pada jaringa kulit. Molekul radikal bebas dapat dilawan dengan menggunakan antioksidan. Oleh karena itu tanaman kaktus yang kaya akan kandungan anti oksidan, flavonoid dan vitamin E dapat melawan radikal bebas</p>\r\n<p>7. Mengatasi gejala alergi</p>\r\n<p>Batang kaktus dapat digunakan untuk mengatasi gejala alergi seperti ruam dan rasa gatal. Karena kaktus memiliki kandungan flavonoid yang berfungsi untuk meredakan gejala alergi.</p>', 1557824883, 'TF2.jpg'),
 (18, 'Mengenal Jenis-jenis Tanah dan Komoditas yang Cocok Ditanam', '<p>Walaupun di jaman sekarang banyak teknik budi daya yang berkembang, seperti akuaponik dan hidroponik, namun tanah tetap menjadi media tanam utama untuk pertanian. Oleh sebab itu, kecocokan tanah untuk budi daya adalah hal paling vital dalam bertani. Semakin baik kualitas tanah yang ada, maka akan semakin baik pula hasil yang didapatkan. Dalam bidang pertanian, tanah dikatakan ideal jika memenuhi syarat seperti halnya:</p>\r\n<p>- Tidak terdapat bagian padasnya karena akan mengganggu gerak dari akar.</p>\r\n<p>- Mempunyai tingkat kelembaban yang cukup baik walaupun pada saat musim panas sekalipun.</p>\r\n<p>- Tidak mudah memadat dan juga mengeras ketika sudah ditanami.</p>\r\n<p>- Terdapat kandungan unsur yang bersifat organik di dalam tanah.</p>\r\n<p>- Kondisi pH netral (sekitar 7).</p>\r\n<p>Jika tanah pertanian memenuhi kriteria tersebut sudah bisa dipastikan bahwa tanah tersebut cocok untuk digunakan.</p>\r\n<p>Setiap jenis-jenis tanah pada dasarnya memiliki sifat yang berbeda satu sama lain dan karakter yang berbeda pula. Tanaman yang cocok ditanam pada setiap jenis tanah pun berbeda-beda karena tanaman juga memiliki sifat dan karakter yang berbeda-beda pula. Berikut contoh tanah yang cocok digunakan untuk bercocok tanam yang akan dijelaskan secara detail, penjelasannya sebagai berikut:</p>\r\n<p>Alluvial</p>\r\n<p>Tanah alluvial ialah jenis tanah yang terjadi karena endapan lumpur. Umumnya merupakan endapan lumpur yang terbawa karena aliran sungai. Karena terbawa dari hulu, tanah alluvial sering ditemukan di daerah hilir. Tanahnya sendiri biasanya bewarna coklat hingga kelabu dengan struktur sedikit lepas-lepas. Tanah alluvial sangat cocok dimanfaatkan sebagai lahan pertanian baik pertanian padi maupun palawija, tembakau, jagung, tebu, buah-buahan dan jenis tanaman lainnya. Karena tekstur tanahnya yang lembut dan mudah digarap sehingga tidak membutuhkan kerja yang ekstra untuk menjadikannya sebagai lahan perrtanian. Tanah aluvial banyak tersebar daerah di Indonesia dari Kalimantan, Sumatra, Sulawesi, Jawa dan Papua.</p>\r\n<p>Andosol</p>\r\n<p>Tanah andosol ialah salah satu jenis tanah vulkanik yang terbentuk akibat dari adanya proses vulkanisme yang ada pada gunung berapi. Tanah Andosol sangat subur dan baik untuk tanaman. Warna dari tanah andosol coklat ke abu-abuan. Tanah ini sangat kaya dengan mineral, unsur hara dan air sehingga sangat baik untuk tanaman. Tanah andosol juga sangat cocok untuk segala jenis tanaman yang ada di dunia. Untuk daerah pesebarannya, tanah andosol banyak terdapat di daerah yang dekat dengan gunung berapi. Daerah di Indonesia yang banyak terdapat tanah andosol adalah daerah di Jawa, Sumatra, Bali, dan Nusa Tenggara.</p>\r\n<p>Entisol</p>\r\n<p>Tanah entisol ialah saudara dari tanah andosol tetapi umumnya merupakan hasil pelapukan dari material yang dikeluarkan oleh letusan gunung berapi seperti pasir, debu,lapili, dan lahar. Tanah Entisol juga termasuk tanah yang subur dan merupakan tipe tanah yang tergolong masih muda. Tanah entisol biasanya ditemukan tidak jauh dari area gunung berapi dapat berupa permukaan tanah tipis yang belum memiliki lapisan tanah dan berupa gundukan pasir seperti yang ada di pantai parangtritis Jogjakarta. Persebaran tanah entisol biasanya terdapat disekitar gunung berapi seperti di pantai Parangtritis Jogjakarta, dan daerah Jawa lainnya yang mempunyai gunung berapi.</p>\r\n<p>Grumusol</p>\r\n<p>Tanah grumusol memiliki tekstur tanah yang kering dan mudah pecah terutama saat musim kemarau. Warna dari tanah grumusol sendiri adalah hitam. Tanah grumusol biasanya berada di permukaan yang kurang dari 300 meter dari permukaan laut dan mempunyai bentuk topografi tanah yang datar hingga bergelombang. Perubahan suhu yang dialami pada daerah bertanah grumusol sangat nyata ketika hujan dan panas. Karena memiliki teksturnya yang kering maka akan sangat bagus apabila ditanami vegetasi kuat seperti kayu jati, jagung, tebu, tembakau, kapas, kedelai dan padi. Persebaran tanah grumusol di Indonesia banyak dijumpai di daerah Jawa seperti di Jawa Tengah (Demak, Jepara, Pati, Rembang dan Blora), Jawa Timur (Ngawi, Madiun) dan ada juga di Nusa Tenggara Timur.</p>\r\n<p>Organosol</p>\r\n<p>Tanah organosol terbentuk dari pelapukan bahan organik. Tanah ini biasa ditemui di daerah rawa atau daerah yang bayak tergenang air. Tanah organosol ini terbagi menjadi dua macam, yaitu tanah humus dan tanah gambut.</p>\r\n<p>Tanah humus adalah tanah hasil pelapukan bahan organik, khususnya dari tanaman yang sudah mati. Humus sangat subur untuk pertanian karena memiliki kandungan bahan organik tinggi sehingga warna tanah ini menjadi hitam. Humus cocok untuk tanaman seperti kelapa, nanas dan padi. Tanah humus terdapat di daerah yang ada banyak hutan. Persebaran humus di Indonesia meliputi daerah Kalimantan, Sumatera, Papua, Jawa dan sebagian wilayah dari Sulawesi.</p>\r\n<p>Tanah gambut adalah tanah hasil pembusukan bahan organik. Gambut tidak sesubur humus. Pembusukan bahan organik pada tanah gambut berlangsung dalam keadaan tergenang sehingga tanah menjadi anaerob dan terlalu masam. Gambut dapat ditanami tanaman seperti kelapa sawit, nanas, palawija, karet dan padi.</p>\r\n<p>Inseptisol</p>\r\n<p>Tanah Inseptol ialah tanah yang terbentuk dari batuan sedimen atau metamorf dengan warna yang agak kecoklatan dan kehitaman serta campuran warna agak keabu-abuan. Tanah inseptisol</p>\r\n<p>juga dapat menopang pengadaan hutan yang asri. Tanah inseptisol cocok jika dimanfaatkan sebagai lahan perkebunan seperti perkebunan karet ataupun sebagai lahan perkebunan lain seperti kelapa sawit. Tanah inseptisol banyak tersebar di berbagai derah di Indonesia seperti di Kalimantan, Sumatera dan Papua.</p>\r\n<p>Latosol</p>\r\n<p>Tanah latosol/laterit ialah tanah yang memiliki warna merah bata karena banyaknya kandungan zat besi dan aluminium yang terdapat dalam tanah ini. Tanah latosol/laterit termasuk ke dalam jajaran tanah yang sudah tua sehingga kurang cocok untuk ditanami tumbuhan apapun dan juga kandungan yang terdapat di dalam tanah tersebut. Namun beberapa jenis tanaman masih bisa tumbuh pada tanah jenis ini, di antaranya adalah cengkeh, kopi, kelapa sawit, kakao, padi, palawija, buah dan sayuran lainnya. Jenis tanah seperti ini memiliki ph mendekati netral sehingga bisa diatur kesuburannya dengan sedikit penambahan pupuk. Persebaran tanah latosol/laterit di Indonesia meliputi Lampung, Sumatra Utara, Kalimantan, Jawa Timur, dan Jawa Barat, Jawa Tengah dan Papua.</p>\r\n<p>Regosol</p>\r\n<p>Tanah regosol terbentuk dari material yang dikeluarkan letusan gunung berapi yang belum mengalami perkembangan sempurna. Tanah jenis ini bertekstur kasar dan berbahan organik rendah. Sifat demikian membuat tanah tidak dapat menampung air dan mineral yang dibutuhkan tanaman dengan baik. Tanah regosol lebih cocok untuk tanaman palawija, tebu, tembakau, sayuran dan padi. Tanah ini tersebar di Jawa, Bali, Bengkulu, Sumatera dan Nusa Tenggara</p>\r\n<p>Litosol</p>\r\n<p>Tanah litosol adalah tanah yang memiliki tekstur berbatu-batu. Jenis tanah ini hampir mirip dengan tanah regosol karena sama-sama terbentuk dari aktivitas gunung Merapi. Tanah ini memiliki kedalaman yang dangkal dan peka terhadap erosi. Kandungan bahan organik tanah ini masih rendah. Tanah litosol cocok untuk tanaman seperti palawija, rumput ternak dan tanaman keras. Tanah ini tersebar di Jawa, Sumatera, Nusa Tenggara, Maluku Selatan dan Papua. Sebelum memulai bercocok tanam baik bunga, sayuran, buah, palawija maupun tanaman perkebunan serta tanaman keras lainnya, mengidentifikasi jenis tanah menjadi sangat penting. Sebab tentunya, media tanam yang digunakan (jenis tanah) menjadi dasar utama keberhasilan dalam bercocok tanam.</p>', 1557841660, 'T1.jpg'),
 (19, 'Perkembangan Tanaman Hias di Indonesia', '<p>Tak hanya fashion, tanaman hias juga mengenal tren. Di saat tren sedang berlangsung harga tanaman hias bisa jadi sangat tinggi dan akan turun saat tren yang baru atau berikutnya berlangsung. Tak heran banyak pecinta tanaman yang beralih profesi untuk menjual tanaman koleksinya karena bisnis tanaman hias cukup menjanjikan. Beberapa jenis tanaman hias yang popular di kalangan masyarakat Indonesia adalah :</p>\r\n<p>- Bonsai, Bonsai adalah contoh tanaman yang sempat sangat popular beberapa tahun yang lalu. Bonsai adalah tanaman yang dikerdilkan dan memiliki bentuk yang unik dengan beberapa bagian tanaman yang ditonjolkan. Image bonsai sangat elit dan tanaman ini merupakan tanaman favorit seniman dan kalangan atas.</p>\r\n<p>- Pakis monyet, Inilah tren tanaman hias terbaru yang berasal dari Tiongkok. Sekilas tanaman ini seperti akar serabut kelapa namun sebenarnya adalah tanaman serumpun dnegan pakis. Disebut pakis monyet karena memang bentuk tanaman ini mirip dengan seekor monyet yang sedang duduk di atas pot. Tanaman ini didatangkan dari Palembang. Sebelum daunnya tumbuh, tanaman ini memiliki batang yang menjulang yang mirip dengan ekor monyet.</p>\r\n<p>- Adenium, Adenium adalah jenis dari kamboja namun berukuran kecil dnegan warna bermacam-macam yang menarik yang sempat menjadi tren para kolektor tanaman. Perawatannya tidaklah susah dan dapat dengan mudah dikembangbiakkan melalui biji yang bila tumbuh nantinya biji tersbeut dapat menjadi bonggol yang menjadi daya tarik tanaman ini selain warnanya. Adenium dapat ditanam melalui media pasir yang dicampur dengan pupuk. Bila menanam letakkanlah di tempat dengan terik matahari yang cukup banyak supaya bunganya dapat keluar dengan lebih banyak. Warna bunga adenium dapat dikembangkan dengan cara stek.</p>\r\n<p>- Aglaonema, Sejenis talas dengan daun yang pendek dan tidak punya kambium. Di pasaran, harga Aglaonema dihitung berdasarkan. Aglaonema yang nilainya tinggi adalah tanaman yang memiliki warna daun berbeda.</p>\r\n<p>- Euphorbia , Euphorbia berbentuk seperti kaktus berduri dan memiliki daun. Tanaman ini tidak tahan air sehingga penyiraman harus dilakukan dengan jarang-jarang. Media tanamnya adalah pasir dan pupuk kandang.</p>\r\n<p>- Bunga-bungaan, Selain berbagai jenis tanaman di atas, jenis tanaman hias lainnya yang tidak tergantung dnegan tren adalah jenis bunga bungaan. Seperti yang kita tahu, berbagai jenis bunga yang dijual selalu laris tanpa mengenal waktu. Jenis jenis bunga tersebut juga memiliki tingkatan harga walaupun sejenis. Beberapa jenis bunga juga menjadi tanaman industry yang dijual melalui floris atau toko bunga untuk disalurkan ke industry perhotelan, perkantoran ataupun industry lainnya. Beberapa jenis bunga yang menjadi tanaman industry adalahmawar, gladiol, krisan, tulip, dan lain lain.</p>', 1557843189, 'THIAS2.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `keranjang`
+--
+
+CREATE TABLE `keranjang` (
+  `id` int(20) NOT NULL,
+  `ip` varchar(12) NOT NULL,
+  `kode_barang` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `keranjang`
+--
+
+INSERT INTO `keranjang` (`id`, `ip`, `kode_barang`) VALUES
+(12, '::1', 'KK018'),
+(13, '::1', 'KK012');
 
 -- --------------------------------------------------------
 
@@ -113,39 +131,44 @@ CREATE TABLE `produk` (
   `tinggi` int(3) NOT NULL,
   `gambar` varchar(20) NOT NULL,
   `jenis_produk` varchar(30) NOT NULL,
-  `catatan` varchar(50) NOT NULL
+  `catatan` varchar(50) NOT NULL,
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_produk`, `stok_produk`, `diameter`, `tinggi`, `gambar`, `jenis_produk`, `catatan`) VALUES
-('KK01', 'Kaktus Rambut Kakek', 10000, 10, 10, 10, 'P17a.png', 'Sukulen', ''),
-('KK010', 'Kaktus Zebra', 26000, 26, 26, 26, 'P34a.png', 'Sukulen', ''),
-('KK011', 'Golden Barrel', 11000, 11, 11, 11, 'P19a.png', 'Sukulen', ''),
-('KK012', 'Crassula Ovata', 14000, 14, 14, 14, 'P18a.png', 'Kaktus', ''),
-('KK013', 'Hatiora Salicornioides', 12000, 12, 12, 12, 'P20a.png', 'Kaktus', ''),
-('KK014', 'Sansivera Stuckyi', 13000, 13, 13, 13, 'P21a.png', 'Sansivera', ''),
-('KK015', 'Haworthia Fasciata', 15000, 15, 15, 15, 'P22a.png', 'Sukulen', ''),
-('KK016', 'Sansivera Stuckyi', 16000, 16, 16, 16, 'P23a.png', 'Sansivera', ''),
-('KK017', 'Fairy Castle Cactus', 17000, 17, 17, 17, 'P24a.png', 'Sukulen', ''),
-('KK018', 'Opuntia Cochenillivera', 18000, 18, 18, 18, 'P25a.png', 'Sukulen', ''),
-('KK019', 'Euphorbia Lactea Cristata', 19000, 19, 19, 19, 'P26a.png', 'Sukulen', ''),
-('KK02', 'Haworthia Cooperi', 2000, 2, 2, 2, 'P9a.png', 'Sukulen', ''),
-('KK020', 'Hoya Kerri', 20000, 20, 20, 20, 'P27a.png', 'Sukulen', ''),
-('KK021', 'Cryptanthus Red', 21000, 21, 21, 21, 'P29a.png', 'Kaktus', ''),
-('KK022', 'Aglaonema Dud Anjamani', 22000, 22, 22, 22, 'P30a.png', 'Aglonema', ''),
-('KK023', 'Capiapoa Tenuissima', 23000, 23, 23, 23, 'P31a.png', 'Sukulen', ''),
-('KK024', 'Opuntia Quimilo', 24000, 24, 24, 24, 'P32a.png', 'Sukulen', ''),
-('KK025', 'Mammillaria Grafting', 25000, 25, 25, 25, 'P33a.png', 'Sukulen', ''),
-('KK03', 'Aglaonema Lipstik', 3000, 3, 3, 3, 'P10a.png', 'Aglonema', ''),
-('KK04', 'Lobivia Oganmaru', 4000, 4, 4, 4, 'P11a.png', 'Sukulen', ''),
-('KK05', 'Lobivia Oganmaru', 5000, 5, 5, 5, 'P12a.png', 'Sukulen', ''),
-('KK06', 'Sansivera Trifasciata Laurenti', 6000, 6, 6, 6, 'P13a.png', 'Sansivera', ''),
-('KK07', 'Haworthia Limifolia', 7000, 7, 7, 7, 'P14a.png', 'Sukulen', ''),
-('KK08', 'Bambu Hoki', 8000, 8, 8, 8, 'P15a.png', 'Kaktus', ''),
-('KK09', 'Euphorbia Lactea Cactus', 9000, 9, 9, 9, 'P16a.png', 'Sukulen', '');
+INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_produk`, `stok_produk`, `diameter`, `tinggi`, `gambar`, `jenis_produk`, `catatan`, `tanggal`) VALUES
+('KK01', 'Kaktus Rambut Kakek', 10000, 10, 10, 10, 'P17a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK010', 'Kaktus Zebra', 26000, 26, 26, 26, 'P34a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK011', 'Golden Barrel', 11000, 11, 11, 11, 'P19a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK012', 'Crassula Ovata', 14000, 14, 14, 14, 'P18a.png', 'Kaktus', '', '2019-05-15 22:28:04'),
+('KK013', 'Hatiora Salicornioides', 12000, 12, 12, 12, 'P20a.png', 'Kaktus', '', '2019-05-15 22:28:04'),
+('KK014', 'Sansivera Stuckyi', 13000, 13, 13, 13, 'P21a.png', 'Sansivera', '', '2019-05-15 22:28:04'),
+('KK015', 'Haworthia Fasciata', 15000, 15, 15, 15, 'P22a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK016', 'Sansivera Stuckyi', 16000, 16, 16, 16, 'P23a.png', 'Sansivera', '', '2019-05-15 22:28:04'),
+('KK017', 'Fairy Castle Cactus', 17000, 17, 17, 17, 'P24a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK018', 'Opuntia Cochenillivera', 18000, 18, 18, 18, 'P25a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK019', 'Euphorbia Lactea Cristata', 19000, 19, 19, 19, 'P26a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK02', 'Haworthia Cooperi', 2000, 2, 2, 2, 'P9a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK020', 'Hoya Kerri', 20000, 20, 20, 20, 'P27a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK021', 'Cryptanthus Red', 21000, 21, 21, 21, 'P29a.png', 'Kaktus', '', '2019-05-15 22:28:04'),
+('KK022', 'Aglaonema Dud Anjamani', 22000, 22, 22, 22, 'P30a.png', 'Aglonema', '', '2019-05-15 22:28:04'),
+('KK023', 'Capiapoa Tenuissima', 23000, 23, 23, 23, 'P31a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK024', 'Opuntia Quimilo', 24000, 24, 24, 24, 'P32a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK025', 'Mammillaria Grafting', 25000, 25, 25, 25, 'P33a.png', 'Sukulen', '', '2019-05-15 22:36:16'),
+('KK026', 'Batu Koral Putih', 10000, 5, 2, 1, 'batu_koral_putih.jpg', 'Batu', '', '2019-05-15 22:37:08'),
+('KK027', 'Batu Hias', 10000, 10, 2, 1, 'batu1.jpg', 'Batu', '', '2019-05-15 22:42:01'),
+('KK028', 'Pot warna', 5000, 10, 5, 3, 'pot3.jpg', 'Pot', '', '2019-05-15 22:43:59'),
+('KK029', 'kaktus mini', 5000, 5, 3, 3, 'pot1.jpg', 'Bibit', '', '2019-05-15 22:47:13'),
+('KK03', 'Aglaonema Lipstik', 3000, 3, 3, 3, 'P10a.png', 'Aglonema', '', '2019-05-15 22:28:04'),
+('KK04', 'Lobivia Oganmaru', 4000, 4, 4, 4, 'P11a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK05', 'Lobivia Oganmaru', 5000, 5, 5, 5, 'P12a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK06', 'Sansivera Trifasciata Laurenti', 6000, 6, 6, 6, 'P13a.png', 'Sansivera', '', '2019-05-15 22:28:04'),
+('KK07', 'Haworthia Limifolia', 7000, 7, 7, 7, 'P14a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
+('KK08', 'Bambu Hoki', 8000, 8, 8, 8, 'P15a.png', 'Kaktus', '', '2019-05-15 22:28:04'),
+('KK09', 'Euphorbia Lactea Cactus', 9000, 9, 9, 9, 'P16a.png', 'Sukulen', '', '2019-05-15 22:28:04');
 
 -- --------------------------------------------------------
 
@@ -227,7 +250,8 @@ INSERT INTO `tbcounter` (`ip`, `date`, `hits`) VALUES
 ('::1', '2019-05-11', 3),
 ('::1', '2019-05-12', 6),
 ('::1', '2019-05-14', 16),
-('::1', '2019-05-15', 3);
+('::1', '2019-05-15', 15),
+('::1', '2019-05-16', 6);
 
 -- --------------------------------------------------------
 
@@ -255,6 +279,12 @@ CREATE TABLE `transaksi` (
 --
 ALTER TABLE `artikel`
   ADD PRIMARY KEY (`kode_artikel`);
+
+--
+-- Indexes for table `keranjang`
+--
+ALTER TABLE `keranjang`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pembeli`
@@ -290,8 +320,12 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `kode_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
+  MODIFY `kode_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
+-- AUTO_INCREMENT for table `keranjang`
+--
+ALTER TABLE `keranjang`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- Constraints for dumped tables
 --
@@ -302,7 +336,6 @@ ALTER TABLE `artikel`
 ALTER TABLE `transaksi`
   ADD CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`id_pembeli`) REFERENCES `pembeli` (`id_pembeli`) ON DELETE CASCADE,
   ADD CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`kode_produk`) REFERENCES `produk` (`kode_produk`) ON DELETE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
