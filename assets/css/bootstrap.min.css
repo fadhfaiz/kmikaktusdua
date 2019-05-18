@@ -2737,7 +2737,8 @@ fieldset:disabled a.btn {
 .btn-primary {
 	color: #fff;
 	background-color: #007bff;
-	border-color: #007bff
+	border-color: #007bff;
+	box-shadow: 3px 3px 2px 0px #616161;
 }
 
 .btn-primary:hover {
@@ -3230,7 +3231,8 @@ fieldset:disabled a.btn {
 
 .btn-outline-danger {
 	color: #dc3545;
-	border-color: #dc3545
+	border-color: #dc3545;
+	box-shadow: 3px 3px 2px 0px #616161;
 }
 
 .btn-outline-danger:hover {

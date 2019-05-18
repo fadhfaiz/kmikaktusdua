@@ -33,7 +33,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-2"><button class="btn btn-block btn-warning" type="reset">Cancel</button></div>
+		<div class="col-2"><a href="<?php echo base_url(); ?>Adminpage/Artikel/article_admin" class="btn btn-block btn-dark" type="reset">Cancel</a></div>
 		<div class="col-2"><button class="btn btn-block btn-warning" type="submit">Submit</button></div>
 	</div>
 	</form>

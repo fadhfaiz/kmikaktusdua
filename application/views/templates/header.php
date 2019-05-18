@@ -50,7 +50,7 @@
 					<li class="nav-item">
 						<a class="nav-link btn btn-success" style="color:white;" href="<?= base_url(); ?>Keranjang/tampil_cart"> 
 						<?php if ($data !=0) : ?>
-						<span class="badge badge-success"> <?php echo $data ?></span>
+						<span class="badge badge-warning" style="color: teal;"> <?php echo $data ?></span>
 						<?php endif; ?>
 						<i class="fas fa-cart-plus fa-lg"></i> Cart</a>
 					</li>

@@ -87,7 +87,7 @@
 			</div>
 
                 <div class="row mt-4">
-                    <div class="col-4"><a href="<?php echo base_url()?>adminpage/Produk/product_admin" class="btn btn-outline-secondary btn-block">Cancel</a></div>
+                    <div class="col-4"><a href="<?php echo base_url()?>adminpage/Produk/product_admin" class="btn btn-dark btn-block">Cancel</a></div>
                     <div class="col-8"><button type="submit" class="btn btn-success btn-block">Edit Produk</a></div>
                 </div>
 

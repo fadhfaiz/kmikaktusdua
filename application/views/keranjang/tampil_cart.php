@@ -5,8 +5,8 @@
 		<tr id= "main_heading">
 		<td width="2%">No</td>
 		<td width="33%">Nama Produk</td>
-		<td width="17%">Harga</td>
-		<td width="20%">Jumlah</td>
+		<td width="17%">Harga Satuan</td>
+		<td width="20%">Jumlah Barang</td>
 		<td width="20%">Total</td>
 		<td width="10%">Hapus</td>
 		</tr>
@@ -30,7 +30,7 @@
 		</tbody>
       <tfoot>
       <tr>
-      <td colspan="4" class="text-center">Total</td>
+      <td colspan="4" class="text-center">Total Pembayaran <span class="badge badge-danger">belum termasuk biaya kirim</span></td>
       <td>Rp. <?= $total; ?></td>
       <td></td>
       </tr>

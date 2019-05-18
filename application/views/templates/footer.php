@@ -1,7 +1,7 @@
 <footer class="container mt-5 mb-2 sticky-bottom">
   <div class="row">
   <div class="col-4"></div>
-  <div class="col-4 text-center text-muted"><p>Unik Dev - KaktusKmi @2019</p></div>
+  <div class="col-4 text-center text-muted"><p>UniQ Dev - KaktusKmi @2019</p></div>
   <div class="col-4"></div>
   </div>
 </footer> 
