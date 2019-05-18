@@ -5010,7 +5010,7 @@ input[type=submit].btn-block {
 	background-clip: border-box;
 	border: 1px solid rgba(0, 0, 0, .125);
 	border-radius: .25rem;
-	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 28px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card>hr {
@@ -7073,7 +7073,8 @@ button.bg-secondary:hover {
 }
 
 .bg-success {
-	background-color: #28a745 !important
+	/* background-color: #28a745 !important; */
+	background-color: #36B07F !important;
 }
 
 a.bg-success:focus,

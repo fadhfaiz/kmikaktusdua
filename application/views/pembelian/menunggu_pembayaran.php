@@ -10,7 +10,7 @@
 						data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-								Detail Pembeli
+							<i class="fas fa-user-check"></i>&nbsp Detail Pembeli
 							</div>
 						</h2>
 					</div>
@@ -51,7 +51,7 @@
 						data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-								Detail Barang Pesanan
+							<i class="fas fa-shopping-cart"></i>&nbsp Detail Barang Pesanan
 							</div>
 						</h2>
 					</div>
@@ -113,7 +113,7 @@
 						data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-								Detail Alamat
+							<i class="fas fa-map-marker-alt"></i>&nbsp Detail Alamat
 							</div>
 						</h2>
 					</div>
@@ -141,7 +141,7 @@
 		<div class="col-lg-4 col-md-12 col-sm-12">
 			<div class="row">
 
-				<div class="col-12 mt-2">
+				<div class="col-12 mt-1">
 					<div class="card text-center bg-success" style="color: white;">
 						<div class="card-body">
 							<h5 class="card-title">Menunggu Ongkir</h5><hr>
@@ -172,7 +172,7 @@
 				<div class="col-12">
 					<div class="card text-center">
 						<div class="card-body">
-							<h5 class="card-title">Pembayaran Terkonfirmasi</h5>
+							<h5 class="card-title">Pembayaran Terkonfirmasi</h5><hr>
 							<p class="card-text">With supporting text below as a natural lead-in to additional content.
 							</p>
 						</div>

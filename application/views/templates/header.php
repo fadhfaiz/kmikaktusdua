@@ -40,23 +40,31 @@
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li> -->
 					<li class="nav-item">
-						<a class="nav-link" style="color:white;" href="<?= base_url(); ?>description/index"> Deskripsi & Cara Perawatan</a>
+						<a class="nav-link" style="color:white;" href="#"> Cara Pembelian</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link" style="color:white;" href="<?= base_url(); ?>article/index"> Baca Artikel</a>
+						<a class="nav-link" style="color:white;" href="<?= base_url(); ?>description/index"> Deskripsi &
+							Perawatan</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link btn btn-success" style="color:white;" href="<?= base_url(); ?>Keranjang/tampil_cart"> 
-						<?php if ($data !=0) : ?>
-						<span class="badge badge-warning" style="color: teal;"> <?php echo $data ?></span>
-						<?php endif; ?>
-						<i class="fas fa-cart-plus fa-lg"></i> Cart</a>
+						<a class="nav-link" style="color:white;" href="<?= base_url(); ?>article/index"> Artikel</a>
 					</li>
 					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
 					<li class="nav-item">
-						<a class="nav-link btn btn-success" style="color:white;" href="<?= base_url(); ?>konfirmasi/index"> <i class="fas fa-envelope fa-lg"></i> Konfirmasi</a>
+						<a class="nav-link btn btn-success" style="color:white;"
+							href="<?= base_url(); ?>Keranjang/tampil_cart">
+							<?php if ($data !=0) : ?>
+							<span class="badge badge-warning" style="color: teal;"> <?php echo $data ?></span>
+							<?php endif; ?>
+							<i class="fas fa-cart-plus fa-lg"></i> Cart</a>
+					</li>
+					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
+					<li class="nav-item">
+						<a class="nav-link btn btn-success" style="color:white;"
+							href="<?= base_url(); ?>konfirmasi/index"> <i class="fas fa-envelope fa-lg"></i>
+							Konfirmasi</a>
 					</li>
 					<!-- <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -73,7 +81,7 @@
 					<!-- <li class="nav-item">
 					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 				</li> -->
-				
+
 				</ul>
 				<!-- <form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
