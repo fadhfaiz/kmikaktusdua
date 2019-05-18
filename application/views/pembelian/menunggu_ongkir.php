@@ -10,7 +10,7 @@
 						data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-								Detail Pembeli dan Alamat
+								Detail Pembeli
 							</div>
 						</h2>
 					</div>
@@ -108,7 +108,7 @@
 						data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-								Detail Pembayaran
+								Detail Alamat
 							</div>
 						</h2>
 					</div>
@@ -136,12 +136,12 @@
 		<div class="col-lg-4 col-md-12 col-sm-12">
 			<div class="row">
 
-				<div class="col-12 mt-4">
+				<div class="col-12 mt-2">
 					<div class="card text-center bg-success" style="color: white;">
 						<div class="card-body">
 							<h5 class="card-title">Menunggu Ongkir</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.
-							</p>
+							<hr>
+							<p class="card-text">Menunggu Penjual untuk Menambahkan Biaya Pengiriman Barang</p>
 						</div>
 					</div>
 				</div>
@@ -150,6 +150,7 @@
 					<div class="card text-center">
 						<div class="card-body">
 							<h5 class="card-title">Menunggu Pembayaran</h5>
+							<hr>
 							<p class="card-text">With supporting text below as a natural lead-in to additional content.
 							</p>
 						</div>
@@ -160,6 +161,7 @@
 					<div class="card text-center">
 						<div class="card-body">
 							<h5 class="card-title">Pembayaran Terkonfirmasi</h5>
+							<hr>
 							<p class="card-text">With supporting text below as a natural lead-in to additional content.
 							</p>
 						</div>

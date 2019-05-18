@@ -10,7 +10,7 @@
 						data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-								Detail Pembeli dan Alamat
+								Detail Pembeli
 							</div>
 						</h2>
 					</div>
@@ -90,7 +90,7 @@
 											<td class="text-center">2</td>
 											<td>Rp. 52.000</td>
 										</tr>
-										tr>
+										<tr>
 											<th></th>
 											<td colspan="3" class="text-center">Biaya Pengiriman</td>
 											<td class="text-center">Rp. 21.000</td>
@@ -113,7 +113,7 @@
 						data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-								Detail Pembayaran
+								Detail Alamat
 							</div>
 						</h2>
 					</div>
@@ -141,12 +141,11 @@
 		<div class="col-lg-4 col-md-12 col-sm-12">
 			<div class="row">
 
-				<div class="col-12 mt-4">
+				<div class="col-12 mt-2">
 					<div class="card text-center bg-success" style="color: white;">
 						<div class="card-body">
-							<h5 class="card-title">Menunggu Ongkir</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.
-							</p>
+							<h5 class="card-title">Menunggu Ongkir</h5><hr>
+							<p class="card-text">Terima kasih telah menunggu, Biaya pengiriman sudah ditambahkan.</p>
 						</div>
 					</div>
 				</div>
@@ -154,9 +153,18 @@
 				<div class="col-12 my-3">
 					<div class="card text-center bg-success" style="color: white;">
 						<div class="card-body">
-							<h5 class="card-title">Menunggu Pembayaran</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.
+							<h5 class="card-title">Menunggu Pembayaran</h5><hr>
+							<p class="card-text">Silahkan transfer sesuai jumlah pembayaran.
 							</p>
+							<form>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="validatedCustomFile" required>
+									<label class="custom-file-label text-left" for="validatedCustomFile">Upload bukti transfer disini..</label>
+									<div class="invalid-feedback">Example invalid custom file feedback</div>
+									<a href="#" class="btn btn-block btn-warning mt-2" type="submit">Kirim Bukti Bayar</a>
+								</div>
+							</form>
+
 						</div>
 					</div>
 				</div>
