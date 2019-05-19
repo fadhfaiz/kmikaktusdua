@@ -90,7 +90,7 @@
 											<td class="text-center">2</td>
 											<td>Rp. 52.000</td>
 										</tr>
-										tr>
+										<tr>
 										<th></th>
 										<td colspan="3" class="text-center">Biaya Pengiriman</td>
 										<td class="text-center">Rp. 21.000</td>

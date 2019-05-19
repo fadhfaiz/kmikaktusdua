@@ -142,6 +142,7 @@
 							<h5 class="card-title">Menunggu Ongkir</h5>
 							<hr>
 							<p class="card-text">Menunggu Penjual untuk Menambahkan Biaya Pengiriman Barang</p>
+							<a href="http://www.jet.co.id/tariff" class="btn btn-block btn-warning" target="_blank">Cek Estimasi Biaya Kirim</a>
 						</div>
 					</div>
 				</div>
