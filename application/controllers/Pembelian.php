@@ -7,6 +7,7 @@
 
         $this->load->model("Pembelian_Model");
         $this->load->model("Menunggu_Model");
+        $this->load->model("Keranjang_Model");
         $this->load->model("cart_model");
         $this->load->library("form_validation");
         $this->load->library("session");
@@ -56,6 +57,7 @@
             
             $data['ongkir'] =$this->Pembelian_Model->Model_ongkir($id);
             $data['judul'] = 'Halaman Status Pengiriman';
+            $data['data'] = $this->Keranjang_Model->tampil();
 
             $this->load->view('templates/header', $this->data);
             $this->load->view('pembelian/menunggu_ongkir',$data);

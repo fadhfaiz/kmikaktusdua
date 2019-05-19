@@ -69,35 +69,31 @@
 										</tr>
 									</thead>
 									<tbody>
+									<?php
+									$i = 1;
+									$total = 0;
+									foreach($data as $a) :
+										$total += $a['total'];
+									?>
 										<tr>
-											<th scope="row">1</th>
-											<td>Crassula Ovata</td>
-											<td>Rp. 14.000</td>
-											<td class="text-center">2</td>
-											<td>Rp. 28.000</td>
+										<td><?= $i++; ?></td>
+										<td><?= $a['nama'] ?></td>
+										<td>Rp. <?= $a['harga'] ?></td>
+										<td class="text-center"><?= $a['jumlah'] ?></td>
+										<td>Rp. <?= $a['total'] ?></td>
+										<td><a href="<?= base_url('Keranjang/hapus/').$a['kode']?>" class="btn btn-danger"><i class='fas fa-fw fa-trash'></i></a></td>
 										</tr>
-										<tr>
-											<th scope="row">2</th>
-											<td>Kaktus Mini</td>
-											<td>Rp. 10.000</td>
-											<td class="text-center">3</td>
-											<td>Rp. 30.000</td>
-										</tr>
-										<tr>
-											<th scope="row">3</th>
-											<td>Bambu Hoki</td>
-											<td>Rp. 26.000</td>
-											<td class="text-center">2</td>
-											<td>Rp. 52.000</td>
-										</tr>
-										<tr>
-											<th scope="row">#</th>
-											<td colspan="3" class="text-center">Jumlah Pembayaran <span
-													class="badge badge-danger">belum termasuk biaya kirim</span></td>
-											<td class="text-center" style="font-weight: bold;">Rp. 110.000</td>
-										</tr>
-									</tbody>
-								</table>
+									<?php endforeach; ?>
+										</tbody>
+									<tfoot>
+									<tr>
+									<td colspan="4" class="text-center">Total Pembayaran <span class="badge badge-danger">belum termasuk biaya kirim</span></td>
+									<td>Rp. <?= $total; ?></td>
+									<td></td>
+									</tr>
+					
+									</tfoot>
+																</table>
 							</div>
 						</div>
 					</div>
