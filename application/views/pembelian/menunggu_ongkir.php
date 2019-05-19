@@ -23,22 +23,22 @@
 									<tr>
 										<td>Nama</td>
 										<td>:</td>
-										<td>Bambang Pamungkas</td>
+										<td><?= $ongkir->nama_pembeli?></td>
 									</tr>
 									<tr>
 										<td>Email</td>
 										<td>:</td>
-										<td>bambangpersija@gmail.com</td>
+										<td><?= $ongkir->email?></td>
 									</tr>
 									<tr>
 										<td>Nomor</td>
 										<td>:</td>
-										<td>087843554322</td>
+										<td><?= $ongkir->no_telp ?></td>
 									</tr>
 									<tr>
 										<td>Keterangan Tambahan</td>
 										<td>:</td>
-										<td>Pilih tanaman yang paling yahuddd</td>
+										<td><?= $ongkir->catatan ?></td>
 									</tr>
 								</tbody>
 							</table>
@@ -111,18 +111,11 @@
 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
 						data-parent="#accordionExample">
 						<div class="card-body">
-							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-							squid. 3
-							wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-							laborum
-							eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
-							nulla
-							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-							nesciunt
-							sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-							farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-							accusamus
-							labore sustainable VHS.
+							<p><?= $ongkir->alamat_lengkap ?></p>
+							<p>Kecamatan :<?= $ongkir->kecamatan ?></p>
+							<p>Kabupaten :<?= $ongkir->kabupaten ?></p>
+							<p>Provinsi :<?= $ongkir->provinsi ?></p>
+							<p>Kode Pos :<?= $ongkir->kodepos ?></p>
 						</div>
 					</div>
 				</div>

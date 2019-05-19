@@ -52,13 +52,14 @@ class Pembelian_Model extends CI_Model
     function Beli_paket(){
 
     }
-    function Model_ongkir($ongkir)
+    function Model_ongkir($id)
     {
             $this->db->select("*");
             $this->db->from("pembeli");
-            $this->db->where('id_pembeli', $ongkir);
+            $this->db->where('id_pembeli', $id);
             return $this->db->get()->row();
     }
+    
 }
 
 ?>
