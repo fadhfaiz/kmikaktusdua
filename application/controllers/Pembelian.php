@@ -64,19 +64,21 @@
             $this->load->view('templates/footer');
         }
 
-        public function menunggu_pembayaran()
+        public function menunggu_pembayaran($id)
         {
             $data['judul'] = 'Halaman Status Pengiriman';
-
+            $data['ongkir'] =$this->Pembelian_Model->Model_ongkir($id);
+            $data['data'] = $this->Keranjang_Model->tampil();
             $this->load->view('templates/header', $this->data);
             $this->load->view('pembelian/menunggu_pembayaran',$data);
             $this->load->view('templates/footer');
         }
 
-        public function terkonfirmasi()
+        public function terkonfirmasi($id)
         {
             $data['judul'] = 'Halaman Status Pengiriman';
-
+            $data['ongkir'] =$this->Pembelian_Model->Model_ongkir($id);
+            $data['data'] = $this->Keranjang_Model->tampil();
             $this->load->view('templates/header', $this->data);
             $this->load->view('pembelian/terkonfirmasi',$data);
             $this->load->view('templates/footer');

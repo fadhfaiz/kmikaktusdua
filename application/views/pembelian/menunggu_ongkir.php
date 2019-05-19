@@ -81,7 +81,6 @@
 										<td>Rp. <?= $a['harga'] ?></td>
 										<td class="text-center"><?= $a['jumlah'] ?></td>
 										<td>Rp. <?= $a['total'] ?></td>
-										<td><a href="<?= base_url('Keranjang/hapus/').$a['kode']?>" class="btn btn-danger"><i class='fas fa-fw fa-trash'></i></a></td>
 										</tr>
 									<?php endforeach; ?>
 										</tbody>
@@ -89,11 +88,11 @@
 									<tr>
 									<td colspan="4" class="text-center">Total Pembayaran <span class="badge badge-danger">belum termasuk biaya kirim</span></td>
 									<td>Rp. <?= $total; ?></td>
-									<td></td>
+								
 									</tr>
 					
 									</tfoot>
-																</table>
+								</table>
 							</div>
 						</div>
 					</div>

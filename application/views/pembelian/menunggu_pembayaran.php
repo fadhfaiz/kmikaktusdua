@@ -19,26 +19,26 @@
 						data-parent="#accordionExample">
 						<div class="card-body">
 							<table class="table table-borderless">
-								<tbody>
+							<tbody>
 									<tr>
 										<td>Nama</td>
 										<td>:</td>
-										<td>Bambang Pamungkas</td>
+										<td><?= $ongkir->nama_pembeli?></td>
 									</tr>
 									<tr>
 										<td>Email</td>
 										<td>:</td>
-										<td>bambangpersija@gmail.com</td>
+										<td><?= $ongkir->email?></td>
 									</tr>
 									<tr>
 										<td>Nomor</td>
 										<td>:</td>
-										<td>087843554322</td>
+										<td><?= $ongkir->no_telp ?></td>
 									</tr>
 									<tr>
 										<td>Keterangan Tambahan</td>
 										<td>:</td>
-										<td>Pilih tanaman yang paling yahuddd</td>
+										<td><?= $ongkir->catatan ?></td>
 									</tr>
 								</tbody>
 							</table>
@@ -69,39 +69,30 @@
 										</tr>
 									</thead>
 									<tbody>
+									<?php
+									$i = 1;
+									$total = 0;
+									foreach($data as $a) :
+										$total += $a['total'];
+									?>
 										<tr>
-											<th>1</th>
-											<td>Crassula Ovata</td>
-											<td>Rp. 14.000</td>
-											<td class="text-center">2</td>
-											<td>Rp. 28.000</td>
+										<td><?= $i++; ?></td>
+										<td><?= $a['nama'] ?></td>
+										<td>Rp. <?= $a['harga'] ?></td>
+										<td class="text-center"><?= $a['jumlah'] ?></td>
+										<td>Rp. <?= $a['total'] ?></td>
+										
 										</tr>
-										<tr>
-											<th>2</th>
-											<td>Kaktus Mini</td>
-											<td>Rp. 10.000</td>
-											<td class="text-center">3</td>
-											<td>Rp. 30.000</td>
-										</tr>
-										<tr>
-											<th>3</th>
-											<td>Bambu Hoki</td>
-											<td>Rp. 26.000</td>
-											<td class="text-center">2</td>
-											<td>Rp. 52.000</td>
-										</tr>
-										<tr>
-											<th></th>
-											<td colspan="3" class="text-center">Biaya Pengiriman</td>
-											<td class="text-center">Rp. 21.000</td>
-										</tr>
-										<tr>
-											<th></th>
-											<td colspan="3" class="text-center">Jumlah Pembayaran <span
-													class="badge badge-success">sudah termasuk biaya kirim</span></td>
-											<td class="text-center" style="font-weight: bold;">Rp. 131.000</td>
-										</tr>
-									</tbody>
+									<?php endforeach; ?>
+										</tbody>
+									<tfoot>
+									<tr>
+									<td colspan="4" class="text-center">Total Pembayaran <span class="badge badge-success">sudah termasuk biaya kirim</span></td>
+									<td>Rp. <?= $total; ?></td>
+									
+									</tr>
+					
+									</tfoot>
 								</table>
 							</div>
 						</div>
@@ -120,18 +111,11 @@
 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
 						data-parent="#accordionExample">
 						<div class="card-body">
-							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-							squid. 3
-							wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-							laborum
-							eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
-							nulla
-							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-							nesciunt
-							sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-							farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-							accusamus
-							labore sustainable VHS.
+							<p><?= $ongkir->alamat_lengkap ?></p>
+							<p>Kecamatan :<?= $ongkir->kecamatan ?></p>
+							<p>Kabupaten :<?= $ongkir->kabupaten ?></p>
+							<p>Provinsi :<?= $ongkir->provinsi ?></p>
+							<p>Kode Pos :<?= $ongkir->kodepos ?></p>
 						</div>
 					</div>
 				</div>
