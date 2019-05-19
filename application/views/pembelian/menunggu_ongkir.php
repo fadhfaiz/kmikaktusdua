@@ -10,7 +10,7 @@
 						data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-							<i class="fas fa-user-check"></i>&nbsp Detail Pembeli
+								<i class="fas fa-user-check"></i>&nbsp Detail Pembeli
 							</div>
 						</h2>
 					</div>
@@ -51,7 +51,7 @@
 						data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-							<i class="fas fa-shopping-cart"></i>&nbsp Detail Barang Pesanan
+								<i class="fas fa-shopping-cart"></i>&nbsp Detail Barang Pesanan
 							</div>
 						</h2>
 					</div>
@@ -69,28 +69,29 @@
 										</tr>
 									</thead>
 									<tbody>
-									<?php
+										<?php
 									$i = 1;
 									$total = 0;
 									foreach($data as $a) :
 										$total += $a['total'];
 									?>
 										<tr>
-										<td><?= $i++; ?></td>
-										<td><?= $a['nama'] ?></td>
-										<td>Rp. <?= $a['harga'] ?></td>
-										<td class="text-center"><?= $a['jumlah'] ?></td>
-										<td>Rp. <?= $a['total'] ?></td>
+											<td><?= $i++; ?></td>
+											<td><?= $a['nama'] ?></td>
+											<td>Rp. <?= $a['harga'] ?></td>
+											<td class="text-center"><?= $a['jumlah'] ?></td>
+											<td>Rp. <?= $a['total'] ?></td>
 										</tr>
-									<?php endforeach; ?>
-										</tbody>
+										<?php endforeach; ?>
+									</tbody>
 									<tfoot>
-									<tr>
-									<td colspan="4" class="text-center">Total Pembayaran <span class="badge badge-danger">belum termasuk biaya kirim</span></td>
-									<td>Rp. <?= $total; ?></td>
-								
-									</tr>
-					
+										<tr>
+											<td colspan="4" class="text-center">Total Pembayaran <span
+													class="badge badge-danger">belum termasuk biaya kirim</span></td>
+											<td>Rp. <?= $total; ?></td>
+
+										</tr>
+
 									</tfoot>
 								</table>
 							</div>
@@ -103,18 +104,42 @@
 						data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 						<h2 class="mb-0">
 							<div class="btn collapsed" style="color: teal; font-weight: bold;">
-							<i class="fas fa-map-marker-alt"></i>&nbsp Detail Alamat
+								<i class="fas fa-map-marker-alt"></i>&nbsp Detail Alamat
 							</div>
 						</h2>
 					</div>
 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
 						data-parent="#accordionExample">
 						<div class="card-body">
-							<p><?= $ongkir->alamat_lengkap ?></p>
-							<p>Kecamatan :<?= $ongkir->kecamatan ?></p>
-							<p>Kabupaten :<?= $ongkir->kabupaten ?></p>
-							<p>Provinsi :<?= $ongkir->provinsi ?></p>
-							<p>Kode Pos :<?= $ongkir->kodepos ?></p>
+							<table class="table table-borderless">
+								<tbody>
+									<tr>
+										<td>Alamat Lengkap</td>
+										<td>:</td>
+										<td><?= $ongkir->alamat_lengkap?></td>
+									</tr>
+									<tr>
+										<td>Kecamatan</td>
+										<td>:</td>
+										<td><?= $ongkir->kecamatan?></td>
+									</tr>
+									<tr>
+										<td>Kabupaten</td>
+										<td>:</td>
+										<td><?= $ongkir->kabupaten ?></td>
+									</tr>
+									<tr>
+										<td>Provinsi</td>
+										<td>:</td>
+										<td><?= $ongkir->provinsi?></td>
+									</tr>
+									<tr>
+										<td>Kode Pos</td>
+										<td>:</td>
+										<td><?= $ongkir->kodepos?></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -130,7 +155,8 @@
 							<h5 class="card-title">Menunggu Ongkir</h5>
 							<hr>
 							<p class="card-text">Menunggu Penjual untuk Menambahkan Biaya Pengiriman Barang</p>
-							<a href="http://www.jet.co.id/tariff" class="btn btn-block btn-warning" target="_blank">Cek Estimasi Biaya Kirim</a>
+							<a href="http://www.jet.co.id/tariff" class="btn btn-block btn-warning" target="_blank">Cek
+								Estimasi Biaya Kirim</a>
 						</div>
 					</div>
 				</div>

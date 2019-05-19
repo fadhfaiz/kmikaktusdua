@@ -111,11 +111,35 @@
 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
 						data-parent="#accordionExample">
 						<div class="card-body">
-							<p><?= $ongkir->alamat_lengkap ?></p>
-							<p>Kecamatan :<?= $ongkir->kecamatan ?></p>
-							<p>Kabupaten :<?= $ongkir->kabupaten ?></p>
-							<p>Provinsi :<?= $ongkir->provinsi ?></p>
-							<p>Kode Pos :<?= $ongkir->kodepos ?></p>
+						<table class="table table-borderless">
+								<tbody>
+									<tr>
+										<td>Alamat Lengkap</td>
+										<td>:</td>
+										<td><?= $ongkir->alamat_lengkap?></td>
+									</tr>
+									<tr>
+										<td>Kecamatan</td>
+										<td>:</td>
+										<td><?= $ongkir->kecamatan?></td>
+									</tr>
+									<tr>
+										<td>Kabupaten</td>
+										<td>:</td>
+										<td><?= $ongkir->kabupaten ?></td>
+									</tr>
+									<tr>
+										<td>Provinsi</td>
+										<td>:</td>
+										<td><?= $ongkir->provinsi?></td>
+									</tr>
+									<tr>
+										<td>Kode Pos</td>
+										<td>:</td>
+										<td><?= $ongkir->kodepos?></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
