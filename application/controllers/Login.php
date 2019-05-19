@@ -7,14 +7,15 @@ class Login extends CI_Controller
         $this->load->model('Login_Model');
         $this->load->library('form_validation');
     }
-
-        public function index()
+    public function index(){
+        $judul['judul'] = 'Halaman Admin';
+        $this->load->view('templates/header_admin', $judul);
+        $this->load->view('adminpage/loginpage');
+        $this->load->view('templates/footer');
+    }
+        public function aksi()
         {
-            if($this->Login_Model->logged_id())
-            {
-                redirect("Adminpage/Home/");
-
-            }else{
+    
         //set form validation
         $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
@@ -33,20 +34,20 @@ class Login extends CI_Controller
                 //checking data via model
                 $checking = $this->Login_Model->check_login('penjual', array('username' => $username), array('password' => $password));
 
-                        if ($checking != FALSE) {
-                            foreach ($checking as $apps) {
+                        if ($checking > 0) {
 
                                 $session_data = array(
                                 // 'id_penjual' => $apps->id_penjual,
-                                    'username' => $apps->username,
-                                    'userpass' => $apps->password,
+                                    'username' => $username,
+                                    'password' => $password,
+                                    'status' => "Login",
                                 );
                             /*  var_dump($session_data);
                                 die; */
                                 $this->session->set_userdata($session_data);
                 
                                 redirect("Adminpage/Home/");
-                            }
+                            
                 
                         }else{
                             $data['error'] = '<div class="alert alert-danger" style="margin-top: 3px">
@@ -65,7 +66,7 @@ class Login extends CI_Controller
                     $this->load->view('templates/footer');
                 }
 
-        }
+        
     }
         public function logout()
         {

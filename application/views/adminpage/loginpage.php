@@ -7,7 +7,7 @@
 		<div class="col-lg-4 col-md-12 col-sm-12">
 			<hr>
 			<?php if(isset($error)) { echo $error; }; ?>
-			<form action="<?php echo base_url() ?>Login" method="post">
+			<form action="<?php echo base_url() ?>Login/aksi" method="post">
 			
 				<div class="form-group">
 					<label for="exampleInputEmail1" style="color: teal;">ID Admin</label>

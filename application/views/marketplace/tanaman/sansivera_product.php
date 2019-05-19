@@ -4,8 +4,7 @@
 		<div class="form-row mt-4">
 			<div class="form-group col-lg-8 col-md-12 col-sm-12">
 				<!-- <label for="inputEmail4">Email</label> -->
-				<input type="text" class="form-control font-italic" id="cari-barang"
-					placeholder="Cari nama produk / nama tanaman...">
+			
 			</div>
 			<!-- <div class="form-group col-lg-3 col-md-12 col-sm-12">
 				<select id="inputState" class="form-control">

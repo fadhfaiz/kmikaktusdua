@@ -3,9 +3,9 @@ Class Home extends CI_Controller
 {
     function __construct(){
         parent::__construct();
-        /* if($this->session->userdata('status') != "Login"){
+        if($this->session->userdata('status') != "Login"){
             redirect(base_url("Login"));
-        } */
+        }
         $this->load->library('form_validation');
         $this->load->model("Model_grafik");
     }
