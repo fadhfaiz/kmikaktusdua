@@ -1,212 +1,182 @@
-<div class="container mt-3 mb-2">
+<div class="container my-4">
 
 	<div class="row">
-		<div class="col">
-			<h3 style="color: teal;">Detail Pesanan</h3>
+
+		<div class="col-lg-8 col-md-12 col-sm-12">
+			<div class="accordion" id="accordionExample">
+
+				<div class="card">
+					<div class="card-header collapsed" type="button" id="headingOne" data-toggle="collapse"
+						data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+						<h2 class="mb-0">
+							<div class="btn collapsed" style="color: teal; font-weight: bold;">
+							<i class="fas fa-user-check"></i>&nbsp Detail Pembeli
+							</div>
+						</h2>
+					</div>
+
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<table class="table table-borderless">
+								<tbody>
+									<tr>
+										<td>Nama</td>
+										<td>:</td>
+										<td>Bambang Pamungkas</td>
+									</tr>
+									<tr>
+										<td>Email</td>
+										<td>:</td>
+										<td>bambangpersija@gmail.com</td>
+									</tr>
+									<tr>
+										<td>Nomor</td>
+										<td>:</td>
+										<td>087843554322</td>
+									</tr>
+									<tr>
+										<td>Keterangan Tambahan</td>
+										<td>:</td>
+										<td>Pilih tanaman yang paling yahuddd</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header collapsed" type="button" id="headingTwo" data-toggle="collapse"
+						data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						<h2 class="mb-0">
+							<div class="btn collapsed" style="color: teal; font-weight: bold;">
+							<i class="fas fa-shopping-cart"></i>&nbsp Detail Barang Pesanan
+							</div>
+						</h2>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr class="text-center">
+											<th scope="col">No</th>
+											<th scope="col">Nama Produk</th>
+											<th scope="col">Harga Satuan</th>
+											<th scope="col">Jumlah Barang</th>
+											<th scope="col">Total</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Crassula Ovata</td>
+											<td>Rp. 14.000</td>
+											<td class="text-center">2</td>
+											<td>Rp. 28.000</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>Kaktus Mini</td>
+											<td>Rp. 10.000</td>
+											<td class="text-center">3</td>
+											<td>Rp. 30.000</td>
+										</tr>
+										<tr>
+											<th scope="row">3</th>
+											<td>Bambu Hoki</td>
+											<td>Rp. 26.000</td>
+											<td class="text-center">2</td>
+											<td>Rp. 52.000</td>
+										</tr>
+										<tr>
+											<th scope="row">#</th>
+											<td colspan="3" class="text-center">Jumlah Pembayaran <span
+													class="badge badge-danger">belum termasuk biaya kirim</span></td>
+											<td class="text-center" style="font-weight: bold;">Rp. 110.000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header collapsed" type="button" id="headingThree" data-toggle="collapse"
+						data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						<h2 class="mb-0">
+							<div class="btn collapsed" style="color: teal; font-weight: bold;">
+							<i class="fas fa-map-marker-alt"></i>&nbsp Detail Alamat
+							</div>
+						</h2>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+							squid. 3
+							wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+							laborum
+							eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+							nulla
+							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+							nesciunt
+							sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+							farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+							accusamus
+							labore sustainable VHS.
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<div class="row">
+
+				<div class="col-12 mt-2">
+					<div class="card text-center bg-success" style="color: white;">
+						<div class="card-body">
+							<h5 class="card-title">Menunggu Ongkir</h5>
+							<hr>
+							<p class="card-text">Menunggu Penjual untuk Menambahkan Biaya Pengiriman Barang</p>
+							<a href="http://www.jet.co.id/tariff" class="btn btn-block btn-warning" target="_blank">Cek Estimasi Biaya Kirim</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 my-3">
+					<div class="card text-center">
+						<div class="card-body">
+							<h5 class="card-title">Menunggu Pembayaran</h5>
+							<hr>
+							<p class="card-text">With supporting text below as a natural lead-in to additional content.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12">
+					<div class="card text-center">
+						<div class="card-body">
+							<h5 class="card-title">Pembayaran Terkonfirmasi</h5>
+							<hr>
+							<p class="card-text">With supporting text below as a natural lead-in to additional content.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 	</div>
 
-	<div class="card text-left">
-		<div class="card-body text-muted">
 
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Kode Pesanan</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title"><?php $ongkir->id_pembeli?></h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Status</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title">Menunggu biaya ongkir dari penjual</h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Nama Produk</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title">Kaktus Duri Duri</h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Jumlah</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title">3</h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Harga Produk</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title">Rp. 235,000</h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Ongkos Kirim</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title"></h5>
-				</div>
-			</div>
-		</div>
-
-		<div class="card-footer text-muted">
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-text">Total Pembayaran</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-text">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-text">Rp. 235,000</h5>
-				</div>
-			</div>
-
-		</div>
-	</div>
 </div>
-<br>
 
-<div class="container mb-5">
+<div class="container mt-4">
 
-	<div class="row">
-		<div class="col">
-			<h3 style="color: teal;">Detail Pembeli</h3>
-		</div>
-	</div>
-
-	<div class="card text-left">
-		<div class="card-body text-muted">
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Nama Pembeli</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title">Ahmad Dhani Prasetyo</h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Nomor HP</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title">0821 7453 9917</h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Alamat Email</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title">fadh.leather@gmail.com</h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-title">Keterangan Tambahan</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-title">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-title">Tolong dipilihkan warna daunnya yang segarrr</h5>
-				</div>
-			</div>
-		</div>
-
-		<div class="card-footer text-muted">
-			<div class="row">
-				<div class="col-4">
-					<h5 class="card-text">Total Pembayaran</h5>
-				</div>
-				<div class="col-1">
-					<h5 class="card-text">:</h5>
-				</div>
-				<div class="col-7">
-					<h5 class="card-text"></h5>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-
-<div class="container mb-5">
-	<div class="row">
-
-		<div class="col text-center">
-			<label>Step 1</label>
-			<div class="card text-white bg-success">
-				<div class="card-body text-center">
-					<h5 class="card-title">Menunggu Ongkir</h5>
-				</div>
-				</a>
-			</div>
-		</div>
-
-		<div class="col text-center">
-			<label>Step 2</label>
-			<div class="card border-secondary">
-				<div class="card-body text-center">
-					<h5 class="card-title">Menunggu Pembayaran</h5>
-				</div>
-			</div>
-		</div>
-
-		<div class="col text-center">
-			<label>Step 3</label>
-			<div class="card border-secondary">
-				<div class="card-body text-center">
-					<h5 class="card-title">Pembayaran Terkonfirmasi</h5>
-				</div>
-			</div>
-		</div>
-
-	</div>
 </div>

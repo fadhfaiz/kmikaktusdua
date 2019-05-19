@@ -62,7 +62,7 @@
 								Yakin Ingin Menghapus Data??
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
 								<a href="<?php echo base_url('Adminpage/Artikel/hapus_article/'.$artikel->kode_artikel)?>"
 									class="btn btn-primary">Hapus Artikel</a>
 							</div>
