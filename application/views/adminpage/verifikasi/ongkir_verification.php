@@ -155,15 +155,19 @@
 						<div class="card-body">
 							<h5 class="card-title text-center">Verifikasi Pembelian</h5>
 							<hr>
+							<h6>Kode Pembeli :</h6>
+							<hr>
+							<h6>Status Transaksi : <b style="color: yellow;">Menunggu Biaya Kirim</b></h6>
+							<hr>
 							<form>
 								<div class="form-group">
 									<label for="exampleInputEmail1">Masukan Biaya Pengiriman</label>
-									<input type="email" class="form-control" id="exampleInputEmail1"
+									<input type="text" class="form-control" id="exampleInputEmail1"
 										aria-describedby="emailHelp" placeholder="Rp...">
 								</div>
 								<div>
 									<a href="#" class="btn btn-block btn-warning mt-2" type="submit">Submit Biaya Kirim</a>
-									<a href="#" class="btn btn-block btn-info mt-2" type="submit">Konfirmasi Pembayaran</a>
+									<a href="#" class="btn btn-block btn-dark mt-2" type="submit">Konfirmasi Pembayaran</a>
 								</div>
 							</form>
 

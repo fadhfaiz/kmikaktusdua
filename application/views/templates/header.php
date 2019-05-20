@@ -40,10 +40,6 @@
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li> -->
 					<li class="nav-item">
-						<a class="nav-link" style="color:white;" href="#"> Cara Pembelian</a>
-					</li>
-					<li class="nav-item d-none d-lg-block disabled"><span class="nav-link disabled">⋮</span></li>
-					<li class="nav-item">
 						<a class="nav-link" style="color:white;" href="<?= base_url(); ?>description/index"> Deskripsi &
 							Perawatan</a>
 					</li>
