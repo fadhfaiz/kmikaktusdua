@@ -62,6 +62,7 @@
 
         public function detail_tanaman($id)
         {
+            echo json_encode($this->cart->contents());
             //$data['cart'] = $this->cart_model->getcart();
             $data['data'] = $this->Marketplace_model->getByProduk($id);
             $data['judul'] = 'Disini Nama Produk';
@@ -83,6 +84,10 @@
         public function addToCart(){
         $ip = $this->ambil_ip_pengunjung();
           $kode = $this->input->post('kode_barang');
+          $array = array(
+              'kode' => $kode
+          );
+          $this->cart->insert($this->input->post());
           //$kode = $this->input->post('jumlah');
 
           $err = FALSE;
@@ -107,7 +112,9 @@
         $ip = $this->ambil_ip_pengunjung();
           $kode = $this->input->post('kode_barang');
           //$kode = $this->input->post('jumlah');
-
+            $this->cart->insert(array(
+                "id" => $kode
+            ));
           $err = FALSE;
 
          // $ip = $this->session->userdata('id');

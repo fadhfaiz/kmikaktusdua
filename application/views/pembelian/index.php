@@ -1,11 +1,20 @@
 <section class="container my-4">
 	<!-- <form action="<?= base_url(); ?>Pembelian/Data_pembeli" method ="post"> -->
-
-	<?php echo form_open('Pembelian'); ?>
+	<?php 
+		echo form_open('Pembelian'); 
+		foreach ($keranjang as $k) {
+			# code...
+			// echo json_encode($k);
+			echo "
+				<input type='hidden' name='id_keranjang' id='id_keranjang'value='".$k['kode']."' />
+			";
+		}
+	?>
 
 		<h5 class="text-center" style="color:white;" id="datadiri1">Informasi Pembeli &nbsp<i class="fas fa-user-circle"></i></h5>
 		<hr>
 		<div>
+			
 			<div class="row">
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">

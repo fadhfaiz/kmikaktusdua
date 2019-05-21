@@ -10,6 +10,7 @@
         $this->load->model("Keranjang_Model");
         $this->load->model("cart_model");
         $this->load->library("form_validation");
+        $this->load->library('cart');
         $this->load->library("session");
         $this->data['data'] = $this->cart_model->getcart();
         $this->data['judul'] = 'KaktusKmi';
@@ -24,6 +25,8 @@
         public function index()
         {
             $data['judul'] = 'Data Diri';
+
+            $data['keranjang'] = $this->Keranjang_Model->tampil();
 
             $this->form_validation->set_rules('nama','Nama','required');
             $this->form_validation->set_rules('email','Email','required|valid_email');

@@ -24,16 +24,16 @@ class Keranjang_Model extends CI_Model {
         return $query->result_array();
     }
     
-		function ambil_ip_pengunjung() {
-				if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   
-					$ip = $_SERVER['HTTP_CLIENT_IP'];
-				} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
-					$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-				} else {
-					$ip = $_SERVER['REMOTE_ADDR'];
-				}
-				return $ip;
-			}
+    function ambil_ip_pengunjung() {
+            if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+            } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            } else {
+                $ip = $_SERVER['REMOTE_ADDR'];
+            }
+            return $ip;
+    }
 			
 	
     public function addToCart($kode){
@@ -41,8 +41,24 @@ class Keranjang_Model extends CI_Model {
        
         return $this->db->insert('keranjang',$cart);
     }
-    public function tampil(){
-        $query = "select DISTINCT keranjang.id as kode, produk.nama_produk as nama,produk.harga_produk as harga, count(keranjang.id) as jumlah, sum(produk.harga_produk) as total from produk join keranjang on produk.kode_produk = keranjang.kode_barang group by produk.kode_produk";
+    public function tampil($kode = 0){
+        $query = "
+            select
+                DISTINCT 
+                keranjang.id as kode, 
+                keranjang.kode_barang,
+                produk.nama_produk as nama,
+                produk.harga_produk as harga, 
+                count(keranjang.id) as jumlah, 
+                sum(produk.harga_produk) as total 
+            from 
+            produk 
+            join 
+            keranjang 
+            on 
+            produk.kode_produk = keranjang.kode_barang 
+            WHERE keranjang.kode_barang IN ($kode)
+            group by produk.kode_produk";
         
         return $this->db->query($query)->result_array();
     

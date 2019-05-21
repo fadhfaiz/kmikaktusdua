@@ -1,5 +1,5 @@
 <section class="container">
-
+  <?php echo json_encode($this->cart->contents()); ?>
 	<table class="table table-bordered table-hover mt-5">
 		<thead class="text-center thead-light">
 		<tr id= "main_heading">
