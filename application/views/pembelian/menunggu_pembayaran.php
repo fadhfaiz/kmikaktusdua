@@ -87,8 +87,13 @@
 										</tbody>
 									<tfoot>
 									<tr>
-									<td colspan="4" class="text-center">Total Pembayaran <span class="badge badge-success">sudah termasuk biaya kirim</span></td>
-									<td>Rp. <?= $total; ?></td>
+										<td colspan="4" class="text-center">Biaya Pengiriman</td>
+										<td>Rp. 0</td>
+									</tr>
+									<tr>
+
+										<td colspan="4" class="text-center">Total Pembayaran <span class="badge badge-success">sudah termasuk biaya kirim</span></td>
+										<td>Rp. <?= $total; ?></td>
 									
 									</tr>
 					
@@ -181,7 +186,7 @@
 					<div class="card text-center">
 						<div class="card-body">
 							<h5 class="card-title">Pembayaran Terkonfirmasi</h5><hr>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.
+							<!-- <p class="card-text">With supporting text below as a natural lead-in to additional content. -->
 							</p>
 						</div>
 					</div>
