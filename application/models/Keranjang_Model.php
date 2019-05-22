@@ -42,6 +42,7 @@ class Keranjang_Model extends CI_Model {
         return $this->db->insert('keranjang',$cart);
     }
     public function tampil($kode = 0){
+        $ip = $this->ambil_ip_pengunjung();
         $query = "
             select
                 DISTINCT 
@@ -57,7 +58,7 @@ class Keranjang_Model extends CI_Model {
             keranjang 
             on 
             produk.kode_produk = keranjang.kode_barang 
-            WHERE keranjang.kode_barang IN ($kode)
+            WHERE keranjang.ip =  '$ip'
             group by produk.kode_produk";
         
         return $this->db->query($query)->result_array();

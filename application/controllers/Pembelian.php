@@ -43,7 +43,7 @@
             if ($this->form_validation->run() != FALSE) {
 
                 $id = $this->Pembelian_Model->Model_Pembeli($this->input->post());
-                $id = $this->Pembelian_Model->transaksi($this->input->post());
+           
                 $this->session->set_flashdata('success');
                 redirect('pembelian/menunggu_ongkir/'. $id);
 

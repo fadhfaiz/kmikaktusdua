@@ -35,31 +35,7 @@ class Pembelian_Model extends CI_Model
 
         return $idPembeli;
     }
-    function transaksi($id){
-        $this->db->select("*");
-        $this->db->from("transaksi");
-        $this->db->join("pembeli","transaksi.id_pembeli = pembeli.id_pembeli","inner");
-        $this->db->join("produk","transaksi.kode_produk = produk.kode_produk","inner");
-        $query = $this->db->get()->row();
-        $kode_pesanan = substr($query->kode_pesanan,3);
-        $kode_pesanan += 1;
-        $kode_pesanan ="KD00". $kode_pesanan;
-        
-        $data = array(
-            'kode_pesanan' => $kode_pesanan,
-            'id_pembeli' => "$id[id_pembeli]",
-            'kode_produk' => "$id[kode_produk]",
-            'total_harga' => "$id[total_harga]",
-            'ongkir' => "$id[ongkir]",
-            'jumlah_produk' => "$id[jumlah_produk]",
-            'tanggal_beli' => time(),
-            'status' => "Menunggu Ongkir"
-
-        );
-
-        $this->db->insert('transaksi',$data);
-    }
-
+ 
     function Model_ongkir($id)
     {
             $this->db->select("*");
