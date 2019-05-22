@@ -62,7 +62,9 @@
 				<div class="col-6">
 					<div class="input-group">
 						<select class="custom-select" id="inputGroupSelect01">
-					
+						<?php for($i=1 ; $i<= $data->stok_produk; $i++) :  ?>
+						<option><?= $i ?></option>
+						<?php endfor; ?>
 						</select>
 					</div>
 				</div>
