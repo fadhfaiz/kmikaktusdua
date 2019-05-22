@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2019 at 07:57 AM
+-- Generation Time: May 22, 2019 at 05:13 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -95,12 +95,26 @@ CREATE TABLE `pembeli` (
 --
 
 INSERT INTO `pembeli` (`id_pembeli`, `nama_pembeli`, `no_telp`, `email`, `kecamatan`, `kabupaten`, `provinsi`, `kodepos`, `alamat_lengkap`, `catatan`) VALUES
-('PB04', '', '', '', '', '', '', '', '', ''),
 ('PB4', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', 'coba yaa'),
 ('PM001', 'Wahyu Shofian', '085200554942', 'wahyushofian@gmail.com', 'Nitikan', 'Bantul', 'Yogyakarta', '55571', 'Jl. Nitikan, Bantul, DIY', 'Jangan kirim barang second ya gan'),
 ('PM002', 'Faadihilah Ahnaf Faiz', '08577432571', 'fadhfaiz@gmail.com', 'Sewon', 'Bantul', 'Yogyakarta', '53718', 'Widoro, Bangunharjo, Mbantul', 'Jangan kirim dompet kulit ya gan'),
 ('PM003', 'Intan Destiyanti', '082132454333', 'idestiyanti@gmail.com', 'Umbulharjo', 'Bantul', 'Yogyakarta', '53218', 'Jl. Dr. Soepomo, Umbulharjo', 'Packing mantap gan'),
-('PM004', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', 'Koral yang putih');
+('PM004', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', 'Koral yang putih'),
+('PM005', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', '123123123'),
+('PM006', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', '123123123'),
+('PM007', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', '123123123'),
+('PM008', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', '123123123'),
+('PM009', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', '123123123'),
+('PM010', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM011', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM012', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM013', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM014', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM015', 'Oko', '08761234666', 'okocarono@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM016', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM017', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM018', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM019', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', '');
 
 -- --------------------------------------------------------
 
@@ -262,7 +276,8 @@ INSERT INTO `tbcounter` (`ip`, `date`, `hits`) VALUES
 ('::1', '2019-05-16', 6),
 ('::1', '2019-05-17', 1),
 ('::1', '2019-05-20', 7),
-('::1', '2019-05-21', 3);
+('::1', '2019-05-21', 4),
+('::1', '2019-05-22', 10);
 
 -- --------------------------------------------------------
 
@@ -271,15 +286,30 @@ INSERT INTO `tbcounter` (`ip`, `date`, `hits`) VALUES
 --
 
 CREATE TABLE `transaksi` (
-  `kode_pesanan` char(5) NOT NULL,
+  `kode_pesanan` int(11) NOT NULL,
+  `kode_unik` varchar(5) NOT NULL,
   `id_pembeli` char(5) DEFAULT NULL,
   `kode_produk` char(5) DEFAULT NULL,
   `total_harga` int(10) DEFAULT NULL,
   `ongkir` int(10) DEFAULT NULL,
   `status` varchar(25) DEFAULT NULL,
   `jumlah_produk` int(3) DEFAULT NULL,
-  `tanggal_beli` date NOT NULL
+  `tanggal_beli` int(11) NOT NULL,
+  `tanggal_verifikasi` int(11) NOT NULL,
+  `gambar` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`kode_pesanan`, `kode_unik`, `id_pembeli`, `kode_produk`, `total_harga`, `ongkir`, `status`, `jumlah_produk`, `tanggal_beli`, `tanggal_verifikasi`, `gambar`) VALUES
+(4, '', 'PM016', 'KK015', 60000, 0, 'menunggu ongkir', 4, 1558516512, 0, NULL),
+(5, '', 'PM016', 'KK07', 7000, 0, 'menunggu ongkir', 1, 1558516512, 0, NULL),
+(6, '', 'PM016', 'KK08', 24000, 0, 'menunggu ongkir', 3, 1558516512, 0, NULL),
+(7, 'VeGmQ', 'PM019', 'KK015', 60000, 30000, 'menunggu pembayaran', 4, 1558517043, 1558532267, NULL),
+(8, 'VeGmQ', 'PM019', 'KK07', 7000, 30000, 'menunggu pembayaran', 1, 1558517043, 1558532267, NULL),
+(9, 'VeGmQ', 'PM019', 'KK08', 24000, 30000, 'menunggu pembayaran', 3, 1558517043, 1558532267, NULL);
 
 --
 -- Indexes for dumped tables
@@ -337,6 +367,11 @@ ALTER TABLE `artikel`
 --
 ALTER TABLE `keranjang`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+--
+-- AUTO_INCREMENT for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `kode_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- Constraints for dumped tables
 --
