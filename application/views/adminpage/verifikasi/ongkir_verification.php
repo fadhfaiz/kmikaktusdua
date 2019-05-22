@@ -23,22 +23,22 @@
 									<tr>
 										<td>Nama</td>
 										<td>:</td>
-										<td>Faadihilah Ahnaf Faiz</td>
+										<td><?= $pembeli['nama_pembeli'] ?></td>
 									</tr>
 									<tr>
 										<td>Email</td>
 										<td>:</td>
-										<td>fadhfaiz@gmail.com</td>
+										<td><?= $pembeli['email'] ?></td>
 									</tr>
 									<tr>
 										<td>Nomor</td>
 										<td>:</td>
-										<td>082156550344</td>
+										<td><?= $pembeli['no_telp'] ?></td>
 									</tr>
 									<tr>
 										<td>Keterangan Tambahan</td>
 										<td>:</td>
-										<td>Pilih kaktus tanpa duri ya gan</td>
+										<td><?= $pembeli['catatan'] ?></td>
 									</tr>
 								</tbody>
 							</table>
@@ -87,8 +87,7 @@
 									</tbody>
 									<tfoot>
 										<tr>
-											<td colspan="4" class="text-center">Total Pembayaran <span
-													class="badge badge-success">sudah termasuk biaya kirim</span></td>
+											<td colspan="4" class="text-center">Total Pembayaran</td>
 											<td>Rp. <?= $total; ?></td>
 
 										</tr>
@@ -117,27 +116,37 @@
 									<tr>
 										<td>Alamat Lengkap</td>
 										<td>:</td>
-										<td>Desa Bangunharjo RT 04/RW 40, Sewon, Bantul, Yogyakarta</td>
+										<td>
+											<?= $pembeli['alamat_lengkap'] ?>
+										</td>
 									</tr>
 									<tr>
 										<td>Kecamatan</td>
 										<td>:</td>
-										<td>Sewon</td>
+										<td>
+											<?= $pembeli['kecamatan'] ?>
+										</td>
 									</tr>
 									<tr>
 										<td>Kabupaten</td>
 										<td>:</td>
-										<td>Bantul</td>
+										<td>
+											<?= $pembeli['kabupaten'] ?>
+										</td>
 									</tr>
 									<tr>
 										<td>Provinsi</td>
 										<td>:</td>
-										<td>Daerah Istimewa Yogyakarta</td>
+										<td>
+											<?= $pembeli['provinsi'] ?>
+										</td>
 									</tr>
 									<tr>
 										<td>Kode Pos</td>
 										<td>:</td>
-										<td>55187</td>
+										<td>
+											<?= $pembeli['kodepos'] ?>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -155,19 +164,18 @@
 						<div class="card-body">
 							<h5 class="card-title text-center">Verifikasi Pembelian</h5>
 							<hr>
-							<h6>Kode Pembeli :</h6>
+							<h6>Kode Pesanan : <?= $pembeli['kode_unik'] ?></h6>
 							<hr>
-							<h6>Status Transaksi : <b style="color: yellow;">Menunggu Biaya Kirim</b></h6>
+							<h6>Status Transaksi : <b style="color: yellow;"><?= $pembeli['status'] ?></b></h6>
 							<hr>
-							<form>
+							<form action="<?= base_url('adminpage/Verifikasi/ongkir_verification/').$pembeli['kode_unik']; ?>" method="post">
 								<div class="form-group">
-									<label for="exampleInputEmail1">Masukan Biaya Pengiriman</label>
-									<input type="text" class="form-control" id="exampleInputEmail1"
-										aria-describedby="emailHelp" placeholder="Rp...">
+									<label for="biaya">Masukan Biaya Pengiriman</label>
+									<input type="text" class="form-control" id="biaya" name="biaya" placeholder="Rp...">
 								</div>
 								<div>
-									<a href="#" class="btn btn-block btn-warning mt-2" type="submit">Submit Biaya Kirim</a>
-									<a href="#" class="btn btn-block btn-dark mt-2" type="submit">Konfirmasi Pembayaran</a>
+									<button class="btn btn-block btn-warning mt-2" type="submit">Submit Biaya Kirim</button>
+									<a href="<?= base_url('adminpage/Verifikasi/ubahStatusTerkonfirmasi/').$pembeli['kode_unik']; ?>" class="btn btn-block btn-dark mt-2" >Konfirmasi Pembayaran</a>
 								</div>
 							</form>
 

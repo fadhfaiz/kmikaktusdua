@@ -136,6 +136,10 @@ class Article_Model extends CI_Model
       'tanggal' => time(),
       'gambar' => $upload['file']['orig_name'],
     );
+
+    // $this->db->set('gambar', $upload['file']['orig_name']);
+    // $this->db->where('kode_unik', $kode);
+    // $this->db->update('transaksi');
     
     $this->db->insert('artikel', $data);
   }

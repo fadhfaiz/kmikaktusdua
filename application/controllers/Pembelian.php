@@ -1,4 +1,6 @@
 <?php 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
     Class Pembelian extends CI_Controller
     {
         private $data;
@@ -12,6 +14,7 @@
         $this->load->library("form_validation");
         $this->load->library('cart');
         $this->load->library("session");
+
         $this->data['data'] = $this->cart_model->getcart();
         $this->data['judul'] = 'KaktusKmi';
         }
@@ -71,11 +74,37 @@
         public function menunggu_pembayaran($id)
         {
             $data['judul'] = 'Halaman Status Pengiriman';
-            $data['ongkir'] =$this->Pembelian_Model->Model_ongkir($id);
-            $data['data'] = $this->Keranjang_Model->tampil();
-            $this->load->view('templates/header', $this->data);
-            $this->load->view('pembelian/menunggu_pembayaran',$data);
-            $this->load->view('templates/footer');
+
+            $this->form_validation->set_rules('submit', 'Submit', 'required');
+
+            // var_dump($this->form_validation->run());
+            // die;
+
+            if($this->form_validation->run() != FALSE) {
+                $this->session->set_userdata('temp_kode_pembeli', $id);
+    
+                $gambare = $this->Pembelian_Model->upload_gambar();
+                // die;
+    
+                if($this->Pembelian_Model->save_gambar($gambare) > 0) {
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Bukti pembayaran berhasil diupload</div>');
+                } else {
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Bukti pembayaran gagal diupload</div>');
+                }
+            }
+                // echo $id; die;
+                $ongkir = $this->Pembelian_Model->Model_ongkir($id);
+                
+                $data['kode_pembeli'] = $id;
+                $data['ongkir'] = $ongkir;
+    
+                $data['data'] = $this->Keranjang_Model->tampil();
+    
+                $this->load->view('templates/header', $this->data);
+                $this->load->view('pembelian/menunggu_pembayaran',$data);
+                $this->load->view('templates/footer');
+            
+            // redirect('Pembelian/menunggu_pembayaran');
         }
 
         public function terkonfirmasi($id)
@@ -83,6 +112,7 @@
             $data['judul'] = 'Halaman Status Pengiriman';
             $data['ongkir'] =$this->Pembelian_Model->Model_ongkir($id);
             $data['data'] = $this->Keranjang_Model->tampil();
+
             $this->load->view('templates/header', $this->data);
             $this->load->view('pembelian/terkonfirmasi',$data);
             $this->load->view('templates/footer');

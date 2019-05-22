@@ -2,9 +2,13 @@
 
 	<div class="row">
 
+	<div class="col-lg-8 col-md-12 col-sm-12">
+		<div class="text-center">
+			<?= $this->session->flashdata('pesan'); ?>
+		</div>
+	</div>
 		<div class="col-lg-8 col-md-12 col-sm-12">
 			<div class="accordion" id="accordionExample">
-
 				<div class="card">
 					<div class="card-header collapsed" type="button" id="headingOne" data-toggle="collapse"
 						data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -88,12 +92,12 @@
 									<tfoot>
 									<tr>
 										<td colspan="4" class="text-center">Biaya Pengiriman</td>
-										<td>Rp. 0</td>
+										<td>Rp. <?= $ongkir->ongkir; ?></td>
 									</tr>
 									<tr>
 
 										<td colspan="4" class="text-center">Total Pembayaran <span class="badge badge-success">sudah termasuk biaya kirim</span></td>
-										<td>Rp. <?= $total; ?></td>
+										<td>Rp. <?= $total + $ongkir->ongkir; ?></td>
 									
 									</tr>
 					
@@ -169,12 +173,12 @@
 							<h5 class="card-title">Menunggu Pembayaran</h5><hr>
 							<p class="card-text">Silahkan transfer sesuai jumlah pembayaran.
 							</p>
-							<form>
+							<form enctype="multipart/form-data" method="post" action="<?= base_url('Pembelian/menunggu_pembayaran/').$kode_pembeli; ?>">
 								<div class="custom-file">
-									<input type="file" class="custom-file-input" id="validatedCustomFile" required>
+									<input type="file" class="custom-file-input" name="gambar" id="validatedCustomFile" required>
 									<label class="custom-file-label text-left" for="validatedCustomFile">Upload bukti transfer disini..</label>
 									<div class="invalid-feedback">Example invalid custom file feedback</div>
-									<a href="#" class="btn btn-block btn-warning mt-2" type="submit">Kirim Bukti Bayar</a>
+									<button class="btn btn-block btn-warning mt-2" name="submit" type="submit">Kirim Bukti Bayar</button>
 								</div>
 							</form>
 
