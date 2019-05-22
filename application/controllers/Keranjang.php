@@ -17,7 +17,7 @@
     public function tampil_cart()
     {
         $data['judul'] = 'Keranjang';
-      
+        
         $data['kategori'] = $this->Keranjang_Model->get_kategori_all();
         $data['data'] = $this->Keranjang_Model->tampil();
         $this->load->view('templates/header',$this->data);

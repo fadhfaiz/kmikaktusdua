@@ -26,26 +26,7 @@ class Model_grafik extends CI_Model {
      return $sql;
      
     } 
-    function statistik_pengunjung_perhari()
-    {
-     
-     $sql= $this->db->query("
-     
-     select
-     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 0) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Senin`,
-     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 1) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Selasa`,
-     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 2) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Rabu`,
-     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 3) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Kamis`,
-     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 4) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Jumat`,
-     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 5) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Sabtu`,
-     ifnull((SELECT SUM(hits) FROM (tbcounter)WHERE((weekday(date)= 6) AND (Month(date)=MONTH(NOW()))AND (YEAR(date)=YEAR(NOW())))),0) AS `Minggu`
-
-     from tbcounter GROUP BY YEAR(date)
-     ");
-     
-     return $sql;
-     
-    } 
+    
     function perhari(){
         // $date = new DateTime("now");
         // $curr_date = $date->format('Y-m-d ');

@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/Dosis/Dosis.css">
-	<link rel="icon" href="<?php echo base_url()?>assets/img/icon.png" />
+	<link rel="icon" href="<?php echo base_url()?>gambar/icon.png" />
 
 	<title><?php echo $judul; ?></title>
 </head>

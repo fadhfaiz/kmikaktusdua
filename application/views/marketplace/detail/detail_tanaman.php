@@ -62,9 +62,11 @@
 				<div class="col-6">
 					<div class="input-group">
 						<select class="custom-select" id="inputGroupSelect01">
-							<option value="1">1 pcs</option>
-							<option value="2">2 pcs</option>
-							<option value="3">3 pcs</option>
+						<?
+						$i = 1;
+						foreach($data as $data) : ?>
+							<option value="1"><?= $i++; ?></option>
+						<? endforeach; ?>
 						</select>
 					</div>
 				</div>

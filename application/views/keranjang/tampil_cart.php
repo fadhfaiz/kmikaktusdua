@@ -13,6 +13,7 @@
 		</thead>
 	<tbody>
       <?php
+      
       $i = 1;
       $total = 0;
       foreach($data as $a) :
