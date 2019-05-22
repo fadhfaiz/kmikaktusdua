@@ -1,177 +1,188 @@
-<div class="container my-5">
+<div class="container my-4">
 
 	<div class="row">
-		<div class="col-lg-6 col-md-12 col-sm-12">
 
-			<div class="row my-2">
-				<div class="col">
-					<h2>Detail Pesanan</h2>
+		<div class="col-lg-8 col-md-12 col-sm-12">
+			<div class="accordion" id="accordionExample">
+
+				<div class="card">
+					<div class="card-header collapsed" type="button" id="headingOne" data-toggle="collapse"
+						data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+						<h2 class="mb-0">
+							<div class="btn collapsed" style="color: teal; font-weight: bold;">
+								<i class="fas fa-user-check"></i>&nbsp Detail Pembeli
+							</div>
+						</h2>
+					</div>
+
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<table class="table table-borderless">
+								<tbody>
+									<tr>
+										<td>Nama</td>
+										<td>:</td>
+										<td>Faadihilah Ahnaf Faiz</td>
+									</tr>
+									<tr>
+										<td>Email</td>
+										<td>:</td>
+										<td>fadhfaiz@gmail.com</td>
+									</tr>
+									<tr>
+										<td>Nomor</td>
+										<td>:</td>
+										<td>082156550344</td>
+									</tr>
+									<tr>
+										<td>Keterangan Tambahan</td>
+										<td>:</td>
+										<td>Pilih kaktus tanpa duri ya gan</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header collapsed" type="button" id="headingTwo" data-toggle="collapse"
+						data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						<h2 class="mb-0">
+							<div class="btn collapsed" style="color: teal; font-weight: bold;">
+								<i class="fas fa-shopping-cart"></i>&nbsp Detail Barang Pesanan
+							</div>
+						</h2>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr class="text-center">
+											<th scope="col">No</th>
+											<th scope="col">Nama Produk</th>
+											<th scope="col">Harga Satuan</th>
+											<th scope="col">Jumlah Barang</th>
+											<th scope="col">Total</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php
+									$i = 1;
+									$total = 0;
+									foreach($data as $a) :
+										$total += $a['total'];
+									?>
+										<tr>
+											<td><?= $i++; ?></td>
+											<td><?= $a['nama'] ?></td>
+											<td>Rp. <?= $a['harga'] ?></td>
+											<td class="text-center"><?= $a['jumlah'] ?></td>
+											<td>Rp. <?= $a['total'] ?></td>
+
+										</tr>
+										<?php endforeach; ?>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="4" class="text-center">Total Pembayaran <span
+													class="badge badge-success">sudah termasuk biaya kirim</span></td>
+											<td>Rp. <?= $total; ?></td>
+
+										</tr>
+
+									</tfoot>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header collapsed" type="button" id="headingThree" data-toggle="collapse"
+						data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						<h2 class="mb-0">
+							<div class="btn collapsed" style="color: teal; font-weight: bold;">
+								<i class="fas fa-map-marker-alt"></i>&nbsp Detail Alamat
+							</div>
+						</h2>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<table class="table table-borderless">
+								<tbody>
+									<tr>
+										<td>Alamat Lengkap</td>
+										<td>:</td>
+										<td>Desa Bangunharjo RT 04/RW 40, Sewon, Bantul, Yogyakarta</td>
+									</tr>
+									<tr>
+										<td>Kecamatan</td>
+										<td>:</td>
+										<td>Sewon</td>
+									</tr>
+									<tr>
+										<td>Kabupaten</td>
+										<td>:</td>
+										<td>Bantul</td>
+									</tr>
+									<tr>
+										<td>Provinsi</td>
+										<td>:</td>
+										<td>Daerah Istimewa Yogyakarta</td>
+									</tr>
+									<tr>
+										<td>Kode Pos</td>
+										<td>:</td>
+										<td>55187</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="card text-left">
-				<div class="card-body text-muted">
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<div class="row">
 
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Kode Pesanan</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title">123456</h5>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Nama Produk</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Jumlah</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Berat</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Diameter x Tinggi</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Total Bayar</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-4">
-							<img src="<?php echo base_url()?>assets/img/edit1.jpg" class="img-fluid">
-						</div>
-					</div>
-				</div>
-				<div class="card-footer text-muted">
-					<div class="row">
-						<div class="col-6">
+				<div class="col-12 my-1">
+					<div class="card bg-success" style="color: white;">
+						<div class="card-body">
+							<h5 class="card-title text-center">Verifikasi Pembelian</h5>
+							<hr>
+							<h6>Kode Pembeli :</h6>
+							<hr>
+							<h6>Status Transaksi : <b style="color: yellow;">Menunggu Biaya Kirim</b></h6>
+							<hr>
 							<form>
 								<div class="form-group">
-									<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-										placeholder="Masukkan ongkos kirim">
+									<label for="exampleInputEmail1">Masukan Biaya Pengiriman</label>
+									<input type="text" class="form-control" id="exampleInputEmail1"
+										aria-describedby="emailHelp" placeholder="Rp...">
+								</div>
+								<div>
+									<a href="#" class="btn btn-block btn-warning mt-2" type="submit">Submit Biaya Kirim</a>
+									<a href="#" class="btn btn-block btn-dark mt-2" type="submit">Konfirmasi Pembayaran</a>
 								</div>
 							</form>
+
 						</div>
-						<div class="col-3"><button type="button" class="btn btn-block btn-success">Submit</button></div>
-						<div class="col-3"><button type="button" class="btn btn-block btn-primary">Konfirmasi</button></div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 
-		<div class="col-lg-6 col-md-12 col-sm-12">
-			<div class="row my-2">
-
-				<div class="col">
-					<h2>Detail Pembelian</h2>
-				</div>
-
-			</div>
-
-			<div class="card text-left">
-				<div class="card-body text-muted">
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Nama Pembeli</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Email</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">No. Handphone</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Alamat</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-4">
-							<h5 class="card-title">Total Bayar</h5>
-						</div>
-						<div class="col-1">
-							<h5 class="card-title">:</h5>
-						</div>
-						<div class="col">
-							<h5 class="card-title"></h5>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
+
+
+</div>
+
+<div class="container mt-4">
 
 </div>

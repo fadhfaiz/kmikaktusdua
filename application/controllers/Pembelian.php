@@ -10,6 +10,7 @@
         $this->load->model("Keranjang_Model");
         $this->load->model("cart_model");
         $this->load->library("form_validation");
+        $this->load->library('cart');
         $this->load->library("session");
         $this->data['data'] = $this->cart_model->getcart();
         $this->data['judul'] = 'KaktusKmi';
@@ -25,10 +26,12 @@
         {
             $data['judul'] = 'Data Diri';
 
+            $data['keranjang'] = $this->Keranjang_Model->tampil();
+
             $this->form_validation->set_rules('nama','Nama','required');
             $this->form_validation->set_rules('email','Email','required|valid_email');
             $this->form_validation->set_rules('no_telp','No_telp','required|numeric|min_length[7]|max_length[13]');
-            $this->form_validation->set_rules('catatan','Catatan','required');
+            $this->form_validation->set_rules('catatan','Catatan');
             $this->form_validation->set_rules('provinsi','Provinsi','required');
             $this->form_validation->set_rules('kabupaten','Kabupaten','required');
             $this->form_validation->set_rules('kecamatan','Kecamatan','required');

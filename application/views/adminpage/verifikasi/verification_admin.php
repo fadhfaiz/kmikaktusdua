@@ -23,14 +23,14 @@
         <td>Menunggu ongkir</td>
         </tr>
         <tr>
-        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/verifikasi/konfirmasi_verification" >123456</a></th>
+        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/verifikasi/ongkir_verification" >123456</a></th>
         <td>Kaktus Nyai</td>
         <td>Ratna Sarungterompet</td>
         <td>DD-MM-YYYY</td>
         <td>Terkonfirmasi</td>
         </tr>
         <tr>
-        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/verifikasi/konfirmasi_verification" >123456</a></th>
+        <th scope="row"><a href="<?php echo base_url(); ?>adminpage/verifikasi/ongkir_verification" >123456</a></th>
         <td>Kaktus Setan</td>
         <td>Gres Natali</td>
         <td>DD-MM-YYYY</td>

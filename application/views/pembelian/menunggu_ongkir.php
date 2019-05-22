@@ -154,6 +154,8 @@
 						<div class="card-body">
 							<h5 class="card-title">Menunggu Ongkir</h5>
 							<hr>
+							<p>Kode Pembeli : <span class="font-weight-bold" style="color: yellow;"><?= $ongkir->id_pembeli ?></span></p>
+							<hr>
 							<p class="card-text">Menunggu Penjual untuk Menambahkan Biaya Pengiriman Barang</p>
 							<a href="http://www.jet.co.id/tariff" class="btn btn-block btn-warning" target="_blank">Cek
 								Estimasi Biaya Kirim</a>
@@ -166,7 +168,7 @@
 						<div class="card-body">
 							<h5 class="card-title">Menunggu Pembayaran</h5>
 							<hr>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.
+							<!-- <p class="card-text">With supporting text below as a natural lead-in to additional content. -->
 							</p>
 						</div>
 					</div>
@@ -177,7 +179,7 @@
 						<div class="card-body">
 							<h5 class="card-title">Pembayaran Terkonfirmasi</h5>
 							<hr>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.
+							<!-- <p class="card-text">With supporting text below as a natural lead-in to additional content. -->
 							</p>
 						</div>
 					</div>

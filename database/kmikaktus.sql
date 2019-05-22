@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2019 at 12:51 AM
+-- Generation Time: May 21, 2019 at 07:57 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -53,16 +53,23 @@ INSERT INTO `artikel` (`kode_artikel`, `judul`, `isi`, `tanggal`, `gambar`) VALU
 CREATE TABLE `keranjang` (
   `id` int(20) NOT NULL,
   `ip` varchar(12) NOT NULL,
-  `kode_barang` varchar(10) NOT NULL
+  `kode_barang` varchar(10) NOT NULL,
+  `id_pembeli` char(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `keranjang`
 --
 
-INSERT INTO `keranjang` (`id`, `ip`, `kode_barang`) VALUES
-(12, '::1', 'KK018'),
-(13, '::1', 'KK012');
+INSERT INTO `keranjang` (`id`, `ip`, `kode_barang`, `id_pembeli`) VALUES
+(18, '::1', 'KK08', '0'),
+(19, '::1', 'KK08', '0'),
+(20, '::1', 'KK08', '0'),
+(21, '::1', 'KK07', '0'),
+(22, '::1', 'KK015', '0'),
+(23, '::1', 'KK015', '0'),
+(24, '::1', 'KK015', '0'),
+(25, '::1', 'KK015', '0');
 
 -- --------------------------------------------------------
 
@@ -92,7 +99,8 @@ INSERT INTO `pembeli` (`id_pembeli`, `nama_pembeli`, `no_telp`, `email`, `kecama
 ('PB4', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', 'coba yaa'),
 ('PM001', 'Wahyu Shofian', '085200554942', 'wahyushofian@gmail.com', 'Nitikan', 'Bantul', 'Yogyakarta', '55571', 'Jl. Nitikan, Bantul, DIY', 'Jangan kirim barang second ya gan'),
 ('PM002', 'Faadihilah Ahnaf Faiz', '08577432571', 'fadhfaiz@gmail.com', 'Sewon', 'Bantul', 'Yogyakarta', '53718', 'Widoro, Bangunharjo, Mbantul', 'Jangan kirim dompet kulit ya gan'),
-('PM003', 'Intan Destiyanti', '082132454333', 'idestiyanti@gmail.com', 'Umbulharjo', 'Bantul', 'Yogyakarta', '53218', 'Jl. Dr. Soepomo, Umbulharjo', 'Packing mantap gan');
+('PM003', 'Intan Destiyanti', '082132454333', 'idestiyanti@gmail.com', 'Umbulharjo', 'Bantul', 'Yogyakarta', '53218', 'Jl. Dr. Soepomo, Umbulharjo', 'Packing mantap gan'),
+('PM004', 'Ari', '08761234666', 'arinurcahya@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', 'Koral yang putih');
 
 -- --------------------------------------------------------
 
@@ -251,7 +259,10 @@ INSERT INTO `tbcounter` (`ip`, `date`, `hits`) VALUES
 ('::1', '2019-05-12', 6),
 ('::1', '2019-05-14', 16),
 ('::1', '2019-05-15', 15),
-('::1', '2019-05-16', 6);
+('::1', '2019-05-16', 6),
+('::1', '2019-05-17', 1),
+('::1', '2019-05-20', 7),
+('::1', '2019-05-21', 3);
 
 -- --------------------------------------------------------
 
@@ -320,12 +331,12 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `kode_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `kode_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- Constraints for dumped tables
 --
