@@ -22,7 +22,7 @@
         }
 
         public function dapatkanSatuDataPembeli($kode) {
-            $this->db->select('transaksi.kode_unik, pembeli.email, pembeli.no_telp, pembeli.catatan, produk.nama_produk, pembeli.nama_pembeli, transaksi.tanggal_beli, transaksi.status, pembeli.alamat_lengkap, pembeli.provinsi, pembeli.kabupaten, pembeli.kecamatan, pembeli.kodepos, pembeli.catatan, pembeli.email');
+            $this->db->select('transaksi.kode_unik, pembeli.email, pembeli.no_telp, pembeli.catatan, produk.nama_produk, pembeli.nama_pembeli, transaksi.tanggal_beli, transaksi.ongkir, transaksi.status, pembeli.alamat_lengkap, pembeli.provinsi, pembeli.kabupaten, pembeli.kecamatan, pembeli.kodepos, pembeli.catatan, pembeli.email');
             $this->db->from('transaksi');
             $this->db->join('produk', 'transaksi.kode_produk = produk.kode_produk');
             $this->db->join('pembeli', 'transaksi.id_pembeli = pembeli.id_pembeli');
