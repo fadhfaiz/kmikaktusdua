@@ -36,15 +36,19 @@
         }
       public function addToCart(){
         $ip = $this->ambil_ip_pengunjung();
-          $kode = $this->input->post('kode_barang');
-          //$kode = $this->input->post('jumlah');
+        $kode = $this->input->post('kode_barang');
+        $jumlah = $this->input->post('jumlah');
+        $array = array(
+            'kode' => $kode,
+            'jumlah' => $jumlah
+        );
 
           $err = FALSE;
 
          // $ip = $this->session->userdata('id');
           
           if($ip){
-              if($this->Keranjang_Model->addToCart($kode)) {
+              if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
                 $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
               }
               
