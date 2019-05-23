@@ -13,7 +13,30 @@
         $this->data['judul'] = 'KaktusKmi';
         
     }
- 
+    function ambil_ip_pengunjung() {
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        return $ip;
+    }
+    function update_cart()
+	{
+        $ip = $this->ambil_ip_pengunjung();
+        $data=array(
+            'ip' => $ip,
+            'jumlah'=> $this->input->post('jumlah')
+        );
+    
+        $this->cart->update($data);  
+        /* var_dump($data);
+        die; */
+		redirect('Keranjang/tampil_cart');
+	}
+
     public function tampil_cart()
     {
         $data['judul'] = 'Keranjang';

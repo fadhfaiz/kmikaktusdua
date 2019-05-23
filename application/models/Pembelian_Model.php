@@ -98,10 +98,10 @@ class Pembelian_Model extends CI_Model
     public function save_gambar($upload)
     {
     
-        echo $this->session->userdata('temp_kode_pembeli');
+      $this->session->userdata('temp_kode_pembeli');
   
       $data = $this->db->get_where('transaksi', ['id_pembeli' => $this->session->userdata('temp_kode_pembeli')])->row_array();
-        var_dump($data); die;
+       // var_dump($data); die;
 
       $this->db->set('gambar', $upload['file']['orig_name']);
       $this->db->where('kode_unik', $data['kode_unik']);

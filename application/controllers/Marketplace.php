@@ -111,7 +111,7 @@
         public function addToCartdetail(){
         $ip = $this->ambil_ip_pengunjung();
           $kode = $this->input->post('kode_barang');
-          //$kode = $this->input->post('jumlah');
+         
             $this->cart->insert(array(
                 "id" => $kode
             ));

@@ -65,6 +65,9 @@ class Keranjang_Model extends CI_Model {
     
         
     }
+    public function updateCart($kode){
+        
+    }
     public function hapus($kode){
         return $this->db->delete('keranjang',['id' =>$kode]);
     }

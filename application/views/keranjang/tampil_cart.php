@@ -1,5 +1,5 @@
 <section class="container">
-  <?php echo json_encode($this->cart->contents()); ?>
+  
 	<table class="table table-bordered table-hover mt-5">
 		<thead class="text-center thead-light">
 		<tr id= "main_heading">
@@ -12,6 +12,7 @@
 		</tr>
 		</thead>
 	<tbody>
+  
       <?php
       
       $i = 1;
@@ -23,11 +24,19 @@
         <td><?= $i++; ?></td>
         <td><?= $a['nama'] ?></td>
         <td>Rp. <?= $a['harga'] ?></td>
-        <td class="text-center"><?= $a['jumlah'] ?></td>
+        <td class="text-center">
+       
+          <div class="row">
+            <div class="col-4"><input type="text" value="<?= $a['jumlah'] ?>" style="width: 100%;" name="jumlah"></div>
+            <div class="col-3"><a href="<?php base_url('Keranjang/update_cart/')?>" type ="button" class="btn btn-success">Update</a></div>
+          </div>
+        </td>
         <td>Rp. <?= $a['total'] ?></td>
-        <td><a href="<?= base_url('Keranjang/hapus/').$a['kode']?>" class="btn btn-danger"><i class='fas fa-fw fa-trash'></i></a></td>
+     
+        <td><a href="<?php echo base_url('Keranjang/hapus/').$a['kode']?>" class="btn btn-danger"><i class='fas fa-fw fa-trash'></i></a></td>
         </tr>
       <?php endforeach; ?>
+    
 		</tbody>
       <tfoot>
       <tr>
