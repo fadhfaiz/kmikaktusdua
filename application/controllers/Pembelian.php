@@ -75,23 +75,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         {
             $data['judul'] = 'Halaman Status Pengiriman';
 
-            $this->form_validation->set_rules('submit', 'Submit', 'required');
+            if(empty($_FILES['userfile']['name'])) {
+                    $this->session->set_userdata('temp_kode_pembeli', $id);
+        
+                    $gambare = $this->Pembelian_Model->upload_gambar();
 
-            // var_dump($this->form_validation->run());
-            // die;
-
-            if($this->form_validation->run() != FALSE) {
-                $this->session->set_userdata('temp_kode_pembeli', $id);
-    
-                $gambare = $this->Pembelian_Model->upload_gambar();
-                // die;
-    
-                if($this->Pembelian_Model->save_gambar($gambare) > 0) {
-                    $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Bukti pembayaran berhasil diupload</div>');
-                } else {
-                    $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Bukti pembayaran gagal diupload</div>');
-                }
+                    // echo $gambare['result']; die;
+                    if($gambare['result'] != 'failed') {
+                        if($this->Pembelian_Model->save_gambar($gambare) > 0) {
+                            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Bukti pembayaran berhasil diupload</div>');
+                        } else {
+                            $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Bukti pembayaran gagal diupload</div>');
+                        }
+                    }
             }
+
                 // echo $id; die;
                 $ongkir = $this->Pembelian_Model->Model_ongkir($id);
                 

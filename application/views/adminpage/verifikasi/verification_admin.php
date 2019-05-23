@@ -40,7 +40,9 @@
                     if($pembelot['gambar'] == NULL) {
                         echo "Belum";
                     } else {
-                        echo "Sudah"; 
+                        ?>
+                            <a href='<?= base_url().'bukti_pembayaran/'.$pembelot['gambar']; ?>' target='_blank'>Sudah</a>
+                        <?php
                     }
                 ?>
             </td>
