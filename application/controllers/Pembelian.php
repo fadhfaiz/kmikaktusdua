@@ -46,8 +46,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             if ($this->form_validation->run() != FALSE) {
                
                 $id = $this->Pembelian_Model->Model_Pembeli($this->input->post());
-           
+               
                 $this->session->set_flashdata('success');
+                
                 redirect('pembelian/menunggu_ongkir/'. $id);
 
             } else {
@@ -64,7 +65,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $data['ongkir'] =$this->Pembelian_Model->Model_ongkir($id);
             $data['judul'] = 'Halaman Status Pengiriman';
-            $data['data'] = $this->Keranjang_Model->tampil();
+            $data['tampil'] = $this->Pembelian_Model->tampil($id);
+            $data['data'] = $this->Keranjang_Model->hapusemua();
 
             $this->load->view('templates/header', $this->data);
             $this->load->view('pembelian/menunggu_ongkir',$data);
@@ -96,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $data['kode_pembeli'] = $id;
                 $data['ongkir'] = $ongkir;
     
-                $data['data'] = $this->Keranjang_Model->tampil();
+                $data['tampil'] = $this->Pembelian_Model->tampil($id);
     
                 $this->load->view('templates/header', $this->data);
                 $this->load->view('pembelian/menunggu_pembayaran',$data);
@@ -109,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         {
             $data['judul'] = 'Halaman Status Pengiriman';
             $data['ongkir'] =$this->Pembelian_Model->Model_ongkir($id);
-            $data['data'] = $this->Keranjang_Model->tampil();
+            $data['tampil'] = $this->Pembelian_Model->tampil($id);
 
             $this->load->view('templates/header', $this->data);
             $this->load->view('pembelian/terkonfirmasi',$data);

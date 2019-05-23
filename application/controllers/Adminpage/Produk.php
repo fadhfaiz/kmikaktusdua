@@ -35,7 +35,7 @@ Class Produk extends CI_Controller
         
             redirect(site_url('Adminpage/Produk/product_admin'));
         }
-
+      
         $data["produk"] = $produk->getIdDataProduk($kode_produk);
      
         if(!$data["produk"]) show_404();

@@ -29,7 +29,7 @@
         <td class="text-center"><?= $a['jumlah'] ?></td>
         <td>Rp. <?= $totalsatuan ?></td>
      
-        <td><a href="<?php echo base_url('Keranjang/hapus/').$a['kode']?>" class="btn btn-danger"><i class='fas fa-fw fa-trash'></i></a></td>
+        <td><a href="<?php echo base_url('Keranjang/hapus/').$a['kodebarang']?>" class="btn btn-danger"><i class='fas fa-fw fa-trash'></i></a></td>
         </tr>
       <?php endforeach; ?>
     

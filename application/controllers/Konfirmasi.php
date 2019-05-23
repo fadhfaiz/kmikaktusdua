@@ -16,12 +16,12 @@
             $data['judul'] = 'Konfirmasi Pembayaran';
 
             $this->form_validation->set_rules('nomor', 'Nomor', 'required|trim|numeric', [
-                'required' => 'harus di isi',
+                'required' => 'Nomor Harus Di isi',
                 'numeric' => 'Nomor harus angka'
             ]);
 
             $this->form_validation->set_rules('kode', 'Kode', 'required|min_length[5]', [
-                'required' => 'harus di isi',
+                'required' => 'Kode Harus Di isi',
                 'min_length' => 'Kode tidak valid'
             ]);
 

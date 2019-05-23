@@ -33,17 +33,11 @@ class Pembelian_Model extends CI_Model
         
         $this->db->insert('pembeli', $data);
 
-        $query = "select *, count(kode_barang) as jumlah from keranjang group by kode_barang";
+        $query = "select *, sum(jumlah) as jumlah from keranjang group by kode_barang";
         $hasil = $this->db->query($query)->result_array();
 
         $query = "select sum(produk.harga_produk) as total from produk, keranjang where produk.kode_produk = keranjang.kode_barang group by keranjang.kode_barang";
         $total = $this->db->query($query)->result_array();
-
-        // var_dump($total);
-        // echo count($hasil);
-        // echo $total[1]['total'];
-        // echo random_string('alnum', 5);
-        // die;
 
         $kode_unik = random_string('alnum', 5);
         // `kode_pesanan``id_pembeli``kode_produk``total_harga``ongkir``status``jumlah_produk``tanggal_beli``gambar`SELECT * FROM `transaksi` WHERE 1
@@ -77,7 +71,46 @@ class Pembelian_Model extends CI_Model
             $this->db->where('pembeli.id_pembeli', $id);
             return $this->db->get()->row();
     }
-    
+    function ambil_ip_pengunjung() {
+      if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   
+          $ip = $_SERVER['HTTP_CLIENT_IP'];
+      } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
+          $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+      } else {
+          $ip = $_SERVER['REMOTE_ADDR'];
+      }
+      return $ip;
+}
+
+
+    public function tampil($kodebeli){
+      $query = "
+      select
+      DISTINCT 
+      produk.kode_produk as kode, 
+      transaksi.kode_pesanan as kodepesanan,
+      pembeli.id_pembeli as idbeli,
+      produk.nama_produk as nama,
+      produk.harga_produk as harga, 
+      sum(transaksi.jumlah_produk) as jumlah, 
+      sum(transaksi.total_harga) as total 
+      from 
+      transaksi
+      join 
+      produk
+      on 
+      transaksi.kode_produk = produk.kode_produk
+      join
+      pembeli
+      on
+      transaksi.id_pembeli = pembeli.id_pembeli
+      where transaksi.id_pembeli = '$kodebeli'
+      group by transaksi.kode_produk";
+      
+      return $this->db->query($query)->result_array();
+  
+      
+  }
     
     public function upload_gambar() {
         $config['upload_path'] = 'bukti_pembayaran/';

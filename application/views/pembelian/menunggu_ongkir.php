@@ -69,18 +69,21 @@
 										</tr>
 									</thead>
 									<tbody>
-										<?php
-									$i = 1;
-									$total = 0;
-									foreach($data as $a) :
-										$total += $a['total'];
-									?>
+									<?php
+      
+										$i = 1;
+										$total = 0;
+										
+										foreach($tampil as $a) :
+											$totalsatuan = $a['harga'] * $a['jumlah'];
+											$total += $totalsatuan;
+										?>
 										<tr>
 											<td><?= $i++; ?></td>
 											<td><?= $a['nama'] ?></td>
 											<td>Rp. <?= $a['harga'] ?></td>
 											<td class="text-center"><?= $a['jumlah'] ?></td>
-											<td>Rp. <?= $a['total'] ?></td>
+											<td>Rp. <?= $totalsatuan ?></td>
 										</tr>
 										<?php endforeach; ?>
 									</tbody>

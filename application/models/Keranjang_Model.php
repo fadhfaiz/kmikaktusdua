@@ -53,7 +53,7 @@ class Keranjang_Model extends CI_Model {
             select
                 DISTINCT 
                 keranjang.id as kode, 
-                keranjang.kode_barang,
+                keranjang.kode_barang as kodebarang,
                 produk.nama_produk as nama,
                 produk.harga_produk as harga, 
                 sum(keranjang.jumlah) as jumlah, 
@@ -73,11 +73,14 @@ class Keranjang_Model extends CI_Model {
     }
 
     public function hapus($kode){
-        return $this->db->delete('keranjang',['id' =>$kode]);
+        return $this->db->delete('keranjang',['kode_barang' =>$kode]);
     }
     public function hapusemua(){
-        $query = "delete from keranjang where 1";
-        return $this->db->query($query)->result_array();
+        $ip = $this->ambil_ip_pengunjung();
+        $sql= $this->db->query("delete from keranjang where ip ='$ip'");
+        return $sql;
     }
+
+ 
 }
 ?>

@@ -20,7 +20,34 @@
             $this->db->where('kode_unik', $data['kode']);
             return $this->db->update('transaksi');
         }
-
+        public function tampil($kode){
+            $query = "
+            select
+            DISTINCT 
+            produk.kode_produk as kode, 
+            transaksi.kode_pesanan as kodepesanan,
+            pembeli.id_pembeli as idbeli,
+            produk.nama_produk as nama,
+            produk.harga_produk as harga, 
+            sum(transaksi.jumlah_produk) as jumlah, 
+            sum(transaksi.total_harga) as total 
+            from 
+            transaksi
+            join 
+            produk
+            on 
+            transaksi.kode_produk = produk.kode_produk
+            join
+            pembeli
+            on
+            transaksi.id_pembeli = pembeli.id_pembeli
+            where transaksi.kode_unik = '$kode'
+            group by transaksi.kode_produk";
+            
+            return $this->db->query($query)->result_array();
+        
+            
+        }
         public function dapatkanSatuDataPembeli($kode) {
             $this->db->select('transaksi.kode_unik, pembeli.email, pembeli.no_telp, pembeli.catatan, produk.nama_produk, pembeli.nama_pembeli, transaksi.tanggal_beli, transaksi.ongkir, transaksi.status, pembeli.alamat_lengkap, pembeli.provinsi, pembeli.kabupaten, pembeli.kecamatan, pembeli.kodepos, pembeli.catatan, pembeli.email');
             $this->db->from('transaksi');

@@ -5,6 +5,7 @@ Class Verifikasi extends CI_Controller
         parent::__construct();
         $this->load->model('Verifikasi_Model');
         $this->load->model('Keranjang_Model');
+        $this->load->model('Pembelian_Model');
         $this->load->library('form_validation');
 
         if($this->session->userdata('status') != "Login"){
@@ -36,11 +37,11 @@ Class Verifikasi extends CI_Controller
             ]);
 
             if($this->form_validation->run() == FALSE) {
+                $data['tampil'] = $this->Verifikasi_Model->tampil($kode);
                 $data['pembeli'] = $this->Verifikasi_Model->dapatkanSatuDataPembeli($kode);
-                $data['data'] = $this->Keranjang_Model->tampil();
                 
                 $this->load->view('templates/header_admin', $data);
-                $this->load->view('adminpage/verifikasi/ongkir_verification');
+                $this->load->view('adminpage/verifikasi/ongkir_verification',$data);
                 $this->load->view('templates/footer');
             } else {
                 $dt = [
@@ -61,7 +62,7 @@ Class Verifikasi extends CI_Controller
         public function konfirmasi_verification()
         {
             $data['judul'] = 'Halaman Detail Verifikasi';
-
+            //$data['tampil'] = $this->Pembelian_Model->tampil($id);
             $this->load->view('templates/header_admin', $data);
             $this->load->view('adminpage/verifikasi/konfirmasi_verification');
             $this->load->view('templates/footer');
