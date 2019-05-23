@@ -86,8 +86,12 @@
 										</tbody>
 									<tfoot>
 									<tr>
+										<td colspan="4" class="text-center">Biaya Pengiriman</td>
+										<td>Rp. <?= $ongkir->ongkir; ?></td>
+									</tr>
+									<tr>
 									<td colspan="4" class="text-center">Total Pembayaran <span class="badge badge-success">sudah termasuk biaya kirim</span></td>
-									<td>Rp. <?= $total; ?></td>
+									<td>Rp. <?= $total+$ongkir->ongkir; ?></td>
 								
 									</tr>
 					

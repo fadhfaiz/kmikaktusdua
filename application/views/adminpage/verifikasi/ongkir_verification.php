@@ -86,9 +86,13 @@
 										<?php endforeach; ?>
 									</tbody>
 									<tfoot>
+									<tr>
+										<td colspan="4" class="text-center">Biaya Pengiriman</td>
+										<td>Rp. <?= $pembeli['ongkir']; ?></td>
+									</tr>
 										<tr>
 											<td colspan="4" class="text-center">Total Pembayaran</td>
-											<td>Rp. <?= $total; ?></td>
+											<td>Rp. <?= $total+$pembeli['ongkir']; ?></td>
 
 										</tr>
 

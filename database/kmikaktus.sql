@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2019 at 05:13 PM
+-- Generation Time: May 23, 2019 at 07:58 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -53,23 +53,17 @@ INSERT INTO `artikel` (`kode_artikel`, `judul`, `isi`, `tanggal`, `gambar`) VALU
 CREATE TABLE `keranjang` (
   `id` int(20) NOT NULL,
   `ip` varchar(12) NOT NULL,
-  `kode_barang` varchar(10) NOT NULL,
-  `id_pembeli` char(5) NOT NULL
+  `kode_barang` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `keranjang`
 --
 
-INSERT INTO `keranjang` (`id`, `ip`, `kode_barang`, `id_pembeli`) VALUES
-(18, '::1', 'KK08', '0'),
-(19, '::1', 'KK08', '0'),
-(20, '::1', 'KK08', '0'),
-(21, '::1', 'KK07', '0'),
-(22, '::1', 'KK015', '0'),
-(23, '::1', 'KK015', '0'),
-(24, '::1', 'KK015', '0'),
-(25, '::1', 'KK015', '0');
+INSERT INTO `keranjang` (`id`, `ip`, `kode_barang`) VALUES
+(26, '::1', 'KK01'),
+(27, '::1', 'KK012'),
+(28, '::1', 'KK013');
 
 -- --------------------------------------------------------
 
@@ -114,7 +108,8 @@ INSERT INTO `pembeli` (`id_pembeli`, `nama_pembeli`, `no_telp`, `email`, `kecama
 ('PM016', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
 ('PM017', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
 ('PM018', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
-('PM019', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', '');
+('PM019', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
+('PM020', 'Maya', '082242112405', 'mayalistyawardani@gmail.com', 'Kalasan', 'Sleman', 'Yogyakarta', '55571', 'Dhuri', 'yang bagus ya potnya');
 
 -- --------------------------------------------------------
 
@@ -277,7 +272,8 @@ INSERT INTO `tbcounter` (`ip`, `date`, `hits`) VALUES
 ('::1', '2019-05-17', 1),
 ('::1', '2019-05-20', 7),
 ('::1', '2019-05-21', 4),
-('::1', '2019-05-22', 10);
+('::1', '2019-05-22', 10),
+('::1', '2019-05-23', 7);
 
 -- --------------------------------------------------------
 
@@ -307,9 +303,12 @@ INSERT INTO `transaksi` (`kode_pesanan`, `kode_unik`, `id_pembeli`, `kode_produk
 (4, '', 'PM016', 'KK015', 60000, 0, 'menunggu ongkir', 4, 1558516512, 0, NULL),
 (5, '', 'PM016', 'KK07', 7000, 0, 'menunggu ongkir', 1, 1558516512, 0, NULL),
 (6, '', 'PM016', 'KK08', 24000, 0, 'menunggu ongkir', 3, 1558516512, 0, NULL),
-(7, 'VeGmQ', 'PM019', 'KK015', 60000, 30000, 'menunggu pembayaran', 4, 1558517043, 1558532267, NULL),
-(8, 'VeGmQ', 'PM019', 'KK07', 7000, 30000, 'menunggu pembayaran', 1, 1558517043, 1558532267, NULL),
-(9, 'VeGmQ', 'PM019', 'KK08', 24000, 30000, 'menunggu pembayaran', 3, 1558517043, 1558532267, NULL);
+(7, 'VeGmQ', 'PM019', 'KK015', 60000, 30000, 'terkonfirmasi', 4, 1558517043, 1558581630, 'XOR15.png'),
+(8, 'VeGmQ', 'PM019', 'KK07', 7000, 30000, 'terkonfirmasi', 1, 1558517043, 1558581630, 'XOR15.png'),
+(9, 'VeGmQ', 'PM019', 'KK08', 24000, 30000, 'terkonfirmasi', 3, 1558517043, 1558581630, 'XOR15.png'),
+(10, 'ifNGd', 'PM020', 'KK01', 10000, 25000, 'terkonfirmasi', 1, 1558590359, 1558590863, 'pba3.PNG'),
+(11, 'ifNGd', 'PM020', 'KK012', 14000, 25000, 'terkonfirmasi', 1, 1558590359, 1558590863, 'pba3.PNG'),
+(12, 'ifNGd', 'PM020', 'KK013', 12000, 25000, 'terkonfirmasi', 1, 1558590359, 1558590863, 'pba3.PNG');
 
 --
 -- Indexes for dumped tables
@@ -366,12 +365,12 @@ ALTER TABLE `artikel`
 -- AUTO_INCREMENT for table `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `kode_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `kode_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- Constraints for dumped tables
 --

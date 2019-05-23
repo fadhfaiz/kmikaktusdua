@@ -44,6 +44,19 @@
 										<td>:</td>
 										<td><?= $ongkir->catatan ?></td>
 									</tr>
+									<tr>
+										<td>Bukti Pembayaran</td>
+										<td>:</td>
+										<td>
+											<?php
+												if($ongkir->gambar == NULL) {
+													echo "Belum ada";
+												} else {
+													echo "Sudah ada";
+												}
+											?>
+										</td>
+									</tr>
 								</tbody>
 							</table>
 						</div>
@@ -176,7 +189,10 @@
 							<form enctype="multipart/form-data" method="post" action="<?= base_url('Pembelian/menunggu_pembayaran/').$kode_pembeli; ?>">
 								<div class="custom-file">
 									<input type="file" class="custom-file-input" name="gambar" id="validatedCustomFile" required>
-									<label class="custom-file-label text-left" for="validatedCustomFile">Upload bukti transfer disini..</label>
+									<!-- <input type="file" class="form-control" name="gambar" id="validatedCustomFile" required> -->
+									<label class="custom-file-label text-left" for="validatedCustomFile">
+										Upload bukti transfer disini..
+									</label>
 									<div class="invalid-feedback">Example invalid custom file feedback</div>
 									<button class="btn btn-block btn-warning mt-2" name="submit" type="submit">Kirim Bukti Bayar</button>
 								</div>
