@@ -23,24 +23,10 @@
         }
         return $ip;
     }
-    function update_cart()
-	{
-        $ip = $this->ambil_ip_pengunjung();
-        $data=array(
-            'ip' => $ip,
-            'jumlah'=> $this->input->post('jumlah')
-        );
-    
-        $this->cart->update($data);  
-        /* var_dump($data);
-        die; */
-		redirect('Keranjang/tampil_cart');
-	}
 
     public function tampil_cart()
     {
         $data['judul'] = 'Keranjang';
-        
         $data['kategori'] = $this->Keranjang_Model->get_kategori_all();
         $data['data'] = $this->Keranjang_Model->tampil();
         $this->load->view('templates/header',$this->data);
@@ -56,8 +42,6 @@
         }
 
         redirect('Keranjang/tampil_cart');
-    }
-
-       
+    }  
     }
 ?>

@@ -17,21 +17,17 @@
       
       $i = 1;
       $total = 0;
+     
       foreach($data as $a) :
-        $total += $a['total'];
+        $totalsatuan = $a['harga'] * $a['jumlah'];
+        $total += $totalsatuan;
       ?>
         <tr>
         <td><?= $i++; ?></td>
         <td><?= $a['nama'] ?></td>
         <td>Rp. <?= $a['harga'] ?></td>
-        <td class="text-center">
-       
-          <div class="row">
-            <div class="col-4"><input type="text" value="<?= $a['jumlah'] ?>" style="width: 100%;" name="jumlah"></div>
-            <div class="col-3"><a href="<?php base_url('Keranjang/update_cart/')?>" type ="button" class="btn btn-success">Update</a></div>
-          </div>
-        </td>
-        <td>Rp. <?= $a['total'] ?></td>
+        <td class="text-center"><?= $a['jumlah'] ?></td>
+        <td>Rp. <?= $totalsatuan ?></td>
      
         <td><a href="<?php echo base_url('Keranjang/hapus/').$a['kode']?>" class="btn btn-danger"><i class='fas fa-fw fa-trash'></i></a></td>
         </tr>

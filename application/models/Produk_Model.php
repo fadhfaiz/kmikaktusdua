@@ -73,7 +73,7 @@ class Produk_Model extends CI_Model
     $this->db->where('kode_produk',$data['kode_produk']);
     $this->db->update('produk');
   }	
-  
+
   function hapus_data_produk($kode_produk)
   {
     return $this->db->delete($this->_table, array("kode_produk" => $kode_produk));

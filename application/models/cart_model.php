@@ -13,7 +13,7 @@ function ambil_ip_pengunjung() {
  public function getcart(){
          //$ip = 0;
         $ip = $this->ambil_ip_pengunjung();
-        $query = "select count(*) as jumlah from keranjang where ip = '$ip'";
+        $query = "select sum(jumlah) as jumlah from keranjang where ip = '$ip'";
         $result = $this->db->query($query)->row_array();
         $cart = $result['jumlah'];
 

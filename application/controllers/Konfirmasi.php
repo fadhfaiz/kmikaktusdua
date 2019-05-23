@@ -16,13 +16,13 @@
             $data['judul'] = 'Konfirmasi Pembayaran';
 
             $this->form_validation->set_rules('nomor', 'Nomor', 'required|trim|numeric', [
-                'required' => 'Kudu diisi coy',
-                'numeric' => 'Nomor nya harus angka, lu dari mana aje sih!!'
+                'required' => 'harus di isi',
+                'numeric' => 'Nomor harus angka'
             ]);
 
             $this->form_validation->set_rules('kode', 'Kode', 'required|min_length[5]', [
-                'required' => 'Kudu diisi coy',
-                'min_length' => 'Kode tidak valid, lu beli di calo ?'
+                'required' => 'harus di isi',
+                'min_length' => 'Kode tidak valid'
             ]);
 
             if($this->form_validation->run() == FALSE) {

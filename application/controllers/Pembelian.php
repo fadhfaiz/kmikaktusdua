@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
             if ($this->form_validation->run() != FALSE) {
-
+               
                 $id = $this->Pembelian_Model->Model_Pembeli($this->input->post());
            
                 $this->session->set_flashdata('success');

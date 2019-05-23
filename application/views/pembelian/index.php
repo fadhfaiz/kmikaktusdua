@@ -128,7 +128,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-							<button type="submit" class="btn btn-success" name="tambahpembeli">Save changes</button>
+							<a href=""><button type="submit" class="btn btn-success" name="tambahpembeli">Save changes</button></a>
 						</div>
 					</div>
 				</div>

@@ -56,33 +56,33 @@
 			</div>
 
 			<hr>
-
+		
 			<div class="row">
-
+			<form method="post" action="<?= base_url('Marketplace/addToCartdetail/').$data->kode_produk?>" method="post" accept-charset="utf-8">
 				<div class="col-6">
 					<div class="input-group">
 						<select class="custom-select" id="inputGroupSelect01" name="jumlah">
-						<?php for($i=1 ; $i<= $data->stok_produk; $i++) :  ?>
-						<option><?= $i ?></option>
+						<?php for($data->jumlah=1 ; $data->jumlah<= $data->stok_produk; $data->jumlah++) :  ?>
+						<option value="<?= $data->jumlah ?>"><?= $data->jumlah ?></option>
 						<?php endfor; ?>
 						</select>
 					</div>
 				</div>
-
+<span>
 				<div class="col-6">
-				<?php
-				echo'
-				<form method="post" action="'.base_url().'Marketplace/addToCartdetail/'.$data->kode_produk.'" method="post" accept-charset="utf-8">
-				<input type="hidden" name="kode_barang" value="'.$data->kode_produk.'" />
+			
+				<input type="hidden" name="kode_barang" value="<?= $data->kode_produk ?>" />
 				<button type="submit" class="btn btn-block btn-warning"><i
 							class="fas fa-cart-arrow-down mr-2">
 						</i> Beli Produk Ini</button>
-				</form>
-				;'
-				?>
+				
 				</div>
+			
+				</form>
 			</div>
-
+			
+		
 		</div>
+		
 	</div>
 </section>

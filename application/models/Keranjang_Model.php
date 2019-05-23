@@ -36,10 +36,16 @@ class Keranjang_Model extends CI_Model {
     }
 			
 	
-    public function addToCart($kode){
-        $cart =["ip" => $this->ambil_ip_pengunjung(),"kode_barang" => $kode];
-       
-        return $this->db->insert('keranjang',$cart);
+    public function addToCart($kode,$jumlah){
+        if($jumlah == NULL){
+            $jumlah =1;
+            $cart =["ip" => $this->ambil_ip_pengunjung(),"kode_barang" => $kode,"jumlah" => $jumlah];
+            return $this->db->insert('keranjang',$cart);
+        }else{
+            $cart =["ip" => $this->ambil_ip_pengunjung(),"kode_barang" => $kode,"jumlah" => $jumlah];
+            return $this->db->insert('keranjang',$cart);
+        }
+        
     }
     public function tampil($kode = 0){
         $ip = $this->ambil_ip_pengunjung();
@@ -50,7 +56,7 @@ class Keranjang_Model extends CI_Model {
                 keranjang.kode_barang,
                 produk.nama_produk as nama,
                 produk.harga_produk as harga, 
-                count(keranjang.id) as jumlah, 
+                sum(keranjang.jumlah) as jumlah, 
                 sum(produk.harga_produk) as total 
             from 
             produk 
@@ -65,11 +71,13 @@ class Keranjang_Model extends CI_Model {
     
         
     }
-    public function updateCart($kode){
-        
-    }
+
     public function hapus($kode){
         return $this->db->delete('keranjang',['id' =>$kode]);
+    }
+    public function hapusemua(){
+        $query = "delete from keranjang where 1";
+        return $this->db->query($query)->result_array();
     }
 }
 ?>

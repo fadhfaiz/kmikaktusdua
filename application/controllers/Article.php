@@ -20,7 +20,7 @@
             $data['judul'] = 'Artikel Kaktuskmi';
             $config['base_url'] = site_url('article/index'); //site url
             $config['total_rows'] = $this->db->count_all('artikel'); //total row
-            $config['per_page'] = 3;  //show record per halaman
+            $config['per_page'] = 10;  //show record per halaman
             $config["uri_segment"] = 3;  // uri parameter
             $choice = $config["total_rows"] / $config["per_page"];
             $config["num_links"] = floor($choice);
