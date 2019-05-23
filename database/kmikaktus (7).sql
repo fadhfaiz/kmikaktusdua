@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2019 at 07:58 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.21
+-- Waktu pembuatan: 23 Bulan Mei 2019 pada 16.46
+-- Versi server: 10.1.31-MariaDB
+-- Versi PHP: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artikel`
+-- Struktur dari tabel `artikel`
 --
 
 CREATE TABLE `artikel` (
@@ -35,7 +37,7 @@ CREATE TABLE `artikel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `artikel`
+-- Dumping data untuk tabel `artikel`
 --
 
 INSERT INTO `artikel` (`kode_artikel`, `judul`, `isi`, `tanggal`, `gambar`) VALUES
@@ -47,28 +49,35 @@ INSERT INTO `artikel` (`kode_artikel`, `judul`, `isi`, `tanggal`, `gambar`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `keranjang`
+-- Struktur dari tabel `keranjang`
 --
 
 CREATE TABLE `keranjang` (
   `id` int(20) NOT NULL,
   `ip` varchar(12) NOT NULL,
-  `kode_barang` varchar(10) NOT NULL
+  `kode_barang` varchar(10) NOT NULL,
+  `jumlah` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `keranjang`
+-- Dumping data untuk tabel `keranjang`
 --
 
-INSERT INTO `keranjang` (`id`, `ip`, `kode_barang`) VALUES
-(26, '::1', 'KK01'),
-(27, '::1', 'KK012'),
-(28, '::1', 'KK013');
+INSERT INTO `keranjang` (`id`, `ip`, `kode_barang`, `jumlah`) VALUES
+(60, '::1', 'KK015', 2),
+(61, '::1', 'KK015', 2),
+(62, '::1', 'KK015', 1),
+(63, '::1', 'KK015', 1),
+(64, '::1', 'KK012', 2),
+(65, '::1', 'KK020', 1),
+(66, '::1', 'KK020', 1),
+(67, '::1', 'KK020', 1),
+(68, '::1', 'KK020', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pembeli`
+-- Struktur dari tabel `pembeli`
 --
 
 CREATE TABLE `pembeli` (
@@ -85,7 +94,7 @@ CREATE TABLE `pembeli` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pembeli`
+-- Dumping data untuk tabel `pembeli`
 --
 
 INSERT INTO `pembeli` (`id_pembeli`, `nama_pembeli`, `no_telp`, `email`, `kecamatan`, `kabupaten`, `provinsi`, `kodepos`, `alamat_lengkap`, `catatan`) VALUES
@@ -114,7 +123,7 @@ INSERT INTO `pembeli` (`id_pembeli`, `nama_pembeli`, `no_telp`, `email`, `kecama
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penjual`
+-- Struktur dari tabel `penjual`
 --
 
 CREATE TABLE `penjual` (
@@ -127,7 +136,7 @@ CREATE TABLE `penjual` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penjual`
+-- Dumping data untuk tabel `penjual`
 --
 
 INSERT INTO `penjual` (`id_penjual`, `nama_penjual`, `email`, `no_telp`, `username`, `password`) VALUES
@@ -136,7 +145,7 @@ INSERT INTO `penjual` (`id_penjual`, `nama_penjual`, `email`, `no_telp`, `userna
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produk`
+-- Struktur dari tabel `produk`
 --
 
 CREATE TABLE `produk` (
@@ -153,7 +162,7 @@ CREATE TABLE `produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `produk`
+-- Dumping data untuk tabel `produk`
 --
 
 INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_produk`, `stok_produk`, `diameter`, `tinggi`, `gambar`, `jenis_produk`, `catatan`, `tanggal`) VALUES
@@ -190,7 +199,7 @@ INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_produk`, `stok_produk
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbcounter`
+-- Struktur dari tabel `tbcounter`
 --
 
 CREATE TABLE `tbcounter` (
@@ -200,7 +209,7 @@ CREATE TABLE `tbcounter` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbcounter`
+-- Dumping data untuk tabel `tbcounter`
 --
 
 INSERT INTO `tbcounter` (`ip`, `date`, `hits`) VALUES
@@ -273,12 +282,12 @@ INSERT INTO `tbcounter` (`ip`, `date`, `hits`) VALUES
 ('::1', '2019-05-20', 7),
 ('::1', '2019-05-21', 4),
 ('::1', '2019-05-22', 10),
-('::1', '2019-05-23', 7);
+('::1', '2019-05-23', 33);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi`
+-- Struktur dari tabel `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -296,7 +305,7 @@ CREATE TABLE `transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `transaksi`
+-- Dumping data untuk tabel `transaksi`
 --
 
 INSERT INTO `transaksi` (`kode_pesanan`, `kode_unik`, `id_pembeli`, `kode_produk`, `total_harga`, `ongkir`, `status`, `jumlah_produk`, `tanggal_beli`, `tanggal_verifikasi`, `gambar`) VALUES
@@ -315,37 +324,37 @@ INSERT INTO `transaksi` (`kode_pesanan`, `kode_unik`, `id_pembeli`, `kode_produk
 --
 
 --
--- Indexes for table `artikel`
+-- Indeks untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
   ADD PRIMARY KEY (`kode_artikel`);
 
 --
--- Indexes for table `keranjang`
+-- Indeks untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pembeli`
+-- Indeks untuk tabel `pembeli`
 --
 ALTER TABLE `pembeli`
   ADD PRIMARY KEY (`id_pembeli`);
 
 --
--- Indexes for table `penjual`
+-- Indeks untuk tabel `penjual`
 --
 ALTER TABLE `penjual`
   ADD PRIMARY KEY (`id_penjual`);
 
 --
--- Indexes for table `produk`
+-- Indeks untuk tabel `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`kode_produk`);
 
 --
--- Indexes for table `transaksi`
+-- Indeks untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`kode_pesanan`),
@@ -353,34 +362,38 @@ ALTER TABLE `transaksi`
   ADD KEY `kode_produk` (`kode_produk`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `artikel`
+-- AUTO_INCREMENT untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
   MODIFY `kode_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
--- AUTO_INCREMENT for table `keranjang`
+-- AUTO_INCREMENT untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
 --
--- AUTO_INCREMENT for table `transaksi`
+-- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   MODIFY `kode_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `transaksi`
+-- Ketidakleluasaan untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`id_pembeli`) REFERENCES `pembeli` (`id_pembeli`) ON DELETE CASCADE,
   ADD CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`kode_produk`) REFERENCES `produk` (`kode_produk`) ON DELETE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
