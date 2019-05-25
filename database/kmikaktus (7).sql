@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Bulan Mei 2019 pada 16.46
+-- Waktu pembuatan: 25 Bulan Mei 2019 pada 10.28
 -- Versi server: 10.1.31-MariaDB
 -- Versi PHP: 7.2.3
 
@@ -55,24 +55,9 @@ INSERT INTO `artikel` (`kode_artikel`, `judul`, `isi`, `tanggal`, `gambar`) VALU
 CREATE TABLE `keranjang` (
   `id` int(20) NOT NULL,
   `ip` varchar(12) NOT NULL,
-  `kode_barang` varchar(10) NOT NULL,
+  `kode_produk` char(5) NOT NULL,
   `jumlah` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `keranjang`
---
-
-INSERT INTO `keranjang` (`id`, `ip`, `kode_barang`, `jumlah`) VALUES
-(60, '::1', 'KK015', 2),
-(61, '::1', 'KK015', 2),
-(62, '::1', 'KK015', 1),
-(63, '::1', 'KK015', 1),
-(64, '::1', 'KK012', 2),
-(65, '::1', 'KK020', 1),
-(66, '::1', 'KK020', 1),
-(67, '::1', 'KK020', 1),
-(68, '::1', 'KK020', 1);
 
 -- --------------------------------------------------------
 
@@ -118,7 +103,41 @@ INSERT INTO `pembeli` (`id_pembeli`, `nama_pembeli`, `no_telp`, `email`, `kecama
 ('PM017', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
 ('PM018', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
 ('PM019', 'Insan', '08761234666', 'insankamil002@gmail.com', 'umbulharjo', 'bantul', 'Yogyakarta', '55164', 'hdgskjdaslkh.kjdg', ''),
-('PM020', 'Maya', '082242112405', 'mayalistyawardani@gmail.com', 'Kalasan', 'Sleman', 'Yogyakarta', '55571', 'Dhuri', 'yang bagus ya potnya');
+('PM020', 'Maya', '082242112405', 'mayalistyawardani@gmail.com', 'Kalasan', 'Sleman', 'Yogyakarta', '55571', 'Dhuri', 'yang bagus ya potnya'),
+('PM021', 'jk', '027832590661', 'intandesti25@gmail.com', 'dfhkjdf', 'jasgdkjsa', 'njhdf', '1234', 'sjlkshls', '6789696'),
+('PM022', 'jk', '027832590661', 'intandesti25@gmail.com', 'dfhkjdf', 'jasgdkjsa', 'njhdf', '1234', 'sjlkshls', '6789696'),
+('PM023', 'gdjf', '097832590662', 'intandesti25@gmail.com', 'dfhkjdf', 'mfcmdfv', 'njhdf', '1234', 'hkhskd', 'nothing'),
+('PM024', 'gdjf', '097832590662', 'intandesti25@gmail.com', 'dfhkjdf', 'mfcmdfv', 'njhdf', '1234', 'hkhskd', 'nothing'),
+('PM025', 'gdjf', '097832590662', 'intandesti25@gmail.com', 'dfhkjdf', 'mfcmdfv', 'njhdf', '1234', 'hkhskd', 'nothing'),
+('PM026', 'gdjf', '097832590662', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'mfcmdfv', 'jgdmf', '1234', 'sjlkshls', 'nothing'),
+('PM027', 'gdjf', '097832590662', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'mfcmdfv', 'jgdmf', '1234', 'sjlkshls', 'nothing'),
+('PM028', 'gdjf', '097832590662', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'mfcmdfv', 'jgdmf', '1234', 'sjlkshls', 'nothing'),
+('PM029', 'gdjf', '097832590662', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'mfcmdfv', 'jgdmf', '1234', 'sjlkshls', 'nothing'),
+('PM030', 'kh', '087832590663', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'mfcmdfv', 'njhdf', '1234', 'hkhskd', 'nothing'),
+('PM031', 'kh', '087832590663', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'mfcmdfv', 'njhdf', '1234', 'hkhskd', 'nothing'),
+('PM032', 'gdjf', '097832590662', 'intan.destiyanti@yahoo.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '63634', 'hkhskd', 'nothing'),
+('PM033', 'gdjf', '097832590662', 'intan.destiyanti@yahoo.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '63634', 'hkhskd', 'nothing'),
+('PM034', 'jk', '097832590662', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'mfcmdfv', 'jgdmf', '63634', 'hkhskd', 'nothing'),
+('PM035', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM036', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM037', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM038', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM039', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM040', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM041', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM042', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM043', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM044', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM045', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM046', 'jkdfh', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '6363', 'hkhskd', 'sndfnh'),
+('PM047', 'idestiyanti', '087832590663', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '12345', 'hkhskd', '6789696'),
+('PM048', 'jk', '097832590662', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'jasgdkjsa', 'njhdf', '1234', 'hkhskd', 'nothing'),
+('PM049', 'idestiyanti', '097832590662', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'mfcmdfv', 'njhdf', '1234', 'hkhskd', '6789696'),
+('PM050', 'jk', '087832590663', 'intandesti25@gmail.com', 'dfhkjdf', 'mfcmdfv', 'jgdmf', '1234', 'hkhskd', 'nothing'),
+('PM051', 'gdjf', '097832590662', 'intandesti25@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'njhdf', '63634', 'djf', '6789696'),
+('PM052', 'jkdfh', '087832590663', 'intan.destiyanti@yahoo.com', 'dfhkjdf', 'mfcmdfv', 'jgdmf', '1234', 'sjlkshls', 'nothing'),
+('PM053', 'jk', '087832590663', 'gjdgfjkdg@gmail.com', 'hnsdfhsd', 'mfcmdfv', 'jgdmf', '1234', 'sjlkshls', '6789696'),
+('PM054', 'idestiyanti', '087832590661', 'intandesti25@gmail.com', 'dfhkjdf', 'jasgdkjsa', 'njhdf', '63634', 'hkhskd', 'nothing');
 
 -- --------------------------------------------------------
 
@@ -166,35 +185,35 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_produk`, `stok_produk`, `diameter`, `tinggi`, `gambar`, `jenis_produk`, `catatan`, `tanggal`) VALUES
-('KK01', 'Kaktus Rambut Kakek', 10000, 10, 10, 10, 'P17a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK010', 'Kaktus Zebra', 26000, 26, 26, 26, 'P34a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK011', 'Golden Barrel', 11000, 11, 11, 11, 'P19a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK012', 'Crassula Ovata', 14000, 14, 14, 14, 'P18a.png', 'Kaktus', '', '2019-05-15 22:28:04'),
-('KK013', 'Hatiora Salicornioides', 12000, 12, 12, 12, 'P20a.png', 'Kaktus', '', '2019-05-15 22:28:04'),
-('KK014', 'Sansivera Stuckyi', 13000, 13, 13, 13, 'P21a.png', 'Sansivera', '', '2019-05-15 22:28:04'),
-('KK015', 'Haworthia Fasciata', 15000, 15, 15, 15, 'P22a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK016', 'Sansivera Stuckyi', 16000, 16, 16, 16, 'P23a.png', 'Sansivera', '', '2019-05-15 22:28:04'),
-('KK017', 'Fairy Castle Cactus', 17000, 17, 17, 17, 'P24a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK018', 'Opuntia Cochenillivera', 18000, 18, 18, 18, 'P25a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK019', 'Euphorbia Lactea Cristata', 19000, 19, 19, 19, 'P26a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK02', 'Haworthia Cooperi', 2000, 2, 2, 2, 'P9a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK020', 'Hoya Kerri', 20000, 20, 20, 20, 'P27a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK021', 'Cryptanthus Red', 21000, 21, 21, 21, 'P29a.png', 'Kaktus', '', '2019-05-15 22:28:04'),
-('KK022', 'Aglaonema Dud Anjamani', 22000, 22, 22, 22, 'P30a.png', 'Aglonema', '', '2019-05-15 22:28:04'),
-('KK023', 'Capiapoa Tenuissima', 23000, 23, 23, 23, 'P31a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK024', 'Opuntia Quimilo', 24000, 24, 24, 24, 'P32a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK025', 'Mammillaria Grafting', 25000, 25, 25, 25, 'P33a.png', 'Sukulen', '', '2019-05-15 22:36:16'),
-('KK026', 'Batu Koral Putih', 10000, 5, 2, 1, 'batu_koral_putih.jpg', 'Batu', '', '2019-05-15 22:37:08'),
-('KK027', 'Batu Hias', 10000, 10, 2, 1, 'batu1.jpg', 'Batu', '', '2019-05-15 22:42:01'),
-('KK028', 'Pot warna', 5000, 10, 5, 3, 'pot3.jpg', 'Pot', '', '2019-05-15 22:43:59'),
-('KK029', 'kaktus mini', 5000, 5, 3, 3, 'pot1.jpg', 'Bibit', '', '2019-05-15 22:47:13'),
-('KK03', 'Aglaonema Lipstik', 3000, 3, 3, 3, 'P10a.png', 'Aglonema', '', '2019-05-15 22:28:04'),
-('KK04', 'Lobivia Oganmaru', 4000, 4, 4, 4, 'P11a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK05', 'Lobivia Oganmaru', 5000, 5, 5, 5, 'P12a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK06', 'Sansivera Trifasciata Laurenti', 6000, 6, 6, 6, 'P13a.png', 'Sansivera', '', '2019-05-15 22:28:04'),
-('KK07', 'Haworthia Limifolia', 7000, 7, 7, 7, 'P14a.png', 'Sukulen', '', '2019-05-15 22:28:04'),
-('KK08', 'Bambu Hoki', 8000, 8, 8, 8, 'P15a.png', 'Kaktus', '', '2019-05-15 22:28:04'),
-('KK09', 'Euphorbia Lactea Cactus', 9000, 9, 9, 9, 'P16a.png', 'Sukulen', '', '2019-05-15 22:28:04');
+('KK01', 'Kaktus Rambut Kakek', 10000, 0, 10, 10, 'P17a.png', 'Sukulen', '', '2019-05-25 06:50:37'),
+('KK010', 'Kaktus Zebra', 26000, 21, 26, 26, 'P34a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK011', 'Golden Barrel', 11000, 7, 11, 11, 'P19a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK012', 'Crassula Ovata', 14000, 10, 14, 14, 'P18a.png', 'Kaktus', '', '2019-05-25 06:34:36'),
+('KK013', 'Hatiora Salicornioides', 12000, 8, 12, 12, 'P20a.png', 'Kaktus', '', '2019-05-24 20:20:55'),
+('KK014', 'Sansivera Stuckyi', 13000, 9, 13, 13, 'P21a.png', 'Sansivera', '', '2019-05-24 20:20:55'),
+('KK015', 'Haworthia Fasciata', 15000, 11, 15, 15, 'P22a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK016', 'Sansivera Stuckyi', 16000, 12, 16, 16, 'P23a.png', 'Sansivera', '', '2019-05-24 20:20:55'),
+('KK017', 'Fairy Castle Cactus', 17000, 13, 17, 17, 'P24a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK018', 'Opuntia Cochenillivera', 18000, 14, 18, 18, 'P25a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK019', 'Euphorbia Lactea Cristata', 19000, 15, 19, 19, 'P26a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK02', 'Haworthia Cooperi', 2000, -2, 2, 2, 'P9a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK020', 'Hoya Kerri', 20000, 16, 20, 20, 'P27a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK021', 'Cryptanthus Red', 21000, 17, 21, 21, 'P29a.png', 'Kaktus', '', '2019-05-24 20:20:55'),
+('KK022', 'Aglaonema Dud Anjamani', 22000, 18, 22, 22, 'P30a.png', 'Aglonema', '', '2019-05-24 20:20:55'),
+('KK023', 'Capiapoa Tenuissima', 23000, 19, 23, 23, 'P31a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK024', 'Opuntia Quimilo', 24000, 20, 24, 24, 'P32a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK025', 'Mammillaria Grafting', 25000, 21, 25, 25, 'P33a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK026', 'Batu Koral Putih', 10000, 1, 2, 1, 'batu_koral_putih.jpg', 'Batu', '', '2019-05-24 20:20:55'),
+('KK027', 'Batu Hias', 10000, 6, 2, 1, 'batu1.jpg', 'Batu', '', '2019-05-24 20:20:55'),
+('KK028', 'Pot warna', 5000, 5, 5, 3, 'pot3.jpg', 'Pot', '', '2019-05-25 06:31:08'),
+('KK029', 'kaktus mini', 5000, 1, 3, 3, 'pot1.jpg', 'Bibit', '', '2019-05-24 20:20:55'),
+('KK03', 'Aglaonema Lipstik', 3000, -1, 3, 3, 'P10a.png', 'Aglonema', '', '2019-05-24 20:20:55'),
+('KK04', 'Lobivia Oganmaru', 4000, 0, 4, 4, 'P11a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK05', 'Lobivia Oganmaru', 5000, 1, 5, 5, 'P12a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK06', 'Sansivera Trifasciata Laurenti', 6000, 2, 6, 6, 'P13a.png', 'Sansivera', '', '2019-05-24 20:20:55'),
+('KK07', 'Haworthia Limifolia', 7000, 3, 7, 7, 'P14a.png', 'Sukulen', '', '2019-05-24 20:20:55'),
+('KK08', 'Bambu Hoki', 8000, -2, 8, 8, 'P15a.png', 'Kaktus', '', '2019-05-24 20:20:55'),
+('KK09', 'Euphorbia Lactea Cactus', 9000, 5, 9, 9, 'P16a.png', 'Sukulen', '', '2019-05-24 20:20:55');
 
 -- --------------------------------------------------------
 
@@ -282,7 +301,9 @@ INSERT INTO `tbcounter` (`ip`, `date`, `hits`) VALUES
 ('::1', '2019-05-20', 7),
 ('::1', '2019-05-21', 4),
 ('::1', '2019-05-22', 10),
-('::1', '2019-05-23', 33);
+('::1', '2019-05-23', 35),
+('::1', '2019-05-24', 22),
+('::1', '2019-05-25', 23);
 
 -- --------------------------------------------------------
 
@@ -305,19 +326,15 @@ CREATE TABLE `transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `transaksi`
+-- Trigger `transaksi`
 --
-
-INSERT INTO `transaksi` (`kode_pesanan`, `kode_unik`, `id_pembeli`, `kode_produk`, `total_harga`, `ongkir`, `status`, `jumlah_produk`, `tanggal_beli`, `tanggal_verifikasi`, `gambar`) VALUES
-(4, '', 'PM016', 'KK015', 60000, 0, 'menunggu ongkir', 4, 1558516512, 0, NULL),
-(5, '', 'PM016', 'KK07', 7000, 0, 'menunggu ongkir', 1, 1558516512, 0, NULL),
-(6, '', 'PM016', 'KK08', 24000, 0, 'menunggu ongkir', 3, 1558516512, 0, NULL),
-(7, 'VeGmQ', 'PM019', 'KK015', 60000, 30000, 'terkonfirmasi', 4, 1558517043, 1558581630, 'XOR15.png'),
-(8, 'VeGmQ', 'PM019', 'KK07', 7000, 30000, 'terkonfirmasi', 1, 1558517043, 1558581630, 'XOR15.png'),
-(9, 'VeGmQ', 'PM019', 'KK08', 24000, 30000, 'terkonfirmasi', 3, 1558517043, 1558581630, 'XOR15.png'),
-(10, 'ifNGd', 'PM020', 'KK01', 10000, 25000, 'terkonfirmasi', 1, 1558590359, 1558590863, 'pba3.PNG'),
-(11, 'ifNGd', 'PM020', 'KK012', 14000, 25000, 'terkonfirmasi', 1, 1558590359, 1558590863, 'pba3.PNG'),
-(12, 'ifNGd', 'PM020', 'KK013', 12000, 25000, 'terkonfirmasi', 1, 1558590359, 1558590863, 'pba3.PNG');
+DELIMITER $$
+CREATE TRIGGER `penjualan_barang` AFTER INSERT ON `transaksi` FOR EACH ROW BEGIN
+	UPDATE produk set stok_produk = stok_produk-NEW.jumlah_produk
+    WHERE kode_produk = NEW.kode_produk;
+END
+$$
+DELIMITER ;
 
 --
 -- Indexes for dumped tables
@@ -333,7 +350,8 @@ ALTER TABLE `artikel`
 -- Indeks untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `kode_produk` (`kode_produk`);
 
 --
 -- Indeks untuk tabel `pembeli`
@@ -375,17 +393,23 @@ ALTER TABLE `artikel`
 -- AUTO_INCREMENT untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `kode_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `kode_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
+
+--
+-- Ketidakleluasaan untuk tabel `keranjang`
+--
+ALTER TABLE `keranjang`
+  ADD CONSTRAINT `keranjang_ibfk_1` FOREIGN KEY (`kode_produk`) REFERENCES `produk` (`kode_produk`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `transaksi`
