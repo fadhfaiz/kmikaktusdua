@@ -1,4 +1,5 @@
 <section class="container">
+	<?= $this->session->flashdata('stok'); ?>
 	<?php echo form_open('Marketplace/cariproduk'); ?>
 	<form>
 

@@ -1,5 +1,7 @@
 <section class="container">
 
+ 		<?= $this->session->flashdata('stok'); ?>
+
 	<div class="row">
 		<div class="col-lg-6 col-md-12 col-sm-12 mt-4 mb-5">
 			<img src="<?php echo base_url().'gambar/'.$data->gambar?>" class="img-fluid" alt="Responsive image">

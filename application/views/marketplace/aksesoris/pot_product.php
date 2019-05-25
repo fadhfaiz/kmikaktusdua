@@ -1,5 +1,5 @@
-
 <section class="container">
+<?= $this->session->flashdata('stok'); ?>
 	<form>
 		<div class="form-row mt-4">
 			<div class="form-group col-lg-8 col-md-12 col-sm-12">

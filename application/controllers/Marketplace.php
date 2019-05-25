@@ -84,38 +84,45 @@
         $ip = $this->ambil_ip_pengunjung();
           $kode = $this->input->post('kode_produk');
           $jumlah = $this->input->post('jumlah');
-          $array = array(
-              'kode' => $kode,
-              'jumlah' => $jumlah,
-
-          );
-          $this->cart->insert($this->input->post());
-          //$kode = $this->input->post('jumlah');
-          
+          $query = "select stok_produk from produk where kode_produk ='$kode'";
+          $stok = $this->db->query($query)->result_array(); 
+        
+            $this->cart->insert(array(
+                "id" => $kode,
+                "jumlah" => $jumlah
+            ));
           $err = FALSE;
-
-         // $ip = $this->session->userdata('id');
           
           if($ip){
-              if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
-            
-                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
-              }
-              
-              if(!$err){
-                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+            foreach($stok as $s){
+                if($s['stok_produk']==0){
+                    $this->session->set_flashdata('stok','<div class="alert alert-danger" role="alert">Maaf Stok Habis</div>');
+                    redirect('marketplace','refresh');
+                }else{
 
-              }
-             
-          }
-          $tujuan = 'Marketplace';
-          redirect($tujuan);
+                    if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
+                  
+                          $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');       
+                }
+                
+                if(!$err){
+                    $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+    
+                }
+               
+                $tujuan = 'marketplace';
+                redirect($tujuan);
+            }
+                }
+            }
          }
         public function addToCartdetail(){
           $ip = $this->ambil_ip_pengunjung();
           $kode = $this->input->post('kode_produk');
           $jumlah = $this->input->post('jumlah');
-     
+          $query = "select stok_produk from produk where kode_produk ='$kode'";
+          $stok = $this->db->query($query)->result_array(); 
+        
             $this->cart->insert(array(
                 "id" => $kode,
                 "jumlah" => $jumlah
@@ -123,48 +130,63 @@
           $err = FALSE;
           
           if($ip){
-            
-                  if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
-                
-                        $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');       
-              }
-              
-              if(!$err){
-                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+            foreach($stok as $s){
+                if($s['stok_produk']==0){
+                    $this->session->set_flashdata('stok','<div class="alert alert-danger" role="alert">Maaf Stok Habis</div>');
+                    redirect('marketplace/detail_tanaman/'.$kode,'refresh');
+                }else{
 
-              }
-             
-          }
-          $tujuan = 'marketplace/detail_tanaman/'.$kode;
-          redirect($tujuan);
+                    if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
+                  
+                          $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');       
+                }
+                
+                if(!$err){
+                    $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+    
+                }
+               
+                $tujuan = 'marketplace/detail_tanaman/'.$kode;
+                redirect($tujuan);
+            }
+                }
+            }
          }
         public function addToCartbatu(){
           $ip = $this->ambil_ip_pengunjung();
           $kode = $this->input->post('kode_produk');
           $jumlah = $this->input->post('jumlah');
-         
+          $query = "select stok_produk from produk where kode_produk ='$kode'";
+          $stok = $this->db->query($query)->result_array(); 
+        
             $this->cart->insert(array(
                 "id" => $kode,
                 "jumlah" => $jumlah
             ));
-
           $err = FALSE;
-
-         // $ip = $this->session->userdata('id');
           
           if($ip){
-              if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
-                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
-              }
-              
-              if(!$err){
-                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+            foreach($stok as $s){
+                if($s['stok_produk']==0){
+                    $this->session->set_flashdata('stok','<div class="alert alert-danger" role="alert">Maaf Stok Habis</div>');
+                    redirect('marketplace/batu_product','refresh');
+                }else{
 
-              }
-             
-          }
-          $tujuan = 'marketplace/batu_product/';
-          redirect($tujuan);
+                    if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
+                  
+                          $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');       
+                }
+                
+                if(!$err){
+                    $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+    
+                }
+               
+                $tujuan = 'marketplace/batu_product/';
+                redirect($tujuan);
+            }
+                }
+            }
          }
     
         public function addToCartbibit(){
@@ -172,28 +194,37 @@
             $kode = $this->input->post('kode_produk');
             $jumlah = $this->input->post('jumlah');
            
+            $query = "select stok_produk from produk where kode_produk ='$kode'";
+            $stok = $this->db->query($query)->result_array(); 
+          
               $this->cart->insert(array(
                   "id" => $kode,
                   "jumlah" => $jumlah
               ));
-
-          $err = FALSE;
-
-         // $ip = $this->session->userdata('id');
-          
-          if($ip){
-              if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
-                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+            $err = FALSE;
+            
+            if($ip){
+              foreach($stok as $s){
+                  if($s['stok_produk']==0){
+                      $this->session->set_flashdata('stok','<div class="alert alert-danger" role="alert">Maaf Stok Habis</div>');
+                      redirect('marketplace/bibit_product','refresh');
+                  }else{
+  
+                      if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
+                    
+                            $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');       
+                  }
+                  
+                  if(!$err){
+                      $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+      
+                  }
+                 
+                  $tujuan = 'marketplace/bibit_product';
+                  redirect($tujuan);
               }
-              
-              if(!$err){
-                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
-
+                  }
               }
-             
-          }
-          $tujuan = 'marketplace/bibit_product/';
-          redirect($tujuan);
          }
     
         public function addToCartpot(){
@@ -201,28 +232,37 @@
             $kode = $this->input->post('kode_produk');
             $jumlah = $this->input->post('jumlah');
            
+            $query = "select stok_produk from produk where kode_produk ='$kode'";
+            $stok = $this->db->query($query)->result_array(); 
+          
               $this->cart->insert(array(
                   "id" => $kode,
                   "jumlah" => $jumlah
               ));
-
-          $err = FALSE;
-
-         // $ip = $this->session->userdata('id');
-          
-          if($ip){
-              if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
-                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+            $err = FALSE;
+            
+            if($ip){
+              foreach($stok as $s){
+                  if($s['stok_produk']==0){
+                      $this->session->set_flashdata('stok','<div class="alert alert-danger" role="alert">Maaf Stok Habis</div>');
+                      redirect('marketplace/pot_product','refresh');
+                  }else{
+  
+                      if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
+                    
+                            $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');       
+                  }
+                  
+                  if(!$err){
+                      $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
+      
+                  }
+                 
+                  $tujuan = 'marketplace/pot_product';
+                  redirect($tujuan);
               }
-              
-              if(!$err){
-                  $this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert"> Gagal ditambahkan ke dalam cart</div>');
-
+                  }
               }
-             
-          }
-          $tujuan = 'marketplace/pot_product/';
-          redirect($tujuan);
          }
     
         public function addToCartpaket(){
