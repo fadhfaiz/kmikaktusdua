@@ -7,8 +7,7 @@
 	
 		<div class="form-group">
 			<label for="judul" style="color: teal;" class="h4">Judul Artikel</label>
-			<input type="text" class="form-control <?php echo form_error('judul') ? 'is-invalid':'' ?>"  id="judul" name="judul" aria-describedby="emailHelp"
-				placeholder="judul artikel">
+			<input type="text" class="form-control <?php echo form_error('judul') ? 'is-invalid':'' ?>"  id="judul" name="judul" aria-describedby="emailHelp" placeholder="judul artikel">
 								<div class="invalid-feedback">
 									<?php echo form_error('judul') ?>
 								</div>

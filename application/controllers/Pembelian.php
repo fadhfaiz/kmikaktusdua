@@ -46,6 +46,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             if ($this->form_validation->run() != FALSE) {
                
                 $id = $this->Pembelian_Model->Model_Pembeli($this->input->post());
+                
+              
                 $data['data'] = $this->Keranjang_Model->hapusemua();
                 $this->session->set_flashdata('success');
                 

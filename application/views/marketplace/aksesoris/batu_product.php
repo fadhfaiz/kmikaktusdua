@@ -51,7 +51,7 @@
 					<div class="card-footer">
 					<div class="row">
 					<div class="col-6">
-					<input type="hidden" name="kode_barang" value="'.$b->kode_produk.'" />
+					<input type="hidden" name="kode_produk" value="'.$b->kode_produk.'" />
 				
 						<p class="h6" style="color: teal;">Rp. '.number_format($b->harga_produk,0,",",".").'</p>
 					</div>

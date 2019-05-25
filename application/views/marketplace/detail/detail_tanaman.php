@@ -26,7 +26,14 @@
 						<tr>
 							<th scope="row">Stok Produk</th>
 							<td>:</td>
-							<td><?php echo $data->stok_produk;?> pcs</td>
+							<td><?php
+								if($data->stok_produk <=0 ){
+									echo'stok habis';
+								}else{
+
+									echo $data->stok_produk ;
+								} ?>
+								</td>
 						</tr>
 						<tr>
 							<th scope="row">Diameter Pot</th>
@@ -71,7 +78,7 @@
 <span>
 				<div class="col-6">
 			
-				<input type="hidden" name="kode_barang" value="<?= $data->kode_produk ?>" />
+				<input type="hidden" name="kode_produk" value="<?= $data->kode_produk ?>" />
 				<button type="submit" class="btn btn-block btn-warning"><i
 							class="fas fa-cart-arrow-down mr-2">
 						</i> Beli Produk Ini</button>

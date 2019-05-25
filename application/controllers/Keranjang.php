@@ -29,6 +29,7 @@
         $data['judul'] = 'Keranjang';
         $data['kategori'] = $this->Keranjang_Model->get_kategori_all();
         $data['data'] = $this->Keranjang_Model->tampil();
+       
         $this->load->view('templates/header',$this->data);
         $this->load->view('Keranjang/tampil_cart',$data);
         $this->load->view('templates/footer');

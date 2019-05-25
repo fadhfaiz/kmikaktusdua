@@ -37,14 +37,16 @@ class Keranjang_Model extends CI_Model {
 			
 	
     public function addToCart($kode,$jumlah){
-        if($jumlah == NULL){
-            $jumlah =1;
-            $cart =["ip" => $this->ambil_ip_pengunjung(),"kode_barang" => $kode,"jumlah" => $jumlah];
-            return $this->db->insert('keranjang',$cart);
-        }else{
-            $cart =["ip" => $this->ambil_ip_pengunjung(),"kode_barang" => $kode,"jumlah" => $jumlah];
-            return $this->db->insert('keranjang',$cart);
-        }
+       
+      if($jumlah == NULL){
+                $jumlah =1;
+                $cart =["ip" => $this->ambil_ip_pengunjung(),"kode_produk" => $kode,"jumlah" => $jumlah];
+                return $this->db->insert('keranjang',$cart);
+            }else{
+                $cart =["ip" => $this->ambil_ip_pengunjung(),"kode_produk" => $kode,"jumlah" => $jumlah];
+                return $this->db->insert('keranjang',$cart);
+            }
+        
         
     }
     public function tampil($kode = 0){
@@ -53,7 +55,7 @@ class Keranjang_Model extends CI_Model {
             select
                 DISTINCT 
                 keranjang.id as kode, 
-                keranjang.kode_barang as kodebarang,
+                keranjang.kode_produk as kodeproduk,
                 produk.nama_produk as nama,
                 produk.harga_produk as harga, 
                 sum(keranjang.jumlah) as jumlah, 
@@ -63,7 +65,7 @@ class Keranjang_Model extends CI_Model {
             join 
             keranjang 
             on 
-            produk.kode_produk = keranjang.kode_barang 
+            produk.kode_produk = keranjang.kode_produk 
             WHERE keranjang.ip =  '$ip'
             group by produk.kode_produk";
         
@@ -73,7 +75,7 @@ class Keranjang_Model extends CI_Model {
     }
 
     public function hapus($kode){
-        return $this->db->delete('keranjang',['kode_barang' =>$kode]);
+        return $this->db->delete('keranjang',['kode_produk' =>$kode]);
     }
     public function hapusemua(){
         $ip = $this->ambil_ip_pengunjung();

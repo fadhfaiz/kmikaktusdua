@@ -33,10 +33,10 @@ class Pembelian_Model extends CI_Model
         
         $this->db->insert('pembeli', $data);
 
-        $query = "select *, sum(jumlah) as jumlah from keranjang group by kode_barang";
+        $query = "select *, sum(jumlah) as jumlah from keranjang group by kode_produk";
         $hasil = $this->db->query($query)->result_array();
 
-        $query = "select sum(produk.harga_produk) as total from produk, keranjang where produk.kode_produk = keranjang.kode_barang group by keranjang.kode_barang";
+        $query = "select sum(produk.harga_produk) as total from produk, keranjang where produk.kode_produk = keranjang.kode_produk group by keranjang.kode_produk";
         $total = $this->db->query($query)->result_array();
 
         $kode_unik = random_string('alnum', 5);
@@ -46,7 +46,7 @@ class Pembelian_Model extends CI_Model
             $data_transaksi = [
                 'id_pembeli' => $idPembeli,
                 'kode_unik' => $kode_unik,
-                'kode_produk' => $h['kode_barang'],
+                'kode_produk' => $h['kode_produk'],
                 'total_harga' => $total[$i++]['total'],
                 'ongkir' => 0,
                 'status' => 'menunggu ongkir',
@@ -54,7 +54,6 @@ class Pembelian_Model extends CI_Model
                 'tanggal_beli' => time(),
                 'gambar' => NULL
             ];
-
             $this->db->insert('transaksi', $data_transaksi);
 
             $data_transaksi = [];
@@ -62,7 +61,6 @@ class Pembelian_Model extends CI_Model
 
         return $idPembeli;
     }
- 
     function Model_ongkir($id)
     {
             $this->db->select("*");
@@ -71,18 +69,6 @@ class Pembelian_Model extends CI_Model
             $this->db->where('pembeli.id_pembeli', $id);
             return $this->db->get()->row();
     }
-    function ambil_ip_pengunjung() {
-      if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   
-          $ip = $_SERVER['HTTP_CLIENT_IP'];
-      } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
-          $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-      } else {
-          $ip = $_SERVER['REMOTE_ADDR'];
-      }
-      return $ip;
-}
-
-
     public function tampil($kodebeli){
       $query = "
       select

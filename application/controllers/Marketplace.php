@@ -9,6 +9,7 @@
             $this->load->library('cart');
             $this->load->model('Marketplace_model');
             $this->load->model('Keranjang_Model');
+            $this->load->model('Pembelian_Model');
             $this->load->model('cart_model');
             $this->load->library('pagination');
             $this->data['data'] = $this->cart_model->getcart();
@@ -62,8 +63,6 @@
 
         public function detail_tanaman($id)
         {
-            echo json_encode($this->cart->contents());
-            //$data['cart'] = $this->cart_model->getcart();
             $data['data'] = $this->Marketplace_model->getByProduk($id);
             $data['judul'] = 'Disini Nama Produk';
 
@@ -83,21 +82,23 @@
         }
         public function addToCart(){
         $ip = $this->ambil_ip_pengunjung();
-          $kode = $this->input->post('kode_barang');
+          $kode = $this->input->post('kode_produk');
           $jumlah = $this->input->post('jumlah');
           $array = array(
               'kode' => $kode,
-              'jumlah' => $jumlah
+              'jumlah' => $jumlah,
+
           );
           $this->cart->insert($this->input->post());
           //$kode = $this->input->post('jumlah');
-
+          
           $err = FALSE;
 
          // $ip = $this->session->userdata('id');
           
           if($ip){
               if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
+            
                 $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
               }
               
@@ -112,9 +113,9 @@
          }
         public function addToCartdetail(){
           $ip = $this->ambil_ip_pengunjung();
-          $kode = $this->input->post('kode_barang');
+          $kode = $this->input->post('kode_produk');
           $jumlah = $this->input->post('jumlah');
-         
+     
             $this->cart->insert(array(
                 "id" => $kode,
                 "jumlah" => $jumlah
@@ -122,8 +123,10 @@
           $err = FALSE;
           
           if($ip){
-              if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
-                $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');
+            
+                  if($this->Keranjang_Model->addToCart($kode,$jumlah)) {
+                
+                        $this->session->set_flashdata('pesan','<div class="alert alert-success" role="alert"> Berhasil ditambahkan ke dalam cart</div>');       
               }
               
               if(!$err){
@@ -137,7 +140,7 @@
          }
         public function addToCartbatu(){
           $ip = $this->ambil_ip_pengunjung();
-          $kode = $this->input->post('kode_barang');
+          $kode = $this->input->post('kode_produk');
           $jumlah = $this->input->post('jumlah');
          
             $this->cart->insert(array(
@@ -166,7 +169,7 @@
     
         public function addToCartbibit(){
             $ip = $this->ambil_ip_pengunjung();
-            $kode = $this->input->post('kode_barang');
+            $kode = $this->input->post('kode_produk');
             $jumlah = $this->input->post('jumlah');
            
               $this->cart->insert(array(
@@ -195,7 +198,7 @@
     
         public function addToCartpot(){
             $ip = $this->ambil_ip_pengunjung();
-            $kode = $this->input->post('kode_barang');
+            $kode = $this->input->post('kode_produk');
             $jumlah = $this->input->post('jumlah');
            
               $this->cart->insert(array(
@@ -224,7 +227,7 @@
     
         public function addToCartpaket(){
             $ip = $this->ambil_ip_pengunjung();
-            $kode = $this->input->post('kode_barang');
+            $kode = $this->input->post('kode_produk');
             $jumlah = $this->input->post('jumlah');
            
               $this->cart->insert(array(
@@ -254,7 +257,7 @@
     
         public function addToCartaglonema(){
             $ip = $this->ambil_ip_pengunjung();
-            $kode = $this->input->post('kode_barang');
+            $kode = $this->input->post('kode_produk');
             $jumlah = $this->input->post('jumlah');
            
               $this->cart->insert(array(
@@ -283,7 +286,7 @@
     
         public function addToCartkaktus(){
             $ip = $this->ambil_ip_pengunjung();
-            $kode = $this->input->post('kode_barang');
+            $kode = $this->input->post('kode_produk');
             $jumlah = $this->input->post('jumlah');
            
               $this->cart->insert(array(
@@ -311,7 +314,7 @@
     
         public function addToCartsansivera(){
             $ip = $this->ambil_ip_pengunjung();
-            $kode = $this->input->post('kode_barang');
+            $kode = $this->input->post('kode_produk');
             $jumlah = $this->input->post('jumlah');
            
               $this->cart->insert(array(
@@ -340,7 +343,7 @@
     
         public function addToCartsukulen(){
             $ip = $this->ambil_ip_pengunjung();
-            $kode = $this->input->post('kode_barang');
+            $kode = $this->input->post('kode_produk');
             $jumlah = $this->input->post('jumlah');
            
               $this->cart->insert(array(
@@ -367,17 +370,7 @@
           redirect($tujuan);
          }
     
-        public function detail_paket($id)
-        {
-           // $data['cart'] = $this->cart_model->getcart();
-            $data['data'] = $this->Marketplace_model->getByPaket($id);
-            $data['judul'] = 'Disini Nama Produk';
-
-            $this->load->view('templates/header', $this->data);
-            $this->load->view('marketplace/detail/detail_paket',$data);
-            $this->load->view('templates/footer'); 
-        }
-
+     
         public function kaktus_product()
         
         {
