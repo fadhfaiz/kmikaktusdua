@@ -1,5 +1,5 @@
-<div class="container my-4">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<section class="container my-4">
 	<div class="row">
 
 	<div class="col-lg-8 col-md-12 col-sm-12">
@@ -191,14 +191,13 @@
 							</p>
 							<form enctype="multipart/form-data" method="post" action="<?= base_url('Pembelian/menunggu_pembayaran/').$kode_pembeli; ?>">
 								<div class="custom-file">
-									<input type="file" class="custom-file-input" name="gambar" id="validatedCustomFile" required>
-									<!-- <input type="file" class="form-control" name="gambar" id="validatedCustomFile" required> -->
-									<label class="custom-file-label text-left" for="validatedCustomFile">
+									<input type="file" class="custom-file-input" name="gambar" id="gambar" required>
+									<label class="custom-file-label text-left" for="gambar">
 										Upload bukti transfer disini..
 									</label>
+								</div>
 									<div class="invalid-feedback">Example invalid custom file feedback</div>
 									<button class="btn btn-block btn-warning mt-2" name="submit" type="submit">Kirim Bukti Bayar</button>
-								</div>
 							</form>
 
 						</div>
@@ -219,10 +218,11 @@
 		</div>
 
 	</div>
-
-
-</div>
-
-<div class="container mt-4">
-
-</div>
+</section>
+<script>
+				// Add the following code if you want the name of the file appear on select
+				$(".custom-file-input").on("change", function() {
+				var fileName = $(this).val().split("\\").pop();
+				$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+				});
+</script>
