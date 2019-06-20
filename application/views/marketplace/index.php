@@ -6,7 +6,7 @@
 		<div class="form-row mt-4 mb-4">
 			<div class="form-group col-lg-6 col-md-12 col-sm-12">
 				<input type="text" name="keyword" class="form-control font-italic" id="cari-barang"
-					placeholder="cari nama produk / jenis tanaman / harga tanaman">
+					placeholder="cari nama produk / jenis tanaman">
 			</div>
 
 			<div class="form-group col-lg-3 col-md-12 col-sm-12">
