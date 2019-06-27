@@ -175,9 +175,9 @@
 			<div class="row">
 
 				<div class="col-12 mt-1">
-					<div class="card text-center bg-success" style="color: white;">
+					<div class="card text-center" style="color: black;">
 						<div class="card-body">
-							<h5 class="card-title">Menunggu Ongkir</h5><hr>
+							<h5 class="card-title">Ongkir Sudah ditambah.</h5><hr>
 							<p class="card-text">Terima kasih telah menunggu, Biaya pengiriman sudah ditambahkan.</p>
 						</div>
 					</div>

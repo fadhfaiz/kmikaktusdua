@@ -96,7 +96,7 @@
           if($ip){
             foreach($stok as $s){
                 if($s['stok_produk']<=0){
-                    $this->session->set_flashdata('stok','<div class="alert alert-danger" role="alert">Maaf Stok Habis</div>');
+                    $this->session->set_flashdata('stok','<div class="alert alert-danger my-2" role="alert">Maaf Stok Habis</div>');
                     redirect('marketplace','refresh');
                 }else{
 

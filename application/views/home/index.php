@@ -22,9 +22,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Pot Tanaman</h5>
 						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
+						<p class="card-text">Menjual aksesoris tambahan pot tanaman.</p>
 					</div>
 				</a>
 				<!-- <div class="card-footer">
@@ -37,10 +35,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Bibit Tanaman</h5>
 						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.
-						</p>
+						<p class="card-text">Menjual bibit tanaman.</p>
 					</div>
 				</a>
 				<!-- <div class="card-footer">
@@ -53,9 +48,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Batu Tanaman</h5>
 						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
+						<p class="card-text">Menjual aksesoris batu tanaman.</p>
 					</div>
 				</a>
 				<!-- <div class="card-footer">
@@ -67,9 +60,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Paket</h5>
 						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
+						<p class="card-text">Menjual paket tanaman.</p>
 					</div>
 				</a>
 			</div>

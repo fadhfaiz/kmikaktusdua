@@ -156,19 +156,19 @@
 			<div class="row">
 
 				<div class="col-12 mt-2">
-					<div class="card text-center bg-success" style="color: white;">
+					<div class="card text-center" style="color: black;">
 						<div class="card-body">
-							<h5 class="card-title">Menunggu Ongkir</h5><hr>
+							<h5 class="card-title">Ongkir Sudah ditambahkan.</h5><hr>
 							<p class="card-text">Terima kasih telah menunggu, Biaya pengiriman sudah ditambahkan.</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-12 my-3">
-					<div class="card text-center bg-success" style="color: white;">
+					<div class="card text-center" style="color: black;">
 						<div class="card-body">
-							<h5 class="card-title">Menunggu Pembayaran</h5><hr>
-							<p class="card-text">Silahkan transfer sesuai jumlah pembayaran dan upload bukti pembayaran.</p>
+							<h5 class="card-title">Terima kasih sudah membayar.</h5><hr>
+							<p class="card-text">Transfer sudah terkonfrmasi oleh penual.</p>
 						</div>
 					</div>
 				</div>
