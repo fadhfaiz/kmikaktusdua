@@ -22,7 +22,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Pot Tanaman</h5>
 						<hr>
-						<p class="card-text">Menjual aksesoris tambahan pot tanaman.</p>
+						<p class="card-text">Klik untuk melihat daftar aksesoris Pot Tanaman.</p>
 					</div>
 				</a>
 				<!-- <div class="card-footer">
@@ -35,7 +35,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Bibit Tanaman</h5>
 						<hr>
-						<p class="card-text">Menjual bibit tanaman.</p>
+						<p class="card-text">Klik untuk melihat daftar aksesoris bibit tanaman.</p>
 					</div>
 				</a>
 				<!-- <div class="card-footer">
@@ -48,7 +48,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Batu Tanaman</h5>
 						<hr>
-						<p class="card-text">Menjual aksesoris batu tanaman.</p>
+						<p class="card-text">Klik untuk melihat daftar aksesoris batu tanaman.</p>
 					</div>
 				</a>
 				<!-- <div class="card-footer">
@@ -58,9 +58,9 @@
 			<div class="card bg-dark"><a href="<?php echo base_url(); ?>marketplace/paket_product"
 					style="color:white; text-decoration: none;">
 					<div class="card-body">
-						<h5 class="card-title text-center">Paket</h5>
+						<h5 class="card-title text-center">Paket Tanaman</h5>
 						<hr>
-						<p class="card-text">Menjual paket tanaman.</p>
+						<p class="card-text">Klik untuk melihat daftar aksesoris paket tanaman.</p>
 					</div>
 				</a>
 			</div>
@@ -135,9 +135,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Tanaman Lainnya</h5>
 						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
+						<p class="card-text">Klik untuk melihat daftar Tanaman Lainnya.</p>
 					</div>
 				</a>
 			</div>
@@ -147,10 +145,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Aglonema</h5>
 						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.
-						</p>
+						<p class="card-text">Klik untuk melihat daftar Tanaman Aglonema.</p>
 					</div>
 				</a>
 			</div>
@@ -160,9 +155,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Sansivera</h5>
 						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
+						<p class="card-text">Klik untuk melihat daftar Tanaman Sansivera.</p>
 					</div>
 				</a>
 			</div>
@@ -171,9 +164,7 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Sukulen</h5>
 						<hr>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-							additional
-							content. This content is a little bit longer.</p>
+						<p class="card-text">Klik untuk melihat daftar Tanaman Sukulen.</p>
 					</div>
 				</a>
 			</div>
