@@ -21,6 +21,7 @@
 		</div>
 
 	</form>
+	
 	<div class="card-columns">
 
 		<?php	
@@ -33,18 +34,18 @@
 							<img src="'. base_url().'gambar/'.$b['gambar'].'"
 								class="card-img-top" style="height: 200px;" alt="...">
 							<div class="card-body" style="height:100px;">
-								<h6 class="card-title">'.$b['nama_produk'].'</h6>
+								<h6 class="card-title text-center">'.$b['nama_produk'].'</h6>
 							</div>
 						</a>
 						<div class="card-footer">
 						<div class="row">
-						<div class="col-6">
+						<div class="col-lg-6 col-md-12 col-sm-12">
 						
 						<input type="hidden" name="kode_produk" value="'.$b['kode_produk'].'" />
 				
-							<p class="h6" style="color: teal;">Rp. '.number_format($b['harga_produk'],0,",",".").'</p>
+							<p class="h6 text-center" style="color: teal;">Rp. '.number_format($b['harga_produk'],0,",",".").'</p>
 						</div>
-						<div class="col-6">
+						<div class="col-lg-6 col-md-12 col-sm-12">
 							
 							<button type="submit" class=" add_cart btn btn-block btn-success" ><i class="glyphicon glyphicon-shopping-cart" ></i> Beli</button>
 						</div>

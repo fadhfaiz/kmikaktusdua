@@ -87,7 +87,9 @@
 		
 		<div class="col-4"><hr></div>
 	</div>
+
 	<?= $this->session->flashdata('stok'); ?>
+	
 	<div class="card-columns my-3">
 		
 			<?php
